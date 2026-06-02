@@ -18,6 +18,6 @@ eleventyComputed:
 {% block body %}
     <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
 
-    <!-- If you want the page to have a "CTA", uncomment the line below -->
-    <!-- {% include 'sections/cta.html' %} -->
+    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
+    {# {% include 'sections/cta.html' %} #}
 {% endblock %}
