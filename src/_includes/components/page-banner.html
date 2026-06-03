@@ -1,4 +1,4 @@
-<!-- Interior page banner — set optional bannerPath for active crumb (defaults to current page URL) -->
+<!-- Interior page banner — set bannerTitle and optional bannerImage in page front matter -->
 <div id="banner-310">
     <div class="cs-container">
         <span class="cs-int-title">{{ bannerTitle or (page.fileSlug | titleCase) }}</span>
@@ -7,5 +7,17 @@
             <a href="{{ bannerPath or page.url }}" class="cs-link cs-active">{{ bannerTitle or (page.fileSlug | titleCase) }}</a>
         </div>
     </div>
+    {% if bannerImage %}
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="{% getUrl bannerImage | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl bannerImage | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+        <source media="(max-width: 1024px)" srcset="{% getUrl bannerImage | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl bannerImage | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+        <source media="(min-width: 1024px)" srcset="{% getUrl bannerImage | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl bannerImage | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl bannerImage | resize({ width: 2500, height: 628 }) | jpeg %}" alt="" width="1920" height="482" loading="eager" decoding="async" aria-hidden="true">
+    </picture>
+    {% else %}
     <div class="cs-background" aria-hidden="true"></div>
+    {% endif %}
 </div>

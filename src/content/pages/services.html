@@ -1,5 +1,7 @@
 ---
 description: "Web design and monthly website plans for local businesses. Fast sites, clear pricing, and ongoing support."
+bannerTitle: "Services"
+bannerImage: "/assets/images/portfolio/port2.jpg"
 eleventyComputed:
   title: "Services | {{ client.name }}"
   permalink: "/services/"
@@ -8,8 +10,182 @@ eleventyComputed:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    <link rel="preload" as="image" href="{% getUrl bannerImage | resize({ width: 640, height: 600 }) | webp %}">
     <link rel="stylesheet" href="/assets/css/services.css">
 {% endblock %}
 
 {% block body %}
+    {% include "components/page-banner.html" %}
+
+    <!-- ============================================ -->
+    <!--            Services Overview                 -->
+    <!-- ============================================ -->
+
+    <section id="services-72">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">Plans Built for Local Business Growth</h2>
+                <p class="cs-text">
+                    Every package is hand-coded for speed, mobile usability, and clear calls-to-action — so visitors know exactly how to reach you.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-icon" aria-hidden="true">01</span>
+                    <h3 class="cs-h3">Custom Web Design</h3>
+                    <p class="cs-item-text">
+                        A professional site tailored to your brand, services, and service area.
+                    </p>
+                    <a href="#service-design" class="cs-link">View details</a>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-icon" aria-hidden="true">02</span>
+                    <h3 class="cs-h3">Monthly Website Plans</h3>
+                    <p class="cs-item-text">
+                        Hosting, updates, and support from $239/month — no large upfront rebuild fees.
+                    </p>
+                    <a href="#service-plans" class="cs-link">View details</a>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-icon" aria-hidden="true">03</span>
+                    <h3 class="cs-h3">Speed &amp; Local SEO</h3>
+                    <p class="cs-item-text">
+                        Technical setup that helps you load fast and show up when locals search.
+                    </p>
+                    <a href="#service-seo" class="cs-link">View details</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--         Individual Service Details           -->
+    <!-- ============================================ -->
+
+    <section id="service-design" class="cs-service-sbs">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 520, height: 580 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 520, height: 580 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Custom website design on desktop and mobile" width="522" height="581" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Service 01</span>
+                <h2 class="cs-title">Custom Web Design</h2>
+                <p class="cs-text">
+                    A brochure site built around how your customers actually hire you — services, service area, proof, and a contact path on every page.
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">Unique home page designed for your industry</li>
+                    <li class="cs-li">Core pages: About, Services, Contact, and legal</li>
+                    <li class="cs-li">Mobile-first layouts and accessible forms</li>
+                    <li class="cs-li">Brand colors, fonts, and imagery direction</li>
+                </ul>
+                <a href="/contact/" class="cs-button-solid">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-plans" class="cs-service-sbs cs-reverse">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 520, height: 580 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 520, height: 580 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Business owner using a modern website" width="522" height="581" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Service 02</span>
+                <h2 class="cs-title">Monthly Website Plans</h2>
+                <p class="cs-text">
+                    Starting at <strong>$239/month</strong> with hosting included. You focus on your business — we keep the site fast, secure, and up to date.
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">Netlify hosting and SSL included</li>
+                    <li class="cs-li">Unlimited content edits (reasonable scope)</li>
+                    <li class="cs-li">Security and dependency updates</li>
+                    <li class="cs-li">Priority support by email</li>
+                </ul>
+                <a href="/contact/" class="cs-button-solid">See If You Qualify</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-seo" class="cs-service-sbs">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 520, height: 580 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 520, height: 580 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Local business visible in search results" width="522" height="581" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Service 03</span>
+                <h2 class="cs-title">Speed &amp; Local SEO</h2>
+                <p class="cs-text">
+                    Technical foundations that support rankings and conversions — not gimmicks, just clean structure and performance.
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">Optimized images with WEBP and responsive sizes</li>
+                    <li class="cs-li">Semantic HTML and meta tags per page</li>
+                    <li class="cs-li">XML sitemap and Search Console setup</li>
+                    <li class="cs-li">Lighthouse-focused performance tuning</li>
+                </ul>
+                <a href="/contact/" class="cs-button-solid">Talk About SEO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            Process / How It Works              -->
+    <!-- ============================================ -->
+
+    <section id="steps-849">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">How It Works</span>
+                <h2 class="cs-title">From First Call to Live Site</h2>
+                <p class="cs-text">
+                    A straightforward process with clear milestones. Most brochure sites launch in 2–4 weeks when content is ready.
+                </p>
+            </div>
+            <ol class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-number">1</span>
+                    <h3 class="cs-h3">Discovery Call</h3>
+                    <p class="cs-item-text">
+                        We review your services, competitors, and goals — then recommend pages and the right plan.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">2</span>
+                    <h3 class="cs-h3">Design &amp; Build</h3>
+                    <p class="cs-item-text">
+                        Home page and interior templates are built with your branding, photos, and lead forms.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">3</span>
+                    <h3 class="cs-h3">Review &amp; Launch</h3>
+                    <p class="cs-item-text">
+                        You approve the site, we connect DNS, and complete the pre-launch checklist together.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">4</span>
+                    <h3 class="cs-h3">Ongoing Support</h3>
+                    <p class="cs-item-text">
+                        Monthly clients send edit requests anytime — we handle updates without you touching code.
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    {% include "sections/cta.html" %}
 {% endblock %}
