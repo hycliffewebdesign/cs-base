@@ -1,0 +1,32 @@
+---
+description: Image optimization rules for this Eleventy + Sharp project. Always apply when adding or editing images.
+alwaysApply: true
+---
+
+# Image Rules
+
+Always run content images through the Sharp optimization pipeline using `{% getUrl %}`. Never use a plain `src="/assets/images/..."` path for content images.
+
+## Required pattern
+
+Every content image must use a `<picture>` element with avif, webp, and fallback sources at appropriate sizes for mobile, tablet, and desktop:
+
+```html
+<picture class="cs-picture">
+    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/your-image.jpg" | resize({ width: 600, height: 400 }) | avif %}" type="image/avif">
+    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/your-image.jpg" | resize({ width: 600, height: 400 }) | webp %}" type="image/webp">
+    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/your-image.jpg" | resize({ width: 600, height: 400 }) | jpeg %}" type="image/jpeg">
+    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/your-image.jpg" | resize({ width: 1200, height: 800 }) | avif %}" type="image/avif">
+    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/your-image.jpg" | resize({ width: 1200, height: 800 }) | webp %}" type="image/webp">
+    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/your-image.jpg" | resize({ width: 1200, height: 800 }) | jpeg %}" type="image/jpeg">
+    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/your-image.jpg" | resize({ width: 1200, height: 800 }) | jpeg %}" alt="descriptive alt text" width="1200" height="800">
+</picture>
+```
+
+Use `| png` instead of `| jpeg` for images with transparency (PNGs with no background).
+
+Use `loading="eager"` instead of `loading="lazy"` for above-the-fold hero images.
+
+## Exceptions
+
+SVGs and icons do not need the pipeline — use plain `src` paths for those.

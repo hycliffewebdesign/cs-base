@@ -1,0 +1,45 @@
+---
+description: Rules for adding Codestitch sections (stitches) to this Eleventy project. Apply when adding, editing, or moving sections.
+alwaysApply: true
+---
+
+# Stitches Rules
+
+This project uses Codestitch — pre-built HTML/CSS sections dropped into Eleventy templates. All section HTML and CSS uses the `cs-` class prefix (short for CodeStitch).
+
+## Adding a new stitch
+
+### 1. Create the section file
+
+Save the stitch HTML as a `.html` file in the appropriate folder:
+
+- `src/_includes/sections/home/` — sections used only on the home page
+- `src/_includes/sections/` — sections used across multiple pages (e.g. cta, header, footer)
+
+Example: `src/_includes/sections/home/pricing.html`
+
+### 2. Add the SCSS
+
+Paste the stitch's CSS into the relevant file in `src/assets/sass/`:
+
+- `local.scss` — page-specific styles, loaded after render
+- `critical.scss` — above-the-fold styles that must load immediately
+
+### 3. Include it in the page
+
+Add a `{% include %}` tag in the page file where you want the section to appear. The order of includes controls the order sections appear on the page.
+
+```html
+{% block body %}
+    {% include "sections/home/hero.html" %}
+    {% include "sections/home/pricing.html" %}
+    {% include "sections/cta.html" %}
+{% endblock %}
+```
+
+## Key conventions
+
+- All sections live in `src/_includes/` so Eleventy does not publish them as pages
+- CSS class names always use the `cs-` prefix — do not rename them
+- Never put raw `<style>` tags inside section HTML files — all styles go in the SASS files
+- Images inside stitches must use the `{% getUrl %}` pipeline — see images.mdc
