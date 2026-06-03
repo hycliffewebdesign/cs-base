@@ -34,3 +34,88 @@ Tools directory, font pair guide (10 pairings by industry), and Page Speed Handb
 - Global CSS variables live in `src/assets/sass/root.scss` (`:root`).
 - Prefer reusing interior page templates; invest uniqueness in the home page per `docs/FREELANCE-WEB-DEV-GUIDE.md` and `docs/PAGE-STRUCTURES.md`.
 - Follow image/font/performance patterns in `docs/WEB-DESIGN-RESOURCES.md` (local fonts via gwfh, `<picture>` + WEBP, no Google Fonts CDN).
+
+## Starting a new client project
+
+When a user says they are starting a new project, starting a new client site, or creating a new site, follow these steps in order. Do not skip steps or assume they are already done.
+
+### Step 1 — Repo setup (user does this manually)
+Remind the user to:
+1. Go to `cs-base` on GitHub and click **Use this template** → **Create a new repository**
+2. Name it after the client (e.g. `smiths-plumbing`)
+3. Clone it locally and open in Cursor
+4. Run `npm install`
+
+### Step 2 — Fill out client data
+Update `src/_data/client.js` with:
+- Business name
+- Tagline
+- Email
+- Phone
+- Address
+- City, state
+- Domain (once known)
+- Social links (if any)
+
+### Step 3 — Update root variables
+Open `src/assets/sass/root.scss` and update the "Update these per client" block:
+- `--primary` — client's primary brand color
+- `--primaryLight` / `--secondary` / `--secondaryLight` — complementary tones
+- `--headerFont` / `--bodyFont` — client's chosen fonts (download and host locally via gwfh.mranftl.com/fonts first)
+
+### Step 4 — Download and add fonts
+1. Go to https://gwfh.mranftl.com/fonts
+2. Select Latin subset only
+3. Download regular, 700, and 900 weights only
+4. Place font files in `src/assets/fonts/`
+5. Add `@font-face` blocks to `root.scss` with `font-display: swap`
+6. Add font preload links to the `<head>` in `src/_includes/layouts/base.html`
+
+### Step 5 — Scaffold pages
+Run the following based on what the client needs:
+
+**Base pages (always):**
+```bash
+npm run create-page -- "About, Services, Contact, Privacy Policy, Terms of Service, Thank You"
+```
+
+**Optional drop-ins (add only if client needs them):**
+```bash
+npm run create-page -- "FAQ"
+npm run create-page -- "Gallery"
+npm run create-page -- "Testimonials"
+npm run create-page -- "Meet the Team"
+npm run create-page -- "Areas Served"
+```
+
+Also create `src/404.html` manually — it does not use the standard page template.
+
+### Step 6 — Add CMS/blog (only if client is paying for it)
+Run:
+```bash
+# This step is skipped by default — Decap was removed in cs-base
+# To add it back, manually re-integrate Decap CMS per the kit documentation
+```
+
+### Step 7 — Build the home page
+Refer to `docs/PAGE-STRUCTURES.md` for the default home page section order:
+1. Hero
+2. Social Proof Bar
+3. Services Overview
+4. Why Choose Us
+5. Process / How It Works
+6. Testimonials
+7. CTA
+8. FAQ Snippet
+
+Pick CodeStitch components for each section. Save chosen stitches to a client folder in the CodeStitch library.
+
+### Step 8 — Pre-launch checklist
+Before going live, run through every item in `docs/WEB-DESIGN-RESOURCES.md` under **Quick Reference Checklist**. Key items:
+- All images use `<picture>` with mobile + desktop WEBP sources
+- Fonts hosted locally, preloaded, `font-display: swap` set
+- HTML validated, links checked, Lighthouse 100 across all categories
+- Sitemap generated, favicon added, schema markup added
+- Submitted to Google Search Console
+- Netlify form notifications set up for client email + your email
+- DNS records moved to Netlify before switching nameservers
