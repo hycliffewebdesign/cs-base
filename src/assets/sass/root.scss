@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// CODESTITCH GLOBAL STYLES
+// GLOBAL STYLES
 // Core stylesheet containing CSS variables, dark mode styles, base element
 // styling, typography rules, utility classes, component styles, navigation,
 // footer, and other repeated section styles for the entire site
@@ -9,14 +9,14 @@
 <---        Core Styles         -->
 <--- -------------------------- -*/
 
-/* CodeStitch Core Styles + Reset */
+/* Core Styles + Reset */
 @media only screen and (min-width: 0px) {
 	/* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
 	:root {
-		--primary: #ff6a3e;
-		--primaryLight: #ffba43;
-		--secondary: #ffba43;
-		--secondaryLight: #ffba43;
+		--primary: #2c5f8a;
+		--primaryLight: #5b8fbf;
+		--secondary: #5b8fbf;
+		--secondaryLight: #5b8fbf;
 		--headerColor: #1a1a1a;
 		--bodyTextColor: #4e4b66;
 		--bodyTextColorWhite: #fafbfc;
@@ -34,8 +34,8 @@
 		/* 60px - 100px top and bottom */
 		--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
-		--headerFont: "Roboto", Arial, sans-serif;
-		--bodyFont: "Roboto", Arial, sans-serif;
+		--headerFont: system-ui, Arial, sans-serif;
+		--bodyFont: system-ui, Arial, sans-serif;
 	}
 
 	html,
@@ -103,7 +103,7 @@
 		opacity: 0;
 	}
 
-	// Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
+	// Buttons - replace with custom button sections as needed. Clear default .cs-button-solid/outline styles when swapping in new components.
 	.cs-button-solid {
 		z-index: 1;
 		position: relative;
@@ -290,37 +290,6 @@
 		h6 {
 			color: #fff;
 		}
-	}
-}
-
-/* Fonts */
-@media only screen and (min-width: 0px) {
-	// Grab your fonts to locally host from https://gwfh.mranftl.com/fonts
-	/* roboto-regular - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 400;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
-
-	/* roboto-700 - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 700;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
-
-	/* roboto-900 - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 900;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 	}
 }
 

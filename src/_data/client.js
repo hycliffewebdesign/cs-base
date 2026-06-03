@@ -1,23 +1,24 @@
+// TODO: Replace every placeholder below before launching the site.
+
 module.exports = {
-    name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    name: "YOUR_BUSINESS_NAME",
+    email: "YOUR_EMAIL@example.com",
+    phoneForTel: "5555555555",
+    phoneFormatted: "(555) 555-5555",
     address: {
-        lineOne: "First Address Line",
-        lineTwo: "Second Address Line",
-        city: "Denver",
-        state: "CO",
-        zip: "80206",
+        lineOne: "YOUR_STREET_ADDRESS",
+        lineTwo: "SUITE_OR_UNIT_OPTIONAL",
+        city: "YOUR_CITY",
+        state: "ST",
+        zip: "00000",
         country: "US",
-        mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
+        mapLink: "https://maps.google.com/",
     },
     socials: {
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
+        facebook: "https://www.facebook.com/YOUR_PAGE",
+        instagram: "https://www.instagram.com/YOUR_HANDLE",
     },
-    //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
+    //! Include https:// and no trailing slash
     domain: "https://www.example.com",
-    // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };

@@ -1,0 +1,36 @@
+# cs-base — Cursor project context
+
+This repo is an Eleventy + Nunjucks + Decap CMS + SASS starter for client web projects. When planning pages, client work, or agency workflow, read the project docs in `docs/` before guessing.
+
+## Project documentation (read when relevant)
+
+### Page layouts — `docs/PAGE-STRUCTURES.md`
+
+Default section order for base and optional pages (Home, About, Services, Contact, etc.). Use this when:
+
+- Adding or restructuring pages
+- Choosing which sections/components belong on a page
+- Scoping a new client site build
+
+### Freelance agency guide — `docs/FREELANCE-WEB-DEV-GUIDE.md`
+
+Reference for running a freelance web agency: LLC, invoicing, pricing ($150/mo subscription vs lump sum), templates, team, contracts, sales, build checklist, Netlify deploy. Use this when:
+
+- Discussing pricing, contracts, or client onboarding
+- Sales scripts, lead qualification, or project management flow
+- Pre-launch checklist, hosting, domains (Porkbun), or Netlify setup
+
+### Web design resources — `docs/WEB-DESIGN-RESOURCES.md`
+
+Tools directory, font pair guide (10 pairings by industry), and Page Speed Handbook (`<picture>`, WEBP, local fonts, critical CSS). Use this when:
+
+- Optimizing images, fonts, or Core Web Vitals / Lighthouse scores
+- Picking font pairings or linking to external tools (Figma, Pexels, validators, etc.)
+- Running the pre-launch performance checklist
+
+## Defaults for implementation
+
+- Match existing kit patterns in `src/` (SASS, Nunjucks, section IDs, `.cs-*` classes).
+- Global CSS variables live in `src/assets/sass/root.scss` (`:root`).
+- Prefer reusing interior page templates; invest uniqueness in the home page per `docs/FREELANCE-WEB-DEV-GUIDE.md` and `docs/PAGE-STRUCTURES.md`.
+- Follow image/font/performance patterns in `docs/WEB-DESIGN-RESOURCES.md` (local fonts via gwfh, `<picture>` + WEBP, no Google Fonts CDN).

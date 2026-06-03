@@ -48,7 +48,7 @@ module.exports = function (eleventyConfig) {
 	/*
 	 * 🖼️ Image Optimization
 	 * Resize and optimize images for better performance using {% getUrl %}
-	 * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-sharp-images
+	 * Documentation: @codestitchofficial/eleventy-plugin-sharp-images (npm)
 	 */
 	eleventyConfig.addPlugin(pluginImages, configImages);
 
@@ -63,7 +63,7 @@ module.exports = function (eleventyConfig) {
 	 * 📦 Production Minification
 	 * Minifies HTML, CSS, JSON, XML, XSL, and webmanifest files
 	 * Only runs during production builds (npm run build)
-	 * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-minify
+	 * Documentation: @codestitchofficial/eleventy-plugin-minify (npm)
 	 */
 	if (isProduction) {
 		eleventyConfig.addPlugin(pluginMinifier);
@@ -76,7 +76,6 @@ module.exports = function (eleventyConfig) {
 	// ═════════════════════════════════════════════════════════════════════════
 
 	eleventyConfig.addPassthroughCopy("./src/assets"); // Static assets
-	eleventyConfig.addPassthroughCopy("./src/admin"); // CMS admin files
 	eleventyConfig.addPassthroughCopy("./src/_redirects"); // Redirect rules
 
 	// ═════════════════════════════════════════════════════════════════════════

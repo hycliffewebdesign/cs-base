@@ -1,22 +1,20 @@
 <br/>
 <p align="center">
-  <a href="https://codestitch.app/">
-    <img src="https://codestitch.app/frontend/images/icon.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Intermediate Starter Kit (SASS)</h3>
+  <h3 align="center">cs-base — Intermediate Starter Kit (SASS)</h3>
 
   <p align="center">
-    Introducing the Intermediate Website Kit, presented by CodeStitch. This kit includes a pre-configured Eleventy environment with Nunjucks templating, along with seamless integration of Decap CMS. This setup allows you to quickly start a project while providing your client with a blog for content management. Everything is ready to go right from the start, offering a fantastic introduction to the advantages of a Static Site Generator, complete with SASS preprocessing.
+    Eleventy + Nunjucks + Decap CMS + SASS for client web projects. Pre-configured build pipeline, reusable sections, optional blog CMS, and demo pages to replace per client.
     <br/>
     <br/>
-    <a href="https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS">LESS Starter Kit</a>
+    <a href="https://www.youtube.com/watch?v=0BNCYM4InT0&t">Setup walkthrough (video)</a>
     .
-    <a href="https://codestitch-intermediate.netlify.app/">View Live Result</a>
+    <a href="#quick-start-guide">Quick start</a>
     .
-    <a href="https://www.youtube.com/watch?v=0BNCYM4InT0&t">Watch Video</a>
+    <a href="docs/PAGE-STRUCTURES.md">Page structures</a>
     .
-    <a href="https://codestitch.app/contact">Report Bug</a>
+    <a href="docs/WEB-DESIGN-RESOURCES.md">Resources</a>
+    .
+    <a href="docs/FREELANCE-WEB-DEV-GUIDE.md">Freelance guide</a>
   </p>
 </p>
 
@@ -58,7 +56,7 @@
 
 The Intermediate Website Kit builds off the beginner kits, mainly by including a pre-configured [Eleventy](https://www.11ty.dev) environment. This setup allows for reusable components, centralized data, and greater scalability as your clients grow. Additionally, a blog has been provided through [Decap CMS](https://decapcms.org/), enabling your clients to manage their own content. This can easily be adapted to various use cases, such as menus, job listing boards, portfolios, and more. A few additional plugins have also been included to enhance the developer experience, offering HTML/CSS minification, JS bundling/minification, and automatic sitemap generation.
 
-An example website is also provided, with easy substitution of website sections through the use of [CodeStitch's vanilla component library](https://codestitch.app/). This kit aims to get any project off the ground as quickly as possible, with deployment achievable in as little as two minutes, including CMS hosting.
+An example website is also provided, with easy substitution of reusable sections and interior page templates. This kit aims to get client projects off the ground quickly, with deployment achievable in minutes once hosting is configured.
 
 <a name="prerequisites"></a>
 
@@ -204,8 +202,8 @@ The `.eleventy.js` file is well-documented, with all necessary extra documentati
 - Uses Eleventy build events (`eleventy.after`) to process JS and SASS files externally. JS is bundled and minified by esbuild. SASS is compiled to CSS and run through a PostCSS pipeline (autoprefixer + cssnano in production).
 - Adds the following plugins:
     - [Eleventy Sitemap](https://github.com/quasibit/eleventy-plugin-sitemap) - Automatically generates a sitemap from all files in `./src/content`.
-    - [Eleventy Minification](https://github.com/CodeStitchOfficial/eleventy-plugin-minify) - Minifies HTML, CSS, JSON, XML, XSL, and webmanifest files (only run in production - when `npm run build` is executed).
-    - [Sharp Images](https://github.com/CodeStitchOfficial/eleventy-plugin-sharp-images) - Resizes and optimizes images at build time for better performance. See the [Image Optimization](#image-optimization) section below.
+    - Eleventy Minification (`@codestitchofficial/eleventy-plugin-minify`) - Minifies HTML, CSS, JSON, XML, XSL, and webmanifest files (only run in production - when `npm run build` is executed).
+    - Sharp Images (`@codestitchofficial/eleventy-plugin-sharp-images`) - Resizes and optimizes images at build time for better performance. See the [Image Optimization](#image-optimization) section below.
 - Passes through all assets (in `./src/assets`), admin files, and redirect rules without modification by Eleventy.
 - Adds date formatting filters and a year shortcode.
 
@@ -251,7 +249,7 @@ This directory contains data files that are accessible within any template throu
 
 Consider adding the client's contact details, address, and social media information to this file. Examples have been provided in the kit. This way, you can access the client's information from a single source of truth. If a client changes their email address, you can update it in the `client.js` file and have it reflect across the website without needing to search through multiple files or use Find and Replace.
 
-As an example, we have defined the client's email address under the `email` key. In the footer (`./src/_includes/sections/footer.html`), we can use `{{ client.email }}` to access this value and output "help@codestitch.app". The format for outputting the data is `{{ [FILENAME].[KEY] }}`. If we wanted to add another file for pricing information, we could create a file (`_data/pricing.json`), then use `{{ pricing.price }}` to render the price.
+As an example, we have defined the client's email address under the `email` key. In the footer (`./src/_includes/sections/footer.html`), we can use `{{ client.email }}` to access this value. The format for outputting the data is `{{ [FILENAME].[KEY] }}`. If we wanted to add another file for pricing information, we could create a file (`_data/pricing.json`), then use `{{ pricing.price }}` to render the price.
 
 In Eleventy, this is known as "Global Data". You can read more about Global Data [here](https://www.11ty.dev/docs/data-global/), with more information about how this works in the context of the Data Cascade [here](https://www.11ty.dev/docs/data-cascade/).
 
@@ -259,7 +257,7 @@ In Eleventy, this is known as "Global Data". You can read more about Global Data
 
 #### \_includes
 
-The `_includes` directory contains pieces of HTML code that you want to share between multiple pages. This code could be small components (a button or a loading spinner), larger sections (header, footer, or a stitch from [CodeStitch](https://codestitch.app/)), or a layout containing a reusable `<head>` element with all necessary meta tags.
+The `_includes` directory contains pieces of HTML code that you want to share between multiple pages. This code could be small components (a button or a loading spinner), larger sections (header, footer, CTA, etc.), or a layout containing a reusable `<head>` element with all necessary meta tags.
 
 By default, the kit has three sub-directories in `_includes` - `components/` for reusable pieces like featured posts and schema markup, `layouts/` for page layouts, and `sections/` for shared page sections like the header, footer, and CTA.
 
@@ -333,7 +331,7 @@ All other non-content files are stored in `assets/`, which is set up in `.eleven
 
 #### Image Optimization
 
-This kit uses [`@codestitchofficial/eleventy-plugin-sharp-images`](https://github.com/CodeStitchOfficial/eleventy-plugin-sharp-images) to resize and convert images at build time, producing optimized AVIF, WebP, and JPEG variants at multiple breakpoints. The plugin provides a `{% getUrl %}` shortcode used throughout the page templates to generate `<picture>` elements with multiple `<source>` tags.
+This kit uses `@codestitchofficial/eleventy-plugin-sharp-images` to resize and convert images at build time, producing optimized AVIF, WebP, and JPEG variants at multiple breakpoints. The plugin provides a `{% getUrl %}` shortcode used throughout the page templates to generate `<picture>` elements with multiple `<source>` tags.
 
 This is **entirely optional** — it is included to demonstrate how the plugin can be used for image optimization, but it is not required.
 
@@ -429,9 +427,9 @@ When you're happy with your website, you can deploy it to your hosting provider 
 5.  Everything should be already configured, thanks to the `netlify.toml` file. Click **Deploy [PROJECT NAME]**.
 6.  Check to see if your site deploys without error. The site should be live, but we still need to set up the CMS.
 
-With slight modifications for usage with 11ty, this setup guide for DecapBridge was written by Geoffrey on the [Intermediate Astro Decap kit](https://github.com/CodeStitchOfficial/Intermediate-Astro-Decap-CMS/blob/main/README.md?plain=1#deployment)
+This kit uses [decapbridge.com](https://decapbridge.com/) for CMS authentication (Netlify Identity is deprecated).
 
-> [!IMPORTANT] This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/tree/deprecated---using-Netlify-Identity)
+> [!IMPORTANT] If you still use Netlify Identity on an older fork, migrate to DecapBridge before deploying new client sites.
 
 > [!TIP] If you are updating your kit from Netlify Identity to decapbridge.com:
 >

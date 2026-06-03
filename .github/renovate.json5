@@ -30,8 +30,8 @@
       ],
     },
     {
-      description: 'Group CodeStitch major updates',
-      groupName: 'codestitch-tools-major',
+      description: 'Group eleventy image/minify plugin major updates',
+      groupName: 'eleventy-plugins-major',
       matchUpdateTypes: ['major'],
       matchPackagePatterns: [
         '^@codestitchofficial/',

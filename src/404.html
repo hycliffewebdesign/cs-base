@@ -1,0 +1,28 @@
+---
+description: "The page you requested could not be found."
+permalink: "/404.html"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+    title: "Page Not Found | {{ client.name }}"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+{% endblock %}
+
+{% block body %}
+    <section id="not-found">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">404</span>
+                <h1 class="cs-title">Page Not Found</h1>
+                <p class="cs-text">
+                    The page you are looking for does not exist or may have been moved.
+                </p>
+                <a href="/" class="cs-button-solid">Back to Home</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -99,7 +99,7 @@ function cleanSass(filePath) {
 	content = content.replace(/--medium:\s*#[0-9a-fA-F]+;\s*/g, "");
 	content = content.replace(/--accent:\s*#[0-9a-fA-F]+;\s*/g, "");
 
-	// 2. Remove "Dark Mode" comments (single-line and multi-line CodeStitch section headers)
+	// 2. Remove "Dark Mode" comments (single-line and multi-line section headers)
 	// Uses [\s\S] instead of a character range so newlines inside multi-line comments are matched
 	content = content.replace(
 		/\/\*(?:(?!\*\/)[\s\S])*?[Dd]ark [Mm]ode(?:(?!\*\/)[\s\S])*?\*\/\s*/g,
