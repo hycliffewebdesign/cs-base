@@ -1,0 +1,11 @@
+<!-- Interior page banner — set optional bannerPath for active crumb (defaults to current page URL) -->
+<div id="banner-310">
+    <div class="cs-container">
+        <span class="cs-int-title">{{ bannerTitle or (page.fileSlug | titleCase) }}</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="{{ bannerPath or page.url }}" class="cs-link cs-active">{{ bannerTitle or (page.fileSlug | titleCase) }}</a>
+        </div>
+    </div>
+    <div class="cs-background" aria-hidden="true"></div>
+</div>

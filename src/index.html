@@ -1,49 +1,24 @@
 ---
-title: "Welcome"
-description: "Your new website"
+title: "Hycliffe Web Design | Starting at $239/mo"
+description: "Professional websites for local businesses. Fast, mobile-optimized, and built to convert. Starting at $239/month."
 permalink: "/"
-tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+tags: "sitemap"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css" />
 
-    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
     {% if client.isProduction %}
         <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="/assets/css/local.css">
         </noscript>
-
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css" />
     {% endif %}
-
-    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
-    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
-    <!-- {% include "components/home-schema.html" %} -->
-
 {% endblock %}
 
 {% block body %}
-    <section id="welcome">
-        <div class="cs-container">
-            <div class="cs-content">
-                <h1>Welcome to Your New Website</h1>
-                <p>
-                    This template has been stripped to its bare minimum. All demo content
-                    has been moved to <code>scripts/deleted/</code> and can be safely deleted
-                    once you no longer need it.
-                </p>
-                <p>
-                    Get started by reading the
-                    Quick Start Guide
-                    section in the README.
-                </p>
-            </div>
-        </div>
-    </section>
 {% endblock %}

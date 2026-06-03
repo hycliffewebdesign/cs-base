@@ -1,50 +1,32 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // CRITICAL PAGE STYLES
-// Above-the-fold and high-priority styles for the home page's landing section.
-// Put the first section of the home page in here, so it loads immediately.
-// The rest of the home page styles in local.css will be deferred and
+// Above-the-fold styles for the home page and 404.
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Demo styles - Delete me!
-#welcome {
-    padding: 100px 16px;
+#hero {
+    padding: clamp(9rem, 20vw, 12rem) 1rem clamp(4rem, 10vw, 6rem);
+    background: linear-gradient(180deg, #f5f8fb 0%, #fff 100%);
 
     .cs-container {
-        max-width: 1280px;
+        max-width: 40rem;
         margin: 0 auto;
     }
 
     .cs-content {
-        max-width: 800px;
-        margin: 0 auto;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
     }
 
-    h1 {
-        margin-bottom: 24px;
-        font-size: clamp(2rem, 5vw, 3rem);
+    .cs-title {
+        max-width: none;
+        margin: 0;
     }
 
-    p {
-        margin-bottom: 16px;
-        font-size: 1.125rem;
-        line-height: 1.6;
-    }
-
-    code {
-        padding: 2px 8px;
-        background: #f4f4f4;
-        border-radius: 4px;
-        font-family: monospace;
-    }
-
-    a {
-        color: var(--primary);
-        text-decoration: underline;
-
-        &:hover {
-            opacity: 0.8;
-        }
+    .cs-text {
+        max-width: 32rem;
     }
 }
 

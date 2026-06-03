@@ -1,24 +1,30 @@
-// TODO: Replace every placeholder below before launching the site.
+const productionDomain = "https://hycliffewebdesign.com";
+
+function siteDomain() {
+    const fromEnv = process.env.URL || productionDomain;
+    return fromEnv.replace(/\/$/, "");
+}
 
 module.exports = {
-    name: "YOUR_BUSINESS_NAME",
-    email: "YOUR_EMAIL@example.com",
-    phoneForTel: "5555555555",
-    phoneFormatted: "(555) 555-5555",
+    name: "Hycliffe Web Design",
+    email: "hycliffewebdesign@gmail.com",
+    phoneForTel: "",
+    phoneFormatted: "",
+    tagline:
+        "Professional websites for local businesses. Fast, mobile-optimized, and built to convert.",
     address: {
-        lineOne: "YOUR_STREET_ADDRESS",
-        lineTwo: "SUITE_OR_UNIT_OPTIONAL",
-        city: "YOUR_CITY",
-        state: "ST",
-        zip: "00000",
+        lineOne: "",
+        lineTwo: "",
+        city: "",
+        state: "",
+        zip: "",
         country: "US",
-        mapLink: "https://maps.google.com/",
+        mapLink: "",
     },
     socials: {
-        facebook: "https://www.facebook.com/YOUR_PAGE",
-        instagram: "https://www.instagram.com/YOUR_HANDLE",
+        facebook: "",
+        instagram: "",
     },
-    //! Include https:// and no trailing slash
-    domain: "https://www.example.com",
+    domain: siteDomain(),
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };
