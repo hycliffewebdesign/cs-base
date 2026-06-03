@@ -1,0 +1,34 @@
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<section id="why-us-1186">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 520, height: 580 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 520, height: 580 }) | jpeg %}" type="image/jpeg">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Small business owner reviewing their new website" width="522" height="581" loading="lazy" decoding="async">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Why {{ client.name }}</span>
+            <h2 class="cs-title">Built for Owners Who Do Not Have Time for DIY</h2>
+            <p class="cs-text">
+                You get a real developer on call — not a ticket queue. We handle hosting, performance, and updates so your site stays fast and trustworthy.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <strong>Hand-coded, not templated clutter</strong> — lean pages that load fast on phones.
+                </li>
+                <li class="cs-li">
+                    <strong>Clear monthly pricing</strong> — no surprise rebuild bills when you need a change.
+                </li>
+                <li class="cs-li">
+                    <strong>Launch support</strong> — forms, analytics, and Search Console guidance when you go live.
+                </li>
+            </ul>
+            <a href="/about/" class="cs-button-solid">About Us</a>
+        </div>
+    </div>
+</section>

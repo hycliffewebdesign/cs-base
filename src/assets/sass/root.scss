@@ -663,8 +663,43 @@
 			}
 		}
 
-		.cs-button-solid {
+		.cs-button-solid:not(.cs-nav-button) {
 			display: none;
+		}
+
+		.cs-li-button {
+			margin-top: calc(8 / 16 * 1rem);
+		}
+
+		.cs-nav-button {
+			display: inline-block;
+			width: auto;
+			font-size: calc(14 / 16 * 1rem);
+			line-height: 1em;
+			padding: calc(14 / 16 * 1rem) calc(28 / 16 * 1rem);
+			text-align: center;
+			white-space: nowrap;
+			color: var(--bodyTextColorWhite);
+			background-color: var(--primary);
+
+			&:before {
+				height: 100%;
+				width: 0;
+				bottom: auto;
+				top: 0;
+				left: 0;
+				background-color: #000;
+				opacity: 1;
+				z-index: -1;
+			}
+
+			&:hover {
+				color: var(--bodyTextColorWhite);
+
+				&:before {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -689,6 +724,10 @@
 			}
 
 			.cs-li-link {
+				color: var(--bodyTextColorWhite);
+			}
+
+			.cs-nav-button {
 				color: var(--bodyTextColorWhite);
 			}
 		}
@@ -1061,6 +1100,40 @@
 				transition: width 0.3s;
 			}
 		}
+
+		.cs-li-button {
+			padding: calc(24 / 16 * 1rem) 0;
+		}
+
+		.cs-nav-button {
+			display: inline-block;
+			font-size: calc(14 / 16 * 1rem);
+			line-height: 1em;
+			padding: calc(12 / 16 * 1rem) calc(24 / 16 * 1rem);
+			white-space: nowrap;
+			color: var(--bodyTextColorWhite);
+			background-color: var(--primary);
+
+			&:before {
+				height: 100%;
+				width: 0;
+				bottom: auto;
+				top: 0;
+				left: 0;
+				background-color: #000;
+				opacity: 1;
+				display: block;
+				z-index: -1;
+			}
+
+			&:hover {
+				color: var(--bodyTextColorWhite);
+
+				&:before {
+					width: 100%;
+				}
+			}
+		}
 	}
 }
 
@@ -1083,6 +1156,10 @@
 				&:before {
 					background-color: var(--primaryLight);
 				}
+			}
+
+			.cs-nav-button {
+				color: var(--bodyTextColorWhite);
 			}
 		}
 	}

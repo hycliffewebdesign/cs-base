@@ -8,8 +8,13 @@
     background: linear-gradient(180deg, #f5f8fb 0%, #fff 100%);
 
     .cs-container {
-        max-width: 40rem;
+        width: 100%;
+        max-width: calc(1280 / 16 * 1rem);
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(2.5rem, 6vw, 4rem);
     }
 
     .cs-content {
@@ -18,15 +23,106 @@
         flex-direction: column;
         align-items: center;
         gap: 1.25rem;
+        max-width: 40rem;
+    }
+
+    .cs-topper {
+        color: var(--primary);
     }
 
     .cs-title {
         max-width: none;
         margin: 0;
+        color: var(--headerColor);
     }
 
     .cs-text {
         max-width: 32rem;
+        color: var(--bodyTextColor);
+    }
+
+    .cs-price {
+        color: var(--primary);
+    }
+
+    .cs-button-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .cs-picture {
+        width: 100%;
+        max-width: 26.25rem;
+        display: block;
+        border-radius: calc(8 / 16 * 1rem);
+        overflow: hidden;
+        box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.08);
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    #hero {
+        .cs-container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-content {
+            text-align: left;
+            align-items: flex-start;
+            flex: 1;
+            max-width: calc(560 / 16 * 1rem);
+        }
+
+        .cs-button-group {
+            justify-content: flex-start;
+        }
+
+        .cs-picture {
+            flex: none;
+            max-width: calc(420 / 16 * 1rem);
+        }
+    }
+}
+
+/* Dark mode — match hero background to site theme (global h1/p turn white in dark mode) */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero {
+            background: linear-gradient(180deg, var(--medium) 0%, var(--dark) 100%);
+
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+                opacity: 0.9;
+            }
+
+            .cs-price {
+                color: var(--primaryLight);
+            }
+
+            .cs-button-outline {
+                border-color: var(--bodyTextColorWhite);
+                color: var(--bodyTextColorWhite);
+            }
+        }
     }
 }
 
