@@ -1,5 +1,6 @@
 ---
 description: "Terms of service for Hycliffe Web Design."
+bannerTitle: "Terms of Service"
 eleventyComputed:
   title: "Terms of Service | {{ client.name }}"
   permalink: "/terms-of-service/"
@@ -12,4 +13,84 @@ eleventyComputed:
 {% endblock %}
 
 {% block body %}
+    {% include "components/page-banner.html" %}
+
+    <section id="page-content">
+        <div class="cs-container">
+            <p class="cs-legal-updated">Last updated: {% year %}</p>
+            <p class="cs-legal-intro">
+                These Terms of Service ("Terms") govern your use of <a href="{{ client.domain }}">{{ client.domain }}</a> and any web design, development, hosting, or related services provided by {{ client.name }} ("we," "us," or "our").
+            </p>
+            <p>
+                This document is a general template for a small web agency. Have a qualified attorney review and customize it for your business, contracts, and state before use with clients.
+            </p>
+
+            <h2 class="cs-h2">Agreement to Terms</h2>
+            <p>By accessing our website or engaging our services, you agree to these Terms. If you do not agree, do not use the site or our services. Separate written agreements or proposals for client projects may supplement or override these Terms where they conflict.</p>
+
+            <h2 class="cs-h2">Services</h2>
+            <p>{{ client.name }} provides website design, development, hosting setup, maintenance, and related digital services for businesses. Specific scope, deliverables, timelines, and fees are defined in a proposal, statement of work, or service agreement agreed to by you and us.</p>
+
+            <h2 class="cs-h2">Subscriptions and Payment</h2>
+            <p>Where monthly or recurring plans are offered (for example, website plans starting at $239/month):</p>
+            <ul>
+                <li>Fees, billing frequency, and included services are described in your agreement or invoice</li>
+                <li>Payments are due on the schedule stated in your agreement (often monthly on the 1st)</li>
+                <li>Late or failed payments may result in paused work, suspended hosting, or termination after notice</li>
+                <li>Price changes will be communicated in advance where required by your agreement or applicable law</li>
+            </ul>
+            <p>One-time project fees, deposits, and hourly work are billed as specified in your written quote or contract.</p>
+
+            <h2 class="cs-h2">Client Responsibilities</h2>
+            <p>You agree to:</p>
+            <ul>
+                <li>Provide timely content, feedback, logins, and approvals needed to complete work</li>
+                <li>Ensure you have rights to text, images, logos, and other materials you supply</li>
+                <li>Review deliverables and report issues within the timeframe stated in your agreement</li>
+                <li>Maintain accurate contact and billing information</li>
+            </ul>
+            <p>Delays caused by missing client input may extend timelines and are not our responsibility.</p>
+
+            <h2 class="cs-h2">Intellectual Property</h2>
+            <h3 class="cs-h3">Your content</h3>
+            <p>You retain ownership of content you provide. You grant us a license to use it as needed to perform services and display your site.</p>
+            <h3 class="cs-h3">Our work</h3>
+            <p>Upon full payment as defined in your agreement, you typically receive ownership or a license to the custom work product created for your project, excluding third-party tools, fonts, stock assets, frameworks, and pre-existing code or templates we reuse across projects. We may showcase completed work in our portfolio unless you request otherwise in writing.</p>
+            <h3 class="cs-h3">Third-party components</h3>
+            <p>Websites may include third-party software, plugins, or services subject to their own licenses and terms. You are responsible for ongoing licenses or fees for those tools where applicable.</p>
+
+            <h2 class="cs-h2">Hosting and Third-Party Services</h2>
+            <p>Hosting, forms, DNS, email, analytics, and similar services may be provided by third parties. We are not liable for outages, data loss, or policy changes by those providers, but we will use reasonable efforts to assist with support and migrations within the scope of your plan.</p>
+
+            <h2 class="cs-h2">Revisions and Support</h2>
+            <p>Included edits, support hours, and response times depend on your plan or contract. Work outside scope may be billed at our then-current hourly or project rates.</p>
+
+            <h2 class="cs-h2">Disclaimer of Warranties</h2>
+            <p>Our website and services are provided "as is" and "as available" without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We do not guarantee specific search rankings, traffic, leads, or revenue results.</p>
+
+            <h2 class="cs-h2">Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, {{ client.name }} and its owners, contractors, and affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for loss of profits, data, or goodwill. Our total liability for any claim arising from these Terms or our services will not exceed the amount you paid us for the specific service giving rise to the claim in the twelve (12) months before the claim, or one hundred U.S. dollars ($100) if no fees were paid, whichever is greater.</p>
+
+            <h2 class="cs-h2">Indemnification</h2>
+            <p>You agree to indemnify and hold us harmless from claims arising from your content, your use of the site, violation of these Terms, or violation of any law or third-party rights, except to the extent caused by our gross negligence or willful misconduct.</p>
+
+            <h2 class="cs-h2">Termination</h2>
+            <p>Either party may terminate a subscription or ongoing service as provided in the applicable agreement. Upon termination, you may owe fees for work performed through the termination date. We may suspend or remove hosted sites for non-payment or material breach after reasonable notice where practicable.</p>
+
+            <h2 class="cs-h2">Governing Law</h2>
+            <p>These Terms are governed by the laws of the United States and the state in which {{ client.name }} is principally located, without regard to conflict-of-law rules. Disputes will be resolved in the courts of that state unless otherwise required by law.</p>
+
+            <h2 class="cs-h2">Changes to These Terms</h2>
+            <p>We may update these Terms from time to time. The "Last updated" date above reflects the current version. Material changes may be posted on this page; continued use of the site after changes constitutes acceptance.</p>
+
+            <h2 class="cs-h2">Contact</h2>
+            <p>Questions about these Terms? Contact {{ client.name }}:</p>
+            <ul>
+                <li>Email: <a href="mailto:{{ client.email }}">{{ client.email }}</a></li>
+                {% if client.phoneForTel %}
+                <li>Phone: <a href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </section>
 {% endblock %}

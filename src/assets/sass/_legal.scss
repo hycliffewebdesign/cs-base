@@ -1,0 +1,63 @@
+// Shared legal page styles (imported by privacy-policy.scss and terms-of-service.scss)
+
+#page-content {
+    .cs-legal-updated {
+        font-size: calc(14 / 16 * 1rem);
+        color: var(--bodyTextColor);
+        opacity: 0.85;
+        margin: 0 0 calc(24 / 16 * 1rem);
+    }
+
+    .cs-legal-intro {
+        font-size: calc(18 / 16 * 1rem);
+        line-height: 1.5em;
+        margin: 0 0 calc(24 / 16 * 1rem);
+        color: var(--headerColor);
+    }
+
+    .cs-h2 {
+        font-size: calc(24 / 16 * 1rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: calc(32 / 16 * 1rem) 0 calc(12 / 16 * 1rem);
+        color: var(--headerColor);
+    }
+
+    .cs-h3 {
+        font-size: calc(18 / 16 * 1rem);
+        line-height: 1.3em;
+        font-weight: 700;
+        margin: calc(24 / 16 * 1rem) 0 calc(8 / 16 * 1rem);
+        color: var(--headerColor);
+    }
+
+    p {
+        margin: 0 0 calc(16 / 16 * 1rem);
+    }
+
+    ul {
+        margin: 0 0 calc(16 / 16 * 1rem);
+        padding-left: calc(24 / 16 * 1rem);
+
+        li {
+            margin-bottom: calc(8 / 16 * 1rem);
+        }
+    }
+
+    a {
+        font-weight: 600;
+    }
+}
+
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #page-content {
+            .cs-legal-updated,
+            .cs-legal-intro,
+            .cs-h2,
+            .cs-h3 {
+                color: var(--bodyTextColorWhite);
+            }
+        }
+    }
+}
