@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2415 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    z-index: 1;
+  }
+  #sbs-2415:before {
+    /* background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbs-2415 .cs-container {
+    width: 100%;
+    position: relative;
+    /* changes to 1280px at tablet */
+    max-width: 35.25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-2415 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 36.625rem;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left, set to center to centrally align */
+    align-items: flex-start;
+  }
+  #sbs-2415 .cs-title {
+    max-width: 15ch;
+  }
+  #sbs-2415 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-2415 .cs-h3 {
+    color: var(--bodyTextColor);
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5em;
+  }
+  #sbs-2415 .cs-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 2rem;
+    max-width: 31.25rem;
+    width: 100%;
+    padding: 0;
+    gap: 0.75rem;
+  }
+  #sbs-2415 .cs-li {
+    display: flex;
+    justify-content: flex-start;
+    /* Push icon top the top so if the list item goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    width: 100%;
+    list-style: none;
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    color: var(--headerColor);
+    font-weight: bold;
+    gap: 0.75rem;
+  }
+  #sbs-2415 .cs-icon {
+    width: 1rem;
+    height: auto;
+    margin-top: 0.1875rem;
+    display: block;
+  }
+  #sbs-2415 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: var(--headerColor);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2415 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-2415 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #sbs-2415 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-2415 .cs-image-group {
+    /* scales the whole section down and ties the font size to the vw, changes at desktop */
+    font-size: min(3.49vw, 1rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 26.125em;
+    height: 31.0625em;
+    position: relative;
+    z-index: 1;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #sbs-2415 .cs-picture {
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+  #sbs-2415 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2415 .cs-picture1 {
+    width: 26.125em;
+    height: 26.125em;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 21.875rem;
+  }
+  #sbs-2415 .cs-picture2 {
+    width: 26.125em;
+    height: 16.875em;
+    bottom: 0;
+    left: 0;
+    /* using object-fit: contain, as cs-picture2 is a PNG and we don't want the image to get cut off at higher resolutions */
+  }
+  #sbs-2415 .cs-picture2 img {
+    object-fit: contain;
+  }
+  #sbs-2415 .cs-floater {
+    display: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2415 .cs-container {
+    max-width: 80rem;
+  }
+  #sbs-2415 .cs-floater {
+    /* 119px - 247px */
+    width: clamp(7.4375rem, 16vw, 15.4375rem);
+    height: auto;
+    position: absolute;
+    right: 1.1875rem;
+    /* 10px - 98px */
+    bottom: calc(clamp(0.625rem, 7vw, 6.125rem) * -1);
+    display: block;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2415 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-2415 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+    align-self: center;
+  }
+  #sbs-2415 .cs-image-group {
+    width: 39.375em;
+    height: auto;
+    min-height: 46.8125em;
+    font-size: min(1.03vw, 1rem);
+  }
+  #sbs-2415 .cs-picture1 {
+    width: 39.375em;
+    height: auto;
+    min-height: 39.375rem;
+    top: 0;
+    bottom: 7.5rem;
+  }
+  #sbs-2415 .cs-picture2 {
+    height: 25.5em;
+    width: 32.4375em;
+  }
+  #sbs-2415 .cs-floater {
+    /* 20px - 39px */
+    right: calc(clamp(1.25rem, 3vw, 2.4375rem) * -1);
+  }
+}
+/* Large Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #sbs-2415 .cs-content {
+    padding: 9rem 0;
+  }
+  #sbs-2415 .cs-floater {
+    right: 50%;
+    margin-right: -57.8125rem;
+    bottom: 1rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Side By Side                -->
+<!-- ============================================ -->
+
+<section id="sbs-2415">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/pet-sbs1.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/pet-sbs1.jpg">
+                <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/pet-sbs1.jpg" alt="wedding" width="272" height="337">
+            </picture>
+            <!--Small Image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/pet-sbs2.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/pet-sbs2.png">
+                <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/pet-sbs2.png" alt="wedding" width="243" height="367">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Featured Service</span>
+            <h2 class="cs-title">Sanitizing Yard Spray Service</h2>
+            <p class="cs-text">
+                Eliminate bacteria and odors with our eco-friendly disinfectant spray, available as a standalone service or add-on to regular waste removal.
+            </p>
+            <h3 class="cs-h3">What's Included:</h3>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="icon" width="16" height="16">
+                    Pet-Safe Formula no harmful chemicals.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="icon" width="16" height="16">
+                    Odor Elimination leaves your yard fresh.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="icon" width="16" height="16">
+                    Bacteria Control healthier space for pets and people.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="icon" width="16" height="16">
+                    You have now a flexible scheduling and easy billing
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Request Sanitizing Service</a>
+        </div>
+        <!--Floating Graphic-->
+        <img class="cs-floater" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/poo.svg" alt="flower" width="244" height="186" aria-hidden="true">
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

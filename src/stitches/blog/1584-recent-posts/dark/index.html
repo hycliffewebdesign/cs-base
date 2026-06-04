@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recent posts</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Events           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-1584 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #blog-1584 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #blog-1584 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: contents;
+    flex-direction: column;
+    align-items: center;
+  }
+  #blog-1584 .cs-title {
+    margin: 0;
+  }
+  #blog-1584 .cs-button-solid {
+    font-size: 1rem;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    order: 3;
+  }
+  #blog-1584 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #blog-1584 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #blog-1584 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #blog-1584 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #blog-1584 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  #blog-1584 .cs-picture {
+    width: 100%;
+    height: 15rem;
+    background-color: #1a1a1a;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #blog-1584 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #blog-1584 .cs-info {
+    height: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  #blog-1584 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #blog-1584 .cs-date {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: normal;
+    margin: 0 0 1.25rem 0;
+    color: #767676;
+    display: block;
+  }
+  #blog-1584 .cs-info-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 0 1.25rem 0;
+    color: var(--bodyTextColor);
+  }
+  #blog-1584 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-decoration: none;
+    text-align: inherit;
+    margin-top: auto;
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-1584 .cs-link:hover:before {
+    width: 100%;
+  }
+  #blog-1584 .cs-link:before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: var(--primary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: -0.125rem;
+    left: 0;
+    transition: width 0.3s;
+  }
+}
+/* Tablet - 648px */
+@media only screen and (min-width: 48rem) {
+  #blog-1584 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-1584 .cs-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  #blog-1584 .cs-item {
+    grid-column: span 7;
+  }
+  #blog-1584 .cs-item:first-of-type {
+    flex-direction: column;
+    grid-column: span 5;
+    grid-row: span 2;
+  }
+  #blog-1584 .cs-item:first-of-type .cs-picture {
+    max-width: none;
+    height: 60%;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #blog-1584 .cs-item {
+    grid-column: span 6;
+  }
+  #blog-1584 .cs-item:first-of-type {
+    grid-column: span 6;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                     Blog                     -->
+<!-- ============================================ -->
+
+<section id="blog-1584">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Our Recent News</h2>
+            <a href="" class="cs-button-solid">View All</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/guy-in-denim.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/guy-in-denim.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/guy-in-denim.jpg" alt="guy in denim" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">One of the most popular styles this summer is the classic denim look.</h3>
+                    <span class="cs-date">8th Oct, 2023</span>
+                    <p class="cs-info-text">
+                        Summer is just around the corner, which means it’s time to update our wardrobes with the latest fashion trends. The fashion world is always buzzing with new styles, and this summer is no exception. 
+                    </p>
+                    <a href="" class="cs-link">
+                        Read More
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/couple-in-denim.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/couple-in-denim.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/couple-in-denim.jpg" alt="couple in denim" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">
+                        Denim shorts, skirts, and jackets are all must-haves for any summer wardrobe.
+                    </h3>
+                    <span class="cs-date">8th Oct, 2023</span>
+                    <p class="cs-info-text">
+                        Summer is just around the corner, which means it’s time to update our wardrobes with the latest fashion trends. The fashion world is always buzzing with new styles...
+                    </p>
+                    <a href="" class="cs-link">
+                        Read More
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/denim-pants.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/denim-pants.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/denim-pants.jpg" alt="denim pants" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">The beauty of denim is that it never goes out of style, and can be dressed up or down.</h3>
+                    <span class="cs-date">8th Oct, 2023</span>
+                    <p class="cs-info-text">
+                        The fashion world is always buzzing with new styles, and this summer is no exception. From bold colors to playful prints, the new summer collections are all about having...
+                    </p>
+                    <a href="" class="cs-link">
+                        Read More
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-2420 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2420:before {
+    /* background color overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-2420 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbsr-2420 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 36.25rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-2420 .cs-content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbsr-2420 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbsr-2420 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2420 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbsr-2420 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbsr-2420 .cs-ul {
+    width: 100%;
+    list-style: none;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #sbsr-2420 .cs-li {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: 700;
+    width: 100%;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #sbsr-2420 .cs-li-icon {
+    width: 1rem;
+    height: auto;
+    flex: none;
+    display: block;
+    position: relative;
+  }
+  #sbsr-2420 .cs-image-group {
+    /* scaling entire section down. font-size starts at a min in vw, and stops when that vales equals .74em, resets at desktop */
+    font-size: min(2.3vw, .6em);
+    width: 39.375em;
+    height: 44em;
+    position: relative;
+  }
+  #sbsr-2420 .cs-picture {
+    width: 100%;
+    height: 44em;
+    display: block;
+    position: relative;
+  }
+  #sbsr-2420 .cs-picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  #sbsr-2420 .cs-circle {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-2420 .cs-message {
+    font-weight: 700;
+    width: 12.3125em;
+    padding: 1em 1.5em;
+    background-color: #fff;
+    border-radius: 2em;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-2420 .cs-message:before {
+    /* background color overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    border-radius: 2em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  #sbsr-2420 .cs-message:after {
+    /* background color overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 0.25em solid var(--primary);
+    opacity: 0.2;
+    border-radius: 2em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  #sbsr-2420 .cs-arrow {
+    width: 4.4375em;
+    height: auto;
+    position: absolute;
+    top: 6.1875em;
+    left: 3.125em;
+    transform: rotate(-29deg);
+  }
+  #sbsr-2420 .cs-wrapper {
+    width: 100%;
+    max-width: 36.25rem;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 32px */
+    gap: clamp(1rem, 1.9vw, 2rem);
+  }
+  #sbsr-2420 .cs-graphic-group {
+    /* 96px - 157px */
+    width: clamp(6rem, 10vw, 9.8125rem);
+    height: clamp(6rem, 10vw, 9.8125rem);
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #sbsr-2420 .cs-circle-small {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-2420 .cs-graphic {
+    /* 55px - 96px */
+    width: clamp(3.4375rem, 5vw, 6rem);
+    height: auto;
+  }
+  #sbsr-2420 .cs-header {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.9vw, 1.5625rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  #sbsr-2420 .cs-graphic-text {
+    margin-bottom: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-2420 .cs-wrapper {
+    flex-direction: row;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbsr-2420 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #sbsr-2420 .cs-image-group {
+    /* reset the scale */
+    font-size: min(0.95vw, 1rem);
+    /* prevent flexbox from squishing it */
+    flex: none;
+    order: 2;
+  }
+  #sbsr-2420 .cs-content-wrapper {
+    width: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-2420">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image, then crop all the extra space around the image out so it doesnt look too small-->
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/person-dog.png" />
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/person-dog.png" />
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/person-dog.png" alt="woman with her dog" width="630" height="704" aria-hidden="true" />
+            </picture>
+            <!--Message-->
+            <span class="cs-message">Cleaner spaces, happier pets.</span>
+            <!--Arrow-->
+            <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/black-arrow2.svg" alt="graphic" width="71" height="151" aria-hidden="true" />
+            <!--Circle Graphic-->
+            <img class="cs-circle" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/dog-circle.svg" alt="graphic" width="630" height="646" aria-hidden="true" />
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content-wrapper">
+            <div class="cs-content">
+                <span class="cs-topper">About Us</span>
+                <h2 class="cs-title">Dedicated to Cleaner Yards and Communities</h2>
+                <p class="cs-text">
+                    We provide consistent, reliable pet waste services backed by strong community values and eco-friendly practices. Your pets’ safety and your satisfaction drive
+                    everything we do.
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-li-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="diamond" width="16" height="16" />
+                        We proudly serve San Jose and the surrounding areas.
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="diamond" width="16" height="16" />
+                        Skilled team dedicated to quality service.
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="diamond" width="16" height="16" />
+                        Safe for pets, families, and the environment.
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/diamond.svg" alt="diamond" width="16" height="16" />
+                        Count on us for punctual and courteous visits.
+                    </li>
+                </ul>
+                <a class="cs-button-solid" href="">Learn More About Us</a>
+            </div>
+            <div class="cs-wrapper">
+                <div class="cs-graphic-group">
+                    <!-- Circle Graphic -->
+                    <img class="cs-circle-small" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/dog-circle.svg" alt="circle" loading="lazy" decoding="async" aria-hidden="true" width="157" height="157" />
+                    <!-- Poop graphic -->
+                    <img class="cs-graphic" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Illustrations/poop-bag.svg" alt="poop bag" loading="lazy" decoding="async" aria-hidden="true" width="96" height="108" />
+                </div>
+                <div class="cs-flex">
+                    <h3 class="cs-header">Our mission:</h3>
+                    <p class="cs-text cs-graphic-text">
+                        Our mission is to promote healthier environments through professional, affordable pet waste management services that make life easier for families, property
+                        managers, and pet lovers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

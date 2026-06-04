@@ -1,0 +1,55 @@
+<!--
+    NOTES: 
+
+    This section overlaps the section above and below it with negative margins pulling the sections toward itself.
+
+    1) on the section above this one, add a padding-bottom of 120px at 64rem (1024px) wide media query
+
+    2) on the section below this one, add padding top 120px at 37.5rem (600px) wide media query
+
+    This will create the space needed to account for the images overlapping their sections and allowing for more space so it doesn't get too cluttered.
+
+    There's also a couple options with this one when it comes to background colors on the sections themselves. The bubbles are cut off with overflow:hidden on the cs-wrapper parent div.  Ideally, you add background-color: #f7f7f7 to any section below this one for contrast since you dont just want these clipped bubbles in the middle of all that white. If you want the section below this stitch to also be white, remove the overflow:hidden from the cs-wrapper div that wraps the bubbles. This will allow them to overflow their container and can float in their full display size against both white backgrounds.
+-->
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1360">
+    <div class="cs-container">
+        <picture class="cs-picture cs-picture1">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg" alt="meeting" width="305" height="339">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">About Company</span>
+            <h2 class="cs-title">We're delighted to provide excellent customer service</h2>
+            <h3 class="cs-h3">
+                We’re committed to delivering the best digital 
+                marketing for businesses
+            </h3>
+            <p class="cs-text">
+                There are many variations of passages of Lorem Ipsumavailable, but the majority have suffered alteration in someform, simply free text by injected humour, or randomised.
+            </p>
+            <a href="" class="cs-button-solid">Discover More</a>
+        </div>
+        <picture class="cs-picture cs-picture2">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg" alt="meeting" width="305" height="339">
+        </picture>
+    </div>
+    <!--
+        Since we cant use overflow:hidden on the section container to clip the bubbles when they overflow the edges we need to make a wrapper around the bubbles that are the same dimensions as the section container and add overflow: hidden to that element. We need to see the images overflow the section container, so this is the solution to that problem. 
+    
+    -->
+    <div class="cs-wrapper">
+        <div class="cs-bubbles" aria-hidden="true"></div>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+<!--
+    NOTES:
+
+    We are using negative margin on the cs-card-group to create the overlapping effect. This pulls the section below it toward it which makes it overlap whatever section is below it. So we need to add extra padding top the the section below it to account for this. Here's the values you need to add to the section below this one to make them work together:
+
+    On mobile:
+    LESS: padding-top: (260/16rem)
+    SCSS: padding-top: calc(260 / 16 * 1rem)
+    CSS: 16.25rem
+
+    On tablet (768px):
+    /* 132px - 260px */
+    padding-top: clamp(8.25rem, 25vw, 16.25rem);
+-->
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1482">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Daycare & Preschool</span>
+            <h1 class="cs-title">Together We’ll Explore
+                New Things</h1>
+            <p class="cs-text">
+                Our mission is to provide affordable, high-quality early education and childcare services for working families to ensure every child.
+            </p>
+            <a href="" class="cs-button-solid">Get Started</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-house.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Home-like Environment</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-shield.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Security and Safety</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-thumb.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Quality Educators</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-ball.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Learn by Playing</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+        </ul>
+    </div>
+    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg" alt="abstract background" width="2250" height="1500" aria-hidden="true">
+    </picture>
+    <div class="cs-graphics-wrapper">
+        <!--Flower-->
+        <img class="cs-flower cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower.svg" alt="abstract flower" width="139" height="144" aria-hidden="true">
+        <!--Yellow Blob-->
+        <img class="cs-blob1 cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-shape.svg" alt="abstract shape" width="378" height="268" aria-hidden="true">
+        <!--Red Blob-->
+        <img class="cs-blob2 cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/orange-blob.svg" alt="abstract shap" width="318" height="221" aria-hidden="true">
+        <!--Leaf-->
+        <img class="cs-leaf cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/abstract-leaf.svg" alt="abstract leaf" width="318" height="221" aria-hidden="true">
+    </div>
+    <!--SVG Curve-->
+    <svg class="cs-curve" width="1920" height="136" viewBox="0 0 1920 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="#fff"/>
+    </svg>
+</section>

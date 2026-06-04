@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing-1842 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #pricing-1842:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.03;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #pricing-1842 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #pricing-1842 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    position: relative;
+  }
+  #pricing-1842 .cs-topper {
+    color: var(--secondary);
+  }
+  #pricing-1842 .cs-title {
+    max-width: none;
+    margin: 0;
+  }
+  #pricing-1842 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    /* 16px - 60px */
+    gap: clamp(1rem, 2vw, 3.75rem);
+    position: relative;
+  }
+  #pricing-1842 .cs-item {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    max-width: 25.8125rem;
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 60px - 80px top *
+            /* 32px - 40px left & right */
+    padding: clamp(3.75rem, 8vw, 5rem) clamp(2rem, 4vw, 2.5rem);
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 30.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #pricing-1842 .cs-item:before {
+    /* Background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #pricing-1842 .cs-item:after {
+    /* border color */
+    content: '';
+    border: 8px solid var(--primary);
+    box-sizing: border-box;
+    border-radius: 30.625rem;
+    opacity: 0.3;
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: 10;
+    /* keeps mouse from interacting with it */
+    pointer-events: none;
+  }
+  #pricing-1842 .cs-item.cs-popular {
+    background-color: var(--primary);
+  }
+  #pricing-1842 .cs-item.cs-popular:after {
+    border-color: #fff;
+    opacity: 0.7;
+  }
+  #pricing-1842 .cs-item.cs-popular .cs-ul:before {
+    background-color: #fff;
+    opacity: 0.7;
+  }
+  #pricing-1842 .cs-item.cs-popular .cs-package {
+    background-color: #fff;
+  }
+  #pricing-1842 .cs-item.cs-popular .cs-price,
+  #pricing-1842 .cs-item.cs-popular .cs-li {
+    color: var(--bodyTextColorWhite);
+  }
+  #pricing-1842 .cs-item.cs-popular .cs-li.cs-disabled {
+    filter: brightness(550%);
+  }
+  #pricing-1842 .cs-item.cs-popular .cs-button-solid {
+    background-color: #fff;
+    color: var(--primary);
+  }
+  #pricing-1842 .cs-item.cs-popular .cs-button-solid:hover {
+    background-color: #ffffff;
+  }
+  #pricing-1842 .cs-package {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    width: 12.4375rem;
+    /* 16px - 20px bottom */
+    margin: 0 0 clamp(1rem, 2vw, 1.5rem) 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 1rem 1.5rem;
+    overflow: hidden;
+    color: var(--primary);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #pricing-1842 .cs-package:before {
+    /* Background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #pricing-1842 .cs-price {
+    /* 31px - 39px */
+    font-size: clamp(1.9375rem, 4vw, 2.4375rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #pricing-1842 .cs-ul {
+    width: 100%;
+    /* 32px - 40px */
+    margin: clamp(2rem, 4vw, 2.5rem) 0 auto;
+    padding: 1.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #pricing-1842 .cs-ul:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--primary);
+    opacity: 0.3;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #pricing-1842 .cs-li {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #pricing-1842 .cs-li.cs-disabled {
+    opacity: 0.5;
+  }
+  #pricing-1842 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #pricing-1842 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #pricing-1842 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #pricing-1842 .cs-button-solid {
+    margin-top: 2rem;
+    padding: 0 3rem;
+    border-radius: 3.75rem;
+    overflow: hidden;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-1842 .cs-item {
+    width: 48%;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #pricing-1842 .cs-card-group {
+    flex-wrap: nowrap;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
+
+<section id="pricing-1842">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Pricing</span>
+            <h2 class="cs-title">Pricing Plans for Our Services</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-package">Basic Membership</span>
+                <span class="cs-price">$125/month</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        All available starter feature
+                    </li>
+                    <li class="cs-li">
+                        Home service 24/7
+                    </li>
+                    <li class="cs-li">
+                        Customer agent service
+                    </li>
+                    <li class="cs-li">
+                        Professional Service
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        2 dedicated photographer
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Remote Service mechanic
+                    </li>
+                </ul>
+                <a href="" class="cs-button-solid">Buy Subscription</a>
+            </li>
+            <li class="cs-item cs-popular">
+                <span class="cs-package">VIP Membership</span>
+                <span class="cs-price">$150/month</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        All available starter feature
+                    </li>
+                    <li class="cs-li">
+                        Home service 24/7
+                    </li>
+                    <li class="cs-li">
+                        Customer agent service
+                    </li>
+                    <li class="cs-li">
+                        Professional Service
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        2 dedicated photographer
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Remote Service mechanic
+                    </li>
+                </ul>
+                <a href="" class="cs-button-solid">Buy Subscription</a>
+            </li>
+            <li class="cs-item">
+                <span class="cs-package">Online Membership</span>
+                <span class="cs-price">$225/month</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        All available starter feature
+                    </li>
+                    <li class="cs-li">
+                        Home service 24/7
+                    </li>
+                    <li class="cs-li">
+                        Customer agent service
+                    </li>
+                    <li class="cs-li">
+                        Professional Service
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        2 dedicated photographer
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        Remote Service mechanic
+                    </li>
+                </ul>
+                <a href="" class="cs-button-solid">Buy Subscription</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

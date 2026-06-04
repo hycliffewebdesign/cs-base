@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>locations</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---            Map             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #map-1834 {
+    min-height: calc(540/16 * 1rem);
+    padding: var(--sectionPadding);
+    /* 268px - 450px */
+    padding-top: clamp(16.75rem, 20vw, 28.125rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  #map-1834 .cs-icon {
+    width: calc(52/16 * 1rem);
+    height: auto;
+    display: block;
+    position: absolute;
+    top: calc(112/16 * 1rem);
+  }
+  #map-1834 .cs-container {
+    width: 100%;
+    max-width: calc(328/16 * 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #map-1834 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #map-1834 .cs-item {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    max-width: calc(462/16 * 1rem);
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    /* 32px - 40px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(2rem, 3vw, 2.5rem) clamp(1rem, 4.2vw, 2rem);
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: calc(260/16 * 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 12;
+    /* 8px - 12px */
+    gap: clamp(0.5rem, 1.2vw, 0.75rem);
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+  #map-1834 .cs-item:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #map-1834 .cs-item:hover {
+    background-color: #8F5B34;
+    cursor: pointer;
+  }
+  #map-1834 .cs-item:hover .cs-h2 {
+    color: var(--bodyTextColorWhite);
+  }
+  #map-1834 .cs-item:hover .cs-item-text {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.9;
+  }
+  #map-1834 .cs-h2 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #map-1834 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #map-1834 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #map-1834 .cs-background iframe {
+    width: 100%;
+    height: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #map-1834 .cs-background:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.16;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #map-1834 .cs-container {
+    max-width: calc(1720/16 * 1rem);
+  }
+  #map-1834 .cs-item {
+    max-width: 100%;
+    grid-column: span 6;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #map-1834 .cs-item {
+    grid-column: span 3;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Map                       -->
+<!-- ============================================ -->
+
+<section id="map-1834">
+    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/brown-pin.svg" alt="icon" decoding="async" width="52" height="52" aria-hidden="true">
+    <div class="cs-background">
+        <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.643306704404!2d-87.63703069895008!3d41.879020188115746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cb8d7b27921%3A0x52950a0fe30adc5f!2s71%20South%20Wacker!5e0!3m2!1sen!2sus!4v1712540404095!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h2 class="cs-h2">
+                    Main Branch
+                </h2>
+                <span class="cs-item-text">
+                    No. 14 Av. Pierre Mendes, Usa 12245
+                </span>
+            </li>
+            <li class="cs-item">
+                <h2 class="cs-h2">
+                    UK Branch
+                </h2>
+                <span class="cs-item-text">
+                    334 Oakland Drive Brooklyn, NY 11218
+                </span>
+            </li>
+            <li class="cs-item">
+                <h2 class="cs-h2">
+                    Japan Branch
+                </h2>
+                <span class="cs-item-text">
+                    Chicago HQ Estica Cop. Macomb, MI 48042
+                </span>
+            </li>
+            <li class="cs-item">
+                <h2 class="cs-h2">
+                    UK Branch
+                </h2>
+                <span class="cs-item-text">
+                    334 Oakland Drive Brooklyn, NY 11218
+                </span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

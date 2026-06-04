@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #meet-team-1368 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #meet-team-1368 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-team-1368 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #meet-team-1368 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    align-items: stretch;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #meet-team-1368 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 25.8125rem;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+  }
+  #meet-team-1368 .cs-item:hover .cs-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #meet-team-1368 .cs-item:hover .cs-info {
+    color: #fff;
+    background-color: var(--secondary);
+  }
+  #meet-team-1368 .cs-picture-wrapper {
+    /* 12px - 20px */
+    margin-bottom: clamp(0.75rem, 4vw, 1.25rem);
+    position: relative;
+  }
+  #meet-team-1368 .cs-picture {
+    margin: 0 auto;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+  #meet-team-1368 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #meet-team-1368 .cs-info {
+    text-align: center;
+    /* 16px - 24px */
+    padding: clamp(1rem, 1.7vw, 1.5rem);
+    background-color: #f7f7f7;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* makes the info boxes grow when the items aren't matching heights */
+    flex-grow: 1;
+    transition: background-color 0.3s;
+  }
+  #meet-team-1368 .cs-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    margin: 0 0 0.25rem;
+    gap: 1rem;
+    transition: color 0.3s;
+  }
+  #meet-team-1368 .cs-job {
+    transition: color 0.3s;
+  }
+  #meet-team-1368 .cs-social {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    right: 50%;
+    bottom: 1.5rem;
+    z-index: 1;
+    transform: translateX(50%);
+  }
+  #meet-team-1368 .cs-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(1rem);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #meet-team-1368 .cs-link:hover .cs-icon {
+    /* use this pen to generate a filter from black to a color of your choosing */
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(55%) sepia(42%) saturate(4845%) hue-rotate(337deg) brightness(101%) contrast(98%);
+  }
+  #meet-team-1368 .cs-link:first-of-type,
+  #meet-team-1368 .cs-link:last-of-type {
+    margin-top: -1.25rem;
+  }
+  #meet-team-1368 .cs-link:nth-of-type(1) {
+    transition-delay: 0.05s;
+  }
+  #meet-team-1368 .cs-link:nth-of-type(2) {
+    transition-delay: 0.1s;
+  }
+  #meet-team-1368 .cs-link:nth-of-type(3) {
+    transition-delay: 0.15s;
+  }
+  #meet-team-1368 .cs-link:nth-of-type(4) {
+    transition-delay: 0.2s;
+  }
+  #meet-team-1368 .cs-icon {
+    width: 1.375rem;
+    height: auto;
+    display: block;
+  }
+  #meet-team-1368 .cs-bubbles {
+    width: 22.3125rem;
+    height: 29.375rem;
+    display: none;
+    position: absolute;
+    top: -7.5rem;
+    left: -11.25rem;
+    z-index: -1;
+  }
+  #meet-team-1368 .cs-bubbles:before {
+    /* white border bubble */
+    content: "";
+    width: 18.375rem;
+    height: 18.375rem;
+    background: transparent;
+    opacity: 1;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: floatAnimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+  #meet-team-1368 .cs-bubbles:after {
+    /* orange bubble */
+    content: "";
+    width: 18.375rem;
+    height: 18.375rem;
+    background: var(--secondary);
+    opacity: 0.1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    animation-name: floatAnimation2;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-team-1368 .cs-item {
+    grid-column: span 4;
+  }
+  #meet-team-1368 .cs-bubbles {
+    display: block;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #meet-team-1368 .cs-bubbles {
+    margin-left: -66.375rem;
+    top: 40.3125rem;
+    left: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Meet the Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1368">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Team</span>
+            <h2 class="cs-title">Our Expert Team Members</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis quam eu elit lobortis ultrices. Nulla ut accumsan lorem, sed molestie justo. Praesent vehicula eleifend.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-1.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-1.jpg">
+                        <img decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-1.jpg"
+                                alt="person" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                                        width="17" height="16">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube1a.svg" alt="youtube"
+                                        width="17" height="16">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Esther Howard</span>
+                    <span class="cs-job">Web Developer</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-2.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-2.jpg">
+                        <img decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-2.jpg"
+                                alt="person" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                                        width="17" height="16">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube1a.svg" alt="youtube"
+                                        width="17" height="16">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Leslie Alexander</span>
+                    <span class="cs-job">Marketing Expert</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-3.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-3.jpg">
+                        <img decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-3.jpg"
+                                alt="person" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                                        width="17" height="16">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube1a.svg" alt="youtube"
+                                        width="17" height="16">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Jenny Wilson</span>
+                    <span class="cs-job">UI/UX Designer</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-1.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-1.jpg">
+                        <img decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-1.jpg"
+                                alt="person" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                                        width="17" height="16">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube1a.svg" alt="youtube"
+                                        width="17" height="16">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Esther Howard</span>
+                    <span class="cs-job">Web Developer</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-2.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-2.jpg">
+                        <img decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-2.jpg"
+                                alt="person" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                                        width="17" height="16">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube1a.svg" alt="youtube"
+                                        width="17" height="16">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Leslie Alexander</span>
+                    <span class="cs-job">Marketing Expert</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-3.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-3.jpg">
+                        <img decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/agency-worker-3.jpg"
+                                alt="person" width="413" height="374" aria-hidden="true">
+                    </picture>
+                    <div class="cs-social">
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                                        width="17" height="16">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                                        width="15" height="13">
+                        </a>
+                        <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube1a.svg" alt="youtube"
+                                        width="17" height="16">
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <span class="cs-name">Jenny Wilson</span>
+                    <span class="cs-job">UI/UX Designer</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<script></script>
+</body>
+</html>

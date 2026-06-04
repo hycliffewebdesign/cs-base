@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-team-1677 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+  }
+  #meet-team-1677 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-team-1677 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #meet-team-1677 .cs-title {
+    margin: 0;
+    max-width: 23ch;
+  }
+  #meet-team-1677 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 20px - 40px */
+    column-gap: clamp(1.25rem, 1.9vw, 2.5rem);
+    /* 24px - 40px */
+    row-gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  #meet-team-1677 .cs-item {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    grid-column: span 12;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+  }
+  #meet-team-1677 .cs-item:hover {
+    cursor: pointer;
+  }
+  #meet-team-1677 .cs-item:hover .cs-link {
+    opacity: 1;
+  }
+  #meet-team-1677 .cs-item:hover .cs-name {
+    color: var(--primary);
+  }
+  #meet-team-1677 .cs-item:hover .cs-picture:after {
+    opacity: 1;
+  }
+  #meet-team-1677 .cs-item:hover .cs-picture img {
+    transform: scale(1.1);
+  }
+  #meet-team-1677 .cs-picture {
+    width: 100%;
+    /* 300px - 380px */
+    height: clamp(18.75rem, 35vw, 23.75rem);
+    /* clips img tag from overflowing it on hover */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-team-1677 .cs-picture:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 39.89%);
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+  }
+  #meet-team-1677 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.7s;
+  }
+  #meet-team-1677 .cs-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 0.25rem;
+  }
+  #meet-team-1677 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #meet-team-1677 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #meet-team-1677 .cs-link {
+    gap: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 4.5rem;
+    z-index: 1;
+    padding: 0.5rem;
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #meet-team-1677 .cs-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+/* Tablet - 500px */
+@media only screen and (min-width: 31.25rem) {
+  #meet-team-1677 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Small Desktop - 850px */
+@media only screen and (min-width: 53.125rem) {
+  #meet-team-1677 .cs-item {
+    grid-column: span 3;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1677">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Team</span>
+            <h2 class="cs-title">Our Expert Team Members</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-one.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-one.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-one.jpg" alt="person" width="290" height="380">
+                </picture>
+                <a href="" class="cs-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-linkedin.svg" alt="facebook" width="22" height="22">
+                </a>
+                <div class="cs-info">
+                    <span class="cs-name">Esther Howard</span>
+                    <span class="cs-job">Web Developer</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-three.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-three.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-three.jpg" alt="person" width="290" height="380">
+                </picture>
+                <a href="" class="cs-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-linkedin.svg" alt="facebook" width="22" height="22">
+                </a>
+                <div class="cs-info">
+                    <span class="cs-name">Leslie Alexander</span>
+                    <span class="cs-job">Marketing Expert</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson1.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson1.jpg" alt="person" width="290" height="380">
+                </picture>
+                <a href="" class="cs-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-linkedin.svg" alt="facebook" width="22" height="22">
+                </a>
+                <div class="cs-info">
+                    <span class="cs-name">Wade Warren</span>
+                    <span class="cs-job">SEO Expert</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-two.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-two.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/day-care-team-two.jpg" alt="person" width="290" height="380">
+                </picture>
+                <a href="" class="cs-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-linkedin.svg" alt="facebook" width="22" height="22">
+                </a>
+                <div class="cs-info">
+                    <span class="cs-name">Jenny Wilson</span>
+                    <span class="cs-job">Web Developer</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

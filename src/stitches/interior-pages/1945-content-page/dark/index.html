@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>content page</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #content-page-1945 {
+    padding: var(--sectionPadding);
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #content-page-1945 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #content-page-1945 .cs-content {
+    text-align: left;
+    width: 100%;
+    max-width: 47.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #content-page-1945 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #content-page-1945 h2,
+  #content-page-1945 h3,
+  #content-page-1945 h4,
+  #content-page-1945 h5,
+  #content-page-1945 h6 {
+    font-weight: 700;
+    text-align: inherit;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+  }
+  #content-page-1945 h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  #content-page-1945 h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+  #content-page-1945 h4,
+  #content-page-1945 h5,
+  #content-page-1945 h6 {
+    font-size: 1.25rem;
+  }
+  #content-page-1945 .cs-button-solid {
+    margin-bottom: 2rem;
+  }
+  #content-page-1945 p {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    color: var(--bodyTextColor);
+  }
+  #content-page-1945 p:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #content-page-1945 p a {
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: underline;
+    color: var(--primary);
+    filter: brightness(120%);
+  }
+  #content-page-1945 ol {
+    margin: 0 0 2rem 0;
+    padding-left: 1.5rem;
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #content-page-1945 ol li {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+  #content-page-1945 ol li strong {
+    color: var(--headerColor);
+  }
+  #content-page-1945 ol li p:last-of-type {
+    margin: 0;
+  }
+  #content-page-1945 ul {
+    margin: 0 0 2rem 0;
+    padding-left: 1.5rem;
+    color: var(--bodyTextColor);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #content-page-1945 ul li {
+    list-style: none;
+    line-height: 1.5em;
+    font-size: 1rem;
+    color: inherit;
+    position: relative;
+  }
+  #content-page-1945 ul li strong {
+    color: var(--headerColor);
+  }
+  #content-page-1945 ul li:before {
+    /* custom list bullet */
+    content: "";
+    width: 3px;
+    height: 3px;
+    background: currentColor;
+    opacity: 1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0.625rem;
+    left: -0.75rem;
+  }
+  #content-page-1945 .cs-image-group {
+    font-size: min(2.29vw, 1rem);
+    width: 29.875em;
+    height: 47.75em;
+    display: none;
+    position: relative;
+    z-index: 2;
+  }
+  #content-page-1945 .cs-picture {
+    width: 29.4375em;
+    height: 42.5625em;
+    box-sizing: border-box;
+    background-color: #dab692;
+    overflow: hidden;
+    border: 8px solid #dab692;
+    border-radius: 16.25rem;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+  #content-page-1945 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #content-page-1945 .cs-graphic {
+    height: auto;
+    position: absolute;
+  }
+  #content-page-1945 .cs-twirl {
+    width: 11.0625em;
+    height: auto;
+    top: 0.9375em;
+    right: 0;
+    z-index: 1;
+  }
+  #content-page-1945 .cs-peach {
+    width: 5.375em;
+    height: auto;
+    top: 0.375em;
+    right: 5.6875em;
+  }
+  #content-page-1945 .cs-blob {
+    width: 19.1875em;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #content-page-1945 .cs-leaf {
+    width: 16.4375em;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #content-page-1945 .cs-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #content-page-1945 .cs-image-group {
+    font-size: min(1.2vw, 1rem);
+    display: block;
+    flex: none;
+  }
+}
+/*-- -------------------------- -->
+<---    Content Page Reverse    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #content-page-1945 .cs-content-reverse {
+    padding-top: 2.25rem;
+  }
+  #content-page-1945 .cs-content-reverse .cs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #content-page-1945 .cs-content-reverse .cs-image-group {
+    font-size: min(1.8vw, 0.9rem);
+    width: 47.8125em;
+    height: 24.5em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #content-page-1945 .cs-content-reverse .cs-picture {
+    width: 47em;
+    height: 21.25em;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #dab692;
+    overflow: hidden;
+    border: 0.5em solid #dab692;
+    border-radius: 16.25rem;
+    position: absolute;
+    z-index: -1;
+  }
+  #content-page-1945 .cs-content-reverse .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #content-page-1945 .cs-content-reverse .cs-graphic {
+    height: auto;
+    position: absolute;
+  }
+  #content-page-1945 .cs-content-reverse .cs-dots {
+    width: 8.5625em;
+    height: auto;
+    top: -2em;
+    left: 2em;
+  }
+  #content-page-1945 .cs-content-reverse .cs-brown {
+    width: 12.6875em;
+    height: auto;
+    top: 0;
+    right: 0;
+    z-index: -3;
+  }
+  #content-page-1945 .cs-content-reverse .cs-peach-right {
+    width: 4.1875em;
+    height: auto;
+    top: -1.1875em;
+    right: 8.3125em;
+  }
+  #content-page-1945 .cs-content-reverse .cs-leaf-right {
+    width: 17.6875em;
+    height: auto;
+    bottom: -0.875em;
+    left: 2em;
+  }
+}
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #content-page-1945 .cs-content-reverse .cs-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #content-page-1945 .cs-content-reverse .cs-image-group {
+    width: 38em;
+    height: 30.125em;
+    margin-top: 3rem;
+    order: -1;
+  }
+  #content-page-1945 .cs-content-reverse .cs-picture {
+    width: 38em;
+  }
+  #content-page-1945 .cs-content-reverse .cs-dots {
+    top: -1em;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<div id="content-page-1945">
+    <section class="cs-content-default">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">About Us</span>
+                <h1 class="cs-title">Welcome to Our Stitch Skin Dermatology & Aesthetics</h1>
+                <p>
+                    At Stitch Skin, Our team of experienced wedding photographers is dedicated to making your dreams come true. Whether you're looking to renovate your home, create a stylish office environment, or design a retail space, we've got you covered. From concept to completion, we'll work closely with you to ensure every detail aligns with your vision.
+                </p>
+                <h3>We're dermatologist and aesthetics experts with hearts on our sleeves, who believe that every person deserves to be immortalised in breathtaking beauty.</h3>
+                <p>
+                    Finding your dream wedding photographer shouldn't be stressful! Here's how to make it magical:
+                </p>
+                <ol>
+                    <li><strong>Determine your reason for seeking help:</strong> Fill out our Contact form with your vision, dreams, and what makes your love unique. The more we know, the better we capture your essence.</li>
+                    <li><strong>Research dermatologists in your area:</strong> Schedule a free consultation to get to know us, ask questions, and see if we're the perfect fit. We'll share packages, show our work, and make sure you feel confident you've found your photographer soulmates.</li>
+                    <li><strong>Schedule an appointment:</strong> We offer flexible packages for every love story and budget. Choose from engagement sessions, full wedding coverage, or even destination adventures!</li>
+                    <li><strong>Prepare for your first appointment:</strong> Once you've found your perfect package and feel the connection, sign the contract and secure your date. The excitement begins!</li>
+                    <li><strong>Attend your appointment:</strong> We'll help you create timelines, answer questions, and ensure you feel relaxed and ready to radiate joy on your special day.</li>
+                    <li><strong>Follow your treatment plan:</strong> After the confetti settles, you'll receive beautifully edited photos to relive every moment for years to come.</li>
+                </ol>
+            </div>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/derm-office.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/derm-office.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/derm-office.jpg" alt="office" width="522" height="680">
+                </picture>
+                <img class="cs-graphic cs-twirl" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/twirl.svg" alt="graphic" width="177" height="97" aria-hidden="true">
+                <img class="cs-graphic cs-peach" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/hero-peach-blob.svg" alt="graphic" width="86" height="65" aria-hidden="true">
+                <img class="cs-graphic cs-blob" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/beige-blob-2.svg" alt="graphic" width="528" height="468" aria-hidden="true">
+                <img class="cs-graphic cs-leaf" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/derm-big-leaf.svg" alt="graphic" width="175" height="143" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================ -->
+    <!--                 Content Page                 -->
+    <!-- ============================================ -->
+    
+    <section class="cs-content-wrapper cs-content-reverse">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h4>We're dermatologist and aesthetics experts with hearts on our sleeves, who believe that every person deserves to be immortalised in breathtaking beauty.</h4>
+                <p>
+                    So, let's embark on this adventure together. Let us capture the essence of your love, stitch it into a masterpiece of light and emotion, and gift you with a legacy of cherished moments that will forever whisper, "This is us." Ready to weave your love story into light? We can't wait to hear your story.
+                </p>
+                <ul>
+                    <li><strong>Determine your reason for seeking help:</strong> Fill out our Contact form with your vision, dreams, and what makes your love unique. The more we know, the better we capture your essence.</li>
+                    <li><strong>Research dermatologists in your area:</strong> Schedule a free consultation to get to know us, ask questions, and see if we're the perfect fit. We'll share packages, show our work, and make sure you feel confident you've found your photographer soulmates.</li>
+                    <li><strong>Schedule an appointment:</strong> We offer flexible packages for every love story and budget. Choose from engagement sessions, full wedding coverage, or even destination adventures!</li>
+                    <li><strong>Prepare for your first appointment:</strong> Once you've found your perfect package and feel the connection, sign the contract and secure your date. The excitement begins!</li>
+                    <li><strong>Attend your appointment:</strong> We'll help you create timelines, answer questions, and ensure you feel relaxed and ready to radiate joy on your special day.</li>
+                    <li><strong>Follow your treatment plan:</strong> After the confetti settles, you'll receive beautifully edited photos to relive every moment for years to come.</li>
+                </ul>
+            </div>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm10.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm10.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm10.jpg" alt="office" width="324" height="467">
+                </picture>
+                <img class="cs-graphic cs-dots" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/lotsa-dots.svg" alt="graphic" width="179" height="225" aria-hidden="true">
+                <img class="cs-graphic cs-brown" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-lines-3.svg" alt="graphic" width="179" height="225" aria-hidden="true">
+                <img class="cs-graphic cs-peach-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/blob-peach.svg" alt="graphic" width="56" height="42" aria-hidden="true">
+                <img class="cs-graphic cs-leaf-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/light-green-leaf.svg" alt="graphic" width="179" height="225" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+</div>
+
+<script></script>
+</body>
+</html>

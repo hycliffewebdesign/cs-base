@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>store products</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Product           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #product-2471 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+  }
+  #product-2471 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 46.875rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 28px - 64px */
+    gap: clamp(1.75rem, 5vw, 4rem);
+  }
+  #product-2471 .cs-picture-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1vw, 1.25rem);
+  }
+  #product-2471 .cs-large-images {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  #product-2471 .cs-large-image {
+    width: 100%;
+    /* 320px - 520px */
+    height: clamp(20rem, 68vw, 32.5rem);
+    /* makes it cover the parent dimensions */
+    object-fit: cover;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+  }
+  #product-2471 .cs-large-image:first-of-type {
+    position: relative;
+  }
+  #product-2471 .cs-large-image img {
+    width: 100%;
+    height: 100%;
+    /* makes it cover the parent like a background image */
+    object-fit: cover;
+    display: block;
+  }
+  #product-2471 .cs-small-images {
+    overflow-x: scroll;
+    display: flex;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1vw, 1.25rem);
+    position: relative;
+    z-index: 10;
+  }
+  #product-2471 .cs-thumbnail {
+    /* 100px - 120px */
+    height: clamp(6.25rem, 8vw, 7.5rem);
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 10;
+    transition: border-color 0.3s;
+  }
+  #product-2471 .cs-thumbnail.cs-active {
+    border-color: var(--primary);
+  }
+  #product-2471 .cs-thumbnail:hover {
+    border-color: var(--primary);
+  }
+  #product-2471 .cs-info-group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #product-2471 .cs-info-item {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #product-2471 .cs-info-item .cs-bold {
+    font-weight: 700;
+  }
+  #product-2471 .cs-h3 {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0 0 1.5rem;
+    color: var(--headerColor);
+  }
+  #product-2471 .cs-price {
+    /* 39px - 49px */
+    font-size: clamp(2.4375rem, 3vw, 3.0625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: -1.17px;
+    color: var(--secondary);
+    display: block;
+  }
+  #product-2471 .cs-info-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 1rem 0 1.5rem;
+    color: var(--bodyTextColor);
+  }
+  #product-2471 .cs-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #product-2471 .cs-quantity {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--headerColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  #product-2471 .cs-quantity-button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.3s;
+  }
+  #product-2471 .cs-quantity-button.cs-inactive {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  #product-2471 .cs-quantity-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+  #product-2471 .cs-quantity-value {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: center;
+    color: var(--headerColor);
+  }
+  #product-2471 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 15.625rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #product-2471 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #product-2471 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #product-2471 .cs-button-solid {
+    border: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #product-2471 .cs-picture-group {
+    flex-direction: row;
+  }
+  #product-2471 .cs-small-images {
+    overflow: initial;
+    flex-direction: column;
+  }
+  #product-2471 .cs-button-group {
+    flex-direction: row;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #product-2471 .cs-container {
+    max-width: 80rem;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  #product-2471 .cs-large-images {
+    min-width: 26.25rem;
+  }
+  #product-2471 .cs-large-image {
+    /* 480px - 620px */
+    height: clamp(30rem, 43vw, 38.75rem);
+  }
+  #product-2471 .cs-product-info {
+    /* 20px - 60px */
+    padding: clamp(1.25rem, 3vw, 3.75rem) 0;
+  }
+  #product-2471 .cs-button-solid {
+    flex-grow: 1;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Product                   -->
+<!-- ============================================ -->
+<section id="product-2471">
+    <div class="cs-container">
+        <div class="cs-picture-group">
+            <div class="cs-large-images">
+                <picture class="cs-large-image" data-index="0">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product1.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product1.png">
+                    <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product1.png" alt="sofa product" loading="lazy" decoding="async" width="490" height="596">
+                </picture>
+                <picture class="cs-large-image" data-index="1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product2.jpg">
+                    <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product2.jpg" alt="sofa product" loading="lazy" decoding="async" width="490" height="596">
+                </picture>
+                <picture class="cs-large-image" data-index="2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product3.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product3.png">
+                    <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product3.png" alt="sofa product" loading="lazy" decoding="async" width="490" height="596">
+                </picture>
+                <picture class="cs-large-image" data-index="3">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product4.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product4.jpg">
+                    <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product4.jpg" alt="sofa product" loading="lazy" decoding="async" width="490" height="596">
+                </picture>
+            </div>
+            <div class="cs-small-images">
+                <img class="cs-thumbnail" data-index="0" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product1.png" alt="preview" loading="lazy" decoding="async" width="120" height="134">
+                <img class="cs-thumbnail" data-index="1" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product2.jpg" alt="preview" loading="lazy" decoding="async" width="120" height="134">
+                <img class="cs-thumbnail" data-index="2" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product3.png" alt="preview" loading="lazy" decoding="async" width="120" height="134">
+                <img class="cs-thumbnail" data-index="3" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/ecomm-product4.jpg" alt="preview" loading="lazy" decoding="async" width="120" height="134">
+            </div>
+        </div>
+        <div class="cs-product-info">
+            <span class="cs-info-item">
+                SKU: <span class="cs-bold">240122-03</span>
+            </span>
+            <h3 class="cs-h3">
+                Jonathan Side Chaise Sofa with Ottoman
+            </h3>
+            <span class="cs-price">$2,597.00</span>
+            <p class="cs-info-text">
+                High in comfort and versatility, the Jonathan's boxy and low-to-the-ground silhouette make it the perfect anchor for any living room -- no matter the interior style.
+            </p>
+            <div class="cs-info-group">
+                <div class="cs-info-item">
+                    Material:
+                    <span class="cs-bold">80% Polyester, 20% Acrylic</span>
+                </div>
+                <div class="cs-info-item">
+                    Size:
+                    <span class="cs-bold">
+                        W99.6" x D39.4" x H27.6";
+                        <br>
+                        Ottoman: W36.6" x D30.7" x H15"
+                    </span>
+                </div>
+            </div>
+            <div class="cs-button-group">
+                <div class="cs-quantity">
+                    <button class="cs-quantity-button">
+                        <img class="cs-quantity-icon" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/minus.svg" alt="-" width="14" height="2" loading="lazy" decoding="async">
+                    </button>
+                    <span class="cs-quantity-value">1</span>
+                    <button class="cs-quantity-button">
+                        <img class="cs-quantity-icon" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/plus.svg" alt="+" width="14" height="14" loading="lazy" decoding="async">
+                    </button>
+                </div>
+                <button class="cs-button-solid">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>class ProductQuantity {
+    constructor(quantityElement) {
+        this.quantityElement = quantityElement;
+        this.minusButton = this.quantityElement.querySelectorAll('.cs-quantity-button')[0];
+        this.plusButton = this.quantityElement.querySelectorAll('.cs-quantity-button')[1];
+        this.valueDisplay = this.quantityElement.querySelector('.cs-quantity-value');
+        this.quantity = parseInt(this.valueDisplay.textContent) || 1;
+        this.minQuantity = 1;
+
+        this.init();
+    }
+
+    init() {
+        this.minusButton.addEventListener('click', () => this.decrement());
+        this.plusButton.addEventListener('click', () => this.increment());
+        this.updateDisplay();
+    }
+
+    increment() {
+        this.quantity++;
+        this.updateDisplay();
+    }
+
+    decrement() {
+        if (this.quantity > this.minQuantity) {
+            this.quantity--;
+            this.updateDisplay();
+        }
+    }
+
+    updateDisplay() {
+        this.valueDisplay.textContent = this.quantity;
+
+        if (this.quantity <= this.minQuantity) {
+            this.minusButton.classList.add('cs-inactive');
+        } else {
+            this.minusButton.classList.remove('cs-inactive');
+        }
+    }
+
+    destroy() {
+        this.minusButton.removeEventListener('click', () => this.decrement());
+        this.plusButton.removeEventListener('click', () => this.increment());
+    }
+}
+
+class ProductImageGallery {
+    constructor(productElement) {
+        this.productElement = productElement;
+        this.largeImages = Array.from(this.productElement.querySelectorAll('.cs-large-image'));
+        this.thumbnails = Array.from(this.productElement.querySelectorAll('.cs-thumbnail'));
+        this.currentIndex = 0;
+
+        this.init();
+    }
+
+    init() {
+        this.largeImages.forEach((image, index) => {
+            image.style.opacity = index === 0 ? '1' : '0';
+        });
+
+        if (this.thumbnails.length > 0) {
+            this.thumbnails[0].classList.add('cs-active');
+        }
+
+        this.thumbnails.forEach((thumbnail) => {
+            thumbnail.addEventListener('click', () => {
+                const index = parseInt(thumbnail.getAttribute('data-index'));
+                this.handleThumbnailClick(index);
+            });
+        });
+    }
+
+    handleThumbnailClick(index) {
+        if (index !== this.currentIndex) {
+            this.thumbnails[this.currentIndex].classList.remove('cs-active');
+            this.largeImages[this.currentIndex].style.opacity = '0';
+            this.currentIndex = index;
+            this.thumbnails[this.currentIndex].classList.add('cs-active');
+
+            requestAnimationFrame(() => {
+                this.largeImages[this.currentIndex].style.opacity = '1';
+            });
+        }
+    }
+
+    destroy() {
+        this.thumbnails.forEach((thumbnail) => {
+            const index = parseInt(thumbnail.getAttribute('data-index'));
+            thumbnail.removeEventListener('click', () => this.handleThumbnailClick(index));
+        });
+    }
+}
+
+// initialize components on DOM ready
+document.addEventListener('DOMContentLoaded', function () {
+    const product = document.querySelector('#product-2471');
+    if (product) {
+        const quantityElement = product.querySelector('.cs-quantity');
+        if (quantityElement) {
+            new ProductQuantity(quantityElement);
+        }
+
+        new ProductImageGallery(product);
+    }
+});</script>
+</body>
+</html>

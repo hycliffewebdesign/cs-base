@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse triplet</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RTsbs-1211,
+  #RTsbsr-1211,
+  #RTsbst-1211 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #RTsbs-1211 .cs-container,
+  #RTsbsr-1211 .cs-container,
+  #RTsbst-1211 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  #RTsbs-1211 .cs-content,
+  #RTsbsr-1211 .cs-content,
+  #RTsbst-1211 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+  #RTsbs-1211 .cs-text,
+  #RTsbsr-1211 .cs-text,
+  #RTsbst-1211 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #RTsbs-1211 .cs-text:last-of-type,
+  #RTsbsr-1211 .cs-text:last-of-type,
+  #RTsbst-1211 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #RTsbs-1211 .cs-h3,
+  #RTsbsr-1211 .cs-h3,
+  #RTsbst-1211 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+  }
+  #RTsbs-1211 .cs-content-flair,
+  #RTsbsr-1211 .cs-content-flair,
+  #RTsbst-1211 .cs-content-flair {
+    width: 100%;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 2rem;
+    column-gap: 1.25rem;
+  }
+  #RTsbs-1211 .cs-ul,
+  #RTsbsr-1211 .cs-ul,
+  #RTsbst-1211 .cs-ul {
+    width: 100%;
+    margin: 0;
+    padding-left: 1.25rem;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #RTsbs-1211 .cs-li,
+  #RTsbsr-1211 .cs-li,
+  #RTsbst-1211 .cs-li {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    max-width: 25rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+    position: relative;
+  }
+  #RTsbs-1211 .cs-li:before,
+  #RTsbsr-1211 .cs-li:before,
+  #RTsbst-1211 .cs-li:before {
+    /* bullet */
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0.625rem;
+    left: -0.9375rem;
+  }
+  #RTsbs-1211 .cs-video-link,
+  #RTsbsr-1211 .cs-video-link,
+  #RTsbst-1211 .cs-video-link {
+    width: 100%;
+    /* changes to 160px at desktop */
+    height: 12.5rem;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #RTsbs-1211 .cs-video-link:hover .cs-video-bg,
+  #RTsbsr-1211 .cs-video-link:hover .cs-video-bg,
+  #RTsbst-1211 .cs-video-link:hover .cs-video-bg {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  #RTsbs-1211 .cs-video-link:hover .cs-wrapper,
+  #RTsbsr-1211 .cs-video-link:hover .cs-wrapper,
+  #RTsbst-1211 .cs-video-link:hover .cs-wrapper {
+    transform: scale(1.2);
+  }
+  #RTsbs-1211 .cs-video-bg,
+  #RTsbsr-1211 .cs-video-bg,
+  #RTsbst-1211 .cs-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #RTsbs-1211 .cs-wrapper,
+  #RTsbsr-1211 .cs-wrapper,
+  #RTsbst-1211 .cs-wrapper {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    border: 2px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.75s;
+  }
+  #RTsbs-1211 .cs-button-solid,
+  #RTsbsr-1211 .cs-button-solid,
+  #RTsbst-1211 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #1a1a1a;
+    min-width: 12.5rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: color 0.3s;
+  }
+  #RTsbs-1211 .cs-button-solid:before,
+  #RTsbsr-1211 .cs-button-solid:before,
+  #RTsbst-1211 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #RTsbs-1211 .cs-button-solid:hover,
+  #RTsbsr-1211 .cs-button-solid:hover,
+  #RTsbst-1211 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #RTsbs-1211 .cs-button-solid:hover:before,
+  #RTsbsr-1211 .cs-button-solid:hover:before,
+  #RTsbst-1211 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #RTsbs-1211 .cs-image-group,
+  #RTsbsr-1211 .cs-image-group,
+  #RTsbst-1211 .cs-image-group {
+    width: 100%;
+    max-width: 49.5625rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+  #RTsbs-1211 .cs-picture,
+  #RTsbsr-1211 .cs-picture,
+  #RTsbst-1211 .cs-picture {
+    /* width 100% so we can match the border radius with the circle graphic easier */
+    width: 100%;
+    max-width: 28.75rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  #RTsbs-1211 .cs-picture img,
+  #RTsbsr-1211 .cs-picture img,
+  #RTsbst-1211 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #RTsbs-1211 .cs-graphic,
+  #RTsbsr-1211 .cs-graphic,
+  #RTsbst-1211 .cs-graphic {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  #RTsbs-1211 .cs-box,
+  #RTsbsr-1211 .cs-box,
+  #RTsbst-1211 .cs-box {
+    /* 16px - 32px top & bottom */
+    /* 16px - 24px */
+    padding: clamp(1rem, 2.9vw, 2rem) clamp(1rem, 2.7vw, 1.5rem);
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    /* 85px - 200px */
+    top: clamp(5.3125rem, 12vw, 12.5rem);
+    right: 0;
+  }
+  #RTsbs-1211 .cs-box-icon,
+  #RTsbsr-1211 .cs-box-icon,
+  #RTsbst-1211 .cs-box-icon {
+    /* 24px - 40px */
+    width: clamp(1.5rem, 4vw, 2.5rem);
+    height: auto;
+    margin: 0 0 0.75rem;
+    display: block;
+  }
+  #RTsbs-1211 .cs-box-header,
+  #RTsbsr-1211 .cs-box-header,
+  #RTsbst-1211 .cs-box-header {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 3vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.75rem;
+    color: var(--primary);
+  }
+  #RTsbs-1211 .cs-box-ul,
+  #RTsbsr-1211 .cs-box-ul,
+  #RTsbst-1211 .cs-box-ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  #RTsbs-1211 .cs-box-li,
+  #RTsbsr-1211 .cs-box-li,
+  #RTsbst-1211 .cs-box-li {
+    list-style: none;
+    /* 12px - 14px */
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #RTsbs-1211 .cs-stat,
+  #RTsbsr-1211 .cs-stat,
+  #RTsbst-1211 .cs-stat {
+    /* 20px - 32px top & bottom */
+    /* 12px - 24px */
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(0.75rem, 3vw, 1.5rem);
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    /* 40px - 120px */
+    bottom: clamp(2.5rem, 7vw, 6.25rem);
+  }
+  #RTsbs-1211 .cs-ring-wrapper,
+  #RTsbsr-1211 .cs-ring-wrapper,
+  #RTsbst-1211 .cs-ring-wrapper {
+    /* 80px - 100px */
+    width: clamp(5rem, 10vw, 6.25rem);
+    position: relative;
+    /* 20px - 24px */
+    margin: 0 0 clamp(1.25rem, 2vw, 1.5rem) 0;
+  }
+  #RTsbs-1211 .cs-number,
+  #RTsbsr-1211 .cs-number,
+  #RTsbst-1211 .cs-number {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+    font-weight: 900;
+    /* prevents mouse from interacting with it */
+    pointer-events: none;
+    line-height: 1.2em;
+    color: var(--bodyTextColorWhite);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+  #RTsbs-1211 .cs-header,
+  #RTsbsr-1211 .cs-header,
+  #RTsbst-1211 .cs-header {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2.1vw, 1.25rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #RTsbs-1211 .cs-desc,
+  #RTsbsr-1211 .cs-desc,
+  #RTsbst-1211 .cs-desc {
+    /* 12px - 14px */
+    font-size: clamp(0.75rem, 1.4vw, 0.875rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  #RTsbs-1211 .cs-ring,
+  #RTsbsr-1211 .cs-ring,
+  #RTsbst-1211 .cs-ring {
+    --ring-width: 3px;
+    width: calc(100% - var(--ring-width));
+    aspect-ratio: 1;
+    overflow: visible;
+    pointer-events: none;
+    rotate: -90deg;
+    scale: 1 -1;
+  }
+  #RTsbs-1211 .cs-ring circle,
+  #RTsbsr-1211 .cs-ring circle,
+  #RTsbst-1211 .cs-ring circle {
+    fill: none;
+    stroke: #f7f7f7;
+    stroke-width: var(--ring-width);
+  }
+  #RTsbs-1211 .cs-ring circle,
+  #RTsbsr-1211 .cs-ring circle,
+  #RTsbst-1211 .cs-ring circle {
+    stroke: var(--secondaryLight);
+    stroke-linecap: round;
+    stroke-dasharray: calc(var(--ratio) * 314%) 314%;
+    transition: stroke-dasharray 1s;
+  }
+  #RTsbs-1211 .cs-stat:hover .cs-ring,
+  #RTsbsr-1211 .cs-stat:hover .cs-ring,
+  #RTsbst-1211 .cs-stat:hover .cs-ring {
+    --ratio: 0 !important;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RTsbs-1211 .cs-container,
+  #RTsbsr-1211 .cs-container,
+  #RTsbst-1211 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #RTsbs-1211 .cs-content,
+  #RTsbsr-1211 .cs-content,
+  #RTsbst-1211 .cs-content {
+    width: 45%;
+  }
+  #RTsbs-1211 .cs-ul,
+  #RTsbsr-1211 .cs-ul,
+  #RTsbst-1211 .cs-ul {
+    width: 45%;
+    max-width: 15.125rem;
+  }
+  #RTsbs-1211 .cs-video-link,
+  #RTsbsr-1211 .cs-video-link,
+  #RTsbst-1211 .cs-video-link {
+    width: 50%;
+    max-width: 17.5rem;
+    height: 10rem;
+  }
+  #RTsbs-1211 .cs-image-group,
+  #RTsbsr-1211 .cs-image-group,
+  #RTsbst-1211 .cs-image-group {
+    width: 50%;
+    margin-top: auto;
+    /* same exact clamp as the sectionPadding variable */
+    margin-bottom: calc(clamp(3.75rem, 7.82vw, 6.25rem)*-1);
+    left: 0;
+  }
+  #RTsbs-1211 .cs-picture,
+  #RTsbsr-1211 .cs-picture,
+  #RTsbst-1211 .cs-picture {
+    /* changes to 719px at large desktop */
+    width: 100%;
+    max-width: 32.625rem;
+  }
+}
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+  #RTsbs-1211 .cs-image-group,
+  #RTsbsr-1211 .cs-image-group,
+  #RTsbst-1211 .cs-image-group {
+    width: 44.9375rem;
+    left: -5.625rem;
+  }
+  #RTsbs-1211 .cs-picture,
+  #RTsbsr-1211 .cs-picture,
+  #RTsbst-1211 .cs-picture {
+    width: 44.9375rem;
+    max-width: 44.9375rem;
+    height: 49.5625rem;
+  }
+  #RTsbs-1211 .cs-picture img,
+  #RTsbsr-1211 .cs-picture img,
+  #RTsbst-1211 .cs-picture img {
+    width: 100%;
+    height: auto;
+    max-height: 49.5625rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #RTsbs-1211 .cs-graphic,
+  #RTsbsr-1211 .cs-graphic,
+  #RTsbst-1211 .cs-graphic {
+    width: 59.375rem;
+    top: -6.25rem;
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RTsbsr-1211 {
+    background-color: #f7f7f7;
+  }
+  #RTsbsr-1211 .cs-box {
+    right: auto;
+    left: 0;
+  }
+  #RTsbsr-1211 .cs-stat {
+    left: auto;
+    right: 0;
+  }
+  #RTsbsr-1211 .cs-graphic {
+    left: 0;
+    right: auto;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RTsbsr-1211 .cs-image-group {
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+}
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+  #RTsbsr-1211 .cs-image-group {
+    left: auto;
+    right: -5.625rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RTsbs-1211">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image-->
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant2.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant2.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant2.png" alt="accountant" width="522" height="793"  aria-hidden="true">
+            </picture>
+            <!--Small Image-->
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/growth.svg" alt="icon" width="40" height="40" aria-hidden="true">
+                <span class="cs-box-header">Business Growth</span>
+                <ul class="cs-box-ul">
+                    <li class="cs-box-li">Global Industry</li>
+                    <li class="cs-box-li">Smart Solution</li>
+                    <li class="cs-box-li">Fast Process</li>
+                </ul>
+            </div>
+            <div class="cs-stat">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">90%</span>
+                    <!--Change the --ratio to the decimal percentage of this circle-->
+                    <svg class="cs-ring" style="--ratio: 0.90">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <span class="cs-header">Project Success</span>
+                <span class="cs-desc">by assisted startup</span>
+            </div>
+            <!--Circle Graphic-->
+            <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl.svg" alt="graphic" width="950" height="950" aria-hidden="true">
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">Always Ready to Invest in Any Business</h2>
+            <h3 class="cs-h3">We consider all the drivers of change gives you the blocks pride for our components you need to change to create.</h3>
+            <p class="cs-text">
+                In the new era of technology we look in the future with certainty and pride for our company and business. consider all the drivers of change gives you the blocks & pride for our components you need to change to create a truly professional website In the new era.
+            </p>
+            <div class="cs-content-flair">
+                <ul class="cs-ul">
+                    <li class="cs-li">Stage-focused investing.</li>
+                    <li class="cs-li">Sector specialization.</li>
+                    <li class="cs-li">Active involvement.</li>
+                    <li class="cs-li">Portfolio diversification.</li>
+                    <li class="cs-li">Achieving a return.</li>
+                </ul>
+                <a href="" class="cs-video-link">
+                    <!--BG Image-->
+                    <img class="cs-video-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/video-bg.jpg" alt="people" width="280" height="160" aria-hidden="true">
+                    <!--Play Icon-->
+                    <picture class="cs-wrapper">
+                        <img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-sharp2.svg" alt="graphic" width="24" height="24" aria-hidden="true">
+                    </picture>
+                </a>
+            </div>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="RTsbsr-1211">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image-->
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant7.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant7.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant7.png" alt="accountant" width="522" height="793"  aria-hidden="true">
+            </picture>
+            <!--Small Image-->
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/growth.svg" alt="icon" width="40" height="40" aria-hidden="true">
+                <span class="cs-box-header">Business Growth</span>
+                <ul class="cs-box-ul">
+                    <li class="cs-box-li">Global Industry</li>
+                    <li class="cs-box-li">Smart Solution</li>
+                    <li class="cs-box-li">Fast Process</li>
+                </ul>
+            </div>
+            <div class="cs-stat">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">90%</span>
+                    <!--Change the --ratio to the decimal percentage of this circle-->
+                    <svg class="cs-ring" style="--ratio: 0.90">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <span class="cs-header">Project Success</span>
+                <span class="cs-desc">by assisted startup</span>
+            </div>
+            <!--Circle Graphic-->
+            <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl.svg" alt="graphic" width="950" height="950" aria-hidden="true">
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">Always Ready to Invest in Any Business</h2>
+            <h3 class="cs-h3">We consider all the drivers of change gives you the blocks pride for our components you need to change to create.</h3>
+            <p class="cs-text">
+                In the new era of technology we look in the future with certainty and pride for our company and business. consider all the drivers of change gives you the blocks & pride for our components you need to change to create a truly professional website In the new era.
+            </p>
+            <div class="cs-content-flair">
+                <ul class="cs-ul">
+                    <li class="cs-li">Stage-focused investing.</li>
+                    <li class="cs-li">Sector specialization.</li>
+                    <li class="cs-li">Active involvement.</li>
+                    <li class="cs-li">Portfolio diversification.</li>
+                    <li class="cs-li">Achieving a return.</li>
+                </ul>
+                <a href="" class="cs-video-link">
+                    <!--BG Image-->
+                    <img class="cs-video-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/video-bg.jpg" alt="people" width="280" height="160" aria-hidden="true">
+                    <!--Play Icon-->
+                    <picture class="cs-wrapper">
+                        <img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-sharp2.svg" alt="graphic" width="24" height="24" aria-hidden="true">
+                    </picture>
+                </a>
+            </div>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Triplet             -->
+<!-- ============================================ -->
+
+<section id="RTsbst-1211">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image-->
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant8.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant8.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant8.png" alt="accountant" width="522" height="793"  aria-hidden="true">
+            </picture>
+            <!--Small Image-->
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/growth.svg" alt="icon" width="40" height="40" aria-hidden="true">
+                <span class="cs-box-header">Business Growth</span>
+                <ul class="cs-box-ul">
+                    <li class="cs-box-li">Global Industry</li>
+                    <li class="cs-box-li">Smart Solution</li>
+                    <li class="cs-box-li">Fast Process</li>
+                </ul>
+            </div>
+            <div class="cs-stat">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">90%</span>
+                    <!--Change the --ratio to the decimal percentage of this circle-->
+                    <svg class="cs-ring" style="--ratio: 0.90">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <span class="cs-header">Project Success</span>
+                <span class="cs-desc">by assisted startup</span>
+            </div>
+            <!--Circle Graphic-->
+            <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl.svg" alt="graphic" width="950" height="950" aria-hidden="true">
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">Always Ready to Invest in Any Business</h2>
+            <h3 class="cs-h3">We consider all the drivers of change gives you the blocks pride for our components you need to change to create.</h3>
+            <p class="cs-text">
+                In the new era of technology we look in the future with certainty and pride for our company and business. consider all the drivers of change gives you the blocks & pride for our components you need to change to create a truly professional website In the new era.
+            </p>
+            <div class="cs-content-flair">
+                <ul class="cs-ul">
+                    <li class="cs-li">Stage-focused investing.</li>
+                    <li class="cs-li">Sector specialization.</li>
+                    <li class="cs-li">Active involvement.</li>
+                    <li class="cs-li">Portfolio diversification.</li>
+                    <li class="cs-li">Achieving a return.</li>
+                </ul>
+                <a href="" class="cs-video-link">
+                    <!--BG Image-->
+                    <img class="cs-video-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/video-bg.jpg" alt="people" width="280" height="160" aria-hidden="true">
+                    <!--Play Icon-->
+                    <picture class="cs-wrapper">
+                        <img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-sharp2.svg" alt="graphic" width="24" height="24" aria-hidden="true">
+                    </picture>
+                </a>
+            </div>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

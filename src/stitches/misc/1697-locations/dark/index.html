@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>locations</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #locations-1697 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #locations-1697 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 31.25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #locations-1697 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #locations-1697 .cs-item {
+    list-style: none;
+    width: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 24px - 60px top & bottom*/
+    /* 16px - 40px left & right*/
+    padding: clamp(1.5rem, 5vw, 3.75rem) clamp(1rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+    z-index: 1;
+    /* bottom border */
+  }
+  #locations-1697 .cs-item::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    /* to change the color of the bottom border, adjust the second color (at 50%). the first and third will blend the color to transparent */
+    /* note you'll also have to change the color in the tablet media query when the lines go vertical */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #locations-1697 .cs-item:last-of-type::after {
+    content: none;
+  }
+  #locations-1697 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+  }
+  #locations-1697 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-decoration: none;
+    max-width: 18.75rem;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #locations-1697 .cs-address {
+    max-width: 18ch;
+    margin-bottom: 1rem;
+  }
+  #locations-1697 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-decoration: none;
+    margin-top: auto;
+    /* setting minimum top spacing with padding and using margin-top: auto; to ensure the link is always at the bottom of the item */
+    /* 24px - 32px */
+    padding-top: clamp(1.5rem, 1vw, 2rem);
+    color: var(--secondary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem;
+    transition: color 0.3s;
+  }
+  #locations-1697 .cs-link:hover .cs-arrow {
+    transform: translateX(0.25rem);
+  }
+  #locations-1697 .cs-link-text {
+    width: fit-content;
+  }
+  #locations-1697 .cs-arrow {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #locations-1697 .cs-container {
+    max-width: 80rem;
+  }
+  #locations-1697 .cs-item {
+    grid-column: span 3;
+  }
+  #locations-1697 .cs-item:nth-of-type(4)::after {
+    display: none;
+  }
+  #locations-1697 .cs-item::after {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+    right: 0;
+    left: initial;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Locations                   -->
+<!-- ============================================ -->
+
+<section id="locations-1697">
+    <div class="cs-container">
+        <!-- Left Content Section-->
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">New York City</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, Brooklyn NY, 2300 USA
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+1(0) 987 654 321</a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">nyc@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">London, UK</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, London, 57th UK
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+44(0) 987 654 321
+                </a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">london@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Paris, France</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, Paris, 2300 Paris
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+33(0) 987 654 321</a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">paris@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Dubai, UAE</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, Khalid bin Street, UAE
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+971 987 654 321</a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">dubai@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">New York City</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, Brooklyn NY, 2300 USA
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+1(0) 987 654 321</a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">nyc@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">London, UK</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, London, 57th UK
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+44(0) 987 654 321
+                </a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">london@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Paris, France</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, Paris, 2300 Paris
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+33(0) 987 654 321</a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">paris@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Dubai, UAE</h3>
+                <span class="cs-item-text cs-address">
+                    5the Avenue, E 28th St, Khalid bin Street, UAE
+                </span>
+                <a class="cs-item-text" href="tel:098-7654-321">+971 987 654 321</a>
+                <a class="cs-item-text" href="mailto:nyc@smartax.com">dubai@smartax.com</a>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Direction</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

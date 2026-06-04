@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1739 {
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+  #reviews-1739 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 49rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-1739 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-1739 .cs-title {
+    max-width: 24ch;
+    margin: 0;
+  }
+  #reviews-1739 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #reviews-1739 .cs-item {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+  #reviews-1739 .cs-picture {
+    width: 100%;
+    min-height: 21.25rem;
+    display: block;
+    position: relative;
+    /* causes this element to grow to its maximum width, before its sibling elements take up the remaining space */
+    flex: 1 0 auto;
+  }
+  #reviews-1739 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    /* pushes the top of the image to the top of the container */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews-1739 .cs-review {
+    text-align: left;
+    width: 100%;
+    /* prevents padding from affecting height and wodth */
+    box-sizing: border-box;
+    /* left & right 16px - 32px */
+    padding: 2rem clamp(1rem, 5vw, 2rem);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #reviews-1739 .cs-info {
+    background-color: #f7f7f7;
+  }
+  #reviews-1739 .cs-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-1739 .cs-flex {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #reviews-1739 .cs-desc {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: var(--primary);
+    display: block;
+  }
+  #reviews-1739 .cs-item-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #reviews-1739 .cs-boxes {
+    display: flex;
+  }
+  #reviews-1739 .cs-box {
+    /* 24px - 32px top & bottom, 16px - 32px left & right */
+    padding: clamp(1.5rem, 2vw, 2rem) clamp(1rem, 2vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* causes the boxes to grow, equally, within the parent container */
+    flex: 1;
+  }
+  #reviews-1739 .cs-box-light {
+    background-color: #e8e8e8;
+  }
+  #reviews-1739 .cs-box-dark {
+    background-color: #1a1a1a;
+    color: #f7f7f7;
+  }
+  #reviews-1739 .cs-weight {
+    /* 25px - 31px */
+    font-size: clamp(1.5625rem, 4vw, 1.9375rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0 0 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #reviews-1739 .cs-arrow {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  #reviews-1739 .cs-tagline {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  #reviews-1739 .cs-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-1739 .cs-item {
+    flex-direction: row;
+  }
+  #reviews-1739 .cs-picture {
+    max-width: 15rem;
+    min-height: 0;
+  }
+}
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+  #reviews-1739 .cs-container {
+    max-width: 80rem;
+  }
+  #reviews-1739 .cs-item {
+    grid-column: span 6;
+  }
+  #reviews-1739 .cs-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-1739">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Client's Testimonials</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-review-1.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-review-1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-review-1.jpg" alt="person" width="240" height="300">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-review">
+                        <span class="cs-name">Britney Allison</span>
+                        <div class="cs-flex">
+                            <span class="cs-desc">Founder Of Yokoloko</span>
+                            <img class="cs-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg"
+                                alt="stars" width="96" height="16">
+                        </div>
+                        <p class="cs-item-text">
+                            ”Great gym! A new gym with modern equipment and facilities makes training so much easier. always willing to help you with your training”
+                        </p>
+                    </div>
+                    <div class="cs-boxes">
+                        <div class="cs-box cs-box-light">
+                            <span class="cs-weight">
+                                <img class="cs-arrow" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow-up.svg" alt="arrow up" height="36" width="36" loading="lazy" decoding="async"> 
+                                110KG
+                            </span>
+                            <span class="cs-tagline">Before Progress</span>
+                        </div>
+                        <div class="cs-box cs-box-dark">
+                            <span class="cs-weight">
+                                <img class="cs-arrow" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow-down.svg" alt="arrow down" height="36" width="36" loading="lazy" decoding="async"> 
+                                82KG
+                            </span>
+                            <span class="cs-tagline">After Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-review-2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-review-2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-review-2.jpg" alt="person" width="240" height="300">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-review">
+                        <span class="cs-name">Leslie Alexander</span>
+                        <div class="cs-flex">
+                            <span class="cs-desc">Founder Of Yokoloko</span>
+                            <img class="cs-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg"
+                                alt="stars" width="96" height="16">
+                        </div>
+                        <p class="cs-item-text">
+                            ”Great gym! A new gym with modern equipment and facilities makes training so much easier. always willing to help you with your training”
+                        </p>
+                    </div>
+                    <div class="cs-boxes">
+                        <div class="cs-box cs-box-light">
+                            <span class="cs-weight">
+                                <img class="cs-arrow" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow-up.svg" alt="arrow up" height="36" width="36" loading="lazy" decoding="async"> 
+                                110KG
+                            </span>
+                            <span class="cs-tagline">Before Progress</span>
+                        </div>
+                        <div class="cs-box cs-box-dark">
+                            <span class="cs-weight">
+                                <img class="cs-arrow" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow-down.svg" alt="arrow down" height="36" width="36" loading="lazy" decoding="async"> 
+                                82KG
+                            </span>
+                            <span class="cs-tagline">After Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/gym-texture.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/gym-texture.jpg">
+        <img class="cs-background" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/gym-texture.jpg" alt="background" height="1920" width="1080" loading="lazy" decoding="async">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

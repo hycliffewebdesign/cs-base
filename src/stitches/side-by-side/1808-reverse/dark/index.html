@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-1808 {
+    padding: var(--sectionPadding);
+    /* 160px - 240px */
+    padding-bottom: clamp(7rem, 25vw, 18rem);
+    background-color: #222222;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-1808 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #sbsr-1808 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-1808 .cs-title,
+  #sbsr-1808 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #sbsr-1808 .cs-text {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+  #sbsr-1808 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbsr-1808 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 12.5rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-1808 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbsr-1808 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbsr-1808 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+  #sbsr-1808 .cs-item {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* 24px - 40px left & right */
+    padding: 1.5rem clamp(1.5rem, 3.5vw, 2.5rem);
+    background-color: #1a1a1a;
+    display: flex;
+    grid-column: span 12;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #sbsr-1808 .cs-stat {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 1.5vw, 1rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  #sbsr-1808 .cs-number {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #sbsr-1808 .cs-person {
+    width: 65%;
+    height: auto;
+    /* allows text align to move it left or right */
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+  #sbsr-1808 .cs-person img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+    object-fit: contain;
+  }
+  #sbsr-1808 .cs-graphic {
+    width: 100%;
+    min-width: 120rem;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%);
+  }
+  #sbsr-1808 .cs-dark {
+    display: none;
+  }
+  #sbsr-1808 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-1808 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.08;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-1808 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #sbsr-1808 .cs-content {
+    width: 42%;
+    max-width: 32.625rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #sbsr-1808 .cs-card-group {
+    width: 46%;
+    max-width: 28.8125rem;
+  }
+  #sbsr-1808 .cs-item {
+    align-items: flex-end;
+  }
+  #sbsr-1808 .cs-person {
+    /* this scales the full size down and ties the font size to the view width. So we use height an width in ems so the font size can scale it down smaller and grow proportionally with the screen size until it reaches its final dimensions */
+    font-size: min(1.06vw, 1rem);
+    width: 43.4375em;
+    height: 46.0625em;
+    right: auto;
+    left: 50%;
+    /* 150px - 228px */
+    margin-left: calc(clamp(9.375rem, 18vw, 14.25rem)*-1);
+  }
+  #sbsr-1808 .cs-person img {
+    /* ensure that whatever image we change this too will be 100% the height of the container. We do this change so that if you have a tall image you want to swap in, it won't overflow the container at the top. */
+    height: 100%;
+    width: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1808">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Giving Back</span>
+            <h2 class="cs-title">We Are Pushing The Limit Of Your Core Strength</h2>
+            <p class="cs-text">
+                Our impact is about more than moving money to where it’s needed most it’s also about helping nonprofits access information and ideas that will help them listen, learn, and grow.
+            </p>
+            <a href="" class="cs-button-solid">Get Started</a>           
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-stat">Fitness Trainee</span>
+                <span class="cs-number">251k+</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-stat">Calories Burned</span>
+                <span class="cs-number">640+</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-stat">Happy Members</span>
+                <span class="cs-number">589+</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--Person Grpahic. To make your own background crops like this, use https://www.remove.bg/ to remove the background of images. Make sure to crop the empty space it creates around the person from the background that was removed.-->
+    <picture class="cs-person">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/body-builder.png">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/body-builder.png">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/body-builder.png" alt="body builder" width="702" height="617" aria-hidden="true">
+    </picture>
+
+    <!--Backgorund Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym2.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym2.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym2.jpg" alt="gym" width="1280" height="568">
+    </picture>
+
+    <!--Splash Graphic-->
+    <img class="cs-graphic cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-splatter.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+    <img class="cs-graphic cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+</section>
+
+<script></script>
+</body>
+</html>

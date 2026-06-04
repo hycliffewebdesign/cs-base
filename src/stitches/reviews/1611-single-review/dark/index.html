@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>single review</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1611 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 2;
+  }
+  #reviews-1611 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: calc(584 / 16 * 1rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1611 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #reviews-1611 .cs-title,
+  #reviews-1611 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #reviews-1611 .cs-text {
+    /* 24px - 32px */
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+  #reviews-1611 .cs-picture {
+    width: 100%;
+    /* changes at desktop */
+    height: calc(280 / 16 * 1rem);
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1611 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews-1611 .cs-flex-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(12 / 16 * 1rem);
+  }
+  #reviews-1611 .cs-profile-wrapper {
+    width: calc(52 / 16 * 1rem);
+    height: calc(52 / 16 * 1rem);
+    border-radius: 50%;
+    /* clips image corners to make circle */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  #reviews-1611 .cs-profile-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes the image behave like a background image */
+    object-fit: cover;
+  }
+  #reviews-1611 .cs-name {
+    font-size: calc(20 / 16 * 1rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+  #reviews-1611 .cs-job {
+    font-size: calc(16 / 16 * 1rem);
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    color: var(--primary);
+    display: block;
+  }
+  #reviews-1611 .cs-quotes {
+    --quoteColor: var(--primary);
+    /* 80px - 180px */
+    width: clamp(5rem, 13vw, 11.25rem);
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+  }
+  #reviews-1611 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #reviews-1611 .cs-background:before {
+    /* black overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    opacity: 0.9;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #reviews-1611 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-1611 .cs-container {
+    max-width: calc(1280 / 16 * 1rem);
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  #reviews-1611 .cs-content {
+    width: 60%;
+    flex: none;
+  }
+  #reviews-1611 .cs-picture {
+    width: 50%;
+    max-width: calc(413 / 16 * 1rem);
+    height: auto;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #reviews-1611 .cs-content {
+    margin-bottom: calc(40 / 16 * 1rem);
+  }
+  #reviews-1611 .cs-picture {
+    /* 480px - 516px */
+    min-height: clamp(30rem, 40vw, 32.25rem);
+    /* -120px to -176px */
+    margin-bottom: calc(clamp(7.5rem, 14vw, 11rem)*-1);
+  }
+}
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cta-1611 {
+    padding: var(--sectionPadding);
+    /* 60px - 160px */
+    padding-top: clamp(3.75rem, 9.82vw, 10rem);
+    position: relative;
+    z-index: 1;
+  }
+  #cta-1611 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: calc(550 / 16 * 1rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #cta-1611 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: calc(630 / 16 * 1rem);
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #cta-1611 .cs-title,
+  #cta-1611 .cs-topper,
+  #cta-1611 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #cta-1611 .cs-title {
+    max-width: 20ch;
+  }
+  #cta-1611 .cs-text {
+    margin: 0 0 calc(32 / 16 * 1rem) 0;
+    opacity: 0.8;
+  }
+  #cta-1611 .cs-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(16 / 16 * 1rem);
+  }
+  #cta-1611 .cs-input {
+    font-size: calc(16 / 16 * 1rem);
+    width: 100%;
+    height: clamp(2.875rem, 5.5vw, 3.5rem);
+    margin: 0;
+    padding: 0;
+    padding-left: calc(20 / 16 * 1rem);
+    border: none;
+    /* prevents padding from adding to width and height */
+    box-sizing: border-box;
+    display: block;
+  }
+  #cta-1611 .cs-input::placeholder {
+    color: #767676;
+  }
+  #cta-1611 .cs-button-solid {
+    font-size: calc(16 / 16 * 1rem);
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: calc(150 / 16 * 1rem);
+    padding: 0 calc(24 / 16 * 1rem);
+    background-color: var(--primaryLight);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #cta-1611 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #cta-1611 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #cta-1611 .cs-submit {
+    width: 100%;
+    border: none;
+  }
+  #cta-1611 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #cta-1611 .cs-wrapper {
+    display: none;
+  }
+  #cta-1611 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta-1611 .cs-background:before {
+    /* black overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #cta-1611 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cta-1611 .cs-container {
+    max-width: calc(1280 / 16 * 1rem);
+  }
+  #cta-1611 .cs-form {
+    flex-direction: row;
+  }
+  #cta-1611 .cs-input {
+    width: calc(360 / 16 * 1rem);
+  }
+  #cta-1611 .cs-submit {
+    width: calc(222 / 16 * 1rem);
+  }
+  #cta-1611 .cs-wrapper {
+    width: 100%;
+    max-width: calc(1774 / 16 * 1rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+  #cta-1611 .cs-fish {
+    /* 172px - 336px */
+    width: clamp(10.75rem, 20vw, 21rem);
+    height: auto;
+    display: block;
+  }
+}
+/* Large Desktop 1300px - Parallax Scroll */
+@media only screen and (min-width: 81.25rem) {
+  #cta-1611 {
+    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/underwater.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #cta-1611 .cs-background img {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-1611">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing7.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing7.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/fishing7.jpg" alt="fishing" width="413" height="516">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Thousands of Happy Fish Hunters</h2>
+            <p class="cs-text">
+                “Outstanding store for fishing accessories! Top-notch products, user-friendly website, and excellent customer service. They truly care about anglers and provide valuable tips. Highly recommended!”
+            </p>
+            <div class="cs-flex-group">
+                <picture class="cs-profile-wrapper">
+                    <img class="cs-profile" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                </picture>
+                <span class="cs-name">
+                    Jenny Wilson
+                    <span class="cs-job">Fish Hunter</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!--SVG Quotes-->
+    <svg class="cs-quotes" width="182" height="152" fill="none" preserveAspectRatio="none" viewBox="0 0 182 152" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="var(--quoteColor)"><path d="M41.75 152H0L33.315 0H100.1L41.75 152ZM123.651 152h-41.75L115.214 0H182l-58.349 152Z"/></g><defs><clipPath id="a-1611"><path fill="#fff" d="M0 0h182v152H0z"/></clipPath></defs></svg>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/coast.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/coast.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/coast.jpg" alt="coast" width="1280" height="568">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-1611">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Subscribe</span>
+            <h2 class="cs-title">Subscribe Your Email for Newsletter & Promotion</h2>
+            <p class="cs-text">
+                Nulla dig nissimmi quis neque interdum. An Ohio man allegedly punched his lawyer in the face in court Tuesday upon finding out he was sentenced.
+            </p>
+            <form class="cs-form" name="Contact Form" method="post">
+                <input class="cs-input" type="email" id="cs-email-302-1611" name="find-us" placeholder="Email Address">
+                <button class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/underwater.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/underwater.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/underwater.jpg" alt="water" width="1920" height="486" aria-hidden="true">
+    </picture>
+    <div class="cs-wrapper">
+        <img class="cs-fish cs-fish1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/left-fish.svg" alt="fish" width="1920" height="486" aria-hidden="true">
+        <img class="cs-fish cs-fish1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/right-fish.svg" alt="fish" width="1920" height="486" aria-hidden="true">
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse triplet</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RTsbs-1588,
+  #RTsbsr-1588,
+  #RTsbst-1588 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #RTsbs-1588 .cs-container,
+  #RTsbsr-1588 .cs-container,
+  #RTsbst-1588 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(2.5rem, 6vw, 4rem);
+  }
+  #RTsbs-1588 .cs-picture,
+  #RTsbsr-1588 .cs-picture,
+  #RTsbst-1588 .cs-picture {
+    width: 100%;
+    height: clamp(25rem, 80vw, 47rem);
+    display: block;
+    position: relative;
+  }
+  #RTsbs-1588 .cs-picture img,
+  #RTsbsr-1588 .cs-picture img,
+  #RTsbst-1588 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #RTsbs-1588 .cs-content,
+  #RTsbsr-1588 .cs-content,
+  #RTsbst-1588 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #RTsbs-1588 .cs-title,
+  #RTsbsr-1588 .cs-title,
+  #RTsbst-1588 .cs-title {
+    /* 26 characters wide including spaces */
+    max-width: 26ch;
+    margin: 0;
+  }
+  #RTsbs-1588 .cs-card-group,
+  #RTsbsr-1588 .cs-card-group,
+  #RTsbst-1588 .cs-card-group {
+    width: 100%;
+    /* 550px - 630px */
+    max-width: clamp(34.375rem, 50vw, 39.375rem);
+    padding: 0;
+    /* 24px - 40px */
+    margin: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(1.75rem, 4vw, 2.5rem) 0;
+    display: grid;
+    align-items: center;
+    gap: clamp(1rem, 4vw, 2.5rem);
+  }
+  #RTsbs-1588 .cs-item,
+  #RTsbsr-1588 .cs-item,
+  #RTsbst-1588 .cs-item {
+    list-style: none;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #RTsbs-1588 .wrapper,
+  #RTsbsr-1588 .wrapper,
+  #RTsbst-1588 .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.625rem;
+  }
+  #RTsbs-1588 .cs-item-number,
+  #RTsbsr-1588 .cs-item-number,
+  #RTsbst-1588 .cs-item-number {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #RTsbs-1588 .cs-h3,
+  #RTsbsr-1588 .cs-h3,
+  #RTsbst-1588 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #RTsbs-1588 .cs-item-text,
+  #RTsbsr-1588 .cs-item-text,
+  #RTsbst-1588 .cs-item-text {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #RTsbs-1588 .cs-ul,
+  #RTsbsr-1588 .cs-ul,
+  #RTsbst-1588 .cs-ul {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #RTsbs-1588 .cs-li,
+  #RTsbsr-1588 .cs-li,
+  #RTsbst-1588 .cs-li {
+    font-size: var(--bodyFontSize);
+    list-style: none;
+    line-height: 1.5em;
+    width: 100%;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #RTsbs-1588 .cs-button-solid,
+  #RTsbsr-1588 .cs-button-solid,
+  #RTsbst-1588 .cs-button-solid {
+    font-size: 1rem;
+    line-height: 3.5em;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    width: auto;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #RTsbs-1588 .cs-button-solid:before,
+  #RTsbsr-1588 .cs-button-solid:before,
+  #RTsbst-1588 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1a1a1a;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #RTsbs-1588 .cs-button-solid:hover,
+  #RTsbsr-1588 .cs-button-solid:hover,
+  #RTsbst-1588 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #RTsbs-1588 .cs-button-solid:hover:before,
+  #RTsbsr-1588 .cs-button-solid:hover:before,
+  #RTsbst-1588 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #RTsbs-1588 .cs-container,
+  #RTsbsr-1588 .cs-container,
+  #RTsbst-1588 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #RTsbs-1588 .cs-content,
+  #RTsbsr-1588 .cs-content,
+  #RTsbst-1588 .cs-content {
+    width: 50%;
+    max-width: 39.375rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #RTsbs-1588 .cs-card-group,
+  #RTsbsr-1588 .cs-card-group,
+  #RTsbst-1588 .cs-card-group {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #RTsbs-1588 .cs-item,
+  #RTsbsr-1588 .cs-item,
+  #RTsbst-1588 .cs-item {
+    grid-column: span 6;
+  }
+  #RTsbs-1588 .cs-picture,
+  #RTsbsr-1588 .cs-picture,
+  #RTsbst-1588 .cs-picture {
+    height: auto;
+    min-height: 32.8125rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RTsbs-1588 .cs-content,
+  #RTsbsr-1588 .cs-content,
+  #RTsbst-1588 .cs-content {
+    padding: 5.25rem 0;
+    align-self: center;
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RTsbsr-1588 {
+    background-color: #f7f7f7;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #RTsbsr-1588 .cs-picture {
+    order: 2;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Side By Side                -->
+<!-- ============================================ -->
+
+<section id="RTsbs-1588">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
+            <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg" alt="models" width="586" height="690">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Our Features</span>
+            <h2 class="cs-title">Accessible Wardrobe That Men Can Wear and Curate Over Time</h2>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">01</span>
+                        <h3 class="cs-h3">
+                            Member Discount
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">02</span>
+                        <h3 class="cs-h3">
+                            Safe Payment
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">03</span>
+                        <h3 class="cs-h3">
+                            Shop with Confidence
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">04</span>
+                        <h3 class="cs-h3">
+                            Money Return
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">View All Collections</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="RTsbsr-1588">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
+            <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg" alt="models" width="586" height="690">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Our Features</span>
+            <h2 class="cs-title">Accessible Wardrobe That Men Can Wear and Curate Over Time</h2>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">01</span>
+                        <h3 class="cs-h3">
+                            Member Discount
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">02</span>
+                        <h3 class="cs-h3">
+                            Safe Payment
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">03</span>
+                        <h3 class="cs-h3">
+                            Shop with Confidence
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">04</span>
+                        <h3 class="cs-h3">
+                            Money Return
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">View All Collections</a>
+        </div>
+    </div>
+</section>
+    
+<!-- ============================================ -->
+<!--             Side By Side Triplet             -->
+<!-- ============================================ -->
+
+<section id="RTsbst-1588">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
+            <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg" alt="models" width="586" height="690">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Our Features</span>
+            <h2 class="cs-title">Accessible Wardrobe That Men Can Wear and Curate Over Time</h2>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">01</span>
+                        <h3 class="cs-h3">
+                            Member Discount
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">02</span>
+                        <h3 class="cs-h3">
+                            Safe Payment
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">03</span>
+                        <h3 class="cs-h3">
+                            Shop with Confidence
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="wrapper">
+                        <span class="cs-item-number">04</span>
+                        <h3 class="cs-h3">
+                            Money Return
+                        </h3>
+                    </div>
+                    <p class="cs-item-text">
+                        It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                    </p>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">View All Collections</a>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-2172 {
+    background-color: #FBF5F1;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2172 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sbsr-2172 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    /* moved section padding to cs-content so the cs-background can be full width */
+    padding: var(--sectionPadding);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-2172 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbsr-2172 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbsr-2172 .cs-ul {
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  #sbsr-2172 .cs-li {
+    list-style: none;
+  }
+  #sbsr-2172 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.5rem 0;
+    color: var(--headerColor);
+  }
+  #sbsr-2172 .cs-li-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 1rem;
+    color: var(--bodyTextColor);
+  }
+  #sbsr-2172 .cs-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+  }
+  #sbsr-2172 .cs-flex {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #sbsr-2172 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+  }
+  #sbsr-2172 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #sbsr-2172 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #sbsr-2172 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbsr-2172 .cs-picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 35rem;
+    z-index: 1;
+  }
+  #sbsr-2172 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #sbsr-2172 .cs-floater {
+    width: 24%;
+    max-width: 18.4375rem;
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-2172 {
+    /* 90px - 150px */
+    /* returned section padding to the section container, this Stitch has 1.5X padding top and bottom than the normal Stitch */
+    padding: clamp(5.625rem, 9vw, 9.375rem) 1rem;
+  }
+  #sbsr-2172 .cs-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2172 .cs-content {
+    width: 48%;
+    max-width: 35.1875rem;
+    /* 32px - 90px */
+    padding: clamp(2rem, 5vw, 5.625rem) 0;
+  }
+  #sbsr-2172 .cs-picture {
+    width: 50vw;
+    height: auto;
+    margin-left: 2.5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+  }
+  #sbsr-2172 .cs-floater {
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-2172">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding9.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding9.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding9.jpg" alt="room" width="960" height="796">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Classes</span>
+            <h2 class="cs-title">Our Workshops</h2>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <h3 class="cs-h3">Bridal Workshop: Sophisticated Wedding</h3>
+                    <p class="cs-li-text">
+                        We welcome and celebrate different perspectives to help our firm, our clients and our people adip iscing elit achieve.
+                    </p>
+                    <div class="cs-info">
+                        <span class="cs-flex">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cal.svg" alt="icon" width="20" height="20">
+                            Sep 29
+                        </span>
+                        <span class="cs-flex">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/clock7.svg" alt="icon" width="20" height="20">
+                            6:00 pm
+                        </span>
+                        <span class="cs-flex">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cost.svg" alt="icon" width="20" height="20">
+                            Free
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <h3 class="cs-h3">Wedding Photography Masterclass</h3>
+                    <p class="cs-li-text">
+                        We welcome and celebrate different perspectives to help our firm, our clients and our people adip iscing elit achieve.
+                    </p>
+                    <div class="cs-info">
+                        <span class="cs-flex">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cal.svg" alt="icon" width="20" height="20">
+                            Sep 29
+                        </span>
+                        <span class="cs-flex">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/clock7.svg" alt="icon" width="20" height="20">
+                            6:00 pm
+                        </span>
+                        <span class="cs-flex">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cost.svg" alt="icon" width="20" height="20">
+                            Free
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Contact Us</a>
+        </div>
+    </div>
+    <img class="cs-floater" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower6.png" alt="flower" width="295" height="225" aria-hidden="true">
+</section>
+
+<script></script>
+</body>
+</html>

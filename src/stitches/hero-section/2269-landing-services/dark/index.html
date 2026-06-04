@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>landing services</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-2269 {
+    padding: var(--sectionPadding);
+    background-color: #1a1a1a;
+    overflow: hidden;
+    position: relative;
+  }
+  #hero-2269 .cs-container {
+    width: 100%;
+    max-width: 107.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 56px */
+    gap: clamp(3rem, 3vw, 3.5rem);
+  }
+  #hero-2269 .cs-flex {
+    width: 100%;
+  }
+  #hero-2269 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left. set to center to align centrally */
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  #hero-2269 .cs-topper {
+    color: var(--secondary);
+  }
+  #hero-2269 .cs-title {
+    /* 39px - 120px */
+    font-size: clamp(2.4375rem, 11vw, 7.5rem);
+    line-height: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    width: 100%;
+    max-width: 65.3125rem;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #hero-2269 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: 2rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #hero-2269 .cs-img-1 {
+    /* 94px - 220px */
+    width: clamp(5.875rem, 22vw, 13.75rem);
+    /* 40px - 96px */
+    height: clamp(2.5rem, 10vw, 6rem);
+    object-fit: cover;
+  }
+  #hero-2269 .cs-img-2 {
+    /* 195px - 361px */
+    width: clamp(12.1875rem, 48vw, 22.5625rem);
+    /* 40px - 96px */
+    height: clamp(2.5rem, 10vw, 6rem);
+    object-fit: cover;
+  }
+  #hero-2269 .cs-floater {
+    /* 126px - 268px */
+    width: clamp(7.875rem, 19vw, 16.75rem);
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    right: -2.125rem;
+    bottom: -1.0625rem;
+  }
+  #hero-2269 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 3.125em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: auto;
+    padding: 0 1.875rem;
+    background-color: var(--primary);
+    color: #000;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+    transition-delay: 0.1s;
+  }
+  #hero-2269 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #hero-2269 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-2269 .cs-button-solid:before {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+}
+/* Large Desktop - 1400px */
+@media only screen and (min-width: 87.5rem) {
+  #hero-2269 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 6.25rem;
+  }
+  #hero-2269 .cs-floater {
+    top: 0.3125rem;
+    right: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-2269 {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-2269 {
+    max-width: 120rem;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+  }
+  #services-2269:before {
+    /* background color */
+    content: "";
+    width: 100vw;
+    height: 100%;
+    background: #1a1a1a;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #services-2269 .cs-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-2269 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    /* 60px - 100px top & bottom */
+    /* 16px - 100px left and right */
+    padding: clamp(3.75rem, 7vw, 6.25rem) clamp(1rem, 4vw, 6.25rem);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 2rem;
+    position: relative;
+    z-index: 15;
+  }
+  #services-2269 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    grid-column: span 12;
+    transition: background-color 0.3s;
+  }
+  #services-2269 .cs-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #services-2269 .cs-icon {
+    width: 2rem;
+    height: auto;
+  }
+  #services-2269 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+  }
+  #services-2269 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+    transition: color 0.3s, opacity 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2269 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  #services-2269 .cs-title {
+    margin: 0;
+  }
+  #services-2269 .cs-card-group {
+    /* 32px - 60px */
+    column-gap: clamp(2rem, 6vw, 3.75rem);
+  }
+  #services-2269 .cs-flex-group {
+    width: 50%;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #services-2269 .cs-item {
+    grid-column: span 4;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #services-2269:before {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                      Hero                    -->
+<!-- ============================================ -->
+
+<section id="hero-2269">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Perfect Photography at Your Doorstep</span>
+                <h2 class="cs-title">
+                    Chris Brown
+                        <img class="cs-img cs-img-1" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/photography-hero-image-one.png" alt="posing" width="220" height="96" loading="eager" decoding="async">
+                    the World Class
+                        <img class="cs-img cs-img-2" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/photography-hero-image-two.png" alt="posing" width="220" height="96" loading="eager" decoding="async">
+                    Wedding Photographer
+                </h2>
+            </div>
+            <div class="cs-flex">
+                <p class="cs-text">
+                    Authentic wedding photography emphasizes candid shots that capture real emotions, reactions, and interactions among the couple, their families, and guests. These moments are often spontaneous and heartfelt.
+                </p>
+                <a class="cs-button-solid" href="" >Book An Appointment</a>
+            </div>
+        </div>
+        <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/photography-hero-floater.png" alt="floating leaf" class="cs-floater" width="373" height="268" loading="eager" decoding="async">
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-2269">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/flower.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        The Ceremony
+                    </h3>
+                    <p class="cs-item-text">
+                        Choose from our range of Photo booth options, including open-air to suit your wedding theme and style.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/meal.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        The Lunch
+                    </h3>
+                    <p class="cs-item-text">
+                        Choose from our range of Photo booth options, including open-air to suit your wedding theme and style.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/photo.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        Photo Booth
+                    </h3>
+                    <p class="cs-item-text">
+                        Choose from our range of Photo booth options, including open-air to suit your wedding theme and style.
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

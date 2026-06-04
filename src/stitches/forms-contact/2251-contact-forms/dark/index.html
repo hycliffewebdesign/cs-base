@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact forms</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-2251 {
+    background-color: #FBF5F1;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #contact-2251 .cs-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact-2251 .cs-wrapper {
+    width: 100%;
+    /* removed at tablet */
+    max-width: 36.5rem;
+    padding: var(--sectionPadding);
+    /* 16px - 100px */
+    padding-left: clamp(1rem, 4.5vw, 6.25rem);
+    padding-right: clamp(1rem, 4.5vw, 6.25rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #contact-2251 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 48.125rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #contact-2251 iframe {
+    width: 100%;
+    height: 20rem;
+  }
+  #contact-2251 .cs-title {
+    max-width: 24ch;
+  }
+  #contact-2251 .cs-form {
+    width: 100%;
+    max-width: 48.125rem;
+    /* prevents flexbox from affecting height and width */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #contact-2251 .cs-form-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #contact-2251 .cs-form-title {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 0.75rem 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #contact-2251 .cs-label {
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #contact-2251 .cs-input,
+  #contact-2251 .cs-select {
+    font-size: 1rem;
+    width: 100%;
+    /* 46px - 56px */
+    height: clamp(2.875rem, 5.5vw, 3.5rem);
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    color: #767676;
+    border: none;
+  }
+  #contact-2251 .cs-input::placeholder,
+  #contact-2251 .cs-select::placeholder {
+    color: #767676;
+  }
+  #contact-2251 .cs-textarea {
+    font-family: inherit;
+    min-height: 7.5rem;
+    margin: 0 0 1.25rem 0;
+    padding-top: 1.5rem;
+  }
+  #contact-2251 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    /* 32px - 48px */
+    padding: 0 clamp(2rem, 4vw, 3rem);
+    background-color: var(--primary);
+    overflow: hidden;
+    color: #fff;
+    border: none;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #contact-2251 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #contact-2251 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #contact-2251 .cs-submit {
+    width: 100%;
+  }
+  #contact-2251 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #contact-2251 .cs-button-wrapper {
+    display: flex;
+    justify-content: center;
+    grid-column: span 12;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 600px) {
+  #contact-2251 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #contact-2251 iframe {
+    width: 50%;
+    height: auto;
+  }
+  #contact-2251 .cs-wrapper {
+    width: 50%;
+    max-width: 100%;
+  }
+  #contact-2251 .cs-button-solid {
+    width: auto;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-2251 .cs-label {
+    grid-column: span 6;
+  }
+  #contact-2251 .cs-label.cs-message {
+    grid-column: span 12;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="contact-2251">
+    <div class="cs-container">
+        <!--Copy and paste any iframe from Google Maps-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172152.96028660645!2d-122.50460356806971!3d47.60882845859935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1735605746621!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="cs-wrapper">
+            <div class="cs-content">
+                <span class="cs-topper">Contact Us</span>
+                <h2 class="cs-title">Let’s Capture The Celebration 
+                    of True Love</h2>
+                <p class="cs-text">
+                    We have courses on-demand and live instructors for workshops and support. We also provide LIVE instructor-led training courses and onsite training.
+                </p>
+            </div>
+            <form class="cs-form" id="cs-form-2251" name="Contact Form" method="post">
+                <label class="cs-label">
+                    <input class="cs-input" required type="text" id="name-2251" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label">
+                    <input class="cs-input" required type="email" id="email-2251" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label">
+                    <input class="cs-input" type="tel" id="phone-2251" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    <select class="cs-select" name="class" id="classes-2251">
+                        <option value="Service 1">Services</option>
+                        <option value="Service 2">Services</option>
+                        <option value="Service 3">Services</option>
+                        <option value="Service 4">Services</option>
+                    </select>
+                </label>
+                <label class="cs-label cs-message">
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-2251" placeholder="Message"></textarea>
+                </label>
+                <div class="cs-button-wrapper">
+                    <button class="cs-button-solid cs-submit" type="submit">Schedule Consultation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

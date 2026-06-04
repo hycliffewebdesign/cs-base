@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recent posts</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Events           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-1736 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-1736 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 49rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    z-index: 1;
+  }
+  #blog-1736 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #blog-1736 .cs-title {
+    /* max width of 18 characters, includes spaces between words */
+    max-width: 23ch;
+    margin: 0;
+  }
+  #blog-1736 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #blog-1736 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  #blog-1736 .cs-item:hover .cs-picture img {
+    transform: scale(1.1);
+  }
+  #blog-1736 .cs-picture {
+    width: 100%;
+    height: 25.8125rem;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #blog-1736 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #blog-1736 .cs-picture::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44.07%, rgba(0, 0, 0, 0) 44.07%, #000 80.27%), rgba(0, 0, 0, 0) 50% / cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #blog-1736 .cs-info {
+    height: 100%;
+    padding: 1.5rem;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    color: var(--bodyTextColorWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  #blog-1736 .cs-date {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    z-index: 2;
+  }
+  #blog-1736 .cs-time {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+  }
+  #blog-1736 .cs-h3 {
+    /* 25px - 31px */
+    font-size: clamp(1.5625rem, 2vw, 1.9375rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    /* 3. any additional text beyond the 3 lines will be truncated and replaced with "..." */
+    text-overflow: ellipsis;
+    margin: 0 0 1rem 0;
+    overflow: hidden;
+    /* 1. set the display to a "webkit box" */
+    display: -webkit-box;
+    transition: color 0.3s;
+    /* 2. clamp the number of lines to 3 */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  #blog-1736 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #blog-1736 .cs-link:hover .cs-arrow {
+    transform: translateX(0.25rem);
+  }
+  #blog-1736 .cs-arrow {
+    width: 1.25rem;
+    height: auto;
+    filter: invert(1) brightness(100);
+    transition: transform 0.3s;
+  }
+  #blog-1736 .cs-stat-group {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+    z-index: 1;
+  }
+  #blog-1736 .cs-stat {
+    display: flex;
+    grid-column: span 12;
+    gap: 1rem;
+  }
+  #blog-1736 .cs-icon-wrapper {
+    padding: 1.25rem;
+    background-color: var(--primary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #blog-1736 .cs-icon {
+    width: 2rem;
+    height: auto;
+  }
+  #blog-1736 .cs-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #blog-1736 .cs-number {
+    font-size: 1.9375rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    color: var(--headerColor);
+  }
+  #blog-1736 .cs-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--bodyTextColor);
+  }
+  #blog-1736 .cs-graphic {
+    width: 100%;
+    min-width: 62.5rem;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-50%);
+  }
+  #blog-1736 .cs-dark {
+    display: none;
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #blog-1736 .cs-stat-group {
+    padding: 0;
+  }
+  #blog-1736 .cs-stat {
+    grid-column: span 6;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #blog-1736 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-1736 .cs-item {
+    grid-column: span 4;
+  }
+  #blog-1736 .cs-stat {
+    grid-column: span 3;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                     Blog                     -->
+<!-- ============================================ -->
+
+<section id="blog-1736">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Blog</span>
+            <h2 class="cs-title">Our Recent Post</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-2.jpg">
+                    <source media="(min-width: 602px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-2.jpg" alt="people" width="305" height="180">
+                </picture>
+                <span class="cs-date">Dec<br>04</span>
+                <div class="cs-info">
+                    <span class="cs-time">
+                        9.00AM - 12.00PM
+                    </span>
+                    <h3 class="cs-h3">My journey of champion ship in weight lifting</h3>
+                    <a href="" class="cs-link">
+                        Read More
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/event-chevron.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-4.jpg">
+                    <source media="(min-width: 602px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-4.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-4.jpg" alt="people" width="305" height="180">
+                </picture>
+                <span class="cs-date">Nov<br>16</span>
+                <div class="cs-info">
+                    <span class="cs-time">
+                        9.00AM - 12.00PM
+                    </span>
+                    <h3 class="cs-h3">My journey of champion ship in weight lifting</h3>
+                    <a href="" class="cs-link">
+                        Read More
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/event-chevron.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-5.jpg">
+                    <source media="(min-width: 602px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-5.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-faq-5.jpg" alt="people" width="305" height="180">
+                </picture>
+                <span class="cs-date">Nov<br>08</span>
+                <div class="cs-info">
+                    <span class="cs-time">
+                        9.00AM - 12.00PM
+                    </span>
+                    <h3 class="cs-h3">My journey of champion ship in weight lifting</h3>
+                    <a href="" class="cs-link">
+                        Read More
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/event-chevron.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="cs-stat-group">
+            <li class="cs-stat">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-calendar.svg" alt="calendar" height="32" width="32" loading="lazy" decoding="async">
+                </picture>
+                <div class="cs-flex">
+                    <span class="cs-number">04</span>
+                    <span class="cs-label">Day Trips</span>
+                </div>
+            </li>
+            <li class="cs-stat">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-pin.svg" alt="pin" height="32" width="32" loading="lazy" decoding="async">
+                </picture>
+                <div class="cs-flex">
+                    <span class="cs-number">02</span>
+                    <span class="cs-label">Guides</span>
+                </div>
+            </li>
+            <li class="cs-stat">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-profile.svg" alt="profile" height="32" width="32" loading="lazy" decoding="async">
+                </picture>
+                <div class="cs-flex">
+                    <span class="cs-number">20</span>
+                    <span class="cs-label">People Group</span>
+                </div>
+            </li>
+            <li class="cs-stat">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-location.svg" alt="location" height="32" width="32" loading="lazy" decoding="async">
+                </picture>
+                <div class="cs-flex">
+                    <span class="cs-number">35</span>
+                    <span class="cs-label">Miles Per Day</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--This SVG is #f7f7f7, so for a better transition to the next section, make the section below this one have a background-color of #f7f7f7 as well and it will look like the graphic is top of the section below it and look like one big graphic.-->
+    <img class="cs-graphic cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/grey-splatter.svg" alt="background" height="1920" width="468" loading="lazy" decoding="async">
+    <!--This is a dark version. Download the svg and change the fill color to match the color of the section background below it-->
+    <img class="cs-graphic cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter.svg" alt="background" height="1920" width="468" loading="lazy" decoding="async">
+</section>
+
+<script></script>
+</body>
+</html>

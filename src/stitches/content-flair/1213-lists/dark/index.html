@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lists</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/* Mobile - 360px */
+/* you can copy and paste these styles into the section CSS where you placed the #list-1213 HTML, or you can place it in your global stylesheet so you can reuse the HTML in any Side By Side section on your site. That way when you make changes to it, it will also change everywhere in the site */
+@media only screen and (min-width: 0rem) {
+  #content-flair-1213 {
+    width: 100%;
+    max-width: 39.375rem;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 2rem;
+    column-gap: 1.25rem;
+  }
+  #content-flair-1213 .cs-ul {
+    width: 100%;
+    margin: 0;
+    padding-left: 1.25rem;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #content-flair-1213 .cs-li {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    max-width: 25rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+    position: relative;
+  }
+  #content-flair-1213 .cs-li:before {
+    /* bullet */
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0.625rem;
+    left: -0.9375rem;
+  }
+  #content-flair-1213 .cs-video-link {
+    width: 100%;
+    /* changes to 160px at desktop */
+    height: 12.5rem;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #content-flair-1213 .cs-video-link:hover .cs-video-bg {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  #content-flair-1213 .cs-video-link:hover .cs-wrapper {
+    transform: scale(1.2);
+  }
+  #content-flair-1213 .cs-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #content-flair-1213 .cs-wrapper {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    border: 2px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.75s;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #content-flair-1213 .cs-ul {
+    width: 50%;
+  }
+  #content-flair-1213 .cs-video-link {
+    width: 50%;
+    max-width: 17.5rem;
+    height: 10rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!--                   
+    These "Micro Stitches" are to be placed inside the .cs-content group of Side By Side Stitches.  Typically after the .cs-title or .cs-text. They are used to add more design flair to a Stitch as well as convey more information in a different way.
+-->
+
+<div id="content-flair-1213">
+    <ul class="cs-ul">
+        <li class="cs-li">Stage-focused investing.</li>
+        <li class="cs-li">Sector specialization.</li>
+        <li class="cs-li">Active involvement.</li>
+        <li class="cs-li">Portfolio diversification.</li>
+        <li class="cs-li">Achieving a return.</li>
+    </ul>
+    <a href="" class="cs-video-link">
+        <!--BG Image-->
+        <img class="cs-video-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/video-bg.jpg" alt="people" width="280" height="160" aria-hidden="true">
+        <!--Play Icon-->
+        <picture class="cs-wrapper">
+            <img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-sharp2.svg" alt="graphic" width="24" height="24" aria-hidden="true">
+        </picture>
+    </a>
+</div>
+
+<script></script>
+</body>
+</html>

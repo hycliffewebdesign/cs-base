@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button boxes</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/* you can copy and paste this into your global stylesheet to be used everywhere in your site */
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #button-box-1483 {
+    width: 100%;
+    max-width: 39.375rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #button-box-1483 .cs-link {
+    text-decoration: none;
+    padding-right: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  #button-box-1483 .cs-link:hover .cs-wrapper {
+    transform: scale(1.2);
+  }
+  #button-box-1483 .cs-wrapper {
+    width: 3.25rem;
+    height: 3.25rem;
+    border: 1px solid #E8E8E8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    transition: transform 0.3s;
+  }
+  #button-box-1483 .cs-img {
+    width: 3.25rem;
+    height: auto;
+    border: 2px solid #BABABA;
+    border-radius: 50%;
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+  }
+  #button-box-1483 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+  #button-box-1483 .cs-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #button-box-1483 .cs-header {
+    font-size: 1.5625rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #button-box-1483 .cs-phone {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #button-box-1483 .cs-job {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--secondary);
+    display: block;
+  }
+  #button-box-1483 .cs-link-content {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #button-box-1483 .cs-link:nth-of-type(1) {
+    border-right: 1px solid #E8E8E8;
+  }
+}
+</style>
+</head>
+<body>
+
+<!--                   
+    These "Micro Stitches" are to be placed inside the .cs-content group of Side By Side Stitches. This one is supposed to go below the cs-text. 
+-->
+
+<div id="button-box-1483">
+    <a class="cs-link" href="tel:555-555-0234">
+        <picture class="cs-img-wrapper">
+            <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/profile1.jpg" alt="profile" width="52" height="52">
+        </picture>
+        <div class="cs-info">
+            <span class="cs-header">Jenny Wilson</span>
+            <span class="cs-job">Owner</span>
+        </div>
+    </a>
+    <a class="cs-link" href="tel:219-924-5555">
+        <picture class="cs-wrapper">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-phone.svg" alt="icon" width="24" height="24">
+        </picture>
+        <div class="cs-info">
+            <span class="cs-phone">(219) 924-5555</span>
+            <span class="cs-link-content">Call to questions</span>
+        </div>
+    </a>
+</div>
+
+<script></script>
+</body>
+</html>

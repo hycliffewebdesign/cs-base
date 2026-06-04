@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>single quotes</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #quote-1307 {
+    position: relative;
+    z-index: 1;
+  }
+  #quote-1307 .cs-container {
+    width: 100%;
+    max-width: calc(1280 / 16 * 1rem);
+    margin: auto;
+    box-sizing: border-box;
+    padding: var(--sectionPadding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #quote-1307 .cs-content {
+    width: 100%;
+    max-width: calc(850 / 16 * 1rem);
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+  }
+  #quote-1307 .cs-quote {
+    /* 31px - 49px */
+    font-size: clamp(1.9375rem, 5.1vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: calc(24 / 16 * 1rem);
+    color: #fff;
+    text-align: inherit;
+  }
+  #quote-1307 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 3.25vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: calc(8 / 16 * 1rem);
+    color: var(--primary);
+    display: block;
+    text-align: inherit;
+  }
+  #quote-1307 .cs-job {
+    font-size: calc(16 / 16 * 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: #f7f7f7;
+    text-align: inherit;
+  }
+  #quote-1307 .cs-background {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* darkened overlay */
+  }
+  #quote-1307 .cs-background::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  #quote-1307 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.24;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Quote                     -->
+<!-- ============================================ -->
+
+<section id="quote-1307">
+    <div class="cs-container">
+        <div class="cs-content">
+            <p class="cs-quote">
+                Creating long-term value with entrepreneurial intelligence! Our main goal is Growth.
+            </p>
+            <span class="cs-name">Piter Bowman</span>
+            <span class="cs-job">Creative Director</span>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)"
+                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/banking-district.jpg">
+        <source media="(min-width: 601px)"
+                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/banking-district.jpg">
+        <img aria-hidden="true" loading="lazy" decoding="async"
+                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/banking-district.jpg"
+                alt="banking cityscape" width="360" height="316">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collections</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Collection         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #collection-2474 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2474 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 80px */
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+  #collection-2474 .cs-picture-wrapper {
+    width: 100%;
+    height: 90vw;
+    max-height: 32.5rem;
+    box-sizing: border-box;
+    /* 16px - 40px */
+    padding: clamp(1rem, 3vw, 2.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+  #collection-2474 .cs-picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #collection-2474 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #collection-2474 .cs-cta {
+    width: 100%;
+    background-color: var(--bodyTextColorWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+  #collection-2474 .cs-heading {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: center;
+    letter-spacing: -0.03em;
+    padding: 1.25rem 0;
+    color: #000;
+  }
+  #collection-2474 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2474 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #collection-2474 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #collection-2474 .cs-title {
+    margin: 0;
+  }
+  #collection-2474 .cs-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #collection-2474 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* pushes the scrollbar to the bottom */
+    /* 48px - 64px */
+    padding-bottom: clamp(3rem, 6vw, 4rem);
+    overflow-x: scroll;
+    display: flex;
+    gap: 1.25rem;
+    /* Scrollbar Styles */
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #AD7E50 #E7E7E8;
+  }
+  #collection-2474 .cs-card-group::-webkit-scrollbar {
+    height: 0.25rem;
+  }
+  #collection-2474 .cs-card-group::-webkit-scrollbar-track {
+    background: #E7E7E8;
+  }
+  #collection-2474 .cs-card-group::-webkit-scrollbar-thumb {
+    background: #AD7E50;
+  }
+  #collection-2474 .cs-card-group::-webkit-scrollbar-thumb:hover {
+    background: #9a6f45;
+  }
+  #collection-2474 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    /* 260px - 305px */
+    max-width: clamp(16.25rem, 40vw, 19.0625rem);
+    overflow: hidden;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, transform 0.3s;
+    flex: 1 0 auto;
+  }
+  #collection-2474 .cs-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  #collection-2474 .cs-image {
+    width: 100%;
+    /* 260px - 305px */
+    height: clamp(16.25rem, 40vw, 19.0625rem);
+    background-color: var(--primary);
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #collection-2474 .cs-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #collection-2474 .cs-flex {
+    height: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  #collection-2474 .cs-tag {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-overflow: ellipsis;
+    margin: 0 0 0.25rem;
+    overflow: hidden;
+    color: var(--bodyTextColor);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+  }
+  #collection-2474 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-overflow: ellipsis;
+    letter-spacing: -0.6px;
+    margin: 0 0 1rem 0;
+    overflow: hidden;
+    color: var(--headerColor);
+    display: -webkit-box;
+    transition: color 0.3s;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    align-self: stretch;
+  }
+  #collection-2474 .cs-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-overflow: ellipsis;
+    letter-spacing: -0.6px;
+    overflow: hidden;
+    color: var(--primary);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #collection-2474 .cs-item {
+    grid-column: span 6;
+  }
+  #collection-2474 .cs-picture-wrapper {
+    height: auto;
+    max-height: 100%;
+    min-height: 29.25rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #collection-2474 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #collection-2474 .cs-picture-wrapper {
+    width: 42%;
+    height: auto;
+    max-height: none;
+    min-height: 49rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #collection-2474 .cs-content {
+    align-self: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Collection                  -->
+<!-- ============================================ -->
+
+<section id="collection-2474">
+    <div class="cs-container">
+        <div class="cs-picture-wrapper">g
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-catalog.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-catalog.jpg">
+                <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-catalog.jpg" alt="busines meeting" width="413" height="652" aria-hidden="true">
+            </picture>
+            <div class="cs-cta">
+                <span class="cs-heading">Japandi Aesthetic Storage</span>
+                <a href="" class="cs-button-solid">Explore Catalog</a>
+            </div>
+        </div>
+        <div class="cs-content">
+            <div class="cs-text-wrapper">
+                <span class="cs-topper">Featured Catalog</span>
+                <h2 class="cs-title">
+                    Modern Living Room Catalog
+                </h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-image" aria-hidden="true">
+                            <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture1.jpg">
+                            <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture1.jpg">
+                            <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture1.jpg" alt="windmill" width="413" height="320">
+                        </picture>
+                        <div class="cs-flex">
+                            <span class="cs-tag">Sofas</span>
+                            <h3 class="cs-h3">
+                                Japandi Bubble Sofa
+                            </h3>
+                            <span class="cs-price">$1,999.96</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-image" aria-hidden="true">
+                            <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture2.jpg">
+                            <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture2.jpg">
+                            <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture2.jpg" alt="windmill" width="413" height="320">
+                        </picture>
+                        <div class="cs-flex">
+                            <span class="cs-tag">Sofas</span>
+                            <h3 class="cs-h3">
+                                Japandi Bubble Sofa
+                            </h3>
+                            <span class="cs-price">$1,999.96</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-image" aria-hidden="true">
+                            <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture3.jpg">
+                            <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture3.jpg">
+                            <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture3.jpg" alt="windmill" width="413" height="320">
+                        </picture>
+                        <div class="cs-flex">
+                            <span class="cs-tag">Sofas</span>
+                            <h3 class="cs-h3">
+                                Japandi Bubble Sofa
+                            </h3>
+                            <span class="cs-price">$1,999.96</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-image" aria-hidden="true">
+                            <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture4.jpg">
+                            <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture4.jpg">
+                            <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture4.jpg" alt="windmill" width="413" height="320">
+                        </picture>
+                        <div class="cs-flex">
+                            <span class="cs-tag">Sofas</span>
+                            <h3 class="cs-h3">
+                                Japandi Bubble Sofa
+                            </h3>
+                            <span class="cs-price">$1,999.96</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-73 {
+    padding: var(--sectionPadding);
+    background-color: #1a1a1a;
+  }
+  #sbsr-73 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: calc(550 / 16 * 1rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbsr-73 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: calc(542 / 16 * 1rem);
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-73 .cs-text {
+    margin-bottom: calc(16 / 16 * 1rem);
+  }
+  #sbsr-73 .cs-text:last-of-type {
+    margin-bottom: calc(32 / 16 * 1rem);
+  }
+  #sbsr-73 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #sbsr-73 .cs-text {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  #sbsr-73 .cs-button-solid {
+    font-size: calc(16 / 16 * 1rem);
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: calc(150 / 16 * 1rem);
+    padding: 0 calc(24 / 16 * 1rem);
+    background-color: var(--primary);
+    border-radius: calc(4 / 16 * 1rem);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #sbsr-73 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: calc(4 / 16 * 1rem);
+    transition: width 0.3s;
+  }
+  #sbsr-73 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbsr-73 .cs-picture {
+    width: 95%;
+    max-width: calc(550 / 16 * 1rem);
+    margin: 0;
+    position: relative;
+    display: block;
+    /* width divided by height */
+    aspect-ratio: 0.93134328;
+    border-radius: calc(16 / 16 * 1rem);
+    z-index: 1;
+  }
+  #sbsr-73 .cs-picture:before {
+    /* Top right box */
+    content: "";
+    width: calc(160 / 16 * 1rem);
+    /* 202px - 248px */
+    height: clamp(12.625rem, 25vw, 15.5rem);
+    background: var(--bodyTextColorWhite);
+    opacity: 1;
+    border-radius: calc(16 / 16 * 1rem);
+    position: absolute;
+    display: block;
+    /* 16px -20px */
+    /* wrapped in a calc function to get a negative clamp value */
+    top: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+    right: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+  }
+  #sbsr-73 .cs-picture:after {
+    /* Bottom left box */
+    content: "";
+    width: calc(160 / 16 * 1rem);
+    /* 202px - 248px */
+    height: clamp(12.625rem, 25vw, 15.5rem);
+    background: var(--bodyTextColorWhite);
+    opacity: 1;
+    border-radius: calc(16 / 16 * 1rem);
+    position: absolute;
+    display: block;
+    /* 16px -20px */
+    /* wrapped in a calc function to get a negative clamp value */
+    bottom: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+    left: calc(clamp(0.5rem, 2.09vw, 1.25rem) * -1);
+    z-index: -1;
+  }
+  #sbsr-73 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: calc(16 / 16 * 1rem);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-73 .cs-container {
+    max-width: calc(1280 / 16 * 1rem);
+    flex-direction: row;
+    justify-content: flex-end;
+    /* 60px - 128px */
+    gap: clamp(3.75rem, 9.5vw, 8rem);
+  }
+  #sbsr-73 .cs-picture {
+    /* 328px - 502px */
+    width: clamp(20.5rem, 37.5vw, 31.375rem);
+    /* 440px - 520px */
+    height: clamp(27.5rem, 40vw, 32.5rem);
+    /* 16px - 20px */
+    margin: 0 0 0 clamp(1rem, 5vw, 1.25rem);
+    flex: none;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbsr-73 .cs-content {
+    width: 45%;
+    margin: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-73">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder-m.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/body-builder.jpg" alt="body builder" width="500" height="552" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Small Group Training</span>
+            <h2 class="cs-title">Make your circle healthier together</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa ut sed odio cursus. Malesuada scelerisque eget eu, sollicitudin tellus nibh aenean enim sed. Ut vitae eget commodo consectetur felis augue. Condimentum pellentesque sed aliquet leo in potenti libero.
+            </p>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

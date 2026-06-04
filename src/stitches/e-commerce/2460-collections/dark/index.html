@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collections</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Collection         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #collection-2460 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2460 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #collection-2460 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  #collection-2460 .cs-topper {
+    color: var(--secondary);
+  }
+  #collection-2460 .cs-title,
+  #collection-2460 .cs-text {
+    max-width: 100%;
+  }
+  #collection-2460 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #collection-2460 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2460 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #collection-2460 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #collection-2460 .cs-wrapper {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #collection-2460 .cs-timer {
+    /* 39px - 49px */
+    font-size: clamp(2.4375rem, 4vw, 3.0625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 2rem;
+    color: #88898b;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  #collection-2460 .cs-timer-item {
+    text-align: center;
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2460 .cs-time {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    color: var(--bodyTextColor);
+  }
+  #collection-2460 .cs-picture {
+    width: 100%;
+    height: 20rem;
+    display: block;
+    order: -1;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2460 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #collection-2460 .cs-card-group {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: clamp(1rem, 1.5vw, 1.25rem);
+    row-gap: 1rem;
+  }
+  #collection-2460 .cs-item {
+    text-align: center;
+    height: fit-content;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2460 .cs-item:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(8, 18, 34, 0) 31.33%, #081222 87.93%);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #collection-2460 .cs-item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(8, 18, 34, 0) 31.33%, #1a345d 87.93%);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #collection-2460 .cs-item:hover {
+    cursor: pointer;
+  }
+  #collection-2460 .cs-item:hover .cs-item-text {
+    height: fit-content;
+    max-height: 100%;
+    opacity: 1;
+  }
+  #collection-2460 .cs-item:hover:before {
+    opacity: 0;
+  }
+  #collection-2460 .cs-item:hover:after {
+    opacity: 1;
+  }
+  #collection-2460 .cs-link {
+    text-decoration: none;
+  }
+  #collection-2460 .cs-item-picture {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #collection-2460 .cs-item-picture:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #collection-2460 .cs-item-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #collection-2460 .cs-item-wrapper {
+    width: 100%;
+    height: 100%;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6.25rem;
+    z-index: 1;
+  }
+  #collection-2460 .cs-date-wrapper {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    width: 4.375rem;
+    background-color: #fff;
+  }
+  #collection-2460 .cs-month {
+    text-transform: uppercase;
+    padding: 0.125rem 0;
+    background-color: #000;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+  #collection-2460 .cs-day {
+    font-size: 1.25rem;
+    padding-top: 0.125rem;
+    color: #000;
+    display: block;
+  }
+  #collection-2460 .cs-date {
+    font-weight: 400;
+    padding-bottom: 0.25rem;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #collection-2460 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.3vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+  #collection-2460 .cs-item-text {
+    line-height: 1.5em;
+    text-align: left;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 0.5rem 0 0;
+    overflow: hidden;
+    color: var(--bodyTextColorWhite);
+    display: -webkit-box;
+    transition: max-height 0.3s, opacity 0.3s;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  #collection-2460 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #collection-2460 .cs-background:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.84;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #collection-2460 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #collection-2460 .cs-card-group {
+    align-items: stretch;
+  }
+  #collection-2460 .cs-item {
+    height: auto;
+  }
+  #collection-2460 .cs-timer {
+    gap: 0.5rem;
+  }
+  #collection-2460 .cs-timer-item {
+    width: 6.25rem;
+    padding: 1rem 0;
+  }
+  #collection-2460 .cs-timer-item:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    opacity: 0.1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #collection-2460 .cs-item {
+    grid-column: span 4;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #collection-2460 .cs-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #collection-2460 .cs-item {
+    height: clamp(21.25rem, 32vw, 26.5rem);
+  }
+  #collection-2460 .cs-item:hover .cs-item-text {
+    opacity: 1;
+    height: 3rem;
+  }
+  #collection-2460 .cs-picture {
+    max-width: 39.5rem;
+    height: auto;
+    max-height: 100%;
+  }
+  #collection-2460 .cs-content {
+    width: 50vw;
+    max-width: 32.5rem;
+    height: fit-content;
+    flex: none;
+  }
+  #collection-2460 .cs-item-text {
+    height: 0;
+    margin-top: 0;
+    opacity: 0;
+    transition: opacity 0.3s, height 0.3s, margin 0.3s;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Collection                   -->
+<!-- ============================================ -->
+
+<!--
+The countdown timer is set in the javascript. Set a date and local time for the countdown to count down to and refresh the browser and now the countdown will work!
+-->
+
+<section id="collection-2460">
+	<div class="cs-container">
+		<div class="cs-wrapper">
+			<div class="cs-content">
+				<span class="cs-topper">Upcoming Furniture Collections</span>
+				<h2 class="cs-title">Fall 2025 Grand Launch of Japandi FurniStitch</h2>
+				<p class="cs-text">
+					Join us in Oak Harbor, WA for the grand unveiling of our Japandi-inspired furniture collection. Discover unique designs, curated pieces, and enjoy a guided tour with founder Matt Wood. This exclusive event marks a new chapter in
+					our journey of craftsmanship.
+				</p>
+				<div class="cs-timer">
+					<span class="cs-timer-item">
+						0
+						<span class="cs-time">Days</span>
+					</span>
+					:
+					<span class="cs-timer-item">
+						12
+						<span class="cs-time">Hours</span>
+					</span>
+					:
+					<span class="cs-timer-item">
+						1
+						<span class="cs-time">Min</span>
+					</span>
+					:
+					<span class="cs-timer-item">
+						21
+						<span class="cs-time">Sec</span>
+					</span>
+				</div>
+				<a href="" class="cs-button-solid">Schedule Your Visit</a>
+			</div>
+			<picture class="cs-picture">
+				<!--Mobile Image-->
+				<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture19.jpg" />
+				<!--Tablet and above Image-->
+				<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture19.jpg" />
+				<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture19.jpg" alt="furniture" width="632" height="485" />
+			</picture>
+		</div>
+
+		<ul class="cs-card-group">
+			<li class="cs-item">
+				<a href="" class="cs-link">
+                    <picture class="cs-item-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture19.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture19.jpg" />
+                        <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture19.jpg" alt="furniture" width="197" height="197" />
+                    </picture>
+                    <div class="cs-item-wrapper">
+                        <div class="cs-date-wrapper">
+                            <span class="cs-month">Aug</span>
+                            <span class="cs-day">08</span>
+    
+                            <span class="cs-date">Tue</span>
+                        </div>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Japandi Style Furniture Showcase Weekend Extravaganza</h3>
+                            <p class="cs-item-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam incidunt molestiae obcaecati eligendi cupiditate.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+                    <picture class="cs-item-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture20.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture20.jpg" />
+                        <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture20.jpg" alt="furniture" width="197" height="197" />
+                    </picture>
+                    <div class="cs-item-wrapper">
+                        <div class="cs-date-wrapper">
+                            <span class="cs-month">Aug</span>
+                            <span class="cs-day">25</span>
+                            <span class="cs-date">Tue</span>
+                        </div>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Virtual Design Consultation Day</h3>
+                            <p class="cs-item-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam incidunt molestiae obcaecati eligendi cupiditate.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+                    <picture class="cs-item-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture21.jpg" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture21.jpg" />
+                        <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture21.jpg" alt="furniture" width="197" height="197" />
+                    </picture>
+                    <div class="cs-item-wrapper">
+                        <div class="cs-date-wrapper">
+                            <span class="cs-month">Aug</span>
+                            <span class="cs-day">31</span>
+                            <span class="cs-date">Sun</span>
+                        </div>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Live Auction Preview Night for Exclusive Furniture Pieces</h3>
+                            <p class="cs-item-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati numquam veniam itaque, eum dolor?
+                            </p>
+                        </div>
+                    </div>
+                </a>
+			</li>
+		</ul>
+	</div>
+	<picture class="cs-background">
+		<!--Mobile Image-->
+		<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/stucco-background.jpg" />
+		<!--Tablet and above Image-->
+		<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/stucco-background.jpg" />
+		<img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/stucco-background.jpg" alt="background" height="932" width="1920" loading="lazy" decoding="async" />
+	</picture>
+</section>
+
+<script>(function () {
+      const timer = document.querySelector('#collection-2460 .cs-timer');
+      if (!timer) return;
+    
+      const items = timer.querySelectorAll('#collection-2460 .cs-timer-item');
+      if (items.length < 4) return;
+    
+      // -----------------------------------------
+      // 1) SET YOUR END TIME HERE
+      // -----------------------------------------
+      // Example: countdown to Dec 31, 2026 at 23:59:59 local time
+      const END_TIME = new Date('2025-12-31T23:59:59'); // <-- CHANGE THIS
+    
+      // Helper to update the display
+      function renderRemaining(msRemaining) {
+        if (msRemaining < 0) msRemaining = 0;
+    
+        let totalSeconds = Math.floor(msRemaining / 1000);
+    
+        const days = Math.floor(totalSeconds / 86400);
+        totalSeconds %= 86400;
+    
+        const hours = Math.floor(totalSeconds / 3600);
+        totalSeconds %= 3600;
+    
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+    
+        items[0].childNodes[0].nodeValue = days + ' ';
+        items[1].childNodes[0].nodeValue = hours.toString().padStart(2, '0') + ' ';
+        items[2].childNodes[0].nodeValue = minutes.toString().padStart(2, '0') + ' ';
+        items[3].childNodes[0].nodeValue = seconds.toString().padStart(2, '0') + ' ';
+      }
+    
+      function tick() {
+        const now = new Date();
+        const diff = END_TIME - now; // ms until end
+        renderRemaining(diff);
+    
+        if (diff <= 0) {
+          clearInterval(intervalId);
+          // Optional: do something when it reaches zero
+          // e.g. timer.classList.add('cs-timer--finished');
+        }
+      }
+    
+      // Initial call so it updates immediately on load
+      tick();
+    
+      // Update every second
+      const intervalId = setInterval(tick, 1000);
+    })();</script>
+</body>
+</html>

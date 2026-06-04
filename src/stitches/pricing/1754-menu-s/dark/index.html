@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menu s</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Pricing          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing-1754 {
+    padding: var(--sectionPadding);
+    /* 100px - 250px */
+    padding-bottom: clamp(6.25rem, 13vw, 15.625rem);
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #pricing-1754 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #pricing-1754 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #pricing-1754 .cs-title {
+    color: var(--bodyTextColorWhite);
+    margin: 0;
+    max-width: 23ch;
+  }
+  #pricing-1754 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  #pricing-1754 .cs-card-group {
+    text-align: center;
+    width: 100%;
+    padding: 0rem clamp(1rem, 2vw, 2rem);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #pricing-1754 .cs-item {
+    list-style: none;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #pricing-1754 .cs-item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #pricing-1754 .cs-h3 {
+    font-size: 1.5625rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #pricing-1754 .cs-package {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #pricing-1754 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  #pricing-1754 .cs-graphic {
+    width: 100%;
+    min-width: 120rem;
+    height: auto;
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0rem;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-1754 .cs-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    /* 16px - 20px */
+    gap: clamp(1rem, 3vw, 1.25rem);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Pricing                   -->
+<!-- ============================================ -->
+
+<section id="pricing-1754">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Pricing</span>
+            <h2 class="cs-title">Choose Pricing Plans</h2>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        Group Fitness Classes
+                    </h3>
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Single Session (Drop In) Options</span>
+                        <p class="cs-item-text">
+                            Single Class: $25
+                        </p>
+                        <p class="cs-item-text">
+                            10 Class Punch Card: $200
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Monthly Membership Package*</span>
+                        <p class="cs-item-text">
+                            Monthly Unlimited Classes + Open Gym: $180
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Yearly Membership Package</span>
+                        <p class="cs-item-text">
+                            One Year of Unlimited Classes + Open Gym: $1,800
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        Personal Training
+                    </h3>
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Single Session (Drop-In) Options</span>
+                        <p class="cs-item-text">
+                            30 Minute Session: $550
+                        </p>
+                        <p class="cs-item-text">
+                            60 Minute Session: $90
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Monthly Membership Packages</span>
+                        <p class="cs-item-text">
+                            1 Month of 9-30 Minute Private Lessons + Open Gym: $300
+                        </p>
+                        <p class="cs-item-text">
+                            1 Month of 8-60 Minute Private Lessons + Open Gym: $550
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Flexible Package (Valid For 1 Year)</span>
+                        <p class="cs-item-text">
+                            10 30 Minute Lessons: $400
+                        </p>
+                        <p class="cs-item-text">
+                            10 60 Minute Lessons: $600
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        Open Gym
+                    </h3>
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Single Session (Drop-In) Option</span>
+                        <p class="cs-item-text">
+                            Drop in (Daily) $25
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Monthly Membership Package*</span>
+                        <p class="cs-item-text">
+                            Monthly Open Gym: 380
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-wrapper">
+                        <span class="cs-package">Yearly Membership Package</span>
+                        <p class="cs-item-text">
+                            One Year of Open Gym: $800
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- SVG Graphic -->
+    <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/black-splatter.svg" alt="graphic" height="1920" width="483" loading="lazy" decoding="async" aria-hidden="true">
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Why Choose          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-2403 {
+    padding: var(--sectionPadding);
+    /* 48px - 64px */
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #why-2403 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #why-2403 .cs-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  #why-2403 .cs-content {
+    /* set text align to center if content needs to be center aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 30.125rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #why-2403 .cs-topper {
+    color: var(--secondary);
+  }
+  #why-2403 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #why-2403 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #why-2403 .cs-button-solid {
+    font-size: 1rem;
+    line-height: 3.5em;
+    text-decoration: none;
+    font-weight: 700;
+    width: auto;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    border-radius: 6.25rem;
+    overflow: hidden;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #why-2403 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1a1a1a;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #why-2403 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #why-2403 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #why-2403 .cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  #why-2403 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.4vw, 1.25rem);
+    position: relative;
+    z-index: 10;
+  }
+  #why-2403 .cs-item {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    /* 24px - 32px */
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border-radius: 2rem;
+    background-color: #fff;
+    overflow: hidden;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    grid-column: span 12;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+    gap: 2rem;
+  }
+  #why-2403 .cs-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    opacity: 0.05;
+    z-index: -1;
+  }
+  #why-2403 .cs-icon {
+    /* 60px - 100px */
+    height: clamp(3.75rem, 5vw, 6.25rem);
+    width: auto;
+    display: block;
+  }
+  #why-2403 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    text-align: inherit;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+  }
+  #why-2403 .cs-item-text {
+    line-height: 1.5em;
+    max-width: 28.125rem;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #why-2403 .cs-picture {
+    width: 52%;
+    max-width: 22.75rem;
+    margin: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #why-2403 .cs-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #why-2403 .cs-container {
+    max-width: 80rem;
+    align-items: stretch;
+  }
+  #why-2403 .cs-wrapper {
+    flex-direction: row;
+  }
+  #why-2403 .cs-content {
+    text-align: left;
+    /* removed at desktop */
+    padding: 1.25rem 0;
+    align-items: flex-start;
+  }
+  #why-2403 .cs-item {
+    grid-column: span 4;
+  }
+  #why-2403 .cs-picture {
+    height: auto;
+    width: 22.75rem;
+    margin: 0;
+  }
+  #why-2403 .cs-picture img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #why-2403 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #why-2403 .cs-content {
+    padding: 0;
+    flex: none;
+  }
+  #why-2403 .cs-wrapper {
+    width: 31%;
+    flex-direction: column;
+    flex: none;
+  }
+  #why-2403 .cs-card-group {
+    width: 55%;
+    max-width: 50.1875rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #why-2403 .cs-item {
+    grid-column: span 6;
+  }
+  #why-2403 .cs-picture {
+    width: 100%;
+    max-width: 22.75rem;
+    height: 100%;
+    display: block;
+  }
+  #why-2403 .cs-picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+  }
+}
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 1500px) {
+  #why-2403 .cs-picture img {
+    width: auto;
+    object-fit: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Why Choose Us               -->
+<!-- ============================================ -->
+
+<section id="why-2403">
+	<div class="cs-container">
+		<div class="cs-wrapper">
+			<div class="cs-content">
+				<span class="cs-topper">Why Choose Us</span>
+				<h2 class="cs-title">Trustworthy, Community-Based Pet Waste Experts</h2>
+				<p class="cs-text">
+					We’re passionate about helping pet owners maintain clean environments with services that are professional, punctual, and personalized to your unique needs.
+				</p>
+				<a href="" class="cs-button-solid">Discover the Difference</a>
+			</div>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/dog.png" />
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/dog.png" />
+                <img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/dog.png" alt="dog" width="364" height="628" />
+            </picture>
+		</div>
+		<ul class="cs-card-group">
+            <li class="cs-item">
+				<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-team.svg" alt="icon" width="120" height="120" />
+				<div class="cs-flex">
+					<h3 class="cs-h3">Experienced Team</h3>
+					<p class="cs-item-text">
+						Our dedicated team of skilled professionals cares about your needs and satisfaction.
+					</p>
+				</div>
+			</li>
+			<li class="cs-item">
+				<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-eco.svg" alt="icon" width="120" height="120" />
+				<div class="cs-flex">
+					<h3 class="cs-h3">Eco-Friendly Approach</h3>
+					<p class="cs-item-text">
+						Our services are completely safe for your pets, children, and all your plants.
+					</p>
+				</div>
+			</li>
+			<li class="cs-item">
+				<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-shield.svg" alt="icon" width="120" height="120" />
+				<div class="cs-flex">
+					<h3 class="cs-h3">Fully Insured</h3>
+					<p class="cs-item-text">
+						Enjoy peace of mind with our reliable services during every visit we make.
+					</p>
+				</div>
+			</li>
+			<li class="cs-item">
+				<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-calendar.svg" alt="icon" width="120" height="120" />
+				<div class="cs-flex">
+					<h3 class="cs-h3">Flexible Scheduling</h3>
+					<p class="cs-item-text">
+						We offer flexible services tailored to fit seamlessly into your daily routine.
+					</p>
+				</div>
+			</li>
+			<li class="cs-item">
+				<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-language.svg" alt="icon" width="120" height="120" />
+				<div class="cs-flex">
+					<h3 class="cs-h3">Bilingual Support</h3>
+					<p class="cs-item-text">
+						We are proud to assist our valued clients who speak Spanish with great care.
+					</p>
+				</div>
+			</li>
+			<li class="cs-item">
+				<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/orange-location.svg" alt="icon" width="120" height="120" />
+				<div class="cs-flex">
+					<h3 class="cs-h3">Locally Owned</h3>
+					<p class="cs-item-text">
+						We take pride in serving our wonderful community in San Jose with dedication.
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<script></script>
+</body>
+</html>

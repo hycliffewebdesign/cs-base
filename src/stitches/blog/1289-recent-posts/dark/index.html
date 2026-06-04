@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recent posts</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Blog             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-1289 {
+    padding: var(--sectionPadding);
+  }
+  #blog-1289 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #blog-1289 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #blog-1289 .cs-flex-group {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #blog-1289 .cs-color {
+    color: var(--primary);
+  }
+  #blog-1289 .cs-card-group {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #blog-1289 .cs-item {
+    list-style: none;
+    grid-column: span 12;
+  }
+  #blog-1289 .cs-item:hover .cs-picture:before {
+    opacity: 0.7;
+  }
+  #blog-1289 .cs-item:hover .cs-picture img {
+    transform: scale(1.2);
+    filter: grayscale(1);
+  }
+  #blog-1289 .cs-item:hover .cs-h3 {
+    text-decoration: underline;
+  }
+  #blog-1289 .cs-highlight .cs-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #blog-1289 .cs-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #blog-1289 .cs-picture {
+    width: 100%;
+    /* 200px - 270px */
+    height: clamp(12.5rem, 25vw, 16.875rem);
+    border-radius: 1rem;
+    /* clips the corners of the img tag */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-1289 .cs-picture:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity 0.3s;
+  }
+  #blog-1289 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.65s, filter 0.4s;
+  }
+  #blog-1289 .cs-date {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #blog-1289 .cs-h3 {
+    /* 20px -25px */
+    font-size: clamp(1.25rem, 2.2vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #blog-1289 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #blog-1289 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-1289 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  #blog-1289 .cs-title {
+    margin: 0;
+  }
+  #blog-1289 .cs-flex-group {
+    width: 50%;
+  }
+  #blog-1289 .cs-item {
+    grid-column: span 4;
+  }
+  #blog-1289 .cs-highlight {
+    grid-column: span 12;
+  }
+  #blog-1289 .cs-highlight .cs-link {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #blog-1289 .cs-highlight .cs-flex {
+    align-self: center;
+  }
+  #blog-1289 .cs-highlight .cs-picture {
+    /* 300px - 400px */
+    min-height: clamp(18.75rem, 35vw, 25rem);
+    height: auto;
+    width: 50%;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #blog-1289 .cs-highlight .cs-h3 {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Blog                      -->
+<!-- ============================================ -->
+
+<section id="blog-1289">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Blog</span>
+                <h2 class="cs-title">Our Latest Construction Insights and Trends</h2>
+            </div>
+            <p class="cs-text">
+                Stay up-to-date with the latest news and updates from our construction company with our "Building a Better Future" news section. From project announcements to industry insights, we'll keep you informed on everything that's happening in the world of construction.
+            </p>
+        </div>      
+        <ul class="cs-card-group">
+            <li class="cs-item cs-highlight">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building9.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building9.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building9.jpg" alt="building" width="270" height="200">
+                    </picture>
+                    <div class="cs-flex">
+                        <span class="cs-date">October 30, 2023</span>
+                        <h3 class="cs-h3">Constructing Dreams: Insights and Inspiration for Your Next Construction Project</h3>
+                        <p class="cs-item-text">
+                            Whether you're a homeowner looking to remodel your kitchen or a commercial developer planning a new project, we've got you covered. Our team of experts shares their knowledge and experience to help you make informed decisions and achieve your goals.
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building10.jpg" alt="building" width="270" height="200">
+                    </picture>
+                    <span class="cs-date">October 30, 2023</span>
+                    <h3 class="cs-h3">Building Strong Foundations: Expert Insights For the Construction Industry</h3>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building11.jpg" alt="building" width="270" height="200">
+                    </picture>
+                    <span class="cs-date">October 30, 2023</span>
+                    <h3 class="cs-h3">Construction Chronicles: Stories of Creativity, Innovation, and Success in the Industry</h3>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building12.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building12.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building12.jpg" alt="building" width="270" height="200">
+                    </picture>
+                    <span class="cs-date">October 30, 2023</span>
+                    <h3 class="cs-h3">Construction Connection: Building Strong Relationships in the Construction Industry</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

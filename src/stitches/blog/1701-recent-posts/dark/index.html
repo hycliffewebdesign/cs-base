@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recent posts</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Blog             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-1701 {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-1701 .cs-container {
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #blog-1701 .cs-news {
+    /* changes to 740px on tablet */
+    max-width: 31.25rem;
+    margin: auto;
+    padding: var(--sectionPadding);
+    display: flex;
+    flex-direction: column;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #blog-1701 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left, set to center to centrally align */
+    align-items: flex-start;
+  }
+  #blog-1701 .cs-title {
+    margin: 0;
+  }
+  #blog-1701 .cs-card-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  #blog-1701 .cs-item {
+    display: flex;
+    flex-direction: column;
+    /* 20px - 32px */
+    gap: clamp(1.25rem, 3vw, 2rem);
+  }
+  #blog-1701 .cs-picture {
+    width: auto;
+    height: 11.4375rem;
+    display: block;
+  }
+  #blog-1701 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #blog-1701 .cs-item-text {
+    flex: 1 0 0;
+  }
+  #blog-1701 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-overflow: ellipsis;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--headerColor);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  #blog-1701 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-overflow: ellipsis;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  #blog-1701 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem;
+    transition: color 0.3s;
+  }
+  #blog-1701 .cs-link:hover .cs-arrow {
+    transform: translateX(0.25rem);
+  }
+  #blog-1701 .cs-link-text {
+    width: fit-content;
+    display: block;
+  }
+  #blog-1701 .cs-arrow {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+  }
+  #blog-1701 .cs-background {
+    width: 100%;
+    height: 22.5rem;
+    display: block;
+  }
+  #blog-1701 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #blog-1701 {
+    padding: var(--sectionPadding);
+  }
+  #blog-1701 .cs-container {
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  #blog-1701 .cs-title {
+    margin: 0;
+  }
+  #blog-1701 .cs-news {
+    width: 60vw;
+    max-width: 46.25rem;
+    margin: 0;
+    padding: 0;
+  }
+  #blog-1701 .cs-card-group {
+    /* 16px - 32px */
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  #blog-1701 .cs-item {
+    flex-direction: row;
+  }
+  #blog-1701 .cs-picture {
+    width: 11.25rem;
+    height: 11.25rem;
+  }
+  #blog-1701 .cs-background {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #blog-1701 .cs-background {
+    width: 50vw;
+    right: 50%;
+    left: auto;
+    margin-right: 13.75rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Blog                      -->
+<!-- ============================================ -->
+
+<section id="blog-1701">
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg">
+        <img loading="lazy" decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg"
+                alt="busines meeting" width="522" height="609" aria-hidden="true">
+    </picture>
+    <div class="cs-container">
+        <div class="cs-news">
+            <div class="cs-content">
+                <span class="cs-topper">Our Blog</span>
+                <h2 class="cs-title">Latest News</h2>
+            </div>
+            <div class="cs-card-group">
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-one.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-one.jpg">
+                        <img loading="lazy" decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-one.jpg"
+                                alt="volunteers" width="630" height="601" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">With more than 100 highly experienced professionals averaging 29+ years of experience.
+                        </h3>
+                        <p class="cs-desc">
+                            In industry best practices and lessons learned, we provide value-added services and solutions to a wide variety of industry, both onshore and offshore.
+                        </p>
+                        <a href="" class="cs-link">
+                            <span class="cs-link-text">Get Direction</span>
+                            <img class="cs-arrow" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                                    alt="icon" width="20" height="20" aria-hidden="true" />
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-two.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-two.jpg">
+                        <img loading="lazy" decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-two.jpg"
+                                alt="volunteers" width="630" height="601" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">
+                            Consulting and training firm that specializes in process safety, risk management, occupational health
+                        </h3>
+                        <p class="cs-desc">
+                            Risk management, occupational health and safety, fire protection, emergency and crisis management, and security risk management.
+                        </p>
+                        <a href="" class="cs-link">
+                            <span class="cs-link-text">Get Direction</span>
+                            <img class="cs-arrow" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                                    alt="icon" width="20" height="20" aria-hidden="true" />
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-three.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-three.jpg">
+                        <img loading="lazy" decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-news-three.jpg"
+                                alt="volunteers" width="630" height="601" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">With more than 100 highly experienced professionals averaging 29+ years of experience.
+                        </h3>
+                        <p class="cs-desc">
+                            In industry best practices and lessons learned, we provide value-added services and solutions to a wide variety of industry, both onshore and offshore.
+                        </p>
+                        <a href="" class="cs-link">
+                            <span class="cs-link-text">Get Direction</span>
+                            <img class="cs-arrow" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                                    alt="icon" width="20" height="20" aria-hidden="true" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

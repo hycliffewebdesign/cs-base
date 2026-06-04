@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-team-1212 {
+    padding: var(--sectionPadding);
+  }
+  #meet-team-1212 .cs-container {
+    /* changes to 1440px at desktop */
+    max-width: 44rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-team-1212 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #meet-team-1212 .cs-button {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 8vw, 3.5rem);
+    font-weight: 700;
+    margin: auto;
+    padding: 0 2.5rem;
+    color: var(--headerColor);
+    background-color: var(--primary);
+    /* prevents button text from wrapping across lines */
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-team-1212 .cs-button:hover:before {
+    width: 100%;
+  }
+  #meet-team-1212 .cs-button:before {
+    /* hover box */
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #meet-team-1212 .cs-card-group {
+    /* changes at tablet */
+    max-width: 25.8125rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.8vw, 1.25rem);
+  }
+  #meet-team-1212 .cs-item {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    grid-column: span 12;
+  }
+  #meet-team-1212 .cs-picture {
+    width: 100%;
+    min-height: 18.75rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+    /* clips img tag from overflowing it on hover */
+    overflow: hidden;
+    /* removed at tablet */
+    aspect-ratio: 1.17142857;
+  }
+  #meet-team-1212 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.7s;
+  }
+  #meet-team-1212 .cs-info {
+    text-align: center;
+    width: 100%;
+    /* prevents padding from affecting the height and width */
+    box-sizing: border-box;
+    padding-bottom: 0;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+  #meet-team-1212 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: inherit;
+    margin: 0 0 0.25rem 0;
+    padding-top: 1rem;
+    color: #fff;
+    display: block;
+    transition: color 0.3s;
+  }
+  #meet-team-1212 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 1rem;
+    color: #fff;
+    display: block;
+  }
+  #meet-team-1212 .cs-social-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #meet-team-1212 .cs-link {
+    padding: 1rem 0;
+    border-top: 1px solid #484848;
+    border-left: 1px solid #484848;
+    flex: 1 1 auto;
+  }
+  #meet-team-1212 .cs-link:first-of-type {
+    /* remove the LEFT border from the first item to give a "dividing" effect on the social links */
+    border-left: none;
+  }
+  #meet-team-1212 .cs-icon {
+    width: 1rem;
+    height: 1rem;
+    z-index: 10;
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s;
+  }
+  #meet-team-1212 .cs-icon:hover {
+    transform: translateY(-0.25rem);
+    filter: grayscale(0);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-team-1212 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #meet-team-1212 .cs-content-group {
+    text-align: left;
+  }
+  #meet-team-1212 .cs-button {
+    margin: 0;
+  }
+  #meet-team-1212 .cs-card-group {
+    max-width: 100%;
+    align-items: stretch;
+  }
+  #meet-team-1212 .cs-item {
+    max-width: 100%;
+    grid-column: span 6;
+  }
+  #meet-team-1212 .cs-item:hover .cs-picture img {
+    opacity: 0.4;
+    transform: scale(1.12);
+  }
+  #meet-team-1212 .cs-item:hover .cs-name {
+    color: var(--primary);
+  }
+  #meet-team-1212 .cs-picture {
+    /* 280px - 350px, resets at desktop */
+    min-height: clamp(17.5rem, 33vw, 21.875rem);
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    aspect-ratio: initial;
+  }
+  #meet-team-1212 .cs-picture img {
+    transition: transform 0.6s, opacity 0.3s;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #meet-team-1212 .cs-container {
+    max-width: 90rem;
+  }
+  #meet-team-1212 .cs-item {
+    grid-column: span 3;
+  }
+  #meet-team-1212 .cs-info {
+    margin-top: -3.75rem;
+  }
+  #meet-team-1212 .cs-picture {
+    min-height: 15.3125rem;
+    /* 245px - 338px */
+    height: clamp(15.3125rem, 27vw, 21.125rem);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1212">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-content-group">
+                <span class="cs-topper">Some good soul</span>
+                <h2 class="cs-title">Our Awesome Team Members</h2>
+            </div>
+            <a href="" class="cs-button" aria-label="read more about us">View All Members</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2081.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2081.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2081.jpg" alt="mechanic"
+                            width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Hanna Green</span>
+                    <span class="cs-job">Tax Advisor</span>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-link" aria-label="visit linkedin">
+                            <img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
+                                    alt="linkedin" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit twitter">
+                            <img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
+                                    alt="twitter" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit instragram">
+                            <img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
+                                    alt="instragram" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit youtube">
+                            <img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
+                                    alt="youtube" width="12" height="12">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2082.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2082.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2082.jpg" alt="mechanic"
+                            width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Hanna Green</span>
+                    <span class="cs-job">Tax Advisor</span>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-link" aria-label="visit linkedin">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
+                                    alt="linkedin" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit twitter">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
+                                    alt="twitter" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit instragram">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
+                                    alt="instragram" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit youtube">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
+                                    alt="youtube" width="12" height="12">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2083.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2083.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2083.jpg" alt="mechanic"
+                            width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Hanna Green</span>
+                    <span class="cs-job">Tax Advisor</span>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-link" aria-label="visit linkedin">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
+                                    alt="linkedin" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit twitter">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
+                                    alt="twitter" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit instragram">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
+                                    alt="instragram" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit youtube">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
+                                    alt="youtube" width="12" height="12">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2084.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2084.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Icons/Rectangle%2084.jpg" alt="mechanic"
+                            width="305" height="338">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Hanna Green</span>
+                    <span class="cs-job">Tax Advisor</span>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-link" aria-label="visit linkedin">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-tax2.svg"
+                                    alt="linkedin" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit twitter">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-tax2.svg"
+                                    alt="twitter" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit instragram">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-tax2.svg"
+                                    alt="instragram" width="12" height="12">
+                        </a>
+                        <a href="" class="cs-link" aria-label="visit youtube">
+                            <img img class="cs-icon" loading="lazy" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-tax2.svg"
+                                    alt="youtube" width="12" height="12">
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

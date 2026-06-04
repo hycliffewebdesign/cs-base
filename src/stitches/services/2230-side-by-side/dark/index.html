@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>side by side</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-2230 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2230 .cs-container {
+    width: 100%;
+    max-width: 80em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+  }
+  #services-2230 .cs-content {
+    text-align: center;
+    width: auto;
+    max-width: 72.5rem;
+    padding: 1.5rem 1rem 7.5rem;
+    /* clips the pseudo element */
+    overflow: hidden;
+    border: 1px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    position: relative;
+  }
+  #services-2230 .cs-topper {
+    color: var(--secondary);
+  }
+  #services-2230 .cs-card-group {
+    list-style: none;
+    width: 100%;
+    /* 48px - 64px */
+    margin: clamp(3rem, 6vw, 4rem) 0 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    /* 32px - 40px */
+    row-gap: clamp(2rem, 4vw, 2.5rem);
+  }
+  #services-2230 .cs-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 16px - 24px */
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+  #services-2230 .cs-item:hover .cs-icon {
+    filter: invert(1) brightness(1000%);
+  }
+  #services-2230 .cs-item:hover .cs-wrapper {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  #services-2230 .cs-wrapper {
+    width: fit-content;
+    padding: 1.875rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  #services-2230 .cs-icon {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+  }
+  #services-2230 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #services-2230 .cs-picture {
+    width: 100%;
+    height: 31.5625rem;
+    margin: -3.75rem 0 0;
+    /* clips the img corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2230 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* adding padding to the img allows us to offset the sides of the image */
+    padding: 0 1.5rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2230 .cs-container {
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+  }
+  #services-2230 .cs-content {
+    text-align: left;
+    width: 80%;
+    margin: 0;
+    /* 32px - 80px */
+    padding: clamp(2rem, 6vw, 5rem);
+    /* 120px - 300px */
+    padding-right: clamp(7.5rem, 21vw, 18.75rem);
+    align-items: flex-start;
+  }
+  #services-2230 .cs-card-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #services-2230 .cs-picture {
+    /* 224px - 513px */
+    width: clamp(14rem, 36vw, 32.0625rem);
+    height: 100%;
+    position: absolute;
+    top: 3.75rem;
+    right: 0;
+    bottom: 0;
+  }
+  #services-2230 .cs-picture img {
+    /* 32px - 100px */
+    padding: clamp(2rem, 7vw, 6.25rem) 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-2230">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">What We Do</span>
+            <h2 class="cs-title">Our Special Services for You</h2>
+            <p class="cs-text">
+                Authentic wedding photography emphasises candid shots that capture real emotions, reactions, and interactions among the couple, their families, and guests.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service1.svg" alt="icon" height="33" width="33" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Pre-Wedding</h3>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service2.svg" alt="icon" height="33" width="33" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Wedding</h3>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service3.svg" alt="icon" height="33" width="33" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Portrait</h3>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service4.svg" alt="icon" height="33" width="33" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Fashion</h3>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service5.svg" alt="icon" height="33" width="33" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Maternity</h3>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/wedding-service6.svg" alt="icon" height="33" width="33" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Birthday</h3>
+                </li>
+            </ul>
+        </div>
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding1.jpg" alt="wedding" width="742" height="640">
+        </picture>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

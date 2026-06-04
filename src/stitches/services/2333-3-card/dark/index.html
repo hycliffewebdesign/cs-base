@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-2333 {
+    padding: var(--sectionPadding);
+  }
+  #services-2333 .cs-container {
+    width: 100%;
+    /* changes to 1440px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #services-2333 .cs-content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2333 .cs-content-wrapper:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #services-2333 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    padding: 3rem clamp(1rem, 4vw, 4rem) 0;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #services-2333 .cs-content-picture {
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+  }
+  #services-2333 .cs-content-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #services-2333 .cs-title {
+    max-width: 20ch;
+  }
+  #services-2333 .cs-text {
+    max-width: 40rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2333 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #services-2333 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2333 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #services-2333 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #services-2333 .cs-card-wrapper {
+    /* 32px - 48px top & Bottom */
+    /* 16px - 48px left & right */
+    padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 4vw, 4rem);
+  }
+  #services-2333 .cs-header {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    font-weight: 700;
+    /* 16px - 20px */
+    margin: 0 0 clamp(1rem, 3vw, 1.25rem);
+    color: var(--primary);
+    display: block;
+  }
+  #services-2333 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2.5vw, 1.25rem);
+    row-gap: 2rem;
+  }
+  #services-2333 .cs-item {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    grid-column: span 12;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #services-2333 .cs-item:hover .cs-picture img {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  #services-2333 .cs-link {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #services-2333 .cs-picture {
+    width: 100%;
+    height: 56vw;
+    max-height: 19.25rem;
+    margin-bottom: 1.5rem;
+    background-color: #000;
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #services-2333 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #services-2333 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: left;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+  }
+  #services-2333 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+    color: var(--bodyTextColor);
+  }
+  #services-2333 .cs-fake-link {
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    margin-top: auto;
+    padding-bottom: 8px;
+    color: var(--headerColor);
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2333 .cs-fake-link:hover .cs-icon {
+    transform: translateX(0.2rem) rotate(45deg);
+  }
+  #services-2333 .cs-fake-link:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--headerColor);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #services-2333 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2333 .cs-container {
+    max-width: 90rem;
+  }
+  #services-2333 .cs-content-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 0;
+  }
+  #services-2333 .cs-content {
+    padding-left: 0;
+    padding-bottom: 3rem;
+  }
+  #services-2333 .cs-content-picture {
+    order: -1;
+  }
+  #services-2333 .cs-item {
+    grid-column: span 4;
+  }
+  #services-2333 .cs-picture {
+    height: 26vw;
+  }
+}
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #services-2333 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #services-2333 .cs-content-wrapper {
+    max-width: 25.8125rem;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #services-2333 .cs-content {
+    padding-left: 3rem;
+  }
+  #services-2333 .cs-content-picture {
+    order: 1;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-2333">
+    <div class="cs-container">
+        <div class="cs-content-wrapper">
+            <div class="cs-content">
+                <span class="cs-topper">Our services</span>
+                <h2 class="cs-title">Awesome Services!</h2>
+                <p class="cs-text">
+                    At Buildstitch Construction, we bring your dreams to life with a commitment to excellence.
+                </p>
+                <a href="" class="cs-button-solid">View All</a>
+            </div>   
+            <picture class="cs-content-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-clip2.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-clip2.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-clip2.png" alt="room" width="413" height="420">
+            </picture>
+        </div>               
+        <div class="cs-card-wrapper">
+            <span class="cs-header">Popular Services</span>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
+                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg" alt="room" width="413" height="420">
+                        </picture>
+                        <h3 class="cs-h3">Tailored Living, Built for You</h3>
+                        <p class="cs-item-text">
+                            Experience the joy of a custom-built home designed to match your vision, needs, and lifestyle perfectly.
+                        </p>
+                        <span class="cs-fake-link">
+                            View More
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black%20upper%20right%20arrow.svg" alt="icon" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                        </span>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
+                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg" alt="room" width="413" height="420">
+                        </picture>
+                        <h3 class="cs-h3">Outdoor Spaces, Redefined</h3>
+                        <p class="cs-item-text">
+                            Transform your exterior with striking hardscaping solutions that bring beauty, durability, and purpose to your property.
+                        </p>
+                        <span class="cs-fake-link">
+                            View More
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black%20upper%20right%20arrow.svg" alt="icon" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                        </span>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg" alt="room" width="413" height="420">
+                        </picture>
+                        <h3 class="cs-h3">More Space, More Possibilities</h3>
+                        <p class="cs-item-text">
+                            Enhance your home’s potential with expertly designed extensions that blend style and practicality seamlessly.
+                        </p>
+                        <span class="cs-fake-link">
+                            View More
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black%20upper%20right%20arrow.svg" alt="icon" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

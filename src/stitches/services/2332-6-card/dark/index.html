@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-2332 {
+    padding: var(--sectionPadding);
+    background-color: #FFFCF3;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2332 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-2332 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #services-2332 .cs-title {
+    max-width: 22ch;
+  }
+  #services-2332 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #services-2332 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 32px - 60px top & bottom */
+    /* 16px - 48px sides */
+    padding: clamp(2rem, 8vw, 3.75rem) clamp(1rem, 3vw, 3rem);
+    background-color: #FFFCF3;
+    border-bottom: 1px solid #e7e7e8;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+  #services-2332 .cs-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+  }
+  #services-2332 .cs-flex {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #services-2332 .cs-icon {
+    width: 2.5rem;
+    height: auto;
+  }
+  #services-2332 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #services-2332 .cs-item-text {
+    line-height: 1.5em;
+    max-width: 28.125rem;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #services-2332 .cs-floater {
+    width: 35.6875rem;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: -6.25rem;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2332 .cs-container {
+    max-width: 80rem;
+  }
+  #services-2332 .cs-card-group {
+    gap: 0;
+    border: 1px solid #e7e7e8;
+  }
+  #services-2332 .cs-item {
+    border-right: 1px solid #e7e7e8;
+    grid-column: span 4;
+    position: relative;
+  }
+  #services-2332 .cs-item:hover {
+    background-color: #fff9e8;
+  }
+  #services-2332 .cs-item:nth-of-type(5),
+  #services-2332 .cs-item:nth-of-type(8) {
+    position: relative;
+    z-index: 100;
+    /* middle-left square */
+  }
+  #services-2332 .cs-item:nth-of-type(5)::before,
+  #services-2332 .cs-item:nth-of-type(8)::before {
+    content: "";
+    width: 0.5625rem;
+    height: 0.5625rem;
+    background-color: var(--secondary);
+    position: absolute;
+    top: -0.3125rem;
+    left: -0.3125rem;
+    z-index: 99;
+  }
+  #services-2332 .cs-item:nth-of-type(5)::after,
+  #services-2332 .cs-item:nth-of-type(8)::after {
+    content: "";
+    width: 0.5625rem;
+    height: 0.5625rem;
+    background-color: var(--secondary);
+    position: absolute;
+    top: -0.3125em;
+    right: -0.3125rem;
+    z-index: 99;
+  }
+  #services-2332 .cs-item:nth-of-type(3),
+  #services-2332 .cs-item:nth-of-type(6) {
+    border-right: none;
+  }
+  #services-2332 .cs-item:nth-of-type(4),
+  #services-2332 .cs-item:nth-of-type(5),
+  #services-2332 .cs-item:nth-of-type(6) {
+    border-bottom: none;
+  }
+  #services-2332 .cs-item:nth-of-type(7),
+  #services-2332 .cs-item:nth-of-type(8),
+  #services-2332 .cs-item:nth-of-type(9) {
+    border-top: 1px solid #e7e7e8;
+    border-bottom: none;
+  }
+  #services-2332 .cs-item:nth-of-type(9) {
+    border-right: none;
+  }
+}
+/* Large Desktop - 1700px */
+@media only screen and (min-width: 106.25rem) {
+  #services-2332 .cs-floater {
+    left: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-2332">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">We offer awesome services!</h2>
+            <p class="cs-text">
+                At Buildstitch Construction, we bring your dreams to life with unparalleled craftsmanship and a commitment to excellence.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <div class="cs-flex">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/buildstitch-s1.svg" alt="car" width="48" height="48">
+                        <h3 class="cs-h3">Construction Services</h3>
+                    </div>
+                    <p class="cs-item-text">
+                        Building exceptional homes that combine innovation with timeless design for families.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <div class="cs-flex">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/buildstitch-s1.svg" alt="car" width="48" height="48">
+                        <h3 class="cs-h3">Construction Services</h3>
+                    </div>
+                    <p class="cs-item-text">
+                        Building exceptional homes that combine innovation with timeless design for families.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <div class="cs-flex">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/buildstitch-s1.svg" alt="car" width="48" height="48">
+                        <h3 class="cs-h3">Construction Services</h3>
+                    </div>
+                    <p class="cs-item-text">
+                        Building exceptional homes that combine innovation with timeless design for families.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <div class="cs-flex">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/buildstitch-s1.svg" alt="car" width="48" height="48">
+                        <h3 class="cs-h3">Construction Services</h3>
+                    </div>
+                    <p class="cs-item-text">
+                        Building exceptional homes that combine innovation with timeless design for families.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <div class="cs-flex">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/buildstitch-s2.svg" alt="car" width="48" height="48">
+                        <h3 class="cs-h3">Building Solutions</h3>
+                    </div>
+                    <p class="cs-item-text">
+                        Building exceptional homes that combine innovation with timeless design for families.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <div class="cs-flex">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/buildstitch-s3.svg" alt="car" width="48" height="48">
+                        <h3 class="cs-h3">Home Construction</h3>
+                    </div>
+                    <p class="cs-item-text">
+                        Building exceptional homes that combine innovation with timeless design for families.
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building-clip.png" alt="building" width="571" height="362" loading="lazy" decoding="async" aria-hidden="true">
+</section>
+
+<script></script>
+</body>
+</html>

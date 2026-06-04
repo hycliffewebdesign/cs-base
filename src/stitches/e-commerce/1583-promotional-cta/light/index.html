@@ -1,0 +1,48 @@
+<!--
+    NOTE: This Stitch has overflow on the bottom of the section and will overlap the section below it in your site. To account for this overlap, add this padding top to the 1024px (64rem) media query for the seciton below it:
+
+    /* 150px - 200px */
+    padding-top: clamp(9.375rem, 16vw, 12.5rem);
+
+    If there is not 1024px media query, create one and add this padding top to the #ID of the section.  This will help it account for the overlap from this section and not look cluttered and cramped */
+-->
+
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+<section id="promotions-1583">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Crafted with an unwavering dedication to quality and style</h2>
+            <a href="" class="cs-button-solid">Shop Now</a>
+        </div>
+        <!-- Wrapper in a wrapper div so we can apply overlfow hidden to this div to cut off the overflow on the right edge at 1024px wide and not clip the overflow that hangs over the bottom -->
+        <div class="cs-wrapper">
+            <div class="cs-image-group">
+                <!--Product Image, to get transparent PNG's of your products with a background, we use https://www.remove.bg/ to remove the images. They will come with empty space around them, to remove this empty space, crop your image to only the edges of the actual image. Or open it in GIMP photo editing software, at the top nav click on "Image" then "Crop to content" and this will remove the empty space around the PNG. Then export as a PNG to your project folder and you're done!-->
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/lure3.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/lure3.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/lure3.png" alt="lure" width="771" height="488" aria-hidden="true">
+                </picture>
+                <div class="cs-price-box">
+                    <!--Price Star-->
+                    <svg class="cs-star" width="183" height="183" viewBox="0 0 183 183" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M106.942 0.641784L111.509 31.9019L134.192 9.9126L128.875 41.054L157.243 27.1504L142.564 55.1248L173.84 50.6679L151.234 72.7369L182.357 78.1629L154.038 92.1663L181.961 106.944L150.7 111.511L172.69 134.194L141.548 128.878L155.452 157.246L127.478 142.566L131.934 173.842L109.865 151.237L104.439 182.359L90.4361 154.04L75.6582 181.963L71.0912 150.703L48.4081 172.692L53.7246 141.551L25.3566 155.454L40.0361 127.48L8.76008 131.937L31.3656 109.868L0.243131 104.442L28.562 90.4384L0.639466 75.6605L31.8996 71.0936L9.91029 48.4105L41.0517 53.7269L27.1481 25.3589L55.1225 40.0384L50.6655 8.7624L72.7345 31.3679L78.1606 0.245449L92.164 28.5643L106.942 0.641784Z" fill="var(--starColor)"/>
+                    </svg>
+                    <span class="cs-price">
+                        20%
+                        <span class="cs-desc">Off</span>
+                    </span>
+                </div>
+        </div>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/waves.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/waves.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/waves.jpg" alt="waves" width="1920" height="660" aria-hidden="true">
+    </picture>
+</section>

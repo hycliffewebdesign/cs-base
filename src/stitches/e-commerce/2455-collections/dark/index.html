@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collections</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Collection         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #collection-2455 {
+    padding: var(--sectionPadding);
+  }
+  #collection-2455 .cs-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #collection-2455 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #collection-2455 .cs-title {
+    max-width: 100%;
+    margin: 0;
+  }
+  #collection-2455 .cs-wrapper {
+    display: contents;
+  }
+  #collection-2455 .cs-card-group {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  #collection-2455 .cs-slideshow {
+    display: flex;
+    /* 16px - 20px */
+    gap: clamp(1rem, 3vw, 1.25rem);
+    transition: transform 0.5s ease-in-out;
+  }
+  #collection-2455 .cs-item {
+    text-align: center;
+    /* Each item is 1/3 of container minus gaps */
+    width: calc((100% - (clamp(1rem, 3vw, 1.25rem) * 2)) / 3);
+    flex-shrink: 0;
+    position: relative;
+  }
+  #collection-2455 .cs-item:hover img {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+  #collection-2455 .cs-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  #collection-2455 .cs-h3 {
+    /* 20px - 24px */
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #collection-2455 .cs-picture {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    aspect-ratio: 1;
+  }
+  #collection-2455 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #collection-2455 .cs-button-group {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    order: 2;
+    gap: 1rem;
+  }
+  #collection-2455 .cs-button {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #cfd0d1;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  #collection-2455 .cs-button:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  #collection-2455 .cs-button:hover .cs-button-arrow {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #collection-2455 .cs-button-arrow {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #collection-2455 .cs-container {
+    max-width: 80rem;
+  }
+  #collection-2455 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+  #collection-2455 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #collection-2455 .cs-item {
+    width: calc((100% - (clamp(1rem, 3vw, 1.25rem) * 5)) / 6);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Collection                 -->
+<!-- ============================================ -->
+
+<section id="collection-2455">
+	<div class="cs-container">
+		<div class="cs-wrapper">
+			<div class="cs-content">
+				<span class="cs-topper">Curated Furniture Selections</span>
+				<h2 class="cs-title">Browse Popular Furniture Categories</h2>
+			</div>
+			<div class="cs-button-group">
+				<button class="cs-button" aria-label="previous review">
+					<img class="cs-button-arrow" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/left-arrow.svg" decoding="async" alt="arrow" width="20" height="20" aria-hidden="true" />
+				</button>
+				<button class="cs-button" aria-label="next review">
+					<img class="cs-button-arrow" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/right-arrow.svg" decoding="async" alt="arrow" width="20" height="20" aria-hidden="true" />
+				</button>
+			</div>
+		</div>
+
+		<ul class="cs-card-group">
+			<div class="cs-slideshow">
+				<li class="cs-item">
+					<a href="" class="cs-link">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture1.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture1.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture1.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<h3 class="cs-h3">Chairs & Sofas</h3>
+					</a>
+				</li>
+				<li class="cs-item">
+					<a href="" class="cs-link">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture2.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture2.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture2.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<h3 class="cs-h3">Tables & Desks</h3>
+					</a>
+				</li>
+				<li class="cs-item">
+					<a href="" class="cs-link">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture3.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture3.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture3.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<h3 class="cs-h3">Storage Solutions</h3>
+					</a>
+				</li>
+				<li class="cs-item">
+					<a href="" class="cs-link">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture4.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture4.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture4.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<h3 class="cs-h3">Lighting Fixtures</h3>
+					</a>
+				</li>
+				<li class="cs-item">
+					<a href="" class="cs-link">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture5.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture5.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture5.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<h3 class="cs-h3">Accessories</h3>
+					</a>
+				</li>
+				<li class="cs-item">
+					<a href="" class="cs-link">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture6.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture6.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture6.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<h3 class="cs-h3">Rugs & Textiles</h3>
+					</a>
+				</li>
+			</div>
+		</ul>
+	</div>
+</section>
+
+<script>class CollectionCarousel {
+	constructor() {
+		this.slideshow = document.querySelector("#collection-2455 .cs-slideshow");
+		this.items = Array.from(document.querySelectorAll("#collection-2455 .cs-item"));
+		this.prevButton = document.querySelector("#collection-2455 .cs-button:first-of-type");
+		this.nextButton = document.querySelector("#collection-2455 .cs-button:last-of-type");
+
+		this.currentIndex = 0;
+		this.isMoving = false;
+
+		this.desktopQuery = window.matchMedia("(min-width: 48rem)");
+
+		this.init();
+	}
+
+	init() {
+		this.prevButton?.addEventListener("click", () => this.moveSlide("prev"));
+		this.nextButton?.addEventListener("click", () => this.moveSlide("next"));
+
+		this.desktopQuery.addEventListener("change", () => {
+			this.currentIndex = 0;
+			this.updateSlidePosition(false);
+		});
+	}
+
+	getItemsPerView() {
+		return this.desktopQuery.matches ? 6 : 3;
+	}
+
+	moveSlide(direction) {
+		if (this.isMoving) return;
+		this.isMoving = true;
+
+		const itemsPerView = this.getItemsPerView();
+		const maxIndex = this.items.length - itemsPerView;
+
+		if (direction === "next") {
+			this.currentIndex++;
+			if (this.currentIndex > maxIndex) {
+				this.currentIndex = 0;
+			}
+		} else {
+			this.currentIndex--;
+			if (this.currentIndex < 0) {
+				this.currentIndex = maxIndex;
+			}
+		}
+
+		this.updateSlidePosition(true);
+
+		setTimeout(() => {
+			this.isMoving = false;
+		}, 500);
+	}
+
+	updateSlidePosition(animate = true) {
+		if (!this.slideshow || !this.items.length) return;
+
+		const itemWidth = this.items[0].offsetWidth;
+		const gap = parseFloat(getComputedStyle(this.slideshow).gap);
+		const moveDistance = (itemWidth + gap) * this.currentIndex;
+
+		this.slideshow.style.transform = `translateX(-${moveDistance}px)`;
+	}
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	new CollectionCarousel();
+});</script>
+</body>
+</html>

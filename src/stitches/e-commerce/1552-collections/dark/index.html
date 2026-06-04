@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collections</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Collection         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #collection-1552 {
+    padding: var(--sectionPadding);
+  }
+  #collection-1552 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: calc(550 / 16 * 1rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #collection-1552 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #collection-1552 .cs-item {
+    max-width: 100%;
+    height: 43vw;
+    /* removed at tablet */
+    max-height: calc(250 / 16 * 1rem);
+    /* 56px - 84px */
+    padding: clamp(3.5rem, 7vw, 5.25rem) calc(24 / 16 * 1rem);
+    box-sizing: border-box;
+    display: flex;
+    grid-column: span 12;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #collection-1552 .cs-item:hover .cs-background img {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
+  #collection-1552 .cs-item-offer {
+    max-height: 100%;
+    height: auto;
+    /* 40px - 80px top & bottom, 24px - 40px sides*/
+    padding: clamp(2.5rem, 8vw, 5rem) clamp(1.5rem, 4vw, 2.5rem);
+    align-items: flex-end;
+  }
+  #collection-1552 .cs-item-offer:hover {
+    /* prevents the first images from having a hover effect, its not necessary */
+  }
+  #collection-1552 .cs-item-offer:hover .cs-background img {
+    opacity: 1;
+    transform: scale(1);
+  }
+  #collection-1552 .cs-offer-tag {
+    font-size: calc(13 / 16 * 1rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-bottom: calc(8 / 16 * 1rem);
+    padding: calc(4 / 16 * 1rem) calc(8 / 16 * 1rem);
+    color: #f7f7f7;
+    background-color: var(--secondary);
+    display: block;
+  }
+  #collection-1552 .cs-text-wrapper {
+    /* 150px - 265px */
+    max-width: clamp(9.375rem, 20vw, 16.5625rem);
+  }
+  #collection-1552 .cs-h3 {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    max-width: 20ch;
+    margin: 0 0 calc(4 / 16 * 1rem);
+    color: var(--headerColor);
+  }
+  #collection-1552 .cs-item-text {
+    font-size: calc(16 / 16 * 1rem);
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #collection-1552 .cs-button-solid {
+    font-size: calc(16 / 16 * 1rem);
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: calc(150 / 16 * 1rem);
+    margin: calc(16 / 16 * 1rem) 0 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 calc(24 / 16 * 1rem);
+    color: #fff;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-1552 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #collection-1552 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #collection-1552 .cs-background {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* set to -2 so the gradient overlay (z-index: -1) appears in front of the images, but behind the text */
+    z-index: -2;
+  }
+  #collection-1552 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s, transform 0.6s;
+  }
+  #collection-1552 .cs-category {
+    font-size: calc(20 / 16 * 1rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    /* 12px - 20px top & bottom, 16px - 24px sides*/
+    padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1rem, 3vw, 1.5rem);
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+    /* blurred background - done as a pseudo element so backdrop-filter won't distort the text */
+  }
+  #collection-1552 .cs-category:hover {
+    background-color: #ffffff;
+    color: var(--headerColor);
+  }
+  #collection-1552 .cs-category::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    --webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #collection-1552 .cs-container {
+    max-width: calc(1280 / 16 * 1rem);
+  }
+  #collection-1552 .cs-item {
+    /* 188px - 348px */
+    min-height: clamp(11.75rem, 27vw, 21.75rem);
+    grid-column: span 3;
+  }
+  #collection-1552 .cs-item-offer {
+    grid-column: span 6;
+    grid-row: span 2;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Collection                  -->
+<!-- ============================================ -->
+
+<section id="collection-1552">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item cs-item-offer">
+                <div class="cs-text-wrapper">
+                    <span class="cs-offer-tag">ONLY $20</span>
+                    <h3 class="cs-h3">Selected Woman’s Wear</h3>
+                    <span class="cs-item-text">Special seasonal offer of the month</span>
+                    <a class="cs-button-solid" href="/">Shop Now</a>
+                    <picture class="cs-background" aria-hidden="true">
+                        <source media="(max-width: 600px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-womens-offer-m.jpg">
+                        <source media="(min-width: 601px)"
+                                srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-womens-offer.jpg">
+                        <img loading="lazy" decoding="async"
+                                src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-womens-offer.jpg"
+                                width="365" height="201">
+                    </picture>
+                </div>
+            </li>
+            <li class="cs-item">
+                <a class="cs-category" href="/">T-Shirts</a>
+                <picture class="cs-background" aria-hidden="true">
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-tshirts.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-tshirts.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-tshirts.jpg"
+                            width="365" height="201">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a class="cs-category" href="/">Bags</a>
+                <picture class="cs-background" aria-hidden="true">
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-bags.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-bags.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-bags.jpg" width="365"
+                            height="201">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a class="cs-category" href="/">Shoes</a>
+                <picture class="cs-background" aria-hidden="true">
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-shoes.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-shoes.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-shoes.jpg"
+                            width="365" height="201">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a class="cs-category" href="/">Accessories</a>
+                <picture class="cs-background" aria-hidden="true">
+                    <source media="(max-width: 600px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-accessories.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-accessories.jpg">
+                    <img loading="lazy" decoding="async"
+                            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/ecomm-offer-accessories.jpg"
+                            width="365" height="201">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

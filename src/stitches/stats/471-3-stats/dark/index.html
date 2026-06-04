@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 stats</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-471 {
+    padding: var(--sectionPadding);
+    background-color: #14142b;
+    /* clips the glowing orbs from causing overflow issues when they overflow the container */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-471:before,
+  #stats-471:after {
+    /* glowing orbs */
+    content: "";
+    width: calc(453 / 16 * 1rem);
+    height: calc(333 / 16 * 1rem);
+    background: #f1f1f4;
+    opacity: 0.16;
+    -webkit-filter: blur(182px);
+    filter: blur(182px);
+    position: absolute;
+    display: block;
+    top: calc(-66 / 16 * 1rem);
+    left: calc(-227 / 16 * 1rem);
+    z-index: -1;
+  }
+  #stats-471:after {
+    display: none;
+  }
+  #stats-471 .cs-container {
+    width: 100%;
+    max-width: calc(955 / 16 * 1rem);
+    margin: auto;
+  }
+  #stats-471 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: calc(60 / 16 * 1rem);
+  }
+  #stats-471 .cs-item {
+    list-style: none;
+    width: 47%;
+    max-width: calc(240 / 16 * 1rem);
+    margin: 0;
+    padding: 0 calc(12 / 16 * 1rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #stats-471 .cs-icon {
+    /* 50px - 76px */
+    width: clamp(3.125rem, 6vw, 4.75rem);
+    height: auto;
+    margin: 0 0 calc(20 / 16 * 1rem);
+    display: block;
+  }
+  #stats-471 .cs-number {
+    /* 31px - 61px */
+    font-size: clamp(1.9375rem, 4.3vw, 3.8125rem);
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 0 calc(4 / 16 * 1rem) 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #stats-471 .cs-desc {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    color: var(--bodyTextColorWhite);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats-471:after {
+    display: block;
+    left: auto;
+    top: calc(57 / 16 * 1rem);
+    right: calc(-281 / 16 * 1rem);
+  }
+  #stats-471 .cs-card-group {
+    justify-content: space-between;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<section id="stats-471">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/codestitch.svg" loading="lazy" decoding="async" alt="icon" width="76" height="66">
+                <span class="cs-number">100+</span>
+                <span class="cs-desc">Landscape Renovations Completed</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/codestitch.svg" loading="lazy" decoding="async" alt="icon" width="76" height="66">
+                <span class="cs-number">100%</span>
+                <span class="cs-desc">Guaranteed Customer Satisfaction</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Stats/codestitch.svg" loading="lazy" decoding="async" alt="icon" width="76" height="66">
+                <span class="cs-number">5/5</span>
+                <span class="cs-desc">From 34 Google Ratings</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

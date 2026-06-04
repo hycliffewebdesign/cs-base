@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---      Side By Side          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2233 {
+    padding: var(--sectionPadding);
+    background-color: #fbf5f1;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2233 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-2233 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 36.625rem;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left, set to center to centrally align */
+    align-items: flex-start;
+  }
+  #sbs-2233 .cs-text {
+    /* 24px - 32px */
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+  #sbs-2233 .cs-options {
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #sbs-2233 .cs-option {
+    list-style: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2233 .cs-option:first-of-type {
+    padding-top: 0;
+  }
+  #sbs-2233 .cs-option:last-of-type {
+    padding-bottom: 0;
+    border: none;
+  }
+  #sbs-2233 .cs-option-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--headerColor);
+  }
+  #sbs-2233 .cs-option-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--bodyTextColor);
+  }
+  #sbs-2233 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2233 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-2233 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-2233 .cs-image-group {
+    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+    font-size: min(2.3vw, .916rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 40em;
+    height: 40.375em;
+    order: -1;
+    position: relative;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #sbs-2233 .cs-picture {
+    width: 20em;
+    height: 35.5625em;
+    overflow: hidden;
+    border: 0.25em solid #fff;
+    display: block;
+    position: absolute;
+  }
+  #sbs-2233 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2233 .cs-picture1 {
+    top: 0;
+    left: 0;
+  }
+  #sbs-2233 .cs-picture2 {
+    top: 0;
+    right: 0;
+  }
+  #sbs-2233 .cs-caption {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 2vw, 1.9375rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    width: 83%;
+    max-width: 24.4375rem;
+    margin: 0;
+    /* 24px - 40px */
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background-color: var(--secondary);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #sbs-2233 .cs-stats {
+    width: 100%;
+    max-width: 80rem;
+    /* 48px - 100px */
+    margin: clamp(3rem, 7vw, 6.25rem) auto 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 0.5rem;
+    position: relative;
+  }
+  #sbs-2233 .cs-stat {
+    /* as the child .cs-number is absolutely positioned, it won't contribute to the size of the box */
+    /* we can set the height equal to the font-size which works around this */
+    /* 100px - 120px */
+    height: clamp(6.25rem, 11vw, 10rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6;
+    position: relative;
+  }
+  #sbs-2233 .cs-stat-number {
+    /* 100px - 120px */
+    font-size: clamp(6.25rem, 11vw, 10rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    color: var(--primary);
+    opacity: 0.2;
+    display: block;
+  }
+  #sbs-2233 .cs-stat-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+    position: absolute;
+    z-index: 2;
+  }
+  #sbs-2233 .cs-flower {
+    width: 19.3125rem;
+    height: auto;
+    margin-right: -60.125rem;
+    display: none;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2233 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-2233 .cs-content {
+    /* 48px - 100px */
+    padding: clamp(3rem, 7vw, 6.25rem) 0;
+  }
+  #sbs-2233 .cs-image-group {
+    font-size: min(1vw, 1rem);
+    height: auto;
+    min-height: 40.3125em;
+  }
+  #sbs-2233 .cs-picture {
+    height: auto;
+    top: 0;
+    bottom: 4.8125em;
+  }
+  #sbs-2233 .cs-stats {
+    /* 24px - 64px */
+    column-gap: clamp(1.5rem, 9vw, 4rem);
+  }
+  #sbs-2233 .cs-stat {
+    grid-column: span 3;
+  }
+}
+/* Large Desktop - 1400px */
+@media only screen and (min-width: 87.5rem) {
+  #sbs-2233 .cs-flower {
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-2233">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Your Wedding Memory will be More Memorable</h2>
+            <p class="cs-text">
+                Our expert instructors give you the skills and knowledge to manage process risks and show you how to continuously make your facilities and operations more safe and reliable. PSRG training courses are available online.
+            </p>
+            <ul class="cs-options">
+                <li class="cs-option">
+                    <span class="cs-option-number">01</span>
+                    <span class="cs-option-text">Formal Style</span>
+                </li>
+                <li class="cs-option">
+                    <span class="cs-option-number">02</span>
+                    <span class="cs-option-text">Semi - Formal Style</span>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding4.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding4.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding4.jpeg" alt="wedding" width="272" height="337">
+            </picture>
+            <!--Small Image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding18.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding18.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding18.jpg" alt="wedding" width="243" height="367">
+            </picture>
+            <p class="cs-caption">Our Summer Wedding in a Classic Style</p>
+        </div>
+    </div>
+    <ul class="cs-stats">
+        <div class="cs-stat">
+            <p class="cs-stat-number">25</p>
+            <p class="cs-stat-text">Years</p>
+        </div>
+        <div class="cs-stat">
+            <p class="cs-stat-number">98</p>
+            <p class="cs-stat-text">Guests</p>
+        </div>
+        <div class="cs-stat">
+            <p class="cs-stat-number">10</p>
+            <p class="cs-stat-text">Bridesmaids</p>
+        </div>
+        <div class="cs-stat">
+            <p class="cs-stat-number">15</p>
+            <p class="cs-stat-text">Groomsmen</p>
+        </div>
+    </ul>
+    <!--Floating Flower-->
+    <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower-tilted.png" alt="flower" width="244" height="186" aria-hidden="true">
+</section>
+
+<script></script>
+</body>
+</html>

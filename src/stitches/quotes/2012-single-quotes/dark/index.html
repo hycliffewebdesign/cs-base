@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>single quotes</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Quote            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #quote-2012 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+  }
+  #quote-2012::before {
+    content: "";
+    width: 100%;
+    height: 60vh;
+    background-color: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  #quote-2012 .cs-container {
+    width: 100%;
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 100px */
+    gap: clamp(3rem, 6.5vw, 6.25rem);
+  }
+  #quote-2012 .cs-review {
+    text-align: center;
+    width: 100%;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    padding: 0;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #quote-2012 .cs-topper {
+    color: var(--secondary);
+  }
+  #quote-2012 .cs-review-text {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    /* 24px - 32px */
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+    color: var(--headerColor);
+    z-index: 1;
+  }
+  #quote-2012 .cs-flex-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  #quote-2012 .cs-name {
+    /* 16px - 25px */
+    font-size: clamp(1rem, 2.3vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
+    color: var(--primary);
+    display: block;
+  }
+  #quote-2012 .cs-job {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #quote-2012 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #quote-2012 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    min-width: 0;
+    /* 420px - 550px */
+    height: clamp(26.25rem, 40vw, 34.375rem);
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 0;
+    box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    transition: width 0.3s ease, flex 0.3s ease;
+  }
+  #quote-2012 .cs-item.expanded {
+    width: 40%;
+    /* Expanded width */
+    flex: none;
+  }
+  #quote-2012 .cs-link {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* we use flexbox here to grow the link to fit the whole item, making it clickable everywhere, no matter the size */
+    position: relative;
+    z-index: 1;
+  }
+  #quote-2012 .cs-link::after {
+    /* hover overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    /* as we can't animate background gradients, we animate the change of opacity from 0 to 1 */
+    transition: opacity 0.3s;
+  }
+  #quote-2012 .cs-number {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 2.7vw, 2.4375rem);
+    font-weight: bold;
+    color: var(--bodyTextColorWhite);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s, top 0.3s;
+  }
+  #quote-2012 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 1.8vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 0.25rem 0;
+    color: var(--bodyTextColorWhite);
+    transition: color 0.3s;
+  }
+  #quote-2012 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #quote-2012 .cs-picture {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #quote-2012 .cs-picture:after {
+    /* background color overlay on hover */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    transition: opacity 0.3s;
+  }
+  #quote-2012 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.3s;
+  }
+  #quote-2012 .cs-resize {
+    /* 48px -60px */
+    width: clamp(3rem, 6vw, 3.75rem);
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  #quote-2012 .cs-waves {
+    width: 150%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #quote-2012 .cs-container {
+    max-width: 80rem;
+  }
+  #quote-2012 .cs-card-group {
+    flex-direction: row;
+  }
+  #quote-2012 .cs-item {
+    width: 25%;
+    flex: 1;
+  }
+  #quote-2012 .cs-item:hover .cs-picture::after {
+    opacity: 1;
+  }
+  #quote-2012 .cs-item:hover .cs-picture img {
+    transform: scale(1.2);
+  }
+  #quote-2012 .cs-item:hover .cs-resize {
+    opacity: 1;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #quote-2012 .cs-item {
+    width: 25%;
+  }
+  #quote-2012 .cs-resize {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                     Quote                    -->
+<!-- ============================================ -->
+
+<section id="quote-2012">
+    <div class="cs-container">
+        <div class="cs-review">
+            <span class="cs-topper">Single Quote</span>
+            <p class="cs-review-text">
+            We’ll start small then build, giving your body a to really what you’re doing,” says Sylvia. “Each class will be exciting, always moving you forward.
+            </p>
+            <div class="cs-flex-group">
+                <span class="cs-name">
+                    Preeti Paul
+                </span>
+                <span class="cs-job">Software Engineer at Google</span>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg">
+                        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist6.jpg" alt="dental patient" width="305" height="550" aria-hidden="true">
+                    </picture>
+                    <!--On Hover Image-->
+                    <img class="cs-resize" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-resize.svg" alt="resize" width="60" height="60" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist7.jpeg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist7.jpeg">
+                        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist7.jpeg" alt="dental patient" width="305" height="550" aria-hidden="true">
+                    </picture>
+                    <!--On Hover Image-->
+                    <img class="cs-resize" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-resize.svg" alt="resize" width="60" height="60" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist8.jpeg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist8.jpeg">
+                        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist8.jpeg" alt="dental patient" width="305" height="550" aria-hidden="true">
+                    </picture>
+                    <!--On Hover Image-->
+                    <img class="cs-resize" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-resize.svg" alt="resize" width="60" height="60" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg">
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg">
+                        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dentist9.jpeg" alt="dental patient" width="305" height="550" aria-hidden="true">
+                    </picture>
+                    <!--On Hover Image-->
+                    <img class="cs-resize" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-resize.svg" alt="resize" width="60" height="60" aria-hidden="true">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <img class="cs-waves" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves2.svg" alt="white waves" width="1920" height="1104" aria-hidden="true">
+</section>
+
+<script>document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('.cs-item');
+  let expandedItem = null;
+  const minWidth = 768; // Minimum width in pixels for the script to be active
+  const maxWidth = 1300; // Maximum width in pixels for the script to be active
+
+  function handleResize() {
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= minWidth && windowWidth < maxWidth) {
+      addClickListeners();
+      resetItems();
+    } else {
+      removeClickListeners();
+      items.forEach(item => {
+        item.classList.remove('expanded', 'collapsed');
+      });
+    }
+  }
+
+  function addClickListeners() {
+    items.forEach(item => {
+      item.addEventListener('click', itemClickHandler);
+    });
+  }
+
+  function removeClickListeners() {
+    items.forEach(item => {
+      item.removeEventListener('click', itemClickHandler);
+    });
+  }
+
+  function itemClickHandler(e) {
+    e.preventDefault();
+
+    if (this === expandedItem) {
+      collapseItem(this);
+    } else {
+      if (expandedItem) {
+        collapseItem(expandedItem);
+      }
+      expandItem(this);
+    }
+  }
+
+  function expandItem(clickedItem) {
+    resetItems(); // Reset all items first
+
+    // Add a class to expand the clicked item
+    clickedItem.classList.add('expanded');
+    expandedItem = clickedItem;
+
+  }
+
+  function collapseItem(item) {
+    item.classList.remove('expanded');
+    expandedItem = null;
+
+    items.forEach(otherItem => {
+      otherItem.classList.remove('collapsed');
+    });
+  }
+
+  function resetItems() {
+    items.forEach(item => {
+      item.classList.remove('expanded', 'collapsed');
+    });
+    expandedItem = null;
+  }
+
+
+  // Initial setup
+  handleResize();
+
+  // Add event listener for window resize
+  window.addEventListener('resize', handleResize);
+});</script>
+</body>
+</html>

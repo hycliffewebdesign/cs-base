@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse pair</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-2278,
+  #RPsbsr-2278 {
+    background-color: #f7f7f7;
+    padding: var(--sectionPadding);
+    /* clips the green background pseudo from overflowing the section */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px, changed clamp at Desktop */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #RPsbs-2278 .cs-header,
+  #RPsbsr-2278 .cs-header {
+    width: 100%;
+    /* changes to 1280px at Desktop */
+    max-width: 43.75rem;
+    margin: auto;
+  }
+  #RPsbs-2278 .cs-container,
+  #RPsbsr-2278 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 43.75rem;
+    margin: auto;
+    padding: var(--sectionPadding);
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px, changed clamp at tablet */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #RPsbs-2278 .cs-container:before,
+  #RPsbsr-2278 .cs-container:before {
+    /* green background */
+    content: "";
+    width: 100vw;
+    height: 100%;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  #RPsbs-2278 .cs-content,
+  #RPsbsr-2278 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 42.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #RPsbs-2278 .cs-title,
+  #RPsbsr-2278 .cs-title {
+    margin: 0;
+    max-width: 24ch;
+  }
+  #RPsbs-2278 .cs-h3,
+  #RPsbsr-2278 .cs-h3 {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 4vw, 2.4375rem);
+    line-height: 1.2em;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+  }
+  #RPsbs-2278 .cs-text,
+  #RPsbsr-2278 .cs-text {
+    margin-bottom: 1rem;
+    /* uncomment this style if you remove the list for consistent styling*/
+  }
+  #RPsbs-2278 .cs-heading,
+  #RPsbsr-2278 .cs-heading {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+  }
+  #RPsbs-2278 .cs-ul,
+  #RPsbsr-2278 .cs-ul {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #RPsbs-2278 .cs-li,
+  #RPsbsr-2278 .cs-li {
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+  #RPsbs-2278 .cs-li:before,
+  #RPsbsr-2278 .cs-li:before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.4375rem;
+    background: var(--secondary);
+    opacity: 1;
+    display: block;
+    flex: none;
+    transform: rotate(45deg);
+  }
+  #RPsbs-2278 .cs-number,
+  #RPsbsr-2278 .cs-number {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    font-weight: 700;
+    /* 24px - 28px */
+    width: clamp(1.5rem, 2.9vw, 1.75rem);
+    height: clamp(1.5rem, 2.9vw, 1.75rem);
+    margin-right: 0.75rem;
+    border-radius: 50%;
+    background: var(--headerColor);
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* we set this element to align to the top of the li, so if there's 
+            multiple lines it will stay at the top instead of the center of the text */
+    align-self: flex-start;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #RPsbs-2278 .cs-button-solid,
+  #RPsbsr-2278 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: color 0.3s;
+  }
+  #RPsbs-2278 .cs-button-solid:before,
+  #RPsbsr-2278 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #RPsbs-2278 .cs-button-solid:hover,
+  #RPsbsr-2278 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #RPsbs-2278 .cs-button-solid:hover:before,
+  #RPsbsr-2278 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #RPsbs-2278 .cs-picture,
+  #RPsbsr-2278 .cs-picture {
+    width: 100%;
+    height: 91.14vw;
+    max-height: 22.5rem;
+    margin: 0;
+    position: relative;
+    display: block;
+  }
+  #RPsbs-2278 .cs-picture img,
+  #RPsbsr-2278 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Desktop - 768px */
+@media only screen and (min-width: 64rem) {
+  #RPsbs-2278 .cs-header,
+  #RPsbsr-2278 .cs-header {
+    max-width: 80rem;
+  }
+  #RPsbs-2278 .cs-container,
+  #RPsbsr-2278 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #RPsbs-2278 .cs-container:before,
+  #RPsbsr-2278 .cs-container:before {
+    /* 110px - 335px */
+    margin-left: calc(clamp(110px, 14vw, 335px)*-1);
+    left: 50%;
+    transform: none;
+  }
+  #RPsbs-2278 .cs-picture,
+  #RPsbsr-2278 .cs-picture {
+    max-width: 32.625rem;
+    height: auto;
+    max-height: 100%;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #RPsbs-2278,
+  body.dark-mode #RPsbsr-2278 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #RPsbs-2278 .cs-container:before,
+  body.dark-mode #RPsbsr-2278 .cs-container:before {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #RPsbs-2278 .cs-title,
+  body.dark-mode #RPsbsr-2278 .cs-title,
+  body.dark-mode #RPsbs-2278 .cs-li,
+  body.dark-mode #RPsbsr-2278 .cs-li,
+  body.dark-mode #RPsbs-2278 .cs-h3,
+  body.dark-mode #RPsbsr-2278 .cs-h3,
+  body.dark-mode #RPsbs-2278 .cs-heading,
+  body.dark-mode #RPsbsr-2278 .cs-heading {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #RPsbs-2278 .cs-text,
+  body.dark-mode #RPsbsr-2278 .cs-text,
+  body.dark-mode #RPsbs-2278 .cs-li,
+  body.dark-mode #RPsbsr-2278 .cs-li {
+    opacity: 0.8;
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbsr-2278 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+/* Desktop - 768px */
+@media only screen and (min-width: 64em) {
+  #RPsbsr-2278 {
+    padding: var(--sectionPadding);
+    padding-top: 0;
+  }
+  #RPsbsr-2278 .cs-container {
+    justify-content: flex-end;
+  }
+  #RPsbsr-2278 .cs-container:before {
+    margin-left: 0;
+    /* 110px - 335px */
+    margin-right: calc(clamp(110px, 14vw, 335px)*-1);
+    right: 50%;
+    left: auto;
+    transform: none;
+  }
+  #RPsbsr-2278 .cs-picture {
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-2278">
+    <div class="cs-header">
+        <span class="cs-topper">Featured Service</span>
+        <h2 class="cs-title">We Have a Vision For The Future
+            Of Construction</h2>
+    </div>
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction7.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction7.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction7.jpg" alt="construction" width="500" height="552" aria-hidden="true">
+        </picture>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h3 class="cs-h3">Roofing Services</h3>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea porttitor in venenatis enim molestie felis vitae nec. Tempor tempor aliquam mus nec. Sodales consectetur lectus quis nullam mauris, cursus massa faucibus. Quis magna nunc nulla eget. Etiam sit adipiscing felis sagittis, facilisi. Pretium sed.
+            </p>
+            <span class="cs-heading">Services Include:</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    Roof inspections and maintenance
+                </li>
+                <li class="cs-li">
+                    Leak detection and repairs
+                </li>
+                <li class="cs-li">
+                    Roof replacement and installation
+                </li>
+                <li class="cs-li">
+                    Energy-efficient roofing solutions
+                </li>
+            </ul>
+            <a class="cs-button-solid" href="">Learn More</a>
+        </div>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-2278">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction8.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction8.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction8.jpg" alt="construction" width="500" height="552" aria-hidden="true">
+        </picture>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h3 class="cs-h3">Stucco Services</h3>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Platea porttitor in venenatis enim molestie felis vitae nec. Tempor tempor aliquam mus nec. Sodales consectetur lectus quis nullam mauris, cursus massa faucibus. Quis magna nunc nulla eget
+            </p>
+            <span class="cs-heading">Services Include:</span>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    Stucco application for new constructions
+                </li>
+                <li class="cs-li">
+                    Stucco repairs and crack sealing
+                </li>
+                <li class="cs-li">
+                    Decorative finishes and textures
+                </li>
+                <li class="cs-li">
+                    Weather-resistant and insulated stucco solutions
+                </li>
+            </ul>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

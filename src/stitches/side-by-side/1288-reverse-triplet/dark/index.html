@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse triplet</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RTsbs-1288,
+  #RTsbsr-1288,
+  #RTsbst-1288 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+    overflow: hidden;
+  }
+  #RTsbs-1288 .cs-container,
+  #RTsbsr-1288 .cs-container,
+  #RTsbst-1288 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #RTsbs-1288 .cs-content,
+  #RTsbsr-1288 .cs-content,
+  #RTsbst-1288 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #RTsbs-1288 .cs-text,
+  #RTsbsr-1288 .cs-text,
+  #RTsbst-1288 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #RTsbs-1288 .cs-text:last-of-type,
+  #RTsbsr-1288 .cs-text:last-of-type,
+  #RTsbst-1288 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #RTsbs-1288 .cs-ul,
+  #RTsbsr-1288 .cs-ul,
+  #RTsbst-1288 .cs-ul {
+    max-width: 39.375rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    /* clips the bullets to create the half circle */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #RTsbs-1288 .cs-li,
+  #RTsbsr-1288 .cs-li,
+  #RTsbst-1288 .cs-li {
+    list-style: none;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #RTsbs-1288 .cs-button-solid,
+  #RTsbsr-1288 .cs-button-solid,
+  #RTsbst-1288 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #RTsbs-1288 .cs-button-solid:before,
+  #RTsbsr-1288 .cs-button-solid:before,
+  #RTsbst-1288 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #RTsbs-1288 .cs-button-solid:hover:before,
+  #RTsbsr-1288 .cs-button-solid:hover:before,
+  #RTsbst-1288 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #RTsbs-1288 .cs-image-group,
+  #RTsbsr-1288 .cs-image-group,
+  #RTsbst-1288 .cs-image-group {
+    /* scales the whole group based on the view width size and stop when that vales equals .845em, resets at desktop */
+    font-size: min(2.207vw, 1em);
+    width: 34.0625em;
+    height: 49.5625em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #RTsbs-1288 .cs-picture,
+  #RTsbsr-1288 .cs-picture,
+  #RTsbst-1288 .cs-picture {
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: absolute;
+  }
+  #RTsbs-1288 .cs-picture img,
+  #RTsbsr-1288 .cs-picture img,
+  #RTsbst-1288 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #RTsbs-1288 .cs-picture1,
+  #RTsbsr-1288 .cs-picture1,
+  #RTsbst-1288 .cs-picture1 {
+    width: 15.25em;
+    height: 12.5em;
+    top: 0em;
+    left: 0em;
+  }
+  #RTsbs-1288 .cs-picture2,
+  #RTsbsr-1288 .cs-picture2,
+  #RTsbst-1288 .cs-picture2 {
+    width: 15.25em;
+    height: 16.875em;
+    top: 2.5em;
+    right: 2.0625em;
+  }
+  #RTsbs-1288 .cs-picture3,
+  #RTsbsr-1288 .cs-picture3,
+  #RTsbst-1288 .cs-picture3 {
+    width: 15.25em;
+    height: 16.875em;
+    top: 13.75em;
+    left: 0;
+  }
+  #RTsbs-1288 .cs-picture4,
+  #RTsbsr-1288 .cs-picture4,
+  #RTsbst-1288 .cs-picture4 {
+    width: 19.375em;
+    height: 21.4375em;
+    box-shadow: 0px 24px 52px 0px rgba(0, 0, 0, 0.38);
+    top: 18.375em;
+    right: 0;
+    z-index: 10;
+  }
+  #RTsbs-1288 .cs-picture5,
+  #RTsbsr-1288 .cs-picture5,
+  #RTsbst-1288 .cs-picture5 {
+    width: 15.25em;
+    height: 16.875em;
+    top: 31.875em;
+    left: 0em;
+  }
+  #RTsbs-1288 .cs-picture6,
+  #RTsbsr-1288 .cs-picture6,
+  #RTsbst-1288 .cs-picture6 {
+    width: 15.25em;
+    height: 11.875em;
+    bottom: 0em;
+    right: 2.0625em;
+  }
+  #RTsbs-1288 .cs-waves-wrapper,
+  #RTsbsr-1288 .cs-waves-wrapper,
+  #RTsbst-1288 .cs-waves-wrapper {
+    /* changes to 100% at desktop */
+    width: 100vw;
+    height: 150%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    /* changes at desktop */
+    transform: translateX(-50%);
+  }
+  #RTsbs-1288 .cs-waves-wrapper img,
+  #RTsbsr-1288 .cs-waves-wrapper img,
+  #RTsbst-1288 .cs-waves-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RTsbs-1288,
+  #RTsbsr-1288,
+  #RTsbst-1288 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #RTsbs-1288 .cs-container,
+  #RTsbsr-1288 .cs-container,
+  #RTsbst-1288 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #RTsbs-1288 .cs-content,
+  #RTsbsr-1288 .cs-content,
+  #RTsbst-1288 .cs-content {
+    padding: 6.25rem 0;
+    align-self: center;
+  }
+  #RTsbs-1288 .cs-image-group,
+  #RTsbsr-1288 .cs-image-group,
+  #RTsbst-1288 .cs-image-group {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+  }
+  #RTsbs-1288 .cs-picture1,
+  #RTsbsr-1288 .cs-picture1,
+  #RTsbst-1288 .cs-picture1 {
+    border-radius: 0 0 1rem 1rem;
+  }
+  #RTsbs-1288 .cs-picture6,
+  #RTsbsr-1288 .cs-picture6,
+  #RTsbst-1288 .cs-picture6 {
+    border-radius: 0;
+  }
+  #RTsbs-1288 .cs-waves-wrapper,
+  #RTsbsr-1288 .cs-waves-wrapper,
+  #RTsbst-1288 .cs-waves-wrapper {
+    width: 110%;
+    height: 100%;
+    display: none;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RTsbsr-1288 {
+    background-color: #1a1a1a;
+  }
+  #RTsbsr-1288 .cs-content {
+    max-width: 32.625rem;
+  }
+  #RTsbsr-1288 .cs-title,
+  #RTsbsr-1288 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #RTsbsr-1288 .cs-text {
+    opacity: 0.8;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RTsbsr-1288 .cs-content {
+    /* sends it to the left */
+    order: -1;
+  }
+  #RTsbsr-1288 .cs-waves-wrapper {
+    display: block;
+  }
+}
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+  #RTsbsr-1288 .cs-container {
+    padding-right: 5.5rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+  }
+  #RTsbsr-1288 .cs-waves-wrapper {
+    width: 43.25rem;
+    height: initial;
+    right: -5.5rem;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    transform: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="RTsbs-1288">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg" alt="building" width="203" height="203">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg" alt="building" width="207" height="207">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg" alt="building" width="214" height="214">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg" alt="building" width="223" height="223">
+            </picture>
+            <picture class="cs-picture cs-picture5">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg" alt="building" width="287" height="287">
+            </picture>
+            <picture class="cs-picture cs-picture6">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg" alt="building" width="203" height="203">
+            </picture>
+            <!--Stripe background-->
+            <picture class="cs-waves-wrapper">
+                <img class="cs-waves" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/svg-waves.svg" alt="stripes" width="650" height="933" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Our Spesialization</span>
+            <h2 class="cs-title">We have extensive experience in building custom homes.</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Side By Side Reverse              -->
+<!-- ============================================ -->
+
+<section id="RTsbsr-1288">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg" alt="building" width="203" height="203">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg" alt="building" width="207" height="207">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg" alt="building" width="214" height="214">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg" alt="building" width="223" height="223">
+            </picture>
+            <picture class="cs-picture cs-picture5">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg" alt="building" width="287" height="287">
+            </picture>
+            <picture class="cs-picture cs-picture6">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg" alt="building" width="203" height="203">
+            </picture>
+            <!--Stripe background-->
+            <picture class="cs-waves-wrapper">
+                <img class="cs-waves" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/svg-waves.svg" alt="stripes" width="650" height="933" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Our Spesialization</span>
+            <h2 class="cs-title">We have extensive experience in building custom homes.</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Side By Side Triplet              -->
+<!-- ============================================ -->
+
+<section id="RTsbst-1288">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg" alt="building" width="203" height="203">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg" alt="building" width="207" height="207">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg" alt="building" width="214" height="214">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg" alt="building" width="223" height="223">
+            </picture>
+            <picture class="cs-picture cs-picture5">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg" alt="building" width="287" height="287">
+            </picture>
+            <picture class="cs-picture cs-picture6">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg" alt="building" width="203" height="203">
+            </picture>
+            <!--Stripe background-->
+            <picture class="cs-waves-wrapper">
+                <img class="cs-waves" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/svg-waves.svg" alt="stripes" width="650" height="933" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Our Spesialization</span>
+            <h2 class="cs-title">We have extensive experience in building custom homes.</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>non standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-1373 {
+    padding: var(--sectionPadding);
+  }
+  #sbs-1373 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-1373 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 36.5rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #sbs-1373 .cs-topper {
+    color: #767676;
+  }
+  #sbs-1373 .cs-title {
+    max-width: 20ch;
+  }
+  #sbs-1373 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-1373 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-1373 .cs-content-flair {
+    width: 100%;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #sbs-1373 .cs-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #sbs-1373 .cs-h3 {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    width: 100%;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #sbs-1373 .cs-progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e8e8e8;
+  }
+  #sbs-1373 .cs-progress-bar {
+    width: var(--progress);
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--primary);
+    display: block;
+  }
+  #sbs-1373 .cs-percentage {
+    font-size: 0.875rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #sbs-1373 .cs-button-solid {
+    font-size: 1rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #sbs-1373 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1a1a1a;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-1373 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #sbs-1373 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-1373 .cs-flex {
+    max-width: 56.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #sbs-1373 .cs-picture {
+    width: 100%;
+    height: 90vw;
+    min-height: 20.5rem;
+    max-height: 28.125rem;
+    /* 24px - 48px */
+    border-radius: clamp(1.5rem, 4vw, 3rem);
+    /* clips the img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #sbs-1373 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-1373 .cs-review {
+    /* 24px - 60px */
+    padding: clamp(1.5rem, 5vw, 3.75rem);
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 80px - 150px */
+    gap: clamp(5rem, 10vw, 9.375rem);
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-1373 .cs-review:before {
+    /* background color in pseudo so we can use the color variable */
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* 24px - 48px */
+    border-radius: clamp(1.5rem, 4vw, 3rem);
+    background: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #sbs-1373 .cs-icon {
+    /* 80px - 120px */
+    width: clamp(5rem, 10vw, 7.5rem);
+    height: auto;
+    opacity: 0.3;
+    display: block;
+  }
+  #sbs-1373 .cs-review-text {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 2vw, 1.9375rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 43.75rem) {
+  #sbs-1373 .cs-flex {
+    flex-direction: row;
+  }
+  #sbs-1373 .cs-picture {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbs-1373 .cs-review {
+    width: 100%;
+  }
+}
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #sbs-1373 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-1373 .cs-content {
+    width: 23.0625rem;
+    text-align: left;
+    align-items: flex-start;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbs-1373 .cs-review {
+    justify-content: space-between;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1373">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Performance</span>
+            <h2 class="cs-title">Web Design Company You Can Trust</h2>
+            <p class="cs-text">
+                Our web design company specializes in the professional creation of unique sites. Our team constantly monitors the emergence of new technologies that we are not afraid to implement in web projects, making them modern and high-tech.
+            </p>
+            <div class="cs-content-flair">
+                <div class="cs-bar">
+                    <h3 class="cs-h3">
+                        Savings Strategies
+                        <span class="cs-percentage">83%</span>
+                    </h3>
+                    <!--change the --progress number to match the percentage in cs-number-->
+                    <div class="cs-progress" aria-hidden="true">
+                        <span class="cs-progress-bar"  style="--progress: 83%"></span>
+                    </div>
+                </div>
+                <div class="cs-bar">
+                    <h3 class="cs-h3">
+                        Tax Planning
+                        <span class="cs-percentage">72%</span>
+                    </h3>
+                    <!--change the --progress number to match the percentage in cs-number-->
+                    <div class="cs-progress" aria-hidden="true">
+                        <span class="cs-progress-bar"  style="--progress: 72%"></span>
+                    </div>
+                </div>
+                <div class="cs-bar">
+                    <h3 class="cs-h3">
+                        Trusted Company
+                        <span class="cs-percentage">96%</span>
+                    </h3>
+                    <!--change the --progress number to match the percentage in cs-number-->
+                    <div class="cs-progress" aria-hidden="true">
+                        <span class="cs-progress-bar"  style="--progress: 96%"></span>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="cs-button-solid">Contact Now</a>
+        </div>
+        <div class="cs-flex">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/cafe.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/cafe.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/cafe.jpg" alt="person in cafe" width="414" height="627">
+            </picture>
+            <div class="cs-review">
+                <img class="cs-icon" loading="lazy" decoding="async" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/oeange-quotes.svg" alt="appliance" width="120" height="99">
+                <p class="cs-review-text">
+                    Small businesses are the heartbeat of communities, embodying the spirit of entrepreneurship, determination, and local support.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

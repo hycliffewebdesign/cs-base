@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse triplet</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---     Side By SIde Pair      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #sbs-2376 {
+    padding: var(--sectionPadding);
+    background-color: #FBF9F5;
+    box-sizing: border-box;
+  }
+  #sbs-2376 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    /* 32px - 100px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(2rem, 8vw, 6.25rem) clamp(1rem, 3vw, 4rem);
+    background-color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 40px - 48px */
+    gap: clamp(2.5rem, 5vw, 3rem);
+  }
+  #sbs-2376 .cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #sbs-2376 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #sbs-2376 .cs-text {
+    max-width: 62rem;
+  }
+  #sbs-2376 .cs-content2 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-2376 .cs-content2 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-2376 .cs-flex {
+    width: 100%;
+    /* 24px - 32px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 2rem);
+    box-sizing: border-box;
+    background-color: #FBF9F5;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 16px - 32px */
+    gap: clamp(1rem, 4vw, 2rem);
+  }
+  #sbs-2376 .cs-h3 {
+    font-size: 1.5625rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    /* 16px - 32px */
+    margin: 0 0 clamp(1rem, 3vw, 2rem);
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #D2D8DF;
+    color: var(--headerColor);
+  }
+  #sbs-2376 .cs-ul {
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #sbs-2376 .cs-li {
+    font-size: var(--bodyFontSize);
+    list-style: none;
+    line-height: 1.5em;
+    width: 100%;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #sbs-2376 .cs-icon {
+    width: 1.1875rem;
+    height: auto;
+    /* adds extra space between the icon and top of parent so it's more centered */
+    margin-top: 3px;
+    display: block;
+    flex: none;
+  }
+  #sbs-2376 .cs-link {
+    font-size: var(--bodyFontSize);
+    text-decoration: none;
+    line-height: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--secondary);
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2376 .cs-link:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #sbs-2376 .cs-picture {
+    width: 100%;
+    height: 75vw;
+    max-height: 21.875rem;
+    border-radius: 1rem;
+    /* clips the border radius of the image */
+    overflow: hidden;
+    display: block;
+    order: -1;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2376 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2376 .cs-flex {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-2376 .cs-flex:nth-child(even) .cs-picture {
+    order: -1;
+  }
+  #sbs-2376 .cs-h3 {
+    /* 108px - 142px */
+    min-height: clamp(6.75rem, 12vw, 8.875rem);
+  }
+  #sbs-2376 .cs-picture {
+    width: 70vw;
+    max-width: 33rem;
+    height: auto;
+    max-height: 100%;
+    order: 2;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--               Side By Side Pair              -->
+<!-- ============================================ -->
+
+<section id="sbs-2376">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Guided Therapy Services</h2>
+            <p class="cs-text">
+                We offer comprehensive support for individuals, couples, and families facing various life transitions, emotional hurdles, and relationship issues. Our dedicated services are designed to help you navigate these challenges with understanding and care.
+            </p>
+        </div>
+        <div class="cs-wrapper">
+            <!--Side By Side-->
+            <div class="cs-flex">
+                <div class="cs-content2">
+                    <h3 class="cs-h3">Personal Growth Therapy</h3>
+                    <p class="cs-text">
+                        Explore emotional healing and confidence-building through personalized therapy for meaningful transformation.
+                    </p>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Recognize emotional triggers and respond healthily.
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Heal past experiences through trauma-informed care.
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Build self-awareness to align with your values and aspirations.
+                        </li>
+                    </ul>
+                    <a href="" class="cs-link">Book Now</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg" alt="people talking" width="528" height="378">
+                </picture>
+            </div>
+            <!--SBS Reverse-->
+            <div class="cs-flex">
+                <div class="cs-content2">
+                    <h3 class="cs-h3">Personal Growth Therapy</h3>
+                    <p class="cs-text">
+                        Explore emotional healing and confidence-building through personalized therapy for meaningful transformation.
+                    </p>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Recognize emotional triggers and respond healthily.
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Heal past experiences through trauma-informed care.
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Build self-awareness to align with your values and aspirations.
+                        </li>
+                    </ul>
+                    <a href="" class="cs-link">Book Now</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg" alt="people talking" width="528" height="378">
+                </picture>
+            </div>
+            <!--Side By Side-->
+            <div class="cs-flex">
+                <div class="cs-content2">
+                    <h3 class="cs-h3">Personal Growth Therapy</h3>
+                    <p class="cs-text">
+                        Explore emotional healing and confidence-building through personalized therapy for meaningful transformation.
+                    </p>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Recognize emotional triggers and respond healthily.
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Heal past experiences through trauma-informed care.
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                            Build self-awareness to align with your values and aspirations.
+                        </li>
+                    </ul>
+                    <a href="" class="cs-link">Book Now</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people3.jpg" alt="people talking" width="528" height="378">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

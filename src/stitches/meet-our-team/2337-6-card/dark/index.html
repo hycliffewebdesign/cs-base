@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-2337 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+  }
+  #meet-2337 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-2337 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #meet-2337 .cs-title {
+    max-width: 18ch;
+    margin-bottom: 0;
+  }
+  #meet-2337 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+  }
+  #meet-2337 .cs-item {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #E7E7E8;
+    display: flex;
+    gap: 1.5rem;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+  #meet-2337 .cs-item:before {
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: var(--primary);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s, opacity 0.3s;
+  }
+  #meet-2337 .cs-item:after {
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: var(--primary);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: width 0.3s, opacity 0.3s;
+  }
+  #meet-2337 .cs-item:hover:before,
+  #meet-2337 .cs-item:hover:after {
+    width: 100%;
+    opacity: 1;
+  }
+  #meet-2337 .cs-picture {
+    width: 42%;
+    max-width: 12.5rem;
+    height: auto;
+    /* 170px - 240px */
+    min-height: clamp(10.625rem, 45vw, 15rem);
+    display: block;
+    flex: none;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-2337 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes sure the image is always cropped with the top of the image at the top of the picture element so no ones heads are cut off */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #meet-2337 .cs-flex {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* 40px - 100px */
+    gap: clamp(2.5rem, 6vw, 6.25rem);
+  }
+  #meet-2337 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+  }
+  #meet-2337 .cs-header {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 0.25rem 0;
+    color: var(--headerColor);
+  }
+  #meet-2337 .cs-job {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    max-width: 28.125rem;
+    margin: 0 0 3rem;
+    padding: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #meet-2337 .cs-social-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  #meet-2337 .cs-social {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #585B5D;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-2337 .cs-social:before {
+    /* background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s, background-color 0.3s;
+  }
+  #meet-2337 .cs-wrapper {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 1rem;
+    border-right: 1px solid #FCEBE9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #meet-2337 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-2337 .cs-container {
+    max-width: 80rem;
+  }
+  #meet-2337 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+  #meet-2337 .cs-card-group {
+    overflow: hidden;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-2337 .cs-item {
+    padding-top: 1.5rem;
+    grid-column: span 6;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-2337 .cs-item:hover .cs-link {
+    transform: translateY(0);
+  }
+  #meet-2337 .cs-item:hover .cs-item-text {
+    opacity: 1;
+    visibility: visible;
+  }
+  #meet-2337 .cs-item:hover .cs-icon-wrapper {
+    transform: scale(0);
+  }
+  #meet-2337 .cs-social:hover {
+    color: #fff;
+  }
+  #meet-2337 .cs-social:hover:before {
+    opacity: 1;
+    background-color: #1a1a1a;
+  }
+  #meet-2337 .cs-social:hover .cs-icon {
+    filter: invert(1) brightness(1000%);
+  }
+}
+/* Desktop - 1300px */
+@media only screen and (min-width: 64rem) {
+  #meet-2337 .cs-item {
+    grid-column: span 4;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Meet The Team                -->
+<!-- ============================================ -->
+
+<section id="meet-2337">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Team</span>
+            <h2 class="cs-title">Our Professionals</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg" alt="wedding photography" width="413" height="340">
+                </picture>
+                <div class="cs-flex">
+                    <div class="cs-info">
+                        <span class="cs-header">Liam Johnson</span>
+                        <span class="cs-job">Innovation Specialist</span>
+                    </div>
+                    <!--Add extra socials in this box-->
+                    <div class="cs-social-group">
+                        <a href="" class="cs-social">
+                            <picture class="cs-wrapper">
+                                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/linkedin-black.svg" alt="icon" width="20" height="20">
+                            </picture>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg" alt="wedding photography" width="413" height="340">
+                </picture>
+                <div class="cs-flex">
+                    <div class="cs-info">
+                        <span class="cs-header">Liam Johnson</span>
+                        <span class="cs-job">Innovation Specialist</span>
+                    </div>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-social">
+                            <picture class="cs-wrapper">
+                                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/linkedin-black.svg" alt="icon" width="20" height="20">
+                            </picture>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg" alt="wedding photography" width="413" height="340">
+                </picture>
+                <div class="cs-flex">
+                    <div class="cs-info">
+                        <span class="cs-header">Liam Johnson</span>
+                        <span class="cs-job">Innovation Specialist</span>
+                    </div>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-social">
+                            <picture class="cs-wrapper">
+                                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/linkedin-black.svg" alt="icon" width="20" height="20">
+                            </picture>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg" alt="wedding photography" width="413" height="340">
+                </picture>
+                <div class="cs-flex">
+                    <div class="cs-info">
+                        <span class="cs-header">Liam Johnson</span>
+                        <span class="cs-job">Innovation Specialist</span>
+                    </div>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-social">
+                            <picture class="cs-wrapper">
+                                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/linkedin-black.svg" alt="icon" width="20" height="20">
+                            </picture>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg" alt="wedding photography" width="413" height="340">
+                </picture>
+                <div class="cs-flex">
+                    <div class="cs-info">
+                        <span class="cs-header">Liam Johnson</span>
+                        <span class="cs-job">Innovation Specialist</span>
+                    </div>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-social">
+                            <picture class="cs-wrapper">
+                                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/linkedin-black.svg" alt="icon" width="20" height="20">
+                            </picture>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction-team.jpg" alt="wedding photography" width="413" height="340">
+                </picture>
+                <div class="cs-flex">
+                    <div class="cs-info">
+                        <span class="cs-header">Liam Johnson</span>
+                        <span class="cs-job">Innovation Specialist</span>
+                    </div>
+                    <div class="cs-social-group">
+                        <a href="" class="cs-social">
+                            <picture class="cs-wrapper">
+                                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/linkedin-black.svg" alt="icon" width="20" height="20">
+                            </picture>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

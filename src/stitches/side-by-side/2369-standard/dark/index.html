@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2369 {
+    padding: var(--sectionPadding);
+    padding-bottom: 0;
+    background-color: #FBF5F1;
+    /* clips anything overflowing */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 49rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-2369 .cs-wrapper {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sbs-2369 .cs-content {
+    /* set text align to center if content needs to be centered */
+    text-align: left;
+    width: 100%;
+    max-width: 43.375rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* left aligns content, set to center to align content horizontally */
+    align-items: flex-start;
+  }
+  #sbs-2369 .cs-header {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 3vw, 1.9375rem);
+    text-align: center;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    color: var(--headerColor);
+  }
+  #sbs-2369 .cs-arrow {
+    width: 9.625rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  #sbs-2369 .cs-topper {
+    text-align: center;
+    margin: auto;
+  }
+  #sbs-2369 .cs-title {
+    text-align: center;
+    max-width: 20ch;
+    margin: auto;
+    margin-bottom: 2rem;
+    /* 48px - 64px */
+    padding-bottom: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-title:before {
+    content: '';
+    width: 100vw;
+    height: 1px;
+    background: #D2D8DF;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #sbs-2369 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-2369 .cs-text:last-of-type {
+    /* 24px - 32px */
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+  #sbs-2369 .cs-ul {
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #sbs-2369 .cs-li {
+    font-size: var(--bodyFontSize);
+    list-style: none;
+    line-height: 1.5em;
+    width: 100%;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #sbs-2369 .cs-icon {
+    width: 1.1875rem;
+    height: auto;
+    /* adds extra space between the icon and top of parent so it's more centered */
+    margin-top: 3px;
+    display: block;
+    flex: none;
+  }
+  #sbs-2369 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 6.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #sbs-2369 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #sbs-2369 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-2369 .cs-image-group {
+    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+    font-size: min(2.8vw, .75rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 32.625em;
+    height: auto;
+    order: 2;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-picture {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #sbs-2369 .cs-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #sbs-2369 .cs-flower {
+    width: 75em;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+}
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+  #sbs-2369 {
+    padding: var(--sectionPadding);
+    padding-bottom: 0;
+  }
+  #sbs-2369 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-content {
+    width: 50%;
+    padding-bottom: clamp(3.75rem, 7.82vw, 6.25rem);
+    align-items: flex-start;
+  }
+  #sbs-2369 .cs-topper,
+  #sbs-2369 .cs-title {
+    text-align: left;
+    margin: 0;
+  }
+  #sbs-2369 .cs-topper {
+    margin-bottom: 0.25rem;
+  }
+  #sbs-2369 .cs-title {
+    margin-bottom: 2rem;
+  }
+  #sbs-2369 .cs-image-group {
+    /* set to inherit at Large Desktop */
+    font-size: min(1.2vw, 1rem);
+    height: auto;
+    order: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  #sbs-2369 .cs-picture {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-picture img {
+    height: 100%;
+    width: auto;
+  }
+  #sbs-2369 .cs-flower {
+    width: 80vw;
+    max-width: 56.25rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2369">
+    <div class="cs-wrapper">
+        <p class="cs-header">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus sit laboriosam ratione veritatis, quisquam asperiores autem, optio minus unde eos ipsa provident saepe deleniti, natus velit dolore? Sint laboriosam, saepe vel est numquam iste harum dignissimos voluptas eum illum sequi id nihil!
+        </p>
+        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/curve-arrow.svg" alt="arrow graphic" width="154" height="120">
+    </div>
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/therapist1.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/therapist1.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/therapist1.png" alt="therapist" width="565" height="814">
+            </picture>
+            <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/flower-blur.svg" alt="flower blur" width="635" height="697">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Who We Are</span>
+            <h2 class="cs-title">Transforming Therapy, Elevating Lives</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit esse deleniti recusandae suscipit voluptatum eveniet provident repudiandae, sequi cum ipsa incidunt quisquam ipsam? Temporibus nihil eligendi illum quos tempora delectus inventore dolore repudiandae perspiciatis voluptatum, adipisci placeat, ducimus dolorem consequuntur?
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                    Digital Solutions Provider Agency
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                    Unicode, UTF8 & Character Sets The Ultimate Guide
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                    WordPress Guides For The Advanced Beginner
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Man An Appointment</a>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

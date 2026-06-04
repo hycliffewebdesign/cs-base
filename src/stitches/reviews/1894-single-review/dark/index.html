@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>single review</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Reviews          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1894 {
+    padding: var(--sectionPadding);
+    background-color: #FAF6F2;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1894 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-1894 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #reviews-1894 .cs-topper {
+    color: var(--secondary);
+  }
+  #reviews-1894 .cs-title {
+    margin: 0;
+  }
+  #reviews-1894 .cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 60px */
+    gap: clamp(3rem, 6vw, 3.75rem);
+  }
+  #reviews-1894 .cs-image-group {
+    font-size: min(3.02vw, 1rem);
+    width: 30.125em;
+    height: 35.6875em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1894 .cs-picture {
+    width: 25.8125em;
+    box-sizing: border-box;
+    background-color: #DAB692;
+    overflow: hidden;
+    border: 8px solid #DAB692;
+    border-radius: 16.25rem;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    bottom: 0.6875em;
+    z-index: -1;
+  }
+  #reviews-1894 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #reviews-1894 .cs-graphic {
+    height: auto;
+    position: absolute;
+  }
+  #reviews-1894 .cs-brown {
+    width: 10.3125em;
+    height: auto;
+    top: 1.25em;
+    right: 1.5em;
+    z-index: -2;
+    transform: rotate(-140deg);
+  }
+  #reviews-1894 .cs-peach {
+    width: 4.3125em;
+    height: auto;
+    top: 0.625em;
+    right: 8.75em;
+  }
+  #reviews-1894 .cs-beige {
+    width: 23.625em;
+    height: auto;
+    top: 5em;
+    right: 0em;
+    z-index: -3;
+  }
+  #reviews-1894 .cs-leaf {
+    width: 14em;
+    height: auto;
+    bottom: 0.6875em;
+    left: 0em;
+    z-index: 1;
+  }
+  #reviews-1894 .cs-dots {
+    width: 16.3125em;
+    height: auto;
+    right: 1em;
+    bottom: 0em;
+    z-index: -2;
+  }
+  #reviews-1894 .cs-lines {
+    width: 15.375em;
+    bottom: 0em;
+  }
+  #reviews-1894 .cs-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 24px - 48px */
+    gap: clamp(1.5rem, 3vw, 2rem);
+  }
+  #reviews-1894 .cs-item-stars {
+    width: 6.9375rem;
+    height: auto;
+    margin: 0 0 1.5rem 0;
+    display: block;
+  }
+  #reviews-1894 .cs-review {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #reviews-1894 .cs-name {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-1894 .cs-job {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #reviews-1894 .cs-flower {
+    /* 121px - 227px */
+    width: clamp(7.57rem, 14vw, 14.1875rem);
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #reviews-1894 .cs-container {
+    max-width: 80rem;
+  }
+  #reviews-1894 .cs-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #reviews-1894 .cs-image-group {
+    font-size: min(1.24vw, 1rem);
+    height: auto;
+    min-height: 35.6875em;
+    flex: none;
+  }
+  #reviews-1894 .cs-item {
+    padding: 1.5rem 0;
+    align-self: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1894">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Client’s Review</h2>
+        </div>
+        <div class="cs-wrapper">
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/derm-lady.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/derm-lady.jpeg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/derm-lady.jpeg" alt="dermatologist" width="312" height="411">
+                </picture>
+                <img class="cs-graphic cs-brown" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-lines2.svg" alt="graphic" width="131" height="99" aria-hidden="true">
+                <img class="cs-graphic cs-peach" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/peach-blob.svg" alt="graphic" width="55" height="41" aria-hidden="true">
+                <img class="cs-graphic cs-beige" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/beige-blob.svg" alt="graphic" width="300" height="312" aria-hidden="true">
+                <img class="cs-graphic cs-leaf" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/leaf2.svg" alt="graphic" width="178" height="223" aria-hidden="true">
+                <img class="cs-graphic cs-dots" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/beige-dots.svg" alt="graphic" width="207" height="115" aria-hidden="true">
+                <img class="cs-graphic cs-lines" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/beige-lines.svg" alt="graphic" width="195" height="215" aria-hidden="true">
+            </div>
+            <div class="cs-item">
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gold-stars-alt.svg" alt="stars" width="111" height="21">
+                    <p class="cs-review">
+                    I wanted to come out and write an honest review of how I was treated, when I went to visit Dr. Paul. I was very skeptical at first as I was dealing with few things and was nervous since I never had any treatments done on my face. But to my surprise, starting from the first step, meeting her, discussing my concerns, I already felt at home. Dr. Paul took all the time to explain the process and did a wonderful job! I can’t believe of how seamless this was and not to mention the results. Wow I am in awe of how smooth and clear my skin looks, let alone the compliments I have been receiving. This was only first treatment and I felt such a huge difference. I will be going back soon and can’t express enough of what a wonderful dermatologist she is. Hands down one of the best and Thank you Dr. Paul for your magic!!!
+                    </p>
+                </div>
+                <div class="cs-flex-group">
+                    <span class="cs-name">
+                        Preeti Paul
+                        <span class="cs-job">Software Engineer at Google</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="cs-flower" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/banner-flower.svg" alt="graphic" loading="lazy" decoding="async" height="143" width="235">
+</section>
+
+<script></script>
+</body>
+</html>

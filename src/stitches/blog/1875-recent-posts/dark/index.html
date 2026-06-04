@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recent posts</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Blog             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-1875 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+  }
+  #blog-1875:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #F6EDDF;
+    opacity: 0.9;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #blog-1875 .cs-container {
+    width: 100%;
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #blog-1875 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    z-index: 1;
+  }
+  #blog-1875 .cs-title {
+    max-width: none;
+  }
+  #blog-1875 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+    z-index: 1;
+  }
+  #blog-1875 .cs-item {
+    list-style: none;
+    width: 100%;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2.5vw, 1.5rem) clamp(1rem, 2.5vw, 1.5rem) 2.5rem;
+    background-color: #FAF6F2;
+    border-radius: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 12;
+    /* 32px - 48px */
+    gap: clamp(2rem, 4.5vw, 3rem);
+  }
+  #blog-1875 .cs-item:hover {
+    cursor: pointer;
+  }
+  #blog-1875 .cs-item:hover .cs-picture img {
+    transform: scale(1.1);
+  }
+  #blog-1875 .cs-item:hover .cs-h3 {
+    color: #8F5B34;
+  }
+  #blog-1875 .cs-picture {
+    width: 100%;
+    /* 180px - 235px */
+    height: clamp(11.25rem, 28vw, 14.6875rem);
+    background-color: #DAB692;
+    /* clips img tag from overflowing it on hover */
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 8px solid #DAB692;
+    /* 100px - 220px */
+    border-radius: clamp(11.25rem, 20vw, 13.75rem);
+    display: block;
+    position: relative;
+  }
+  #blog-1875 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #blog-1875 .cs-text-box {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+  #blog-1875 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 120%;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #blog-1875 .cs-details {
+    margin: 0 0 1rem 0;
+    display: flex;
+    gap: 1.25rem;
+  }
+  #blog-1875 .cs-time,
+  #blog-1875 .cs-date {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: flex;
+    gap: 0.5rem;
+  }
+  #blog-1875 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+  }
+  #blog-1875 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    width: 100%;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #blog-1875 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #blog-1875 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes the top of the image start at the top of the parent */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #blog-1875 .cs-graphic1 {
+    /* 200px - 548px */
+    width: clamp(12.5rem, 30vw, 34.25rem);
+    height: auto;
+    opacity: 0.5;
+    display: block;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    z-index: 0;
+  }
+  #blog-1875 .cs-graphic2 {
+    width: 34.25rem;
+    height: auto;
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0rem;
+    z-index: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #blog-1875:before {
+    background: linear-gradient(89deg, rgba(255, 243, 236, 0.9) 44.46%, rgba(255, 243, 236, 0) 78.47%);
+    opacity: 1;
+  }
+  #blog-1875 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-1875 .cs-card-group {
+    max-width: 66.5rem;
+  }
+  #blog-1875 .cs-item {
+    padding-right: 3.75rem;
+    /* 24px - 32px */
+    padding-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    border-radius: 16.25rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #blog-1875 .cs-item:nth-of-type(even) {
+    padding: 2rem 2rem 2rem 3.75rem;
+    flex-direction: row-reverse;
+  }
+  #blog-1875 .cs-text-box {
+    align-self: center;
+  }
+  #blog-1875 .cs-picture {
+    /* 320px - 420px */
+    width: clamp(20rem, 40vw, 26.25rem);
+    min-height: 14.6875rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+  #blog-1875 .cs-text-box {
+    text-align: left;
+    align-items: flex-start;
+  }
+  #blog-1875 .cs-graphic2 {
+    display: block;
+  }
+}
+/* Large Desktop - 1920px */
+@media only screen and (min-width: 120rem) {
+  #blog-1875 .cs-graphic1 {
+    margin-right: 25rem;
+    left: auto;
+    right: 50%;
+  }
+  #blog-1875 .cs-graphic2 {
+    margin-left: 26.25rem;
+    right: auto;
+    left: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Blog                      -->
+<!-- ============================================ -->
+
+<section id="blog-1875">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Recent News</span>
+            <h2 class="cs-title">Our Latest Blog</h2>
+            <p class="cs-text">
+                Aside from seeing patients, Dr. Stitch is dedicated to patient advocacy and education on evidence-based medicine in dermatology, especially for skin of color. 
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm9.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm9.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm9.jpg" alt="person" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Ways to Treat Dark Spots and Patches</h3>
+                    <div class="cs-details">
+                        <span class="cs-date">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-calendar.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                            April 15, 2023
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-clock.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                            1 min
+                        </span>
+                    </div>
+                    <p class="cs-item-text">
+                        Hyperpigmentation can be caused due to several reasons (melasma or drug reactions) however post-inflammatory hyperpigmentation (PIH). At vero eos et accusamus et iusto odio dignissimos ducimus qui.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm10.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm10.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm10.jpg" alt="person" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">Botanicals and Supplements for Acne</h3>
+                    <div class="cs-details">
+                        <span class="cs-date">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-calendar.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                            April 15, 2023
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-clock.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                            1 min
+                        </span>
+                    </div>
+                    <p class="cs-item-text">
+                        Hyperpigmentation can be caused due to several reasons (melasma or drug reactions) however post-inflammatory hyperpigmentation (PIH). At vero eos et accusamus et iusto odio dignissimos ducimus qui.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm11.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm11.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm11.jpg" alt="person" width="500" height="750">
+                </picture>
+                <div class="cs-text-box">
+                    <h3 class="cs-h3">My skin looks amazing! Can't wait for my next appointment. Highly recommend!</h3>
+                    <div class="cs-details">
+                        <span class="cs-date">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-calendar.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                            April 15, 2023
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-clock.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                            1 min
+                        </span>
+                    </div>
+                    <p class="cs-item-text">
+                        Hyperpigmentation can be caused due to several reasons (melasma or drug reactions) however post-inflammatory hyperpigmentation (PIH). At vero eos et accusamus et iusto odio dignissimos ducimus qui.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/dermatology-background.jpeg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/dermatology-background.jpeg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/dermatology-background.jpeg" alt="cream background with ripple" width="1920" height="970" aria-hidden="true">
+    </picture>
+    <!-- Top left gold graphic -->
+    <img class="cs-graphic1" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gold-graphic.svg" alt="gold flake graphic" width="370" height="322" aria-hidden="true">
+    <!-- Bottom right gold graphic -->
+    <img class="cs-graphic2" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gold-graphic.svg" alt="gold flake graphic" width="370" height="322" aria-hidden="true">
+</section>
+
+<script></script>
+</body>
+</html>

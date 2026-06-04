@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing-2421 {
+    padding: var(--sectionPadding);
+  }
+  #pricing-2421 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #pricing-2421 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #pricing-2421 .cs-title {
+    max-width: 28ch;
+  }
+  #pricing-2421 .cs-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+  }
+  #pricing-2421 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #pricing-2421 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #pricing-2421 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #pricing-2421 .cs-button-group {
+    grid-column: span 12;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.9vw, 1.25rem);
+  }
+  #pricing-2421 .cs-button {
+    /* top & bottom - 32px - 48px */
+    /* left & right - 16px - 40px */
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 2.5vw, 2.5rem);
+    background-color: #fff;
+    border: none;
+    border-radius: 0.75rem;
+    /* 16px - 24px */
+    gap: clamp(1rem, 2vw, 1.5rem);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #pricing-2421 .cs-button:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #pricing-2421 .cs-button:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid var(--primary);
+    opacity: 0.1;
+    border-radius: 0.75rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #pricing-2421 .cs-button.cs-active {
+    /* when the button is active, add these styles to the button, its pseudo, and children */
+  }
+  #pricing-2421 .cs-button.cs-active .cs-check-wrapper {
+    border: none;
+    background-color: var(--primary);
+  }
+  #pricing-2421 .cs-button.cs-active .cs-check {
+    opacity: 1;
+  }
+  #pricing-2421 .cs-button.cs-active .cs-discount {
+    color: #fff;
+  }
+  #pricing-2421 .cs-button.cs-active .cs-discount:before {
+    opacity: 1;
+  }
+  #pricing-2421 .cs-button.cs-active .cs-price {
+    color: var(--headerColor);
+  }
+  #pricing-2421 .cs-button.cs-active:before {
+    opacity: 0.1;
+  }
+  #pricing-2421 .cs-button.cs-active:after {
+    opacity: 1;
+  }
+  #pricing-2421 .cs-check-wrapper {
+    /* 24px - 32px */
+    width: clamp(1.5rem, 1.9vw, 2rem);
+    height: clamp(1.5rem, 1.9vw, 2rem);
+    /* prevents squishing */
+    flex: none;
+    background-color: #fff;
+    border: #cfd0d1;
+    border-radius: 50%;
+    transition: background-color 0.3s, border 0.3s;
+  }
+  #pricing-2421 .cs-check {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    display: block;
+    transition: opacity 0.3s;
+  }
+  #pricing-2421 .cs-flex {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #pricing-2421 .cs-discount {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    padding: 0.125rem 0.75rem 0;
+    background-color: #fff;
+    border-radius: 2rem;
+    color: var(--secondary);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #pricing-2421 .cs-discount:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    opacity: 0.2;
+    border-radius: 2rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #pricing-2421 .cs-plan {
+    /* 16px - 25px */
+    font-size: clamp(1rem, 3.3vw, 1.5625rem);
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: 700;
+    color: var(--headerColor);
+  }
+  #pricing-2421 .cs-price {
+    /* 39px - 49px */
+    font-size: clamp(2.4375rem, 7vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    color: var(--bodyTextColor);
+    display: inline-flex;
+    align-items: baseline;
+    transition: color 0.3s;
+  }
+  #pricing-2421 .cs-price-small {
+    font-size: 1rem;
+  }
+  #pricing-2421 .cs-card {
+    grid-column: span 12;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 16px - 48px */
+    padding: clamp(1rem, 5vw, 3rem);
+    background-color: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s;
+    transform-origin: top left;
+  }
+  #pricing-2421 .cs-card:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #pricing-2421 .cs-card.cs-hidden {
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    transform: scale(0);
+  }
+  #pricing-2421 .cs-package {
+    font-size: 1.5625rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  #pricing-2421 .cs-ul {
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #pricing-2421 .cs-li {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #pricing-2421 .cs-li.cs-disabled .cs-icon {
+    background-color: #cfd0d1;
+  }
+  #pricing-2421 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    /* prevents squishing */
+    flex: none;
+    padding: 0.25rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: block;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #pricing-2421 .cs-card,
+  #pricing-2421 .cs-button-group {
+    grid-column: span 6;
+  }
+  #pricing-2421 .cs-card {
+    order: -1;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
+
+<section id="pricing-2421">
+	<div class="cs-container">
+		<div class="cs-content">
+			<span class="cs-topper">Clear, Simple Pricing</span>
+			<h2 class="cs-title">Affordable Plans for Every Yard</h2>
+			<p class="cs-text">We believe in transparent, fair pricing with no hidden fees. Choose the plan that suits your needs whether it’s a one-time cleanup or ongoing service for spotless results.</p>
+		</div>
+		<div class="cs-wrapper">
+			<div class="cs-button-group">
+				<button class="cs-button" data-filter="one">
+					<picture class="cs-check-wrapper">
+						<img class="cs-check" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="check" height="24" width="24" loading="lazy" decoding="async" a ria-hidden="true" />
+					</picture>
+					<div class="cs-flex">
+						<span class="cs-discount">10% Off</span>
+						<span class="cs-plan">Weekly Clean & Fresh</span>
+					</div>
+					<span class="cs-price">
+						$15
+						<span class="cs-price-small">/Week</span>
+					</span>
+				</button>
+				<button class="cs-button" data-filter="two">
+					<picture class="cs-check-wrapper">
+						<img class="cs-check" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="check" height="24" width="24" loading="lazy" decoding="async" a ria-hidden="true" />
+					</picture>
+					<div class="cs-flex">
+						<span class="cs-discount">20% Off</span>
+						<span class="cs-plan">Starter Scoop Plan</span>
+					</div>
+					<span class="cs-price">
+						$25
+						<span class="cs-price-small">/Month</span>
+					</span>
+				</button>
+				<button class="cs-button" data-filter="three">
+					<picture class="cs-check-wrapper">
+						<img class="cs-check" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="check" height="24" width="24" loading="lazy" decoding="async" aria-hidden="true" />
+					</picture>
+					<div class="cs-flex">
+						<span class="cs-discount">30% Off</span>
+						<span class="cs-plan">Ultimate Pet Yard Care</span>
+					</div>
+					<span class="cs-price">
+						$40
+						<span class="cs-price-small">/Month</span>
+					</span>
+				</button>
+			</div>
+			<!--Card 1-->
+			<div class="cs-card" data-category="one">
+				<span class="cs-package">Package Includes:</span>
+				<ul class="cs-ul">
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Choose flexible service plans, your way.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						No long-term contracts—cancel anytime easily.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						One-time or recurring visits available.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Weekly or biweekly cleaning options offered.
+					</li>
+					<li class="cs-li cs-disabled">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Add eco-friendly sanitizing for extra protection.
+					</li>
+					<li class="cs-li cs-disabled">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Service available for all yard sizes.
+					</li>
+					<li class="cs-li cs-disabled">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Pay easily with secure online payments.
+					</li>
+				</ul>
+				<a href="" class="cs-button-solid">Choose Your Plan</a>
+			</div>
+			<!--Card 2-->
+			<div class="cs-card cs-hidden" data-category="two">
+				<span class="cs-package">Package Includes:</span>
+				<ul class="cs-ul">
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Choose flexible service plans, your way.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						No long-term contracts—cancel anytime easily.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						One-time or recurring visits available.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Weekly or biweekly cleaning options offered.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Add eco-friendly sanitizing for extra protection.
+					</li>
+					<li class="cs-li cs-disabled">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Service available for all yard sizes.
+					</li>
+					<li class="cs-li cs-disabled">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Pay easily with secure online payments.
+					</li>
+				</ul>
+				<a href="" class="cs-button-solid">Choose Your Plan</a>
+			</div>
+			<!--Card 3-->
+			<div class="cs-card cs-hidden" data-category="three">
+				<span class="cs-package">Package Includes:</span>
+				<ul class="cs-ul">
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Choose flexible service plans, your way.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						No long-term contracts—cancel anytime easily.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						One-time or recurring visits available.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Weekly or biweekly cleaning options offered.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Add eco-friendly sanitizing for extra protection.
+					</li>
+					<li class="cs-li">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Service available for all yard sizes.
+					</li>
+					<li class="cs-li cs-disabled">
+						<img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Icons/white-check.svg" alt="checkmark" width="16" height="16" />
+						Pay easily with secure online payments.
+					</li>
+				</ul>
+				<a href="" class="cs-button-solid">Choose Your Plan</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>class CS_GalleryFilter {
+	filtersSelector = ".cs-button";
+	cardSelector = ".cs-card";
+	activeClass = "cs-active";
+	hiddenClass = "cs-hidden";
+
+	constructor() {
+		this.$card = document.querySelectorAll(this.cardSelector);
+		const $filters = document.querySelectorAll(this.filtersSelector);
+
+		this.onClick($filters[0]);
+
+		for (const $filter of $filters) {
+			$filter.addEventListener("click", () => this.onClick($filter));
+		}
+	}
+
+	onClick($filter) {
+		this.filter($filter.dataset.filter);
+
+		const { activeClass } = this;
+
+		this.$activeFilter?.classList.remove(activeClass);
+		$filter.classList.add(activeClass);
+
+		this.$activeFilter = $filter;
+	}
+
+	filter(filter) {
+		const showAll = filter == "all";
+		const { hiddenClass } = this;
+
+		for (const $gallery of this.$card) {
+			const show = showAll || $gallery.dataset.category == filter;
+			$gallery.classList.toggle(hiddenClass, !show);
+		}
+	}
+}
+
+new CS_GalleryFilter();</script>
+</body>
+</html>

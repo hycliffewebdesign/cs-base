@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>side by side</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-choose-1710 {
+    /* moved padding to the container so the cs-picture can be full width */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #why-choose-1710 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    /* moved to container instead of section, moves back to the section container at tablet */
+    padding: var(--sectionPadding);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 40px - 64px */
+    gap: clamp(2.5rem, 3.9vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1710 .cs-container:before {
+    /* light grey background overlay */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1710 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #why-choose-1710 .cs-title {
+    margin: 0;
+    max-width: 23ch;
+  }
+  #why-choose-1710 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 16px - 32px */
+    gap: clamp(1rem, 3.2vw, 2rem);
+  }
+  #why-choose-1710 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* 16px - 32px */
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  #why-choose-1710 .cs-item {
+    list-style: none;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #why-choose-1710 .cs-item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #why-choose-1710 .cs-item-number {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #why-choose-1710 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #why-choose-1710 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #why-choose-1710 .cs-picture {
+    width: 100%;
+    max-width: 80rem;
+    /* 340px - 620px */
+    height: clamp(21.25rem, 47vw, 38.75rem);
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* clips the img from overflowing the container on hover */
+    overflow: hidden;
+  }
+  #why-choose-1710 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1710 .cs-floater {
+    /* 246px - 582px */
+    width: clamp(15.375rem, 50vw, 36.375rem);
+    height: auto;
+    position: absolute;
+    right: -4rem;
+    top: -0.5rem;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #why-choose-1710 {
+    padding: var(--sectionPadding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 60px - 100px */
+    gap: clamp(3.75rem, 3.9vw, 6.25rem);
+  }
+  #why-choose-1710 .cs-container {
+    padding: 0;
+  }
+  #why-choose-1710 .cs-container:before {
+    width: 130vw;
+    height: 180%;
+    top: -9.375rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #why-choose-1710 .cs-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<section id="why-choose-1710">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Grow Your Business with Our New Bold Agency</h2>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-item-number">01</span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Aqestic recusandae laudantium
+                        </h3>
+                        <p class="cs-item-text">
+                            Optio amet a quisquam saepe aliquid, voluptate praesentium dicta.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number">02</span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Voluptatem eum cupiditate totam
+                        </h3>
+                        <p class="cs-item-text">
+                            Optio amet a quisquam saepe aliquid, voluptate praesentium dicta.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number">03</span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Recusandae laudantium optio amet
+                        </h3>
+                        <p class="cs-item-text">
+                            Optio amet a quisquam saepe aliquid, voluptate praesentium dicta.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number">04</span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Aqestic recusandae laudantium
+                        </h3>
+                        <p class="cs-item-text">
+                            Optio amet a quisquam saepe aliquid, voluptate praesentium dicta.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-item-number">05</span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Recusandae laudantium optio amet
+                        </h3>
+                        <p class="cs-item-text">
+                            Optio amet a quisquam saepe aliquid, voluptate praesentium dicta.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number">06</span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Aqestic recusandae laudantium
+                        </h3>
+                        <p class="cs-item-text">
+                            Optio amet a quisquam saepe aliquid, voluptate praesentium dicta.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number">07</span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">
+                            Voluptatem eum cupiditate totam
+                        </h3>
+                        <p class="cs-item-text">
+                            Optio amet a quisquam saepe aliquid, voluptate praesentium dicta.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!---SVG Graphic-->
+        <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/diagnol-ovals.svg" alt="graphic" loading="lazy" decoding="async" height="710" aria-hidden="true" width="690">
+    </div>
+    <picture class="cs-picture">
+        <source media="(min-width: 1024px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg">
+        <source media="(min-width: 601px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg">
+        <source media="(max-width: 600px)"
+                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg">
+        <img aria-hidden="true" loading="lazy" decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg"
+                alt="meeting" width="1280" height="620">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>non standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #sbs-1360 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 11;
+  }
+  #sbs-1360 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 39.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #sbs-1360 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #sbs-1360 .cs-topper {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    color: #767676;
+  }
+  #sbs-1360 .cs-title {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    max-width: 25ch;
+  }
+  #sbs-1360 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 1rem;
+  }
+  #sbs-1360 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-1360 .cs-h3 {
+    /* 16px - 30px */
+    font-size: clamp(1rem, 2.4vw, 1.25rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    max-width: 37ch;
+    /* 16px - 24px */
+    margin: 0 0 clamp(1rem, 1.6vw, 1.5rem);
+    color: var(--primary);
+  }
+  #sbs-1360 .cs-button-solid {
+    font-size: 1rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #sbs-1360 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1a1a1a;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-1360 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #sbs-1360 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-1360 .cs-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #sbs-1360 .cs-bubbles {
+    width: 29.625rem;
+    height: 20.625rem;
+    position: absolute;
+    /* changes to 160px at larger desktop */
+    left: -16.25rem;
+    bottom: -8.75rem;
+    z-index: -1;
+  }
+  #sbs-1360 .cs-bubbles:before {
+    /* white border bubble */
+    content: '';
+    width: 20.625rem;
+    height: 20.625rem;
+    background: transparent;
+    border: 1px solid #1A1A1A;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    animation-name: floatAnimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #sbs-1360 .cs-bubbles:after {
+    /* orange bubble */
+    content: '';
+    width: 16.25rem;
+    height: 16.25rem;
+    background: var(--primary);
+    opacity: 0.15;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 1.875rem;
+    right: 0;
+    z-index: -1;
+    animation-name: floatAnimation2;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #sbs-1360 .cs-picture {
+    width: 100%;
+    height: 20.5rem;
+    border-radius: 3rem;
+    /* clips the corners of the img tag */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #sbs-1360 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #sbs-1360 {
+    padding-bottom: 0;
+  }
+  #sbs-1360 .cs-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #sbs-1360 .cs-content {
+    width: 85%;
+    order: -1;
+  }
+  #sbs-1360 .cs-picture {
+    width: 45%;
+    max-width: 19.0625rem;
+    margin-bottom: -3.75rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-1360 {
+    padding-top: 0;
+  }
+  #sbs-1360 .cs-container {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+  }
+  #sbs-1360 .cs-content {
+    /* 80px - 140px */
+    padding: clamp(5rem, 10vw, 8.75rem) 0;
+    order: initial;
+  }
+  #sbs-1360 .cs-bubbles {
+    /* reset at large deskop */
+    left: -12.0625rem;
+    bottom: -8.125rem;
+  }
+  #sbs-1360 .cs-picture {
+    width: 37%;
+    /* 230px - 340px */
+    height: clamp(14.375rem, 24vw, 21.25rem);
+  }
+  #sbs-1360 .cs-picture1 {
+    align-self: flex-start;
+    margin-bottom: 0;
+    margin-top: -3.75rem;
+  }
+  #sbs-1360 .cs-picture2 {
+    align-self: flex-end;
+  }
+}
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+  #sbs-1360 .cs-bubbles {
+    margin-right: 31.25rem;
+    left: auto;
+    right: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!--
+    NOTES: 
+
+    This section overlaps the section above and below it with negative margins pulling the sections toward itself.
+
+    1) on the section above this one, add a padding-bottom of 120px at 64rem (1024px) wide media query
+
+    2) on the section below this one, add padding top 120px at 37.5rem (600px) wide media query
+
+    This will create the space needed to account for the images overlapping their sections and allowing for more space so it doesn't get too cluttered.
+
+    There's also a couple options with this one when it comes to background colors on the sections themselves. The bubbles are cut off with overflow:hidden on the cs-wrapper parent div.  Ideally, you add background-color: #f7f7f7 to any section below this one for contrast since you dont just want these clipped bubbles in the middle of all that white. If you want the section below this stitch to also be white, remove the overflow:hidden from the cs-wrapper div that wraps the bubbles. This will allow them to overflow their container and can float in their full display size against both white backgrounds.
+-->
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1360">
+    <div class="cs-container">
+        <picture class="cs-picture cs-picture1">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg" alt="meeting" width="305" height="339">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">About Company</span>
+            <h2 class="cs-title">We're delighted to provide excellent customer service</h2>
+            <h3 class="cs-h3">
+                We’re committed to delivering the best digital 
+                marketing for businesses
+            </h3>
+            <p class="cs-text">
+                There are many variations of passages of Lorem Ipsumavailable, but the majority have suffered alteration in someform, simply free text by injected humour, or randomised.
+            </p>
+            <a href="" class="cs-button-solid">Discover More</a>
+        </div>
+        <picture class="cs-picture cs-picture2">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg" alt="meeting" width="305" height="339">
+        </picture>
+    </div>
+    <!--
+        Since we cant use overflow:hidden on the section container to clip the bubbles when they overflow the edges we need to make a wrapper around the bubbles that are the same dimensions as the section container and add overflow: hidden to that element. We need to see the images overflow the section container, so this is the solution to that problem. 
+    
+    -->
+    <div class="cs-wrapper">
+        <div class="cs-bubbles" aria-hidden="true"></div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

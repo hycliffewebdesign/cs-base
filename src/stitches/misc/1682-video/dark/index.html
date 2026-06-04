@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Video            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #video-1682 {
+    padding: var(--sectionPadding);
+  }
+  #video-1682 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #video-1682 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #video-1682 .cs-title {
+    margin: 0;
+    max-width: 20ch;
+  }
+  #video-1682 .cs-big-link {
+    width: 100%;
+    /* 460px - 600px */
+    height: clamp(28.75rem, 43vw, 37.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #video-1682 .cs-big-link:hover .cs-background img {
+    transform: scale(1.1);
+  }
+  #video-1682 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* clips the img from overflowing the container on hover */
+    overflow: hidden;
+  }
+  #video-1682 .cs-background:before {
+    /* color overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.2;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-blend-mode: multiply;
+  }
+  #video-1682 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.7s;
+  }
+  #video-1682 .cs-link-icon {
+    /* 80px - 110px */
+    width: clamp(5rem, 11vw, 6.875rem);
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+  }
+  #video-1682 .cs-card-group {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 1.75rem;
+  }
+  #video-1682 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 28.125rem;
+    margin: 0 auto;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  #video-1682 .cs-item:hover .cs-h3,
+  #video-1682 .cs-item:hover .cs-link {
+    color: var(--primary);
+  }
+  #video-1682 .cs-item:hover .cs-arrow {
+    filter: initial;
+  }
+  #video-1682 .cs-item:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  #video-1682 .cs-h3 {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 2.6vw, 1.9375rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #video-1682 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #video-1682 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-decoration: none;
+    margin-top: auto;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem;
+    transition: color 0.3s;
+  }
+  #video-1682 .cs-link:hover .cs-arrow {
+    transform: translateX(0.25rem);
+  }
+  #video-1682 .cs-link-text {
+    width: fit-content;
+  }
+  #video-1682 .cs-arrow {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #video-1682 .cs-card-group {
+    /* 20px - 32px */
+    column-gap: clamp(1.25rem, 3vw, 2rem);
+    /* 40px - 80px */
+    row-gap: clamp(2.5rem, 5vw, 5rem);
+  }
+  #video-1682 .cs-item {
+    padding: 0;
+    /* 20px - 32px */
+    padding-left: clamp(1.25rem, 3vw, 2rem);
+    border: none;
+    border-left: 1px solid var(--primary);
+    grid-column: span 4;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Video                      -->
+<!-- ============================================ -->
+
+<section id="video-1682">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our services</span>
+            <h2 class="cs-title">Grow Your Business with Our New Bold Agency</h2>
+        </div>
+        <a href="" class="cs-big-link">
+            <!--Background Image-->
+            <picture class="cs-background">
+                <source media="(min-width: 1024px)"
+                        srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-video.jpg">
+                <source media="(min-width: 601px)"
+                        srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-video.jpg">
+                <source media="(max-width: 600px)"
+                        srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-video.jpg">
+                <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/enterprise-video.jpg"
+                        alt="meeting" width="1280" height="580">
+            </picture>
+            <!--Play Icon-->
+            <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-play-icon.svg"
+                    alt="play icon" width="110" height="110" aria-hidden="true">
+        </a>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">Process Safety & Risk Management</h3>
+                <p class="cs-item-text">
+                    We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                </p>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Started</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Occupational Safety & Health</h3>
+                <p class="cs-item-text">
+                    We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                </p>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Started</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Security Assessment and Planning</h3>
+                <p class="cs-item-text">
+                    We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                </p>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Get Started</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                            alt="icon" width="20" height="20" aria-hidden="true" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

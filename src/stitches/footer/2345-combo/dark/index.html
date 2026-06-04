@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>combo</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Logos            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #logos-2345 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #logos-2345 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #logos-2345 .cs-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  #logos-2345 .cs-logo {
+    /* adjust the clamps as needed for your logos to be arrnaged the way you want them */
+    height: auto;
+    margin: 0;
+    display: block;
+  }
+  #logos-2345 .cs-logo.logo1 {
+    width: clamp(104px, 13vw, 178px);
+  }
+  #logos-2345 .cs-logo.logo2 {
+    width: clamp(35px, 7vw, 62px);
+  }
+  #logos-2345 .cs-logo.logo3 {
+    width: clamp(86px, 15vw, 173px);
+  }
+  #logos-2345 .cs-logo.logo4 {
+    width: clamp(112px, 15vw, 187px);
+  }
+  #logos-2345 .cs-logo.logo5 {
+    width: clamp(58px, 10vw, 121px);
+  }
+  #logos-2345 .cs-logo.logo6 {
+    width: clamp(99px, 10vw, 133px);
+  }
+}
+/* In-between - 650px */
+@media only screen and (min-width: 650px) {
+  #logos-2345 .cs-container {
+    flex-direction: row;
+  }
+  #logos-2345 .cs-row {
+    /* makes the cs-row non-existent and elts the children interact with the children from outside the cs-row */
+    display: contents;
+  }
+}
+/*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #footer-2345 {
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    /* 32px - 60px */
+    padding-bottom: clamp(2rem, 7vw, 3.75rem);
+  }
+  #footer-2345 .cs-container {
+    width: 100%;
+    max-width: 112.5rem;
+    margin: auto;
+    /* 24px - 100px top & bottom */
+    /* 16px - 100px left & right */
+    padding: clamp(1.5rem, 8vw, 6.25rem) clamp(1rem, 6.5vw, 6.25rem);
+    /* 24px - 40px */
+    padding-bottom: clamp(1.5rem, 5vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    background-color: #1A1A1A;
+  }
+  #footer-2345 .cs-cta {
+    width: 100%;
+    /* 80px - 128px */
+    margin-bottom: clamp(5rem, 10vw, 8rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+    column-gap: 4rem;
+  }
+  #footer-2345 .cs-title {
+    /* 31px - 39px */
+    font-size: clamp(1.9375rem, 3vw, 2.4375rem);
+    max-width: 75rem;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #footer-2345 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #footer-2345 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #footer-2345 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #footer-2345 .cs-button-solid {
+    flex: none;
+  }
+  #footer-2345 .cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  #footer-2345 .cs-content {
+    max-width: 32.25rem;
+  }
+  #footer-2345 .cs-logo {
+    width: 10.875rem;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  #footer-2345 .cs-text {
+    /* 32px - 60px */
+    margin-bottom: clamp(2rem, 7vw, 3.75rem);
+    color: var(--bodyTextColorWhite);
+  }
+  #footer-2345 .cs-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 0.5rem;
+  }
+  #footer-2345 .cs-nav-li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #footer-2345 .cs-nav-link {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    transition: color 0.3s;
+  }
+  #footer-2345 .cs-nav-link:hover {
+    color: var(--primary);
+  }
+  #footer-2345 .cs-ul {
+    width: 100%;
+    max-width: 47.25rem;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 24px - 32px */
+    row-gap: clamp(1.5rem, 5vw, 2rem);
+    /* 24px - 64px */
+    column-gap: clamp(1.5rem, 5vw, 2rem);
+  }
+  #footer-2345 .cs-li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    grid-column: span 12;
+  }
+  #footer-2345 .cs-header {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #A3A3A3;
+    display: block;
+  }
+  #footer-2345 .cs-contact {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--bodyTextColorWhite);
+  }
+  #footer-2345 .cs-logo {
+    width: 10.875rem;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #footer-2345 .cs-logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #footer-2345 .cs-flex {
+    width: 100%;
+    max-width: 17.6875rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.25rem;
+  }
+  #footer-2345 .cs-wrapper {
+    width: 100%;
+    display: flex;
+  }
+  #footer-2345 .cs-copyright,
+  #footer-2345 .cs-link {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #A3A3A3;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  #footer-2345 .cs-link:hover {
+    color: var(--primary);
+  }
+  #footer-2345 .cs-bottom {
+    width: 100%;
+    /* 48px - 60px */
+    margin-top: clamp(3rem, 7vw, 3.75rem);
+    /* 24px - 40px */
+    padding-top: clamp(1.5rem, 5vw, 2.5rem);
+    border-top: 1px solid #434240;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #footer-2345 .cs-copyright {
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+  }
+  #footer-2345 .cs-copyright-link {
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+    transition: color 0.3s;
+  }
+  #footer-2345 .cs-copyright-link:hover {
+    color: var(--primary);
+  }
+  #footer-2345 .cs-terms {
+    display: flex;
+    align-items: center;
+    order: -1;
+  }
+  #footer-2345 .cs-divider {
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: #a3a3a3;
+    display: inline-block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #footer-2345 .cs-ul {
+    width: 80%;
+    max-width: 44rem;
+  }
+  #footer-2345 .cs-li {
+    grid-column: span 6;
+  }
+  #footer-2345 .cs-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #footer-2345 .cs-terms {
+    order: initial;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #footer-2345 .cs-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #footer-2345 .cs-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #footer-2345 .cs-ul {
+    width: 50%;
+  }
+  #footer-2345 .cs-li {
+    grid-column: span 12;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #footer-2345 .cs-li {
+    grid-column: span 6;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Logos                      -->
+<!-- ============================================ -->
+
+<section id="logos-2345">
+    <div class="cs-container">
+        <!--Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes-->
+        <div class="cs-row">
+            <img class="cs-logo logo1" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo7.png" alt="logo" width="287" height="65" loading="lazy" decoding="async">
+            <img class="cs-logo logo2" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo8.png" alt="logo" width="229" height="55" loading="lazy" decoding="async">
+            <img class="cs-logo logo3" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo9.png" alt="logo" width="235" height="53" loading="lazy" decoding="async">
+        </div>
+        <div class="cs-row">
+            <img class="cs-logo logo4" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo10.png" alt="logo" width="228" height="61" loading="lazy" decoding="async">
+            <img class="cs-logo logo5" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo11.png" alt="logo" width="228" height="61" loading="lazy" decoding="async">
+            <img class="cs-logo logo6" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/logo12.png" alt="logo" width="228" height="61" loading="lazy" decoding="async">
+        </div>
+    </div>
+</section>
+           
+<!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+                                
+<footer id="footer-2345">
+    <div class="cs-container">
+        <div class="cs-cta">
+            <h2 class="cs-title">Building a Future with Our Help. Leave a message and our Agent will contact You shortly. We look forward to working with you!</h2>
+            <a href="" class="cs-button-solid">Get A Free Quote</a>
+        </div>
+        <div class="cs-wrapper">
+            <div class="cs-content">
+                <a href="" class="cs-logo">
+                    <img class="cs-logo-img" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/archi-logo.svg" alt="logo" width="174" height="28" loading="lazy" decoding="async">
+                </a>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nemo quo, ea animi libero facilis voluptates.
+                </p>
+                <ul class="cs-nav">
+                    <li class="cs-nav-li">
+                        <a href="" class="cs-nav-link">Home</a>
+                    </li>
+                    <li class="cs-nav-li">
+                        <a href="" class="cs-nav-link">About</a>
+                    </li>
+                    <li class="cs-nav-li">
+                        <a href="" class="cs-nav-link">Services</a>
+                    </li>
+                    <li class="cs-nav-li">
+                        <a href="" class="cs-nav-link">Projects</a>
+                    </li>
+                    <li class="cs-nav-li">
+                        <a href="" class="cs-nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <span class="cs-header">Phone Number</span>
+                    <a href="" class="cs-contact">+1 555-286-6985</a>
+                </li>
+                <li class="cs-li">
+                    <span class="cs-header">Email Address</span>
+                    <a href="" class="cs-contact">Josh@archistitch.com</a>
+                </li>
+                <li class="cs-li">
+                    <span class="cs-header">Office Hours</span>
+                    <a href="" class="cs-contact">Mon - Sat <br>9:00 am - 6:00 pm</a>
+                </li>
+                <li class="cs-li">
+                    <span class="cs-header">Office Address</span>
+                    <a href="" class="cs-contact">5555 Mooresville Rd, <br>
+                        Somewhere, NC, 28147</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-bottom">
+            <span class="cs-copyright">
+                © Copyright 2025 - <a class="cs-copyright-link" href="">Archistitch</a>
+            </span>
+            <div class="cs-terms">
+                <a href="" class="cs-copyright-link">Terms & Conditions</a>
+                <span class="cs-divider">|</span>
+                <a href="" class="cs-copyright-link">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script></script>
+</body>
+</html>

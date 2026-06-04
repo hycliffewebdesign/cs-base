@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #faq-1885 {
+    padding: var(--sectionPadding);
+    background-color: #faf6f2;
+    position: relative;
+    /* because the graphics are absolutely positioned, with some overflow above/below the image groups, we can use the em scaling with margins to set the distance on mobile. these get removed on larger screens */
+  }
+  #faq-1885 .cs-container {
+    width: 100%;
+    /* changes to 1720px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #faq-1885 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #faq-1885 .cs-title {
+    max-width: 25ch;
+    margin: 0;
+  }
+  #faq-1885 .cs-flex-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #faq-1885 .cs-image-group {
+    font-size: min(3.82vw, 0.9rem);
+    width: 23.8125em;
+    height: 34.4375em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-1885 .cs-image-group-left {
+    margin-bottom: 4.5em;
+  }
+  #faq-1885 .cs-image-group-right {
+    margin-top: 3.375em;
+  }
+  #faq-1885 .cs-picture {
+    width: 23.8125em;
+    height: 34.4375em;
+    box-sizing: border-box;
+    background-color: #dab692;
+    overflow: hidden;
+    border: 0.5em solid #dab692;
+    border-radius: 16.25rem;
+    position: absolute;
+    z-index: -1;
+  }
+  #faq-1885 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #faq-1885 .cs-graphic {
+    height: auto;
+    position: absolute;
+  }
+  #faq-1885 .cs-twirl {
+    width: 11.0625em;
+    height: auto;
+    top: 0.9375em;
+    right: 0;
+    z-index: 1;
+  }
+  #faq-1885 .cs-peach-left {
+    width: 5.375em;
+    height: auto;
+    top: -0.5625em;
+    right: 5.6875em;
+  }
+  #faq-1885 .cs-beige {
+    width: 23.75em;
+    height: auto;
+    right: 0;
+    bottom: -2.9375em;
+    z-index: -3;
+  }
+  #faq-1885 .cs-leaf-left {
+    width: 10.9375em;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #faq-1885 .cs-dots {
+    width: 8.6875em;
+    height: auto;
+    top: -1.625em;
+    left: 0;
+  }
+  #faq-1885 .cs-brown {
+    width: 12.6875em;
+    height: auto;
+    top: 0;
+    right: 0;
+    z-index: -3;
+  }
+  #faq-1885 .cs-peach-right {
+    width: 2.9375em;
+    height: auto;
+    right: 1.9375em;
+    bottom: 1.5em;
+  }
+  #faq-1885 .cs-leaf-right {
+    width: 10.0625em;
+    height: auto;
+    right: 0;
+    bottom: 0;
+  }
+  #faq-1885 .cs-faq-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #faq-1885 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    /* clips all corners of the button that overlap the rounded border */
+    overflow: hidden;
+    transition: border-bottom 0.3s;
+  }
+  #faq-1885 .cs-faq-item.active .cs-button {
+    background-color: #8f5b34;
+    color: var(--bodyTextColorWhite);
+  }
+  #faq-1885 .cs-faq-item.active .cs-button:before {
+    background-color: var(--bodyTextColorWhite);
+    transform: rotate(315deg);
+  }
+  #faq-1885 .cs-faq-item.active .cs-button:after {
+    background-color: var(--bodyTextColorWhite);
+    transform: rotate(-315deg);
+  }
+  #faq-1885 .cs-faq-item.active .cs-item-text {
+    height: auto;
+    /* set the margin and paddings only when the item is active so we don't create space when the item is closed */
+    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
+    opacity: 1;
+  }
+  #faq-1885 .cs-button {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: left;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    background-color: var(--secondary);
+    color: var(--headerColor);
+    border: none;
+    border-radius: 3.75rem;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #faq-1885 .cs-button:hover {
+    cursor: pointer;
+  }
+  #faq-1885 .cs-button:before {
+    /* left line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1.5625rem;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+    /* animate the transform from the left side of the x axis, and the center of the y */
+    transform-origin: left center;
+  }
+  #faq-1885 .cs-button:after {
+    /* right line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1.6875rem;
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
+    /* animate the transform from the right side of the x axis, and the center of the y */
+    transform-origin: right center;
+  }
+  #faq-1885 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    height: 0;
+    margin: 0;
+    background-color: #fff;
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    color: var(--bodyTextColor);
+    opacity: 0;
+    border-radius: 1.5rem;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #faq-1885 .cs-container {
+    max-width: 107.5rem;
+  }
+  #faq-1885 .cs-flex-group {
+    flex-direction: row;
+    justify-content: space-between;
+    /* 16px - 40px */
+    gap: clamp(1rem, 1vw, 2.5rem);
+  }
+  #faq-1885 .cs-image-group {
+    font-size: min(0.9vw, 1em);
+    margin: 0;
+  }
+  #faq-1885 .cs-image-group-left {
+    align-self: flex-start;
+  }
+  #faq-1885 .cs-image-group-right {
+    align-self: flex-end;
+  }
+  #faq-1885 .cs-faq-group {
+    width: 47%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-1885">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="cs-flex-group">
+            <div class="cs-image-group cs-image-group-left">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/faq-left.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/faq-left.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/faq-left.jpg" alt="dermatologist" width="324" height="467">
+                </picture>
+                <img class="cs-graphic cs-twirl" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/twirl.svg" alt="graphic" width="208" height="203" aria-hidden="true">
+                <img class="cs-graphic cs-peach-left" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/peach-blob.svg" alt="graphic" width="56" height="42" aria-hidden="true">
+                <img class="cs-graphic cs-beige" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/beige-blob.svg" alt="graphic" width="379" height="394" aria-hidden="true">
+                <img class="cs-graphic cs-leaf-left" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/leaf-2.svg" alt="graphic" width="179" height="225" aria-hidden="true">
+            </div>
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What to bring to the appointment?
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Credit card on file policy
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Are there parking options? 
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What to Anticipate During Your Appointment?
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Cancellation policy
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Financial Policy and Insurance Guidance
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What if I live out of town but would love to see Dr Paul?
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What should we do if we are unhappy with any part of our experience? 
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+            </ul>
+            <div class="cs-image-group cs-image-group-right">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/faq-right.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/faq-right.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/faq-right.jpg" alt="dermatologist" width="324" height="467">
+                </picture>
+                <img class="cs-graphic cs-dots" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/lotsa-dots.svg" alt="graphic" width="179" height="225" aria-hidden="true">
+                <img class="cs-graphic cs-brown" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-rainbow.svg" alt="graphic" width="179" height="225" aria-hidden="true">
+                <img class="cs-graphic cs-peach-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/big-peach.svg" alt="graphic" width="56" height="42" aria-hidden="true">
+                <img class="cs-graphic cs-leaf-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/thin-leaf.svg" alt="graphic" width="179" height="225" aria-hidden="true">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+                item.classList.toggle('active');
+            };
+            item.addEventListener('click', onClick);
+        }</script>
+</body>
+</html>

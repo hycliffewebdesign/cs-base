@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1536 {
+    padding: var(--sectionPadding);
+  }
+  #reviews-1536 .cs-container {
+    width: 100%;
+    max-width: 90rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-1536 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-1536 .cs-title {
+    max-width: 23ch;
+  }
+  #reviews-1536 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.15rem);
+    row-gap: 1.5rem;
+  }
+  #reviews-1536 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 28.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  #reviews-1536 .cs-review {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 1.6vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    /* 24px - 48px */
+    padding: clamp(1.5rem, 6vw, 3rem);
+    height: 100%;
+    min-height: 10rem;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    /* 20px - 40px */
+    margin-bottom: clamp(1.25rem, 4vw, 2.5rem);
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1536 .cs-svg {
+    --svgBG: #F2FAF8;
+    --svgBorder: #E5F4F0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+  #reviews-1536 .cs-flex-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #reviews-1536 .cs-profile {
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 2px solid #BABABA;
+    background-color: #BABABA;
+    border-radius: 50%;
+    /* clips image corners to make circle */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  #reviews-1536 .cs-profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes the image behave like a background image */
+    object-fit: cover;
+  }
+  #reviews-1536 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-1536 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--secondary);
+    display: block;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #reviews-1536 .cs-card-group {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  #reviews-1536 .cs-item {
+    width: 48.6%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1536">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Happy Customer Feedback About Our Service</h2>
+            <p class="cs-text">
+                We promise to take care of your child’s social, emotional, intellectual and physical needs with sensitive care and we also ensure you their security with our life.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <p class="cs-review">
+                    Stitch Day Care Center has been a game-changer for our family. Our child is thriving, and we're beyond grateful for their caring staff. Highly recommended!
+                    <!--SVG Background-->
+                    <svg class="cs-svg" id="Layer_2-1536" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="none" viewBox="0 0 419.56 253.34"><defs><style>#reviews-1536 .cls-1{fill:var(--svgBG);stroke-width:0px;}#reviews-1536 .cls-2{fill:none;stroke:var(--svgBorder);stroke-width:8px;}</style></defs><g id="Layer_1-2-1536"><path class="cls-1" d="m15.19,31.24C3.02,87.15-7.83,197.87,33.09,244.28c1.6,1.84,3.7,3.1,5.97,3.98s5.53,1.27,7.96,1c111.15-12.01,218.79-19.77,331.19-10.95,7.42.59,13.44-2.31,16.91-8.96,6.17-11.9,9.68-26.01,11.93-41.81,6.86-47.35,14.39-96.32-1.99-144.35-10.09-29.5-34.23-38.72-63.65-38.83-121.86-.35-220.38.52-295.39,2.99-18.98.63-26.52,4-30.83,23.89Z"/><path class="cls-2" d="m15.07,30.98C2.88,86.96-7.99,197.81,33,244.27c1.61,1.84,3.7,3.1,5.98,3.99s5.54,1.27,7.97,1c111.37-12.02,219.23-19.8,331.85-10.96,7.43.59,13.47-2.31,16.94-8.97,6.18-11.92,9.7-26.04,11.96-41.86,6.88-47.4,14.42-96.43-1.99-144.52-10.11-29.53-34.29-38.77-63.78-38.87-122.1-.35-220.82.52-295.97,2.99-19.01.63-26.57,4.01-30.89,23.92Z"/></g></svg>
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Jenny Wilson
+                        <span class="cs-job">Parent</span>
+                    </span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <p class="cs-review">
+                    Exceptional care and education at Stitch Day Care Center. Our child loves it here, and we do too. Highly impressed!
+                    <!--SVG Background-->
+                    <svg class="cs-svg" id="Layer_2-1536"  preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 419.56 253.34"><defs><style>#reviews-1536 .cls-1{fill:var(--svgBG);stroke-width:0px;}#reviews-1536 .cls-2{fill:none;stroke:var(--svgBorder);stroke-width:8px;}</style></defs><g id="Layer_1-2-1536"><path class="cls-1" d="m15.19,31.24C3.02,87.15-7.83,197.87,33.09,244.28c1.6,1.84,3.7,3.1,5.97,3.98s5.53,1.27,7.96,1c111.15-12.01,218.79-19.77,331.19-10.95,7.42.59,13.44-2.31,16.91-8.96,6.17-11.9,9.68-26.01,11.93-41.81,6.86-47.35,14.39-96.32-1.99-144.35-10.09-29.5-34.23-38.72-63.65-38.83-121.86-.35-220.38.52-295.39,2.99-18.98.63-26.52,4-30.83,23.89Z"/><path class="cls-2" d="m15.07,30.98C2.88,86.96-7.99,197.81,33,244.27c1.61,1.84,3.7,3.1,5.98,3.99s5.54,1.27,7.97,1c111.37-12.02,219.23-19.8,331.85-10.96,7.43.59,13.47-2.31,16.94-8.97,6.18-11.92,9.7-26.04,11.96-41.86,6.88-47.4,14.42-96.43-1.99-144.52-10.11-29.53-34.29-38.77-63.78-38.87-122.1-.35-220.82.52-295.97,2.99-19.01.63-26.57,4.01-30.89,23.92Z"/></g></svg>
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Reviews/profile3.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Esther Howard
+                        <span class="cs-job">Parent</span>
+                    </span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <p class="cs-review">
+                    Stitch Day Care Center has been a game-changer for our family. Our child is thriving, and we're beyond grateful for their caring staff. Highly recommended!
+                    <!--SVG Background-->
+                    <svg class="cs-svg" id="Layer_2-1536" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="none" viewBox="0 0 419.56 253.34"><defs><style>#reviews-1536 .cls-1{fill:var(--svgBG);stroke-width:0px;}#reviews-1536 .cls-2{fill:none;stroke:var(--svgBorder);stroke-width:8px;}</style></defs><g id="Layer_1-2-1536"><path class="cls-1" d="m15.19,31.24C3.02,87.15-7.83,197.87,33.09,244.28c1.6,1.84,3.7,3.1,5.97,3.98s5.53,1.27,7.96,1c111.15-12.01,218.79-19.77,331.19-10.95,7.42.59,13.44-2.31,16.91-8.96,6.17-11.9,9.68-26.01,11.93-41.81,6.86-47.35,14.39-96.32-1.99-144.35-10.09-29.5-34.23-38.72-63.65-38.83-121.86-.35-220.38.52-295.39,2.99-18.98.63-26.52,4-30.83,23.89Z"/><path class="cls-2" d="m15.07,30.98C2.88,86.96-7.99,197.81,33,244.27c1.61,1.84,3.7,3.1,5.98,3.99s5.54,1.27,7.97,1c111.37-12.02,219.23-19.8,331.85-10.96,7.43.59,13.47-2.31,16.94-8.97,6.18-11.92,9.7-26.04,11.96-41.86,6.88-47.4,14.42-96.43-1.99-144.52-10.11-29.53-34.29-38.77-63.78-38.87-122.1-.35-220.82.52-295.97,2.99-19.01.63-26.57,4.01-30.89,23.92Z"/></g></svg>
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Britney Allison
+                        <span class="cs-job">Parent</span>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>combos</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-2052 {
+    padding: var(--sectionPadding);
+    background-color: #f3fcfb;
+    overflow: hidden;
+    position: relative;
+  }
+  #stats-2052 .cs-container {
+    width: 100%;
+    /* changes to 1280px on tablet */
+    max-width: 30rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #stats-2052 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #stats-2052 .cs-title {
+    max-width: 30ch;
+  }
+  #stats-2052 .cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* 32px - 64px */
+    gap: clamp(2rem, 1vw, 4rem);
+  }
+  #stats-2052 .cs-number {
+    font-style: normal;
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 1.2em;
+    margin: 0 0 1.5rem;
+    color: var(--primary);
+    display: block;
+  }
+  #stats-2052 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+  }
+  #stats-2052 .cs-video-wrapper {
+    width: 100%;
+    height: 70vw;
+    max-height: 21.25rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2052 .cs-video-wrapper:hover {
+    cursor: pointer;
+  }
+  #stats-2052 .cs-video-wrapper:hover .cs-play {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  #stats-2052 .cs-video-wrapper video,
+  #stats-2052 .cs-video-wrapper .cs-picture {
+    width: 100%;
+    height: 100%;
+    /* makes image act as a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #stats-2052 .cs-video-wrapper video img,
+  #stats-2052 .cs-video-wrapper .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes image act as a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #stats-2052 .cs-play {
+    /* 80px - 120px */
+    width: clamp(5rem, 10vw, 7.5rem);
+    height: clamp(5rem, 10vw, 7.5rem);
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s, opacity 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  #stats-2052 .cs-play.cs-hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) !important;
+  }
+  #stats-2052 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+  }
+  #stats-2052 .cs-top-icon {
+    width: auto;
+    height: 4.5rem;
+    margin: 0 0 2rem;
+    display: block;
+  }
+  #stats-2052 .cs-text-large {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 1.5rem;
+    color: var(--headerColor);
+  }
+  #stats-2052 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 2rem 0 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2052 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #stats-2052 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #stats-2052 .cs-graphic {
+    display: none;
+    position: absolute;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats-2052 .cs-container {
+    max-width: 80rem;
+  }
+  #stats-2052 .cs-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+  #stats-2052 .cs-right-column {
+    /* 211px - 367px */
+    max-width: clamp(13.1875rem, 26vw, 22.9375rem);
+    flex: 1;
+  }
+  #stats-2052 .cs-left-column {
+    /* 164px - 305px */
+    max-width: clamp(10.25rem, 22vw, 19.0625rem);
+    flex: 1;
+  }
+  #stats-2052 .cs-video-wrapper {
+    /* 265px - 480px */
+    width: clamp(16.5625rem, 34vw, 30rem);
+    height: 78vw;
+    max-height: 41.8125rem;
+  }
+  #stats-2052 .cs-graphic {
+    display: block;
+  }
+  #stats-2052 .cs-graphic-left {
+    width: 33rem;
+    height: 51.875rem;
+    bottom: -16.375rem;
+    left: -20.1875rem;
+  }
+  #stats-2052 .cs-graphic-right {
+    width: 30.1875rem;
+    height: 47.3125rem;
+    top: -2.125rem;
+    right: -19.75rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #stats-2052 .cs-graphic-left {
+    bottom: -5.0625rem;
+  }
+  #stats-2052 .cs-graphic-right {
+    right: -17.8125rem;
+  }
+}
+/* Large Desktop - 1920px */
+@media only screen and (min-width: 120rem) {
+  #stats-2052 .cs-graphic-left {
+    margin-right: 47.5rem;
+    right: 50%;
+    left: initial;
+  }
+  #stats-2052 .cs-graphic-right {
+    margin-left: 48.4375rem;
+    right: initial;
+    left: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                      Stats                   -->
+<!-- ============================================ -->
+
+<section id="stats-2052">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Dental Care for Everyone</span>
+            <h2 class="cs-title">Globally Leading Advanced Multispecialty Dental Hospital</h2>
+        </div>
+        <div class="cs-wrapper">
+            <div class="cs-left-column">
+                <span class="cs-number">12+</span>
+                <h3 class="cs-h3">Years of scientific and clinical work</h3>
+                <p class="cs-text">
+                    Luctus accumsan tortor posuere ac ut consequat semper. Et pharetra pharetra massa massa ultricies mi quis.
+                </p>
+            </div>
+            <div class="cs-video-wrapper">
+                <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
+                <video loading="lazy" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Videos/gym.mp4" autoplay="false"></video>
+                <!-- <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/patient1.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/patient1.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/patient1.png" alt="body builder" width="630" height="877">
+                </picture> -->
+                <button class="cs-play" aria-label="click to play video">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg" alt="play icon" width="24" height="24" aria-hidden="true" decoding="async">
+                </button>
+            </div>
+            <div class="cs-right-column">
+                <img class="cs-top-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/tooth-gum.png" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+                <p class="cs-text-large">
+                    Enthusiastically supply parallel convergence after high standards in e-markets. Progressively administrate fully researched partnerships and market positioning  web-readiness.
+                </p>
+                <p class="cs-text">
+                    Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Luctus accumsan tortor posuere ac ut consequat semper. Et pharetra pharetra massa massa ultricies mi quis.
+                </p>
+                <a class="cs-button-solid" href="">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <img class="cs-graphic cs-graphic-left" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/dental-drop-green.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
+    <img class="cs-graphic cs-graphic-right" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/dental-drop-blue.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
+</section>
+
+<script>function togglePlayButton() {
+            // Select all elements with the .cs-picture class
+            const picture = document.querySelector('#stats .cs-video-wrapper');
+            const playButton = document.querySelector('#stats .cs-play');
+
+            function togglePlayButton() {
+                playButton.classList.toggle('cs-hide');
+            }
+
+            picture.addEventListener('click', togglePlayButton);
+            playButton.addEventListener('click', togglePlayButton);
+        }
+
+        // Call the function to activate the event listeners
+        togglePlayButton();
+
+        function toggleVideoPlayback() {
+            // Select the video element
+            const video = document.querySelector('#stats-2052 video');
+            const playButton = document.querySelector('#stats .cs-play');
+
+            function togglePlay() {
+                // Check if the video is paused
+                if (video.paused) {
+                    video.play(); // Play the video if it is paused
+                } else {
+                    video.pause(); // Pause the video if it is playing
+                }
+            }
+
+            video.addEventListener("click", togglePlay);
+            playButton.addEventListener("click", togglePlay);
+        }
+
+        // Call the function to activate the event listener
+        toggleVideoPlayback();</script>
+</body>
+</html>

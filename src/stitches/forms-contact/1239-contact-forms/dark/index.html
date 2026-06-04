@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact forms</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-1239 {
+    background-color: #f7f7f7;
+    position: relative;
+    z-index: 1;
+  }
+  #contact-1239:before {
+    /* background pattern */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/zag-pattern.svg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.48;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #contact-1239 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    /* 48px - 80px */
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+  #contact-1239 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 32.625rem;
+    /* resets to 0 at tablet */
+    margin: auto;
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    order: 2;
+  }
+  #contact-1239 .cs-title {
+    margin: 0 0 2rem 0;
+  }
+  #contact-1239 .cs-form {
+    width: 100%;
+    padding: 0;
+    /* prevents flexbox from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #contact-1239 .cs-label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    width: 100%;
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #contact-1239 .cs-input {
+    font-size: 1rem;
+    width: 100%;
+    /* 46px - 56px */
+    height: clamp(2.875rem, 4vw, 3.5rem);
+    padding: 0;
+    padding-left: 1.5rem;
+    color: var(--headerColor);
+    background-color: #fff;
+    border: none;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #contact-1239 .cs-input::placeholder {
+    color: #7d799c;
+    opacity: 0.6;
+  }
+  #contact-1239 .cs-textarea {
+    min-height: 7.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  #contact-1239 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #1a1a1a;
+    border: none;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: color 0.3s;
+  }
+  #contact-1239 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #contact-1239 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #contact-1239 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #contact-1239 .cs-submit {
+    min-width: 17.6875rem;
+    margin: auto;
+  }
+  #contact-1239 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #contact-1239 .cs-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #contact-1239 .cs-card-group {
+    width: 100%;
+    max-width: 32.625rem;
+    margin: 0;
+    padding: var(--sectionPadding);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+    order: 1;
+    position: relative;
+    z-index: 1;
+  }
+  #contact-1239 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* 16px - 20px */
+    padding: clamp(1rem, 4vw, 2.5rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  #contact-1239 .cs-item:hover:before {
+    opacity: 1;
+  }
+  #contact-1239 .cs-item:hover .cs-header,
+  #contact-1239 .cs-item:hover .cs-item-text,
+  #contact-1239 .cs-item:hover .cs-link {
+    color: var(--bodyTextColorWhite);
+  }
+  #contact-1239 .cs-item:hover .cs-text,
+  #contact-1239 .cs-item:hover .cs-link {
+    opacity: 0.8;
+  }
+  #contact-1239 .cs-item:hover .cs-link:hover {
+    color: var(--primary);
+  }
+  #contact-1239 .cs-item:hover .cs-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #contact-1239 .cs-item:before {
+    /* hover border and background */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    border: 1px solid var(--primary);
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #contact-1239 .cs-header {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-align: inherit;
+    font-weight: 700;
+    /* 12px - 16px */
+    margin: 0 0 clamp(0.75rem, 1.6vw, 1rem);
+    display: block;
+    transition: color 0.3s;
+  }
+  #contact-1239 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 0.25rem;
+    color: var(--bodyTextColor);
+    display: block;
+    transition: color 0.3s;
+  }
+  #contact-1239 .cs-link {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.3s;
+  }
+  #contact-1239 .cs-icon {
+    width: 1rem;
+    height: auto;
+  }
+  #contact-1239 .cs-card-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #contact-1239 .cs-card-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #contact-1239 .cs-background {
+    width: 55vw;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+  }
+  #contact-1239 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #contact-1239 {
+    /* moved padding back to the section container */
+    padding: var(--sectionPadding);
+  }
+  #contact-1239 .cs-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #contact-1239 .cs-content {
+    text-align: left;
+    width: 42%;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+    order: 1;
+  }
+  #contact-1239 .cs-form {
+    padding: 0;
+  }
+  #contact-1239 .cs-submit {
+    margin-left: 0;
+  }
+  #contact-1239 .cs-wrapper {
+    width: 42%;
+    max-width: 25.8125rem;
+    order: 2;
+  }
+  #contact-1239 .cs-card-group {
+    padding: 0;
+  }
+  #contact-1239 .cs-card-background {
+    display: none;
+  }
+  #contact-1239 .cs-background {
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1239">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Make An Appointment</h2>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1239" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1239" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email-1239" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="phone" id="phone-1239" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1239" placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Make an Appointment</button>
+            </form>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-header">Call Us</span>
+                    <p class="cs-item-text">
+                        We are available for your 24/7 support.<br>
+                        <a class="cs-link" href="tell:555-555-5555">(555) 555-5555</a>                    
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-header">Email</span>
+                    <p class="cs-item-text">
+                        Email your questions at
+                        <a class="cs-link" href="mailto:info@invetexfinance.com">info@invetexfinance.com</a>     
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-header">Reviews</span>
+                    <p class="cs-item-text">
+                        See Our reviews on Google or leave a review
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/google-1a.svg" alt="icon" loading="lazy" decoding="async" width="16" height="16" aria-hidden="true">
+                            Google Reviews
+                        </a>                   
+                    </p>
+                </li>
+            </ul>
+            <!--Background image on mobile. We have to wrap the list in a wrpper div so we can place the image in the HTML as its background. It's better to insert images on your site in the HTML than the CSS as a background because it improves performance and load times being in the HTML.-->
+            <picture class="cs-card-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/HEADPHONES.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/HEADPHONES.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/HEADPHONES.jpg" alt="people" width="960" height="839">
+            </picture>
+        </div>
+    </div>
+    <!--Background image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/HEADPHONES.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/HEADPHONES.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/HEADPHONES.jpg" alt="people" width="960" height="839">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

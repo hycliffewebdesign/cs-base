@@ -1,0 +1,53 @@
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<section id="hero-929">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Unleash Your Inner Beauty With Our Modern Hair Experts</h2>
+            <div class="cs-flex">
+                <div class="cs-content-group">
+                    <p class="cs-text">
+                        Designed to maintain your current colour, blend out a growing root or balance your blonde while providing full and semi-permanent coverage.
+                    </p>
+                    <a href="" class="cs-button-solid">Book An Appointment</a>
+                </div>
+                <div class="cs-hours-group">
+                    <span class="cs-header">Business Hours</span>
+                    <div class="cs-hours">
+                        <span class="cs-day">Mon-Fri</span>
+                        <span class="cs-time">10AM-8PM</span>
+                    </div>
+                    <div class="cs-hours">
+                        <span class="cs-day">Sat</span>
+                        <span class="cs-time">11AM-6PM</span>
+                    </div>
+                    <div class="cs-hours">
+                        <span class="cs-day">Sun</span>
+                        <span class="cs-time">Closed</span>
+                    </div>
+                </div>
+            </div>
+            <!--We need this wrapper div so we can place the cs-tagline around the cs-picture image. We can only place images inside picture tags so the cs-tagline can't go in there. hence we HAVE to make a div wrapper so they can be placed together-->
+            <div class="cs-picture-group">
+                <span class="cs-tagline">Since 1990</span>
+                <!--Hair Model Picture-->
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/woman-m.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/woman.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/woman.png" alt="hair model" width="576" height="598">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-m.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon.jpg" alt="salon interior" width="1920" height="804">
+    </picture>
+</section>

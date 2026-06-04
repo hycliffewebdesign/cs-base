@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mosaic</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-2442 {
+    padding: var(--sectionPadding);
+    background-color: #040710;
+    position: relative;
+  }
+  #gallery-2442 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #gallery-2442 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #gallery-2442 .cs-title {
+    max-width: 28ch;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #gallery-2442 .cs-image-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* 8px - 20px */
+    gap: clamp(0.5rem, 2vw, 1.25rem);
+  }
+  #gallery-2442 .cs-picture-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #gallery-2442 .cs-picture-wrapper:hover .cs-info {
+    opacity: 1;
+    bottom: 1.5rem;
+  }
+  #gallery-2442 .cs-picture {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  #gallery-2442 .cs-picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  #gallery-2442 .cs-info {
+    /* padding is done in ems so the content doesn't get squished on smaller devices */
+    padding: 1.5em 2em;
+    background-color: rgba(3, 7, 17, 0.3);
+    opacity: 0;
+    border: 1px solid #010104;
+    position: absolute;
+    /* by using right and left, the content stretches to fill the card, 24px short of the edges */
+    right: 1.5rem;
+    bottom: -3.125rem;
+    left: 1.5rem;
+    transition: opacity 0.3s, bottom 0.3s;
+    backdrop-filter: blur(11px);
+  }
+  #gallery-2442 .cs-border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #gallery-2442 .cs-border:before {
+    content: "";
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #gallery-2442 .cs-border:after {
+    content: "";
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #gallery-2442 .cs-border1 {
+    /* top left border */
+  }
+  #gallery-2442 .cs-border1:before {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #d53232 0%, rgba(0, 0, 0, 0) 78%);
+  }
+  #gallery-2442 .cs-border1:after {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, #d53232 0%, rgba(0, 0, 0, 0) 78%);
+  }
+  #gallery-2442 .cs-border2:before {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 22%, #d53232 100%);
+    top: auto;
+    bottom: 0;
+  }
+  #gallery-2442 .cs-border2:after {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 22%, #d53232 100%);
+    right: 0;
+    left: auto;
+  }
+  #gallery-2442 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #gallery-2442 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-2442 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #gallery-2442 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #gallery-2442 {
+    /* we create the mosaic pattern by using position: absolute; on all picture-wrappers, and use font-size scaling to keep everything in arrangement */
+  }
+  #gallery-2442 .cs-image-group {
+    font-size: min(1.2vw, 1rem);
+    width: 80em;
+    height: 134em;
+    position: relative;
+  }
+  #gallery-2442 .cs-picture-wrapper {
+    position: absolute;
+  }
+  #gallery-2442 .cs-picture-wrapper-1 {
+    width: 25.8125em;
+    height: 48.125em;
+    top: 0;
+    left: 0;
+  }
+  #gallery-2442 .cs-picture-wrapper-2 {
+    width: 27.125em;
+    height: 29.875em;
+    top: 6.25em;
+    left: 29.8125em;
+  }
+  #gallery-2442 .cs-picture-wrapper-3 {
+    width: 19.0625em;
+    height: 29.875em;
+    top: 0;
+    right: 0;
+  }
+  #gallery-2442 .cs-picture-wrapper-4 {
+    width: 39.375em;
+    height: 41.75em;
+    top: 52.125em;
+    left: 0;
+  }
+  #gallery-2442 .cs-picture-wrapper-5 {
+    width: 36.625em;
+    height: 48.125em;
+    top: 40.125em;
+    right: 0;
+  }
+  #gallery-2442 .cs-picture-wrapper-6 {
+    width: 19.0625em;
+    height: 36.125em;
+    bottom: 0;
+    left: 0;
+  }
+  #gallery-2442 .cs-picture-wrapper-7 {
+    width: 27.125em;
+    height: 19.875em;
+    bottom: 12em;
+    left: 23.0625em;
+  }
+  #gallery-2442 .cs-picture-wrapper-8 {
+    width: 25.8125em;
+    height: 41.75em;
+    right: 0;
+    bottom: 0;
+  }
+  #gallery-2442 .cs-picture {
+    width: 100%;
+    height: 100%;
+  }
+  #gallery-2442 .cs-picture img {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-2442">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Portfolio</span>
+            <h2 class="cs-title">A Glowing Showcase of Living Art and Visual Alchemy</h2>
+        </div>
+        <div class="cs-image-group">
+            <div class="cs-picture-wrapper cs-picture-wrapper-1">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art9.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art9.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art9.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="cs-picture-wrapper cs-picture-wrapper-2">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art10.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art10.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art10.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="cs-picture-wrapper cs-picture-wrapper-3">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art11.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art11.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art11.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="cs-picture-wrapper cs-picture-wrapper-4">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art12.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art12.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art12.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="cs-picture-wrapper cs-picture-wrapper-5">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art13.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art13.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art13.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="cs-picture-wrapper cs-picture-wrapper-6">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art14.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art14.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art14.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="cs-picture-wrapper cs-picture-wrapper-7">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art15.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art15.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art15.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="cs-picture-wrapper cs-picture-wrapper-8">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art16.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art16.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art16.jpg" alt="new hallway" width="420" height="567">
+                </picture>
+                <div class="cs-info">
+                    <div class="cs-border cs-border1" aria-hidden="true"></div>
+                    <h3 class="cs-h3">Totem & Spirit</h3>
+                    <div class="cs-border cs-border2" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="cs-button-solid">View Full Gallery</a>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

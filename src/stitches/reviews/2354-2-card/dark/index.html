@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #reviews-2354 {
+    padding: var(--sectionPadding);
+    background-color: #F8F7F6;
+  }
+  #reviews-2354 .cs-container {
+    width: 100%;
+    /* chnages to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 40px - 48px */
+    gap: clamp(2.5rem, 5vw, 3rem);
+  }
+  #reviews-2354 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-2354 .cs-title {
+    margin: 0;
+    max-width: 20ch;
+  }
+  #reviews-2354 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2354 .cs-item {
+    text-align: left;
+    list-style: none;
+    /* 32px - 48px top & bottom */
+    /* 24px - 48px left & right */
+    padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 3rem);
+    background-color: #fff;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2354 .cs-item:last-of-type {
+    padding: 0;
+    order: -1;
+  }
+  #reviews-2354 .cs-featured {
+    /* 25px - 31px */
+    font-size: clamp(1.5625rem, 3vw, 1.9375rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-2354 .cs-item-text {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0 0 3rem;
+    color: var(--bodyTextColor);
+  }
+  #reviews-2354 .cs-info {
+    display: flex;
+    align-items: center;
+    /* 8px - 16px */
+    gap: clamp(0.5rem, 1vw, 1rem);
+  }
+  #reviews-2354 .cs-profile-wrapper {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    display: block;
+    flex: none;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2354 .cs-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews-2354 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+  }
+  #reviews-2354 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: var(--bodyTextColor);
+  }
+  #reviews-2354 .cs-quote {
+    width: 5.375rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+  #reviews-2354 .cs-picture {
+    width: 100%;
+    height: 90vw;
+    max-height: 28.125rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2354 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-2354 .cs-container {
+    max-width: 80rem;
+  }
+  #reviews-2354 .cs-card-group {
+    /* 60px - 150px */
+    padding: clamp(3.75rem, 12vw, 9.375rem) 0;
+  }
+  #reviews-2354 .cs-item {
+    grid-column: span 6;
+  }
+  #reviews-2354 .cs-item:last-of-type {
+    width: 85%;
+    max-width: 59.6875rem;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  #reviews-2354 .cs-picture {
+    width: 100%;
+    max-height: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-2354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">What Our Clients Say About ArchiStitch</h2>
+        </div>                  
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-featured">“They did an amazing work for us”</span>
+                <p class="cs-item-text">
+                    ArchiStitch transformed our home into a masterpiece. Their attention to detail and innovative design approach brought our vision to life in ways we never imagined.
+                </p>
+                <div class="cs-info">
+                    <picture class="cs-profile-wrapper">
+                        <img class="cs-profile" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/profile1.jpg" alt="person" width="52" height="52">
+                    </picture>
+                    <span class="cs-name">
+                        Brittney Allison
+                        <span class="cs-desc">Founder of Yokoloko</span>
+                    </span>
+                </div>
+                <img class="cs-quote" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/quote-orange.svg" alt="quote" width="86" height="69">
+            </li>
+            <li class="cs-item">
+                <span class="cs-featured">“They did an amazing work for us”</span>
+                <p class="cs-item-text">
+                    ArchiStitch transformed our home into a masterpiece. Their attention to detail and innovative design approach brought our vision to life in ways we never imagined.
+                </p>
+                <div class="cs-info">
+                    <picture class="cs-profile-wrapper">
+                        <img class="cs-profile" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/profile1.jpg" alt="person" width="52" height="52">
+                    </picture>
+                    <span class="cs-name">
+                        Brittney Allison
+                        <span class="cs-desc">Founder of Yokoloko</span>
+                    </span>
+                </div>
+                <img class="cs-quote" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/quote-orange.svg" alt="quote" width="86" height="69">
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building19.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building19.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building19.jpg" alt="building" width="955" height="636">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

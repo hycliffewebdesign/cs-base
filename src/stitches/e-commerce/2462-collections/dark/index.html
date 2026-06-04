@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collections</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Collection          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #collection-2462 {
+    padding: var(--sectionPadding);
+  }
+  #collection-2462 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #collection-2462 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: contents;
+    flex-direction: column;
+    align-items: center;
+  }
+  #collection-2462 .cs-topper {
+    color: var(--secondary);
+  }
+  #collection-2462 .cs-title {
+    max-width: 24ch;
+    margin: 0;
+  }
+  #collection-2462 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.25rem;
+    display: inline-block;
+    order: 3;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2462 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #collection-2462 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #collection-2462 .cs-card-group {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    row-gap: clamp(1.5rem, 3vw, 3rem);
+  }
+  #collection-2462 .cs-item {
+    text-align: center;
+    height: fit-content;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-2462 .cs-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #collection-2462 .cs-image-group {
+    width: 100%;
+    height: 100vw;
+    max-height: 25rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #collection-2462 .cs-picture {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    transition: filter 0.3s;
+  }
+  #collection-2462 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #collection-2462 .cs-icon-wrapper {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--secondary);
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+  }
+  #collection-2462 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: left;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 0 0 1rem;
+    overflow: hidden;
+    color: var(--headerColor);
+    display: block;
+    transition: color 0.3s;
+  }
+  #collection-2462 .cs-category {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin-bottom: 0.5rem;
+    color: var(--bodyTextColor);
+  }
+  #collection-2462 .cs-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--secondary);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #collection-2462 .cs-container {
+    max-width: 80rem;
+  }
+  #collection-2462 .cs-item {
+    grid-column: span 6;
+  }
+  #collection-2462 .cs-image-group {
+    max-height: 18.75rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #collection-2462 .cs-content {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4rem;
+  }
+  #collection-2462 .cs-item {
+    grid-column: span 4;
+  }
+  #collection-2462 .cs-item:hover .cs-icon-wrapper {
+    opacity: 1;
+  }
+  #collection-2462 .cs-item:hover .cs-picture {
+    filter: blur(8px);
+  }
+}
+/* Large - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #collection-2462 .cs-item {
+    grid-column: span 3;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Collection                   -->
+<!-- ============================================ -->
+
+<section id="collection-2462">
+	<div class="cs-container">
+		<div class="cs-content">
+			<div class="cs-flex">
+				<span class="cs-topper">Bid on Unique Japandi Pieces</span>
+				<h2 class="cs-title">Join Our Live Auctions for Exclusive Japandi Furniture</h2>
+			</div>
+			<a href="" class="cs-button-solid">Explore All Catalogs</a>
+		</div>
+
+		<ul class="cs-card-group">
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture22.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture22.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture22.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Sofas</span>
+					<h3 class="cs-h3">Japandi Style Boucle Sofa</h3>
+					<span class="cs-price">$2,099.00</span>
+				</a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture26.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture26.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture26.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Rugs</span>
+					<h3 class="cs-h3">Geometric Woven Rug</h3>
+					<span class="cs-price">From $165.95</span>
+				</a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture27.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture27.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture27.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Coffee table</span>
+					<h3 class="cs-h3">Round Coffee Table with Storage</h3>
+					<span class="cs-price">$589.99</span>
+				</a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture28.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture28.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture28.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Office Table</span>
+					<h3 class="cs-h3">Minimalist Marble office Table</h3>
+					<span class="cs-price">$1,189.99</span>
+				</a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture29.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture29.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture29.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Rugs</span>
+					<h3 class="cs-h3">Geometric Shag Tassel Rug</h3>
+					<span class="cs-price">From $112.95</span>
+				</a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture30.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture30.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture30.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Dining Tables</span>
+					<h3 class="cs-h3">Round Wood Table for 4</h3>
+					<span class="cs-price">$769.99</span>
+				</a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture31.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture31.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture31.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Sofas</span>
+					<h3 class="cs-h3">Japandi Bouclé Sofa</h3>
+					<span class="cs-price">$1,894.99</span>
+				</a>
+			</li>
+			<li class="cs-item">
+				<a href="" class="cs-link">
+					<div class="cs-image-group">
+						<picture class="cs-picture">
+							<!--Mobile Image-->
+							<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture32.jpg" />
+							<!--Tablet and above Image-->
+							<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture32.jpg" />
+							<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture32.jpg" alt="furniture" width="197" height="197" />
+						</picture>
+						<picture class="cs-icon-wrapper">
+							<img class="cs-icon" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/bag.svg" alt="bag " width="28" height="28" />
+						</picture>
+					</div>
+					<span class="cs-category">Rugs</span>
+					<h3 class="cs-h3">Japandi Geometric Jute Rug</h3>
+					<span class="cs-price">From $39.95</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<script></script>
+</body>
+</html>

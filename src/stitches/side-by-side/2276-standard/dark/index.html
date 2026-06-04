@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #sbs-2276 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2276 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-2276 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbs-2276 .cs-title {
+    max-width: 25ch;
+  }
+  #sbs-2276 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-2276 .cs-signature {
+    width: 10.625rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  #sbs-2276 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #sbs-2276 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 2rem 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #sbs-2276 .cs-button-solid {
+    font-size: 1rem;
+    text-align: center;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    width: 11.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    /* clips corners of the before element */
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #sbs-2276 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-2276 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #sbs-2276 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-2276 .cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  #sbs-2276 .cs-image-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+  #sbs-2276 .cs-image-group a {
+    display: none;
+    flex: none;
+  }
+  #sbs-2276 .cs-picture {
+    width: 100%;
+    height: 90vw;
+    max-height: 31.25rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2276 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2276 .cs-container {
+    max-width: 80rem;
+  }
+  #sbs-2276 .cs-content {
+    /* 32px - 64px */
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+  #sbs-2276 .cs-title {
+    margin: 0;
+  }
+  #sbs-2276 .cs-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-2276 .cs-flex {
+    /* 12px to 40px */
+    padding: clamp(0.75rem, 3vw, 2.5rem) 0;
+    align-self: center;
+  }
+  #sbs-2276 .cs-picture1 {
+    height: 25rem;
+    max-height: initial;
+  }
+  #sbs-2276 .cs-picture2 {
+    width: 47vw;
+    max-width: 22.625rem;
+    height: auto;
+    max-height: 100%;
+    order: -1;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2276 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-2276 .cs-desc {
+    margin: 0;
+  }
+  #sbs-2276 .cs-flex .cs-button-solid {
+    display: none;
+  }
+  #sbs-2276 .cs-image-group {
+    width: 50%;
+    max-width: 25.8125rem;
+  }
+  #sbs-2276 .cs-image-group a {
+    display: inline-block;
+  }
+  #sbs-2276 .cs-picture1 {
+    height: 100%;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 75rem) {
+  #sbs-2276 .cs-image-group {
+    margin-bottom: 5.25rem;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #sbs-2276 .cs-title,
+  body.dark-mode #sbs-2276 .cs-text,
+  body.dark-mode #sbs-2276 .cs-name,
+  body.dark-mode #sbs-2276 .cs-desc {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs-2276 .cs-text,
+  body.dark-mode #sbs-2276 .cs-desc {
+    opacity: 0.8;
+  }
+  body.dark-mode #sbs-2276 .cs-signature {
+    filter: grayscale(1) brightness(10000%);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2276">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction2.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction2.jpg">
+                <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction2.jpg" alt="construction site" width="413" height="492" loading="lazy">
+            </picture>
+            <a href="" class="cs-button-solid">Read More</a>
+        </div>
+        <div class="cs-content">
+            <div class="cs-header">
+                <span class="cs-topper">About Us</span>
+                <h2 class="cs-title">Creating Elegant Environments, One Detail At A Time</h2>
+            </div>
+            <div class="cs-wrapper">
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        At BuildStitch, we specialize in turning your dream projects into reality. From bespoke custom homes to intricate hardscaping and extensions, our expertise ensures a flawless journey from concept to completion. Whether you're planning a renovation or a ground-up build, our focus is on exceeding expectations every step of the way.
+                    </p>
+                    <img class="cs-signature" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/signature.png" decoding="async" loading="lazy" alt="signature" width="170" height="59" aria-hidden="true">
+                    <span class="cs-name">William John</span>
+                    <span class="cs-desc">Founder of Build Stitch</span>
+                    <!--if you change this button class name, change the class name to rename it as well in the css at small desktop media query-->
+                    <a href="" class="cs-button-solid">Get Started Today</a>
+                </div>
+                <picture class="cs-picture cs-picture2">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction5.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction5.jpg">
+                    <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction5.jpg" alt="construction site" width="362" height="400" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

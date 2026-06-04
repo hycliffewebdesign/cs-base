@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-team-1283 {
+    padding: var(--sectionPadding);
+  }
+  #meet-team-1283 .cs-container {
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-team-1283 .cs-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+  }
+  #meet-team-1283 .cs-flex-group {
+    display: flex;
+    flex-direction: column;
+  }
+  #meet-team-1283 .cs-text {
+    max-width: 32.625rem;
+  }
+  #meet-team-1283 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    /* clips the corners off the image tag */
+    overflow: hidden;
+  }
+  #meet-team-1283 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* Makes image behave like a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #meet-team-1283 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  #meet-team-1283 .cs-item {
+    list-style: none;
+    /* Changes on tablet */
+    width: 100%;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    /* 16px - 20px */
+    padding: clamp(1rem, 2vw, 1.25rem) 0;
+    background: #f1f1f4;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #meet-team-1283 .cs-item:hover .cs-picture img {
+    transform: scale(1.1);
+  }
+  #meet-team-1283 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #meet-team-1283 .cs-job-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #meet-team-1283 .cs-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  #meet-team-1283 .cs-link {
+    width: 2rem;
+    height: 2rem;
+    /* After making the a tag into a box, we center the image inside of it */
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* creates the 3D space for the 3D effect when spinning */
+    transform-style: preserve-3d;
+    perspective: 700px;
+  }
+  #meet-team-1283 .cs-link:hover .cs-icon {
+    transform: translateY(-0.3125rem) rotateY(360deg);
+  }
+  #meet-team-1283 .cs-icon {
+    width: 0.875rem;
+    height: auto;
+    transition: transform 0.7s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-team-1283 .cs-container {
+    max-width: 80rem;
+  }
+  #meet-team-1283 .cs-topper {
+    width: 100%;
+  }
+  #meet-team-1283 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 1.25rem;
+  }
+  #meet-team-1283 .cs-title {
+    margin-bottom: 0;
+  }
+  #meet-team-1283 .cs-text {
+    width: 50%;
+  }
+  #meet-team-1283 .cs-card-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #meet-team-1283 .cs-card-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Meet The Team                -->
+<!-- ============================================ -->
+
+<section id="meet-team-1283">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Meet The Team</span>
+                <h2 class="cs-title">Meet Our Team</h2>
+            </div>
+            <p class="cs-text">
+                We can help you design your project and develop a comprehensive plan to ensure that
+                it meets your specific needs and requirements. Our team of architects and engineers will work
+                closely with you to create a design that is both functional and aesthetically pleasing.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimages2.nyc3.digitaloceanspaces.com/Meet-Team/contractor-1.jpg" alt="portrait"
+                        width="275" height="132">
+                </picture>
+                <span class="cs-name">Oscar Chavez</span>
+                <span class="cs-job-title">Project Engineer</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                            width="17" height="16">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/linkedin-dark.svg" alt="linkedin"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                            width="17" height="16">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimages2.nyc3.digitaloceanspaces.com/Meet-Team/contractor-2.jpg" alt="portrait"
+                        width="275" height="132">
+                </picture>
+                <span class="cs-name">Pansy Dixon</span>
+                <span class="cs-job-title">Civil Engineer</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                            width="17" height="16">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/linkedin-dark.svg" alt="linkedin"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                            width="17" height="16">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimages2.nyc3.digitaloceanspaces.com/Meet-Team/contractor-3.jpg" alt="portrait"
+                        width="275" height="132">
+                </picture>
+                <span class="cs-name">Kayla Ortega</span>
+                <span class="cs-job-title">Site Supervisor</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                            width="17" height="16">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/linkedin-dark.svg" alt="linkedin"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                            width="17" height="16">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimages2.nyc3.digitaloceanspaces.com/Meet-Team/contractor-1.jpg" alt="portrait"
+                        width="275" height="132">
+                </picture>
+                <span class="cs-name">Oscar Chavez</span>
+                <span class="cs-job-title">Project Engineer</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                            width="17" height="16">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/linkedin-dark.svg" alt="linkedin"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                            width="17" height="16">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimages2.nyc3.digitaloceanspaces.com/Meet-Team/contractor-2.jpg" alt="portrait"
+                        width="275" height="132">
+                </picture>
+                <span class="cs-name">Pansy Dixon</span>
+                <span class="cs-job-title">Civil Engineer</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                            width="17" height="16">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/linkedin-dark.svg" alt="linkedin"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                            width="17" height="16">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img aria-hidden="true" loading="lazy" decoding="async"
+                        src="https://csimages2.nyc3.digitaloceanspaces.com/Meet-Team/contractor-3.jpg" alt="portrait"
+                        width="275" height="132">
+                </picture>
+                <span class="cs-name">Kayla Ortega</span>
+                <span class="cs-job-title">Site Supervisor</span>
+                <!-- Social Flexbox -->
+                <div class="cs-social">
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram1a.svg" alt="instagram"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter1a.svg" alt="twitter"
+                            width="17" height="16">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/linkedin1a.svg" alt="linkedin"
+                            width="15" height="13">
+                    </a>
+                    <a href="" class="cs-link" aria-label="Linked in" target="_blank" rel="noopener">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook1a.svg" alt="facebook"
+                            width="17" height="16">
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

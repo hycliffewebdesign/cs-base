@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>centered</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-929 {
+    padding: var(--sectionPadding);
+    /* 160px - 200px */
+    padding-top: clamp(10rem, 16vw, 12.5rem);
+    padding-bottom: 0;
+    position: relative;
+  }
+  #hero-929 .cs-container {
+    width: 100%;
+    max-width: calc(1280 / 16 * 1rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #hero-929 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #hero-929 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: calc(1096 / 16 * 1rem);
+    /* 8px - 16px */
+    margin: 0 0 clamp(0.5rem, 2vw, 1rem) 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #hero-929 .cs-flex {
+    width: 100%;
+    /* removed at small desktop */
+    margin-bottom: calc(40 / 16 * 1rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(40 / 16 * 1rem);
+  }
+  #hero-929 .cs-content-group {
+    width: 100%;
+    /* changes to 352px at small desktop */
+    max-width: calc(700 / 16 * 1rem);
+  }
+  #hero-929 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: calc(650 / 16 * 1rem);
+    margin: 0 auto calc(28 / 16 * 1rem) auto;
+    color: #f7f7f7;
+  }
+  #hero-929 .cs-button-solid {
+    font-size: calc(16 / 16 * 1rem);
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: calc(150 / 16 * 1rem);
+    padding: 0 calc(32 / 16 * 1rem);
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #hero-929 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #hero-929 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-929 .cs-hours-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: calc(20 / 16 * 1rem);
+    column-gap: calc(24 / 16 * 1rem);
+  }
+  #hero-929 .cs-header {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+  #hero-929 .cs-hours {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(8 / 16 * 1rem);
+  }
+  #hero-929 .cs-day {
+    font-size: calc(16 / 16 * 1rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    color: var(--primary);
+    display: block;
+  }
+  #hero-929 .cs-time {
+    font-size: calc(16 / 16 * 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: #f7f7f7;
+    display: block;
+  }
+  #hero-929 .cs-picture-group {
+    position: relative;
+  }
+  #hero-929 .cs-tagline {
+    /* 52px - 62px */
+    font-size: clamp(3.25rem, 7vw, 3.875rem);
+    font-family: "Mr Dafoe", cursive;
+    line-height: 0.9em;
+    max-width: 5ch;
+    margin: 0 auto calc(-34 / 16 * 1rem);
+    color: var(--primary);
+    display: block;
+    transform: rotate(-14.36deg) translateX(-6.25rem);
+  }
+  #hero-929 .cs-picture {
+    width: 100%;
+    height: auto;
+    max-height: calc(598 / 16 * 1rem);
+    display: flex;
+    align-items: flex-end;
+  }
+  #hero-929 .cs-picture img {
+    width: 100%;
+    height: auto;
+  }
+  #hero-929 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #hero-929 .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    opacity: 0.96;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #hero-929 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #hero-929 .cs-header {
+    text-align: left;
+    width: auto;
+    /* removed at small desktop */
+    max-width: 8ch;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #hero-929 .cs-flex {
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    /* 80px - 100px */
+    bottom: clamp(5rem, 8vw, 6.25rem);
+  }
+  #hero-929 .cs-content-group {
+    text-align: left;
+    width: 24vw;
+    max-width: calc(352 / 16 * 1rem);
+  }
+  #hero-929 .cs-hours-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #hero-929 .cs-header {
+    max-width: 100%;
+  }
+  #hero-929 .cs-picture-group {
+    margin-top: calc(-50 / 16 * 1rem);
+  }
+  #hero-929 .cs-tagline {
+    margin: 0;
+    position: absolute;
+    /* changes at large desktop */
+    left: calc(60 / 16 * 1rem);
+    /* 90px - 130px */
+    top: clamp(5.625rem, 10vw, 8.125rem);
+  }
+}
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #hero-929 .cs-hours-group {
+    max-width: calc(320 / 16 * 1rem);
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #hero-929 .cs-header {
+    width: 100%;
+  }
+  #hero-929 .cs-tagline {
+    left: calc(26 / 16 * 1rem);
+    top: calc(130 / 16 * 1rem);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<section id="hero-929">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Unleash Your Inner Beauty With Our Modern Hair Experts</h2>
+            <div class="cs-flex">
+                <div class="cs-content-group">
+                    <p class="cs-text">
+                        Designed to maintain your current colour, blend out a growing root or balance your blonde while providing full and semi-permanent coverage.
+                    </p>
+                    <a href="" class="cs-button-solid">Book An Appointment</a>
+                </div>
+                <div class="cs-hours-group">
+                    <span class="cs-header">Business Hours</span>
+                    <div class="cs-hours">
+                        <span class="cs-day">Mon-Fri</span>
+                        <span class="cs-time">10AM-8PM</span>
+                    </div>
+                    <div class="cs-hours">
+                        <span class="cs-day">Sat</span>
+                        <span class="cs-time">11AM-6PM</span>
+                    </div>
+                    <div class="cs-hours">
+                        <span class="cs-day">Sun</span>
+                        <span class="cs-time">Closed</span>
+                    </div>
+                </div>
+            </div>
+            <!--We need this wrapper div so we can place the cs-tagline around the cs-picture image. We can only place images inside picture tags so the cs-tagline can't go in there. hence we HAVE to make a div wrapper so they can be placed together-->
+            <div class="cs-picture-group">
+                <span class="cs-tagline">Since 1990</span>
+                <!--Hair Model Picture-->
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/woman-m.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/woman.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/woman.png" alt="hair model" width="576" height="598">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-m.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon.jpg" alt="salon interior" width="1920" height="804">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

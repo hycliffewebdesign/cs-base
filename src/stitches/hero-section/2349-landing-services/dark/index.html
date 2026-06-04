@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>landing services</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #hero-2349 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2349 .cs-container {
+    width: 100%;
+    max-width: 112.5rem;
+    margin: auto;
+    /* 392px - 560px */
+    padding-top: clamp(350px, 58vw, 600px);
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2349 .cs-content {
+    width: 100%;
+    max-width: 59.5rem;
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  #hero-2349 .cs-title {
+    /* 39px - 90px */
+    font-size: clamp(2.4375rem, 6vw, 5.625rem);
+    margin-bottom: 0;
+    max-width: 100%;
+    color: var(--bodyTextColorWhite);
+  }
+  #hero-2349 .cs-text {
+    margin-bottom: 2rem;
+    max-width: 54.5rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #hero-2349 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2349 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #hero-2349 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-2349 .cs-button-solid {
+    align-self: flex-start;
+  }
+  #hero-2349 .cs-stats {
+    margin: 0;
+    /* 24px - 40px top & bottom */
+    /* 16px - 60px left & right */
+    padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 5vw, 3.75rem);
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.875rem;
+    row-gap: 4rem;
+  }
+  #hero-2349 .cs-item {
+    list-style: none;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #hero-2349 .cs-number {
+    /* 25px - 49px */
+    font-size: clamp(1.5625rem, 5vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #hero-2349 .cs-color {
+    color: var(--primary);
+    display: inline-block;
+    transform: translateX(5px);
+  }
+  #hero-2349 .cs-desc {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #hero-2349 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+  }
+  #hero-2349 .cs-background:before {
+    /* gradient Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #hero-2349 .cs-background img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #hero-2349 {
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    /* 48px - 60px */
+    padding-bottom: clamp(3rem, 4vw, 3.75rem);
+  }
+  #hero-2349 .cs-content {
+    width: 55%;
+    padding: 0;
+  }
+  #hero-2349 .cs-stats {
+    width: auto;
+    background-color: #fff;
+    column-gap: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+  #hero-2349 .cs-item {
+    grid-column: span 12;
+  }
+}
+/* Large Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #hero-2349 .cs-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4.5rem;
+  }
+  #hero-2349 .cs-item {
+    grid-column: span 1;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #services-2349 {
+    padding: var(--sectionPadding);
+  }
+  #services-2349 .cs-card-group {
+    width: 100%;
+    max-width: 112.5rem;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px, changes to 100px at large desktop 1300px */
+    column-gap: clamp(1rem, 3vw, 1.25rem);
+    row-gap: 2rem;
+  }
+  #services-2349 .cs-item {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    grid-column: span 12;
+  }
+  #services-2349 .cs-link {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #services-2349 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  #services-2349 .cs-h2 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+    text-align: inherit;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    padding-bottom: 1rem;
+    height: 100%;
+    color: var(--headerColor);
+    border-bottom: 1px solid #e3ddd9;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #services-2349 .cs-item-text {
+    font-size: 1rem;
+    text-align: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2349 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-2349 .cs-item {
+    grid-column: span 3;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #services-2349 .cs-card-group {
+    column-gap: 6.25rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Hero                       -->
+<!-- ============================================ -->
+
+<section id="hero-2349">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Plan for secure future</span>
+            <h2 class="cs-title">Guiding Your Path to a Modern Architecture</h2>
+            <p class="cs-text">
+                At ArchiStitch, we seamlessly blend innovative design with functionality, creating spaces that inspire, elevate, and endure. From visionary concepts to flawless execution, we craft architectural masterpieces tailored to your lifestyle.
+            </p>
+            <a href="" class="cs-button-solid">Book A Call</a>
+        </div>
+    </div>
+    <ul class="cs-stats">
+        <li class="cs-item">
+            <span class="cs-number">
+                <span class="cs-color">+</span>
+                500K
+            </span>
+            <span class="cs-desc">Happy Users</span>
+        </li>
+        <li class="cs-item">
+            <span class="cs-number">
+                <span class="cs-color">+</span>
+                100K
+            </span>
+            <span class="cs-desc">Partners</span>
+        </li>
+        <li class="cs-item">
+            <span class="cs-number">
+                <span class="cs-color">+</span>
+                1.4K
+            </span>
+            <span class="cs-desc">Completed Projects</span>
+        </li>
+    </ul>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building28.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building28.jpg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building28.jpg" alt="fancy modern architecture" width="1800" height="860">
+    </picture>
+</section>
+           
+<!-- ============================================ -->
+<!--                 Services                     -->
+<!-- ============================================ -->
+                                
+<section id="services-2349">
+    <ul class="cs-card-group">
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch7.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Expensive Living Spaces</h2>
+                <p class="cs-item-text">
+                    Urban design draws together the many strands of place-making, environmental stewardship.
+                </p>
+            </a>
+        </li>
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch8.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Smart Home Integration</h2>
+                <p class="cs-item-text">
+                    Urban design draws together the many strands of place-making, environmental stewardship.
+                </p>
+            </a>
+        </li>
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch9.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Home Security System</h2>
+                <p class="cs-item-text">
+                    Urban design draws together the many strands of place-making, environmental stewardship.
+                </p>
+            </a>
+        </li>
+        <li class="cs-item">
+            <a href="" class="cs-link">
+                <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arch10.svg" alt="icon" width="24" height="24">
+                <h2 class="cs-h2">Covered Parking</h2>
+                <p class="cs-item-text">
+                    Urban design draws together the many strands of place-making, environmental stewardship.
+                </p>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<script></script>
+</body>
+</html>

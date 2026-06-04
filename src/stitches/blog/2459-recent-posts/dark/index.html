@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recent posts</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---            Blog            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-2459 {
+    padding: var(--sectionPadding);
+  }
+  #blog-2459 .cs-container {
+    width: 100%;
+    /* switches to 1280px at tablet */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #blog-2459 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #blog-2459 .cs-title,
+  #blog-2459 .cs-text {
+    max-width: 100%;
+  }
+  #blog-2459 .cs-card-group {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: clamp(1rem, 1.5vw, 1.25rem);
+    row-gap: 1rem;
+  }
+  #blog-2459 .cs-item {
+    text-align: center;
+    height: fit-content;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-2459 .cs-item:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #blog-2459 .cs-picture {
+    width: 100%;
+    height: clamp(13.75rem, 26vw, 18.75rem);
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #blog-2459 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #blog-2459 .cs-flex {
+    padding: 1.5rem clamp(1rem, 2vw, 1.5rem);
+  }
+  #blog-2459 .cs-info-wrapper {
+    margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  #blog-2459 .cs-date,
+  #blog-2459 .cs-tag {
+    color: var(--bodyTextColor);
+  }
+  #blog-2459 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.3vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: left;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+    color: var(--headerColor);
+    display: -webkit-box;
+    transition: color 0.3s;
+  }
+  #blog-2459 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: left;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    color: var(--bodyTextColor);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  #blog-2459 .cs-link {
+    font-weight: 700;
+    line-height: 1.2em;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    color: var(--headerColor);
+    border-top: 1px solid #e7e7e8;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #blog-2459 .cs-link:hover {
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
+  }
+  #blog-2459 .cs-link:hover .cs-link-icon {
+    filter: grayscale(0) brightness(10000%);
+  }
+  #blog-2459 .cs-link-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    position: relative;
+    transition: filter 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #blog-2459 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-2459 .cs-card-group {
+    align-items: stretch;
+  }
+  #blog-2459 .cs-item {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 4;
+  }
+  #blog-2459 .cs-flex {
+    margin-bottom: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Blog                       -->
+<!-- ============================================ -->
+
+<section id="blog-2459">
+	<div class="cs-container">
+		<div class="cs-content">
+			<span class="cs-topper">Blog & News</span>
+			<h2 class="cs-title">The Stories Behind Japandi Designs</h2>
+			<p class="cs-text">
+				Dive into the elegant fusion of Japanese minimalism and Scandinavian functionality with Japandi FurniStitch. Our blog offers expert insights, design tips, and cultural context to enhance your understanding and appreciation of each
+				carefully crafted furniture piece.
+			</p>
+		</div>
+
+		<ul class="cs-card-group">
+			<li class="cs-item">
+				<picture class="cs-picture">
+					<!--Mobile Image-->
+					<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture15.jpg" />
+					<!--Tablet and above Image-->
+					<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture15.jpg" />
+					<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture15.jpg" alt="furniture" width="197" height="197" />
+				</picture>
+				<div class="cs-flex">
+					<div class="cs-info-wrapper">
+						<span class="cs-date">07 April, 2025</span>
+						<span class="cs-tag">#Art</span>
+					</div>
+					<h3 class="cs-h3">Japandi Style Interior : Create your harmonious japandi indoor space</h3>
+					<p class="cs-item-text">
+                        Discover the serene beauty of Japandi style interiors, blending Japanese minimalism with Scandinavian simplicity for functional and aesthetically pleasing outdoor spaces. Seamless indoor-outdoor...
+                    </p>
+				</div>
+				<a href="" class="cs-link">
+					Read Article
+					<img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/angle-arrow.svg" alt="icon" width="20" height="20" />
+				</a>
+			</li>
+			<li class="cs-item">
+				<picture class="cs-picture">
+					<!--Mobile Image-->
+					<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture16.jpg" />
+					<!--Tablet and above Image-->
+					<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture16.jpg" />
+					<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture16.jpg" alt="furniture" width="197" height="197" />
+				</picture>
+
+				<div class="cs-flex">
+					<div class="cs-info-wrapper">
+						<span class="cs-date">07 April, 2025</span>
+						<span class="cs-tag">#Art</span>
+					</div>
+					<h3 class="cs-h3">Organic Modern Style : Tips for a Sleek and Natural Interior Design</h3>
+					<p class="cs-item-text">
+                        Organic modern design blends natural elements with sleek aesthetics to create harmonious living spaces that soothe and delight. This style combines : Natural materials and textures for a grounded...
+                    </p>
+				</div>
+				<a href="" class="cs-link">
+					Read Article
+					<img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/angle-arrow.svg" alt="icon" width="20" height="20" />
+				</a>
+			</li>
+			<li class="cs-item">
+				<picture class="cs-picture">
+					<!--Mobile Image-->
+					<source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture17.jpg" />
+					<!--Tablet and above Image-->
+					<source media="(min-width: 601px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture17.jpg" />
+					<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/ecommerce/ecom-furniture17.jpg" alt="furniture" width="197" height="197" />
+				</picture>
+				<div class="cs-flex">
+					<div class="cs-info-wrapper">
+						<span class="cs-date">07 April, 2025</span>
+						<span class="cs-tag">#Art</span>
+					</div>
+					<h3 class="cs-h3">Japandi dining room ideas : Create a serene Japandi Dining space !</h3>
+					<p class="cs-item-text">
+                        Japandi dining rooms blend Japanese minimalism and Scandinavian functionality, creating a serene and harmonious space. Here's what you need to know : Natural elements and neutral tones are key F...
+                    </p>
+				</div>
+				<a href="" class="cs-link">
+					Read Article
+					<img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/angle-arrow.svg" alt="icon" width="20" height="20" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 steps</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #steps-1480 {
+    padding: var(--sectionPadding);
+    position: relative;
+    overflow: hidden;
+  }
+  #steps-1480 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #steps-1480 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #steps-1480 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #steps-1480 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    position: relative;
+  }
+  #steps-1480 .cs-item {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 12;
+    position: relative;
+  }
+  #steps-1480 .cs-picture-group {
+    position: relative;
+  }
+  #steps-1480 .cs-picture {
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #steps-1480 .cs-picture img {
+    object-fit: cover;
+  }
+  #steps-1480 .cs-shape {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #steps-1480 .cs-icon-wrapper {
+    /* 16px - 20px */
+    margin-top: calc(clamp(1rem, 2vw, 1.25rem)*-1);
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: var(--primaryLight);
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  #steps-1480 .cs-icon {
+    width: auto;
+    height: 1rem;
+  }
+  #steps-1480 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 0.5rem 0;
+    color: var(--headerColor);
+  }
+  #steps-1480 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    max-width: 16.25rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #steps-1480 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    color: #fff;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 6.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #steps-1480 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 6.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #steps-1480 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #steps-1480 .cs-graphic {
+    width: 29.3125rem;
+    height: 28.4375rem;
+    position: absolute;
+    top: -15.0625rem;
+    right: -17.1875rem;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #steps-1480 .cs-item {
+    grid-column: span 6;
+  }
+  #steps-1480 .cs-item:nth-of-type(2):after {
+    display: none;
+  }
+  #steps-1480 .cs-item:nth-of-type(1):after {
+    transform: rotate(135deg) scaleX(-1);
+  }
+  #steps-1480 .cs-item:after {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: -2.5rem;
+    transform: rotate(45deg);
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #steps-1480 .cs-container {
+    max-width: 80rem;
+  }
+  #steps-1480 .cs-card-group {
+    /* dotted line background */
+  }
+  #steps-1480 .cs-card-group::after {
+    content: "";
+    width: 250rem;
+    height: 9.4375rem;
+    background-image: url(https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-line.svg);
+    position: absolute;
+    top: 3.125rem;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+  #steps-1480 .cs-item {
+    grid-column: span 3;
+  }
+  #steps-1480 .cs-item:nth-of-type(2):after {
+    display: block;
+    transform: rotate(45deg);
+  }
+  #steps-1480 .cs-item:nth-of-type(3):after {
+    display: block;
+    transform: rotate(135deg) scaleX(-1);
+  }
+  #steps-1480 .cs-item:after {
+    right: -3rem;
+  }
+  #steps-1480 .cs-graphic {
+    top: 0;
+  }
+}
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+  #steps-1480 .cs-graphic {
+    width: 44.375rem;
+    height: 43.125rem;
+    margin-left: 41.4375rem;
+    left: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-1480">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">How to get started</span>
+            <h2 class="cs-title">How to Get Started for Children of 5 Months to 12 Years Age</h2>
+            <p class="cs-text">
+                We promise to take care of your child’s social, emotional, intellectual and physical needs with sensitive care and we also ensure you their security with our life.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/day-care-step-one.jpg" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-link.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Join the Network</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/day-care-step-two.jpg" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-calendar.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Schedule an Interview</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/day-care-step-three.jpg" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-bag.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Enroll a Service</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/day-care-step-four.jpg" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-baby.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Send Your Children</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+        </ul>
+        <button class="cs-button-solid">Learn More</button>
+    </div>
+    <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-blob.svg" alt="blob" height="690" width="710">
+</section>
+
+<script></script>
+</body>
+</html>

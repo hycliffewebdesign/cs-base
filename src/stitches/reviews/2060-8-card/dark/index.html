@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Testimonials         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #testimonials-2060 {
+    padding: var(--sectionPadding);
+    bottom: -10.875rem;
+    left: -0.6875rem;
+  }
+  #testimonials-2060 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #testimonials-2060 .cs-card-group {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #testimonials-2060 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
+    text-align: left;
+    width: 100%;
+    margin: 0 0 1.75rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left, set to center to centrally align */
+    align-items: flex-start;
+    grid-column: span 12;
+  }
+  #testimonials-2060 .cs-title,
+  #testimonials-2060 .cs-text {
+    max-width: 100%;
+  }
+  #testimonials-2060 .cs-green-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin: 0 0 2rem 0;
+  }
+  #testimonials-2060 .cs-item {
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 12;
+    position: relative;
+  }
+  #testimonials-2060 .cs-item-picture {
+    min-height: 25.375rem;
+  }
+  #testimonials-2060 .cs-picture {
+    width: 100%;
+    height: 100%;
+    /* remove the picture from page flow so it conforms to normal cs-item dimensions */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #testimonials-2060 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #testimonials-2060 .cs-stars {
+    width: 6rem;
+    height: auto;
+    /* 24px - 48px */
+    margin: clamp(1.5rem, 5vw, 3rem) 0 1rem;
+  }
+  #testimonials-2060 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+  }
+  #testimonials-2060 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    color: var(--Main-Paragraph, #4e4b66);
+  }
+  #testimonials-2060 .cs-quote {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 2rem 0 0;
+    color: var(--headerColor);
+  }
+  #testimonials-2060 .cs-item-green {
+    text-align: left;
+    padding: 2.5rem;
+    padding-bottom: 10rem;
+    background-color: #f2fbf8;
+    align-items: flex-start;
+  }
+  #testimonials-2060 .cs-item-green .cs-stars {
+    width: 7.5rem;
+    margin: 0 0 2rem;
+  }
+  #testimonials-2060 .cs-item-green .cs-h3 {
+    margin: 0 0 0.5rem;
+  }
+  #testimonials-2060 .cs-item-green .cs-text {
+    margin: 0;
+  }
+  #testimonials-2060 .cs-graphic {
+    width: 20.3125rem;
+    height: 23.4375rem;
+    object-fit: contain;
+    opacity: 0.3;
+    position: absolute;
+    bottom: -12.9375rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #testimonials-2060 .cs-content,
+  #testimonials-2060 .cs-item {
+    grid-column: span 6;
+  }
+  #testimonials-2060 .cs-content {
+    order: 1;
+  }
+  #testimonials-2060 .cs-item:nth-child(2) {
+    order: 3;
+  }
+  #testimonials-2060 .cs-item:nth-child(3) {
+    order: 2;
+  }
+  #testimonials-2060 .cs-item:nth-child(4) {
+    order: 4;
+  }
+  #testimonials-2060 .cs-item:nth-child(5) {
+    order: 7;
+  }
+  #testimonials-2060 .cs-item:nth-child(6) {
+    order: 5;
+  }
+  #testimonials-2060 .cs-item:nth-child(7) {
+    order: 6;
+  }
+  #testimonials-2060 .cs-item:nth-child(8) {
+    order: 8;
+  }
+}
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #testimonials-2060 .cs-content,
+  #testimonials-2060 .cs-item {
+    grid-column: span 3;
+  }
+  #testimonials-2060 .cs-content {
+    padding: 0;
+  }
+  #testimonials-2060 .cs-item:nth-child(2) {
+    order: 5;
+  }
+  #testimonials-2060 .cs-item:nth-child(3) {
+    order: 2;
+  }
+  #testimonials-2060 .cs-item:nth-child(4) {
+    order: 3;
+  }
+  #testimonials-2060 .cs-item:nth-child(5) {
+    order: 7;
+  }
+  #testimonials-2060 .cs-item:nth-child(6) {
+    order: 6;
+  }
+  #testimonials-2060 .cs-item:nth-child(7) {
+    order: 4;
+  }
+  #testimonials-2060 .cs-item:nth-child(8) {
+    order: 8;
+  }
+  #testimonials-2060 .cs-stars {
+    margin-top: 1.25rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Testimonials                -->
+<!-- ============================================ -->
+
+<section id="testimonials-2060">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-content">
+                <span class="cs-topper">Testimonials</span>
+                <h2 class="cs-title">What Our Clients Say</h2>
+                <p class="cs-text">
+                    Orci eu lobortis elementum nibh  tellus. Vulputate eu scelerisque felis imperdiet proin fermentum leo  vel. Luctus accumsan tortor.
+                </p>
+            </li>
+            <li class="cs-item cs-item-green">
+                <img class="cs-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-stars.png" alt="stars" width="120" height="24" aria-hidden="true">
+                <h3 class="cs-h3">99.99% Customer Satisfaction</h3>
+                <p class="cs-green-text">
+                    Based on 750+ reviews of  6,154 completed projects
+                </p>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dentitch-joined-graphic.svg" alt="drops" width="528" height="830" aria-hidden="true" decoding="async">
+            </li>
+            <li class="cs-item cs-item-picture">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-1.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-1.jpg" alt="body builder" width="630" height="877">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <img class="cs-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dental-stars.png" alt="stars" width="120" height="24" aria-hidden="true">
+                <h3 class="cs-h3">Piter Bowman</h3>
+                <span class="cs-job">Managing Director</span>
+                <p class="cs-quote">
+                    "From routine cleanings to complex procedures, our experienced team is dedicated to ensuring your comfort and achieving the results you desire."
+                </p>
+            </li>
+            <li class="cs-item cs-item-picture">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-2.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-2.jpg" alt="body builder" width="630" height="877">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <img class="cs-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dental-stars.png" alt="stars" width="120" height="24" aria-hidden="true">
+                <h3 class="cs-h3">Piter Bowman</h3>
+                <span class="cs-job">Managing Director</span>
+                <p class="cs-quote">
+                    "From routine cleanings to complex procedures, our experienced team is dedicated to ensuring your comfort and achieving the results you desire."
+                </p>
+            </li>
+            <li class="cs-item cs-item-picture">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-3.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/dental-testimonial-3.jpg" alt="body builder" width="630" height="877">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <img class="cs-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dental-stars.png" alt="stars" width="120" height="24" aria-hidden="true">
+                <h3 class="cs-h3">Piter Bowman</h3>
+                <span class="cs-job">Managing Director</span>
+                <p class="cs-quote">
+                    "From routine cleanings to complex procedures, our experienced team is dedicated to ensuring your comfort and achieving the results you desire."
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

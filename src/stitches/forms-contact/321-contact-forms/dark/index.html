@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact forms</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-321 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #contact-321 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: calc(550 / 16 * 1rem);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: calc(52 / 16 * 1rem);
+  }
+  #contact-321 .cs-content {
+    text-align: left;
+  }
+  #contact-321 .cs-topper {
+    color: var(--secondary);
+  }
+  #contact-321 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #contact-321 .cs-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: calc(12 / 16 * 1rem);
+  }
+  #contact-321 .cs-label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: calc(4 / 16 * 1rem);
+  }
+  #contact-321 .cs-input {
+    font-size: calc(16 / 16 * 1rem);
+    width: 100%;
+    height: calc(56 / 16 * 1rem);
+    padding: 0;
+    padding-left: calc(24 / 16 * 1rem);
+    border-radius: calc(8 / 16 * 1rem);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: none;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #contact-321 .cs-input::placeholder {
+    color: #f7f7f7;
+    opacity: 0.5;
+  }
+  #contact-321 .cs-textarea {
+    min-height: calc(120 / 16 * 1rem);
+    padding-top: calc(24 / 16 * 1rem);
+    margin-bottom: calc(12 / 16 * 1rem);
+    font-family: inherit;
+  }
+  #contact-321 .cs-button-solid {
+    font-size: calc(16 / 16 * 1rem);
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: calc(150 / 16 * 1rem);
+    padding: 0 calc(24 / 16 * 1rem);
+    background-color: var(--primary);
+    border-radius: calc(4 / 16 * 1rem);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #contact-321 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: calc(4 / 16 * 1rem);
+    transition: width 0.3s;
+  }
+  #contact-321 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #contact-321 .cs-submit {
+    width: calc(283 / 16 * 1rem);
+    text-transform: uppercase;
+    color: var(--headerColor);
+    background-color: var(--secondary);
+    border: none;
+    transition: color 0.3s;
+  }
+  #contact-321 .cs-submit:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+  #contact-321 .cs-right {
+    width: 100%;
+    /* 16px - 24px */
+    padding: clamp(1rem, 3.5vw, 1.5rem);
+    border-radius: calc(24 / 16 * 1rem);
+    background-color: rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    display: flex;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* 24px - 32px */
+    gap: clamp(1.5rem, 4vw, 2rem);
+  }
+  #contact-321 .cs-map {
+    width: 100%;
+    /* 300px - 425px */
+    height: clamp(18.75rem, 63.4vw, 26.5625rem);
+    border-radius: calc(24 / 16 * 1rem);
+    /* clips the corners of the img tag */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  #contact-321 .cs-map:before {
+    content: "";
+    position: absolute;
+    display: block;
+    /* 32px - 48px */
+    width: clamp(2rem, 4vw, 3rem);
+    height: clamp(2rem, 4vw, 3rem);
+    background: url("https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-red.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    /* 148px - 220px */
+    top: clamp(9.25rem, 30.7vw, 13.75rem);
+    /* push to the center line of the div */
+    left: 50%;
+    /* push X amount of pixels from it's current position off the center line */
+    margin-left: calc(10 / 16 * 1rem);
+    z-index: 10;
+  }
+  #contact-321 .cs-map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #contact-321 .cs-contact-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: calc(16 / 16 * 1rem);
+  }
+  #contact-321 .cs-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #contact-321 .cs-header {
+    font-size: calc(20 / 16 * 1rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin-bottom: calc(12 / 16 * 1rem);
+    color: var(--secondary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(4 / 16 * 1rem);
+  }
+  #contact-321 .cs-link {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    transition: color 0.3s;
+  }
+  #contact-321 .cs-link:hover {
+    color: var(--secondary);
+  }
+  #contact-321 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+  }
+  #contact-321 .cs-background:before {
+    /* top right box */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.92;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #contact-321 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #contact-321 .cs-contact-group {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-321 .cs-container {
+    max-width: calc(1280 / 16 * 1rem);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: calc(52 / 16 * 1rem);
+  }
+  #contact-321 .cs-content {
+    max-width: calc(522 / 16 * 1rem);
+  }
+  #contact-321 .cs-title,
+  #contact-321 .cs-topper {
+    text-align: left;
+    margin-left: 0;
+  }
+  #contact-321 .cs-title {
+    max-width: calc(522 / 16 * 1rem);
+  }
+  #contact-321 .cs-email,
+  #contact-321 .cs-phone {
+    width: 48%;
+  }
+  #contact-321 .cs-button-solid {
+    margin-left: 0;
+  }
+  #contact-321 .cs-right {
+    width: 51.6%;
+    max-width: calc(658 / 16 * 1rem);
+    /* prevent flexbox from squishing it */
+    flex: none;
+  }
+}
+/* Desktop - 1300px - Parallax Effect */
+@media only screen and (min-width: 81.25rem) {
+  #contact-321 {
+    background: url("https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* makes parallax effect */
+    background-attachment: fixed;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-321">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">We Are Always Ready To Hear For You.</h2>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-321" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-321" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="text" id="email-321" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="text" id="phone-321" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-321" placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Make an Appointment</button>
+            </form>
+        </div>
+        <div class="cs-right">
+            <!--Map Image, pin is made in the CSS-->
+            <picture class="cs-map">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map.png">
+                <img decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map.png" alt="map" width="610" height="425" aria-hidden="true">
+            </picture>
+            <ul class="cs-contact-group">
+                <li class="cs-item">
+                    <span class="cs-header">
+                        <img class="cs-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-gold.svg" alt="icon" width="20" height="20">
+                        Phone
+                    </span>
+                    <a href="tel:555-456 7899" class="cs-link">(555) 456 7899</a>
+                    <a href="tel:555-456 7899" class="cs-link">(555) 456 7898</a>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-header">
+                        <img class="cs-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-gold.svg" alt="icon" width="20" height="20">
+                        Address
+                    </span>
+                    <a href="" class="cs-link">121 Fake St, Melbourne<br> VIC 300, Australia</a>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-header">
+                        <img class="cs-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/clock-gold.svg" alt="icon" width="20" height="20">
+                        Our Hours
+                    </span>
+                    <span class="cs-link">Monday To Saturday</span>
+                    <span class="cs-link">9:00 AM - 10:30 PM</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--background image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table.jpg">
+        <img decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table.jpg" alt="round table" width="275" height="132" aria-hidden="true">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

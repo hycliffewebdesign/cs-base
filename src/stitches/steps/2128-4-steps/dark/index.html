@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 steps</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---            Steps           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #steps-2128 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #steps-2128 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #steps-2128 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #steps-2128 .cs-title {
+    max-width: 35ch;
+  }
+  #steps-2128 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #steps-2128 .cs-item {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    /* bottom border */
+  }
+  #steps-2128 .cs-item:first-of-type {
+    padding-top: 0;
+  }
+  #steps-2128 .cs-item:last-of-type {
+    padding-bottom: 0;
+  }
+  #steps-2128 .cs-item:last-of-type::after {
+    display: none;
+  }
+  #steps-2128 .cs-item::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    /* to change the color of the bottom border, adjust the second color (at 50%). the first and third will blend the color to transparent */
+    /* note you'll also have to change the color in the tablet media query when the lines go vertical */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #steps-2128 .cs-icons {
+    width: 5.3125rem;
+    height: 5rem;
+    /* 24px - 40px */
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #steps-2128 .cs-icon {
+    /* 48px - 60px */
+    width: clamp(3rem, 5vw, 3.75rem);
+    height: auto;
+    display: block;
+  }
+  #steps-2128 .cs-icon-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  #steps-2128 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+  }
+  #steps-2128 .cs-item-text {
+    /* 14px - 20px */
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    text-decoration: none;
+    max-width: 18.75rem;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #steps-2128 .cs-graphic {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  #steps-2128 .cs-graphic-left {
+    width: 6.625rem;
+    height: auto;
+    top: 11.6875rem;
+    left: -1.8125rem;
+  }
+  #steps-2128 .cs-graphic-right {
+    width: 3.8125rem;
+    height: auto;
+    top: -1rem;
+    right: -1rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #steps-2128 .cs-container {
+    max-width: 80rem;
+  }
+  #steps-2128 .cs-card-group {
+    row-gap: 3rem;
+  }
+  #steps-2128 .cs-item {
+    padding: 0 1rem;
+    grid-column: span 3;
+  }
+  #steps-2128 .cs-item::after {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+    right: 0;
+    left: initial;
+  }
+  #steps-2128 .cs-h3 {
+    max-width: 13ch;
+  }
+  #steps-2128 .cs-graphic-left {
+    width: 10.0625rem;
+    top: 4.3125rem;
+    left: -2.4375rem;
+  }
+  #steps-2128 .cs-graphic-right {
+    width: 7.0625rem;
+    top: -1rem;
+    right: -1.875rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #steps-2128 .cs-item {
+    /* 20px - 30px */
+    padding: 0 clamp(1.25rem, 2.5vw, 1.875rem);
+  }
+  #steps-2128 .cs-graphic-left {
+    width: 16.1875rem;
+    top: 0.6875rem;
+    left: -4.0625rem;
+  }
+  #steps-2128 .cs-graphic-right {
+    width: 14.5625rem;
+    top: 0;
+    right: -3.75rem;
+  }
+}
+/* Large Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #steps-2128 .cs-graphic-left {
+    width: 27rem;
+    top: auto;
+    bottom: 0rem;
+    left: -5.9375rem;
+  }
+  #steps-2128 .cs-graphic-right {
+    width: 27rem;
+    top: -0.1875rem;
+    right: -7rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                     Steps                    -->
+<!-- ============================================ -->
+
+<section id="steps-2128">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Perfect Photography at Your Doorstep</span>
+            <h2 class="cs-title">Your Wedding Memory will be More Memorable with Our Photography</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-icons">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/layer.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                    <img class="cs-icon-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-shape.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                </div>
+                <h3 class="cs-h3">Perfect Arrangement</h3>
+                <span class="cs-item-text">
+                    Choose from our range of Photo booth options.
+                </span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-icons">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/snowflake.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                    <img class="cs-icon-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-shape.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                </div>
+                <h3 class="cs-h3">The Wedding Bliss</h3>
+                <span class="cs-item-text">
+                    Choose from our range of Photo booth options.
+                </span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-icons">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/two-users.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                    <img class="cs-icon-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-shape.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                </div>
+                <h3 class="cs-h3">Just The Two of Us</h3>
+                <span class="cs-item-text">
+                    Choose from our range of Photo booth options.
+                </span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-icons">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/heart-outline.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                    <img class="cs-icon-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-shape.svg" alt="icon" width="20" height="20" aria-hidden="true" />
+                </div>
+                <h3 class="cs-h3">Make With Love</h3>
+                <span class="cs-item-text">
+                    Choose from our range of Photo booth options.
+                </span>
+            </li>
+        </ul>
+    </div>
+    <img class="cs-graphic cs-graphic-left" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/leaf1.png" alt="leaf" width="528" height="830" aria-hidden="true" decoding="async">
+    <img class="cs-graphic cs-graphic-right" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/leaf2.png" alt="leaf" width="528" height="830" aria-hidden="true" decoding="async">
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 steps</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #steps-1376 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+    /* clips the waves and lines from cause overflow issues */
+    overflow: hidden;
+    /* setting the row groups to display: contents causes the child cs-items to "appear" as direct children of the parent .cs-card-group */
+    /* therefore, we can set the order of the .cs-items between rows, changing it between mobile and desktop */
+  }
+  #steps-1376 .cs-container {
+    width: 100%;
+    max-width: 90rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #steps-1376 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #steps-1376 .cs-topper {
+    color: #767676;
+  }
+  #steps-1376 .cs-title {
+    max-width: 25ch;
+    margin: 0;
+  }
+  #steps-1376 .cs-group1,
+  #steps-1376 .cs-group2 {
+    /* the contents of this div are no longer its children. This div acts as if it doesn't exist and their content is now children of the next level parent, in this case, the cs-card-group. That way they can all be arranged together as children under 1 parent div instead of children in two different parent divs */
+    display: contents;
+  }
+  #steps-1376 .cs-card-group {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+    position: relative;
+  }
+  #steps-1376 .cs-group1 {
+    display: contents;
+  }
+  #steps-1376 .cs-group1 .cs-item:nth-of-type(1) {
+    order: 1;
+  }
+  #steps-1376 .cs-group1 .cs-item:nth-of-type(2) {
+    order: 3;
+  }
+  #steps-1376 .cs-group1 .cs-item:nth-of-type(3) {
+    order: 5;
+  }
+  #steps-1376 .cs-group2 {
+    display: contents;
+  }
+  #steps-1376 .cs-group2 .cs-item:nth-of-type(1) {
+    order: 2;
+  }
+  #steps-1376 .cs-group2 .cs-item:nth-of-type(2) {
+    order: 4;
+  }
+  #steps-1376 .cs-item {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    max-width: 15rem;
+    height: 15rem;
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 1.5rem;
+    background-color: #f4f4f4;
+    /* clips the :before element from being clickable when it's outside the item and triggering the hover animation */
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  #steps-1376 .cs-item:before {
+    content: "";
+    width: 9.25rem;
+    height: 9.25rem;
+    background: #fff;
+    opacity: 0;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -7.25rem;
+    transform: translateY(6.25rem);
+    transition: left 0.3s, transform 0.3s, opacity 0.3s;
+  }
+  #steps-1376 .cs-item:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  #steps-1376 .cs-item:hover:before {
+    opacity: 0.2;
+    left: -1rem;
+    transform: translateY(0);
+  }
+  #steps-1376 .cs-item:hover .cs-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #steps-1376 .cs-item:hover .cs-h3,
+  #steps-1376 .cs-item:hover .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #steps-1376 .cs-item:hover .cs-text {
+    opacity: 0.8;
+  }
+  #steps-1376 .cs-picture {
+    width: 6.25rem;
+    height: auto;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #steps-1376 .cs-icon {
+    width: 2rem;
+    height: auto;
+  }
+  #steps-1376 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #steps-1376 .cs-item-text {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    max-width: 28.125rem;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+    transition: color 0.3s, opacity 0.3s;
+  }
+  #steps-1376 .cs-waves {
+    display: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #steps-1376 .cs-card-group {
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  #steps-1376 .cs-group1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  #steps-1376 .cs-group2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+  }
+  #steps-1376 .cs-item {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #steps-1376 .cs-waves {
+    width: 4.4375rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #steps-1376 .cs-waves img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #steps-1376 .cs-card-group {
+    flex-direction: column;
+  }
+  #steps-1376 .cs-group1 {
+    width: 100%;
+    /* -8px to -30px, we put the clamp in a calc function to turn it into a negative number and pull down to cause the overlapping effect */
+    margin-bottom: calc(clamp(.5rem, 2vw, 1.875rem)*-1);
+    flex-direction: row;
+  }
+  #steps-1376 .cs-group2 {
+    width: 100%;
+    /* -8px to -30px */
+    margin-top: calc(clamp(.5rem, 2vw, 1.875rem)*-1);
+    flex-direction: row;
+  }
+  #steps-1376 .cs-waves {
+    width: 110vw;
+    max-width: 120rem;
+    height: auto;
+  }
+  #steps-1376 .cs-waves:before {
+    /* left continuation line */
+    content: "";
+    width: 50vw;
+    height: 4px;
+    background: #e8e8e8;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 5.25rem;
+    right: 100%;
+  }
+  #steps-1376 .cs-waves:after {
+    /* Right continuation line */
+    content: "";
+    width: 50vw;
+    height: 4px;
+    background: #e8e8e8;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 5.25rem;
+    left: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Steps                     -->
+<!-- ============================================ -->
+
+<section id="steps-1376">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Process</span>
+            <h2 class="cs-title">We’re Committed to Maintain Standard Work Process</h2>
+        </div>
+        <!--
+            We had to use a div here because of the grouping we had to do to make the staggerd design work. We needed to create two groups, one with 3 cards and one with 2 cards so we can arrange the cards separately to create the design we need to create. 
+        -->
+        <div class="cs-card-group">
+            <div class="cs-group1">
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step1.svg" alt="icon"
+                            width="48" height="48"/>
+                    </picture>
+                    <h3 class="cs-h3">Discovery</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, et?
+                    </p>
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step2.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Strategy</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, et?
+                    </p>
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Design</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, et?
+                    </p>
+                </div>
+            </div>
+            <div class="cs-group2">
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step4.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Development</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, et?
+                    </p>
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Test & Launch</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, et?
+                    </p>
+                </div>
+            </div>
+            <picture class="cs-waves">
+                <!--Mobile Image-->
+                <source media="(max-width: 1023px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-tablet.svg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg" alt="wave" width="1280" height="568">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

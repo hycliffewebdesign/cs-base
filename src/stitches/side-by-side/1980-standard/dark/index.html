@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side by Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-1980 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+  }
+  #sbs-1980 .cs-container {
+    width: 100%;
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-1980 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #sbs-1980 .cs-title,
+  #sbs-1980 .cs-text {
+    max-width: none;
+  }
+  #sbs-1980 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-1980 .cs-ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  #sbs-1980 .cs-li {
+    list-style: none;
+    margin: 0;
+    /* 24px - 32px */
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid var(--primaryLight);
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  #sbs-1980 .cs-li:last-of-type {
+    padding: 0;
+    border: none;
+  }
+  #sbs-1980 .cs-li-icon {
+    /* 64px - 80px */
+    width: clamp(4rem, 8vw, 5rem);
+    height: auto;
+    display: block;
+  }
+  #sbs-1980 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: left;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #sbs-1980 .cs-li-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 0;
+    color: var(--bodyTextColor);
+    opacity: 0.8;
+  }
+  #sbs-1980 .cs-image-group {
+    width: 100%;
+    height: 42.5rem;
+    max-height: 47rem;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-1980 .cs-box {
+    text-align: left;
+    width: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 20px - 40px */
+    padding: 1.5rem;
+    border-top: 32px solid #fff;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  #sbs-1980 .cs-box:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--primaryLight);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-1980 .cs-topper {
+    z-index: 1;
+  }
+  #sbs-1980 .cs-h2 {
+    font-size: 1.9375rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+    z-index: 10;
+  }
+  #sbs-1980 .cs-box-ul {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #sbs-1980 .cs-box-li {
+    /* 14px - 18px */
+    font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+    line-height: 1.5em;
+    list-style: none;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #sbs-1980 .cs-icon {
+    /* 24px - 32px */
+    width: clamp(1.5rem, 3vw, 2rem);
+    height: auto;
+    display: block;
+  }
+  #sbs-1980 .cs-picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-1980 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-1980 .cs-image-group {
+    height: clamp(36.25rem, 72.5vw, 47rem);
+  }
+  #sbs-1980 .cs-box {
+    width: 60%;
+    padding: clamp(2rem, 6vw, 3.75rem) clamp(1.5rem, 3vw, 2.5rem);
+    border-right: 32px solid #fff;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-1980 .cs-container {
+    max-width: 80rem;
+  }
+  #sbs-1980 .cs-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-1980 .cs-ul {
+    max-width: 27.5rem;
+    order: 2;
+  }
+  #sbs-1980 .cs-image-group {
+    height: auto;
+    max-height: 100%;
+    width: 55%;
+  }
+  #sbs-1980 .cs-box {
+    width: 80%;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #sbs-1980 .cs-ul {
+    max-width: 29.875rem;
+  }
+  #sbs-1980 .cs-box {
+    width: 70%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side by Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1980">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Dental Care For Everyone</span>
+            <h2 class="cs-title">Our Focus is on Your Overall Well-being & Helping You Achieve Optimal Health & Wellness.</h2>
+            <p class="cs-text">
+                From preventative care to restorative dentistry, our team is dedicated to providing the best possible dental care for you. Enthusiastically supply parallel convergence after high standards in e-markets. Progressively administrate fully researched partnerships and market positioning web-readiness. Credibly scale an expanded.
+            </p>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tooth-gum.svg" decoding="async" alt="icon" width="80" height="80" loading="lazy">
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Gum Surgery</h3>
+                        <p class="cs-li-text">
+                            Dentitch provides the best service and has won many awards. Our mission is to make everyone confident to give their best smile.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/braces-rubber-bands.svg" decoding="async" alt="icon" width="80" height="80" loading="lazy">
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Dental Sealants</h3>
+                        <p class="cs-li-text">
+                            Dentitch provides the best service and has won many awards. Our mission is to make everyone confident to give their best smile.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tooth-loosen.svg" decoding="async" alt="icon" width="80" height="80" loading="lazy">
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Gum Disease</h3>
+                        <p class="cs-li-text">
+                            Dentitch provides the best service and has won many awards. Our mission is to make everyone confident to give their best smile.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/crown-tooth.svg" decoding="async" alt="icon" width="80" height="80" loading="lazy">
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Dental Implants</h3>
+                        <p class="cs-li-text">
+                            Dentitch provides the best service and has won many awards. Our mission is to make everyone confident to give their best smile.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="cs-image-group">
+                <!--Floating Box-->
+                <div class="cs-box">
+                    <span class="cs-topper">Protect Your Smile</span>
+                    <h2 class="cs-h2">Smiles More Radiant and Healthy is Our Passion.</h2>
+                    <ul class="cs-box-ul">
+                        <li class="cs-box-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/teal-check.svg" alt="checkmark" width="32" height="32">
+                            Our focus is on your overall well-being.
+                        </li>
+                        <li class="cs-box-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/teal-check.svg" alt="checkmark" width="32" height="32">
+                            We provide quality dental care.
+                        </li>
+                        <li class="cs-box-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/teal-check.svg" alt="checkmark" width="32" height="32">
+                            Innovative therapy & qualified dentists.
+                        </li>
+                    </ul>
+                </div>
+                <!--Image-->
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-cleaning.jpeg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-cleaning.jpeg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-cleaning.jpeg" alt="dental cleaning" width="704" height="752" aria-hidden="true">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

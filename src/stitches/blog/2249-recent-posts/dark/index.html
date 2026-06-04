@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recent posts</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Blog             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-2249 {
+    padding: var(--sectionPadding);
+    background-color: #FBF5F1;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-2249 .cs-container {
+    width: 100%;
+    /* chnages to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #blog-2249 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #blog-2249 .cs-title {
+    max-width: 25ch;
+  }
+  #blog-2249 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    overflow: hidden;
+    color: #fff;
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-2249 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #blog-2249 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #blog-2249 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* 24px - 40px */
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  #blog-2249 .cs-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* 8px - 24px */
+    gap: clamp(0.5rem, 3vw, 1.5rem);
+  }
+  #blog-2249 .cs-picture {
+    width: 100%;
+    max-width: 38rem;
+    height: 55vw;
+    position: relative;
+    z-index: 1;
+  }
+  #blog-2249 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #blog-2249 .cs-wrapper {
+    max-width: 38rem;
+    padding: 1rem 0;
+    display: flex;
+  }
+  #blog-2249 .cs-h3 {
+    /* 20px - 39px */
+    font-size: clamp(1.25rem, 3vw, 2.4375rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    color: var(--headerColor);
+  }
+  #blog-2249 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #blog-2249 .cs-date {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    margin: 0;
+    color: var(--primary);
+    display: block;
+    flex: none;
+  }
+  #blog-2249 .cs-day {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 7vw, 3.8125rem);
+    line-height: 1.2em;
+    margin: 0;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+  }
+  #blog-2249 .cs-flex {
+    /* 16px - 32px */
+    padding-left: clamp(1rem, 3vw, 2rem);
+    margin-left: clamp(1rem, 3vw, 2rem);
+    border-left: 1px solid #BABABA;
+    position: relative;
+    z-index: 1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #blog-2249 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-2249 .cs-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #blog-2249 .cs-item:nth-of-type(even) .cs-picture {
+    order: 2;
+  }
+  #blog-2249 .cs-picture {
+    width: 84vw;
+    /* 200px - 400px */
+    min-height: clamp(12.5rem, 28vw, 25rem);
+    height: auto;
+  }
+  #blog-2249 .cs-wrapper {
+    padding: 4rem 0;
+    align-self: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Blog                      -->
+<!-- ============================================ -->
+
+<section id="blog-2249">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Blog & News</span>
+            <h2 class="cs-title">Our Latest News & Blogs</h2>
+            <p class="cs-text">
+                We have courses on-demand and live instructors for workshops and support. We also provide LIVE instructor-led training courses and onsite training.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding13.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding13.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding13.jpg" alt="wedding picture" width="608" height="400">
+                 </picture>
+                 <div class="cs-wrapper">
+                    <span class="cs-date">
+                        <span class="cs-day">16</span>
+                        Jan 2024
+                    </span>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Bridal gowns: readymade or custom made?</h3>
+                        <p class="cs-item-text">
+                            Proin faucibus nec mauris a sodales, sed element um mi tincidunt. Sed eget viverra egestas nisi in consequat. Fusce…
+                        </p>
+                    </div>
+                 </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding13.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding13.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding13.jpg" alt="wedding picture" width="608" height="400">
+                 </picture>
+                 <div class="cs-wrapper">
+                    <span class="cs-date">
+                        <span class="cs-day">16</span>
+                        Jan 2024
+                    </span>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Bridal gowns: readymade or custom made?</h3>
+                        <p class="cs-item-text">
+                            Proin faucibus nec mauris a sodales, sed element um mi tincidunt. Sed eget viverra egestas nisi in consequat. Fusce…
+                        </p>
+                    </div>
+                 </div>
+            </li>
+        </ul>
+        <a href="" class="cs-button-solid">View All News</a>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

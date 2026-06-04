@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 steps</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         location           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #steps-2433 {
+    padding: var(--sectionPadding);
+    background-color: #030711;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #steps-2433 .cs-container {
+    width: 100%;
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #steps-2433 .cs-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 3rem;
+  }
+  #steps-2433 .cs-content .cs-text {
+    /* changes to 413px at tablet */
+    max-width: 100%;
+  }
+  #steps-2433 .cs-flex {
+    width: 100%;
+  }
+  #steps-2433 .cs-topper {
+    width: 100%;
+    color: var(--secondary);
+  }
+  #steps-2433 .cs-title {
+    text-wrap: balance;
+    max-width: none;
+    color: var(--bodyTextColorWhite);
+  }
+  #steps-2433 .cs-steps {
+    width: 100%;
+    /* height enables smooth transition between tabs and eliminates content layout shift (CLS) for accordion while oriented vertically • adjust this to accommodate your custom content */
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  #steps-2433 .cs-step-toggle {
+    /* dimensions of .cs-step-toggle and .cs-tab must be the same at all times */
+    width: 100%;
+    height: 3.5rem;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  #steps-2433 :checked + .cs-step-panel {
+    /* open panel styles */
+    min-height: 33.75rem;
+    flex-basis: 100%;
+    /* or whatever proportion you want the active panel to expand to */
+    flex-grow: 1;
+  }
+  #steps-2433 :checked + .cs-step-panel .cs-tab {
+    color: var(--primary);
+  }
+  #steps-2433 :checked + .cs-step-panel .cs-item {
+    padding-bottom: 1rem;
+    opacity: 1;
+    transition-duration: 0.66s;
+    transition-timing-function: ease;
+    transition-delay: 0.3s;
+    pointer-events: auto;
+  }
+  #steps-2433 :checked + .cs-step-panel .cs-item .cs-text {
+    grid-template-rows: 1fr;
+    transition-duration: 0.66s;
+    transition-timing-function: ease;
+    transition-delay: 0.3s;
+  }
+  #steps-2433 :checked + .cs-step-panel .cs-item-icon {
+    opacity: 1;
+    transition-duration: 1.75s;
+    transition-timing-function: ease;
+    transition-delay: 0.3s;
+  }
+  #steps-2433 :checked + .cs-step-panel .cs-picture {
+    opacity: 1;
+    transform: scale(1);
+    transition-timing-function: ease;
+    transition-duration: 0.66s;
+    transition-delay: 0.33s;
+  }
+  #steps-2433 .cs-step-panel {
+    min-height: 0;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    position: relative;
+    transition-property: flex-basis, flex-grow, min-height;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+  }
+  #steps-2433 .cs-tab {
+    /* dimensions of .cs-step-toggle and .cs-tab must be the same at all times */
+    font-size: clamp(1.25rem, 12vw, 0.96153846rem);
+    line-height: 3.5rem;
+    text-align: left;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0;
+    color: var(--bodyTextColorWhite);
+    background: none;
+    /* reset border on label element */
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* position label over toggle element */
+    transform: translate(0, -100%);
+    transition: color 0.3s ease;
+    pointer-events: none;
+  }
+  #steps-2433 .cs-item {
+    text-align: left;
+    margin: 0 auto auto auto;
+    padding: 0;
+    opacity: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    pointer-events: none;
+  }
+  #steps-2433 .cs-item .cs-text {
+    /* nested in cs-item to only apply within steps widget */
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition-property: grid-template-rows;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+  }
+  #steps-2433 .cs-picture {
+    width: 100%;
+    height: 26.25rem;
+    opacity: 0;
+    transition: transform 0.15s linear, opacity 0.15s linear;
+    transform-origin: 50% 100%;
+    transform: scale(0.51);
+    position: relative;
+    z-index: 1;
+  }
+  #steps-2433 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  #steps-2433 .cs-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #steps-2433 .cs-item-icon {
+    width: 4rem;
+    height: 4rem;
+    opacity: 0;
+    display: block;
+    flex: none;
+    position: relative;
+    transition: opacity 0.15s linear;
+  }
+  #steps-2433 .cs-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: auto;
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  #steps-2433 .cs-border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #steps-2433 .cs-border:before {
+    content: '';
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #steps-2433 .cs-border:after {
+    content: '';
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #steps-2433 .cs-border1 {
+    /* top left border */
+  }
+  #steps-2433 .cs-border1:before {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #88898b 0%, rgba(0, 0, 0, 0) 78%);
+  }
+  #steps-2433 .cs-border1:after {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, #88898b 0%, rgba(0, 0, 0, 0) 78%);
+  }
+  #steps-2433 .cs-border2:before {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 22%, #88898b 100%);
+    top: auto;
+    bottom: 0;
+  }
+  #steps-2433 .cs-border2:after {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 22%, #88898b 100%);
+    left: auto;
+    right: 0;
+  }
+  #steps-2433 .cs-text {
+    max-width: none;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.9;
+  }
+  #steps-2433 .cs-item-text {
+    min-height: 0;
+    align-self: center;
+  }
+  #steps-2433 .cs-item-text a {
+    color: var(--secondary);
+  }
+  #steps-2433 .cs-item-text a:hover {
+    text-decoration: none;
+  }
+  #steps-2433 .cs-background {
+    width: 160%;
+    height: 175%;
+    opacity: 0.08;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -3.125rem);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #steps-2433 {
+    /* if your cs-item-text is too tall and makes the panel taller than all the others, measure how tall that panel is and change this variable to that number so they all respond to it. We need a fixed height for the animations to work */
+    --panelHeight: calc((420 / 16) * 1rem);
+  }
+  #steps-2433 .cs-container {
+    max-width: 80rem;
+  }
+  #steps-2433 .cs-content {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  #steps-2433 .cs-content .cs-text {
+    width: 48%;
+    max-width: 25.8125rem;
+  }
+  #steps-2433 .cs-flex {
+    width: 48%;
+  }
+  #steps-2433 .cs-topper {
+    flex-shrink: 0;
+  }
+  #steps-2433 .cs-title {
+    margin: 0;
+  }
+  #steps-2433 .cs-steps {
+    /* reset height • still necessary for dimensions of other elements within accordion */
+    height: var(--panelHeight);
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  #steps-2433 .cs-step-toggle {
+    width: clamp(3.5rem, 6.9vw, 6.25rem);
+    height: 100%;
+  }
+  #steps-2433 :checked + .cs-step-panel {
+    /* open panel styles */
+    min-height: unset;
+    width: 100%;
+  }
+  #steps-2433 :checked + .cs-step-panel .cs-item {
+    padding-bottom: 0;
+  }
+  #steps-2433 :checked + .cs-step-panel .cs-item .cs-text {
+    transition-delay: 0.45s;
+  }
+  #steps-2433 .cs-step-panel {
+    height: 100%;
+    width: 0;
+    flex-direction: row;
+    transition-property: flex-basis, flex-grow, width;
+  }
+  #steps-2433 .cs-tab {
+    text-align: left;
+    writing-mode: vertical-rl;
+    width: clamp(3.5rem, 6.9vw, 6.25rem);
+    height: 100%;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transform: translate(-100%, 0) rotate(180deg);
+    z-index: 6;
+  }
+  #steps-2433 .cs-item {
+    height: 100%;
+    padding-bottom: 0;
+    padding-right: 2.5rem;
+    flex-direction: row;
+    align-items: stretch;
+    gap: clamp(1rem, 3vw, 2.5rem);
+  }
+  #steps-2433 .cs-picture {
+    width: 50%;
+    height: 100%;
+    flex: 1.25;
+    transform-origin: 50% 50%;
+  }
+  #steps-2433 .cs-item-content {
+    flex: 1;
+    justify-content: space-between;
+    gap: 6.25rem;
+  }
+  #steps-2433 .cs-item-text {
+    align-self: flex-start;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    steps                     -->
+<!-- ============================================ -->
+
+<section id="steps-2433">
+    <div class="cs-container">
+        <div class="cs-info">
+            <span class="cs-topper">how it works</span>
+            <h2 class="cs-title">From Vision to Vivid Body Art in Just a Few Steps</h2>
+            <p class="cs-text">
+                Whether it's your first time or your next masterpiece, our process is built around creativity, clarity, and collaboration. Here's how we bring your idea to life.
+            </p>
+        </div>
+        <!-- TO add more panels, scroll to instructions after the current ending panel -->
+        <div class="cs-steps" role="tablist" aria-label="Service steps">
+            <!-- panel 1 -->
+            <input class="cs-step-toggle" id="service1-2433" type="radio" name="radio-set" checked="checked" aria-controls="panel1" aria-selected="true" aria-expanded="true" aria-labelledby="step1" role="tab">
+            <div class="cs-step-panel" id="panel1-2433" aria-labelledby="step1" tabindex="0" role="tabpanel">
+                <label id="step1-2433" class="cs-tab" for="service1">1. Share Your Vision</label>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(max-width: 1023px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(min-width: 1024px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg" alt="" width="389" height="420" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-item-content">
+                        <div class="cs-item-icon" aria-hidden="true">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hands-pray.svg" alt="" width="24" height="24">
+                            <div class="cs-border cs-border1" aria-hidden="true"></div>
+                            <div class="cs-border cs-border2" aria-hidden="true"></div>
+                        </div>
+                        <p class="cs-text">
+                            <span class="cs-item-text">
+                            Fill out our <a href="">contact form</a>, call, email, DM us, or stop by. Tell us about your idea — including size, placement, style, and subject matter. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti ipsam non, quisquam delectus assumenda ipsum a laborum totam rerum. 
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- panel 2 -->
+            <input class="cs-step-toggle" id="service2-2433" type="radio" name="radio-set"  aria-controls="panel2" aria-selected="false" aria-expanded="false" aria-labelledby="step2" role="tab">
+            <div class="cs-step-panel" id="panel2-2433" aria-labelledby="step2" tabindex="-1" role="tabpanel">
+                <label id="step2-2433" class="cs-tab" for="service2">2. Book a Free Consultation</label>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(max-width: 1023px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(min-width: 1024px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg" alt="" width="389" height="420" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-item-content">
+                        <div class="cs-item-icon" aria-hidden="true">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hands-pray.svg" alt="" width="24" height="24">
+                            <div class="cs-border cs-border1" aria-hidden="true"></div>
+                            <div class="cs-border cs-border2" aria-hidden="true"></div>
+                        </div>
+                        <p class="cs-text">
+                            <span class="cs-item-text">
+                            Ancient Egyptians used tattoos to show dedication to a deity, and the tattoos were believed to convey divine protection.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div> 
+            <!-- panel 3 -->
+            <input class="cs-step-toggle" id="service3-2433" type="radio" name="radio-set" aria-controls="panel3" aria-selected="false" aria-expanded="false" aria-labelledby="step3" role="tab">
+            <div class="cs-step-panel" id="panel3-2433" aria-labelledby="step3" tabindex="-1" role="tabpanel">
+                <label id="step3-2433" class="cs-tab" for="service3">3. Provide References</label>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(max-width: 1023px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(min-width: 1024px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg" alt="" width="389" height="420" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-item-content">
+                        <div class="cs-item-icon" aria-hidden="true">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hands-pray.svg" alt="" width="24" height="24">
+                            <div class="cs-border cs-border1" aria-hidden="true"></div>
+                            <div class="cs-border cs-border2" aria-hidden="true"></div>
+                        </div>
+                        <p class="cs-text">
+                            <span class="cs-item-text">
+                            The Japanese word irezumi means "insertion of ink" and can mean tattoos using tebori, the traditional Japanese hand method, a Western-style machine, or any method of tattooing using insertion of ink.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- panel 4 -->
+            <input class="cs-step-toggle" id="service4-2433" type="radio" name="radio-set" aria-controls="panel4" aria-selected="false" aria-expanded="false" aria-labelledby="step4" role="tab">
+            <div class="cs-step-panel" id="panel4-2433" aria-labelledby="step4" tabindex="-1" role="tabpanel">
+                <label id="step4-2433" class="cs-tab" for="service4">4. Receive a Custom Quote</label>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(max-width: 1023px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(min-width: 1024px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg" alt="" width="389" height="420" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-item-content">
+                        <div class="cs-item-icon" aria-hidden="true">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hands-pray.svg" alt="" width="24" height="24">
+                            <div class="cs-border cs-border1" aria-hidden="true"></div>
+                            <div class="cs-border cs-border2" aria-hidden="true"></div>
+                        </div>
+                        <p class="cs-text">
+                            <span class="cs-item-text">
+                            In Hinduism, Buddhism, and Neopaganism, tattoos are accepted. Southeast Asia has a tradition of protective tattoos variously known as sak yant or yantra tattoos that include Buddhist images, prayers, and symbols.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- panel 5 -->
+            <input class="cs-step-toggle" id="service5-2433" type="radio" name="radio-set" aria-controls="panel5" aria-selected="false" aria-expanded="false" aria-labelledby="step5" role="tab">
+            <div class="cs-step-panel" id="panel5-2433" aria-labelledby="step5" tabindex="-1" role="tabpanel">
+                <label id="step5-2433" class="cs-tab" for="service5">5. Bring It to Life</label>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(max-width: 1023px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <source media="(min-width: 1024px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg">
+                        <img src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo-step1.jpg" alt="" width="389" height="420" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-item-content">
+                        <div class="cs-item-icon" aria-hidden="true">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hands-pray.svg" alt="" width="24" height="24">
+                            <div class="cs-border cs-border1" aria-hidden="true"></div>
+                            <div class="cs-border cs-border2" aria-hidden="true"></div>
+                        </div>
+                        <p class="cs-text">
+                            <span class="cs-item-text">
+                            Ötzi the iceman had a total of 61 tattoos, which may have been a form of acupuncture used to relieve pain. If so, this is at least 2,000 years before acupuncture's previously known earliest use in China (c. 100 BC).
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- panel [*] -->
+            <!-- 
+                INSTRUCTIONS:
+                to add a panel just use the template below and follow these 6 easy steps:
+                1) All seven instances of the "*" symbol below need to be updated to your new panel's number. I know... its a lot, this is necessary for proper accessibility and functionality. All the numbering happens within the first 3-lines of the code so no need to drill deeper. 
+                2) Update the <label> element (including the '*' if you missed it on the previous step). This is your heading and creates the tab you click on to open the panels. Keep it succinct for consistent panels.
+                3) Update the <picture> element's source_srcsset and img_src with paths to your custom resources.
+                4) Update the .cs-icon_src with the path to your custom icon.
+                5)  update the  '...' in the .cs-item-text with your custom text; Keep it succinct for consistent panels. This would be a good opportunity to offer a link to a page with more specific information.  
+                6) uncomment the code for your new panel (if you haven't already) and you are ready to go. Happy stitching!
+
+             -->
+            <!-- TEMPLATE -->
+            <!--
+            <input class="cs-step-toggle" id="service*-2433" type="radio" name="radio-set" aria-controls="panel*" aria-selected="false" aria-expanded="false" aria-labelledby="step*" role="tab">
+            <div class="cs-step-panel" id="panel*-2433" aria-labelledby="step*" tabindex="-1" role="tabpanel">
+                <label id="step*-2433" class="cs-tab" for="service*">*. Heading</label>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="...">
+                        <source media="(max-width: 1023px)" srcset="...">
+                        <source media="(min-width: 1024px)" srcset="...">
+                        <img src="..." alt="" width="389" height="420" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-item-content">
+                        <div class="cs-item-icon" aria-hidden="true">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="..." alt="" width="24" height="24">
+                            <div class="cs-border cs-border1" aria-hidden="true"></div>
+                            <div class="cs-border cs-border2" aria-hidden="true"></div>
+                        </div>
+                        <p class="cs-text">
+                            <span class="cs-item-text">
+                            ...
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+    <img class="cs-background" loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/Misc/tattoo-accordion-bg.jpg" alt="" width="1920" height="889" aria-hidden="true">
+</section>
+
+<script>document.addEventListener("DOMContentLoaded", () => {
+
+    // === A11Y STATE MANAGEMENT ON RADIO CHANGE ===
+    document.querySelectorAll('.cs-step-toggle').forEach(radio => {
+        radio.addEventListener('change', () => {
+
+            // Loop through all radios to update state accordingly
+            document.querySelectorAll('.cs-step-toggle').forEach(input => {
+                const isSelected = input.checked;
+
+                // Reflect selection and expansion state for screen readers
+                input.setAttribute('aria-selected', isSelected);
+                input.setAttribute('aria-expanded', isSelected);
+
+                const panelId = input.getAttribute('aria-controls');
+                const panel = document.getElementById(panelId);
+
+                if (panel) {
+                    // Show/hide panels visually
+                    panel.hidden = !isSelected;
+
+                    // Prevent offscreen content from receiving focus or interaction
+                    if (isSelected) {
+                        panel.removeAttribute('inert');
+                    } else {
+                        panel.setAttribute('inert', '');
+                    }
+
+                    // Allow the selected panel to be focusable (e.g., via skip links or manual focus)
+                    panel.setAttribute('tabindex', isSelected ? '0' : '-1');
+                }
+            });
+        });
+    });
+
+    // === KEYBOARD HANDLING WITHIN PANELS ===
+    document.querySelectorAll('.cs-step-panel').forEach(panel => {
+        panel.addEventListener('keydown', (e) => {
+
+            // Escape key: return focus to corresponding radio (tab)
+            if (e.key === 'Escape') {
+                const radioId = panel.getAttribute('aria-labelledby');
+                const radio = document.getElementById(radioId);
+                if (radio) {
+                    radio.focus();
+                    e.preventDefault();
+                }
+            }
+
+            // Trap focus within panel content (loop back to start or end)
+            if (e.key === 'Tab') {
+                const focusable = panel.querySelectorAll(
+                    'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+                );
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+
+                if (e.shiftKey && document.activeElement === first) {
+                    // Shift+Tab on first focusable loops to last
+                    last.focus();
+                    e.preventDefault();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    // Tab on last focusable loops to first
+                    first.focus();
+                    e.preventDefault();
+                }
+            }
+        });
+    });
+});</script>
+</body>
+</html>

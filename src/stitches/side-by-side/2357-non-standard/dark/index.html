@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>non standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #sbs-2357 {
+    padding: var(--sectionPadding);
+  }
+  #sbs-2357 .cs-container {
+    width: 100%;
+    /* changes to 1800px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* 32px - 64px */
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+  #sbs-2357 .cs-content {
+    width: 100%;
+    max-width: 75.9375rem;
+    order: -1;
+  }
+  #sbs-2357 .cs-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #sbs-2357 .cs-title {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 5vw, 1.9375rem);
+    /* 32px - 64px */
+    margin: 0 0 clamp(2rem, 7vw, 4rem);
+    max-width: 100%;
+  }
+  #sbs-2357 .cs-text {
+    max-width: 59.625rem;
+  }
+  #sbs-2357 .cs-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #sbs-2357 .cs-number {
+    /* 39px - 90px */
+    font-size: clamp(2.4375rem, 7vw, 5.625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #sbs-2357 .cs-color {
+    color: var(--primary);
+    display: inline-block;
+    transform: translateX(-0.5rem);
+  }
+  #sbs-2357 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+  }
+  #sbs-2357 .cs-picture {
+    width: 100%;
+    max-height: 40rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2357 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2357 .cs-image-group {
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2357 .cs-picture1 {
+    height: 110vw;
+  }
+  #sbs-2357 .cs-picture2 {
+    height: 132vw;
+    margin-bottom: 1.5rem;
+  }
+  #sbs-2357 .cs-link {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 2vw, 1rem);
+    line-height: 1.2em;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 85%;
+    height: 3.5rem;
+    margin: 0;
+    padding: 0 1rem;
+    background-color: #fff;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #sbs-2357 .cs-link:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  #sbs-2357 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2357 .cs-container {
+    max-width: 112.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #sbs-2357 .cs-flex {
+    width: 53%;
+    max-width: 28.5625rem;
+    flex: none;
+    justify-content: flex-start;
+    gap: 0;
+    order: 2;
+  }
+  #sbs-2357 .cs-stat {
+    margin-top: 2rem;
+  }
+  #sbs-2357 .cs-picture2 {
+    max-height: 100%;
+    /* 480px - 660px */
+    height: clamp(30rem, 60vw, 42.5rem);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-2357">
+    <div class="cs-container">
+        <div class="cs-flex">
+            <div class="cs-image-group cs-image-group1">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building17.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building17.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building17.jpg" alt="nice house" width="517" height="650">
+                </picture>
+                <a href="" class="cs-link">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-up-right.svg" alt="icon" width="24" height="24">
+                    16 Revene Marin, New York
+                </a>
+            </div>
+            <div class="cs-stat">
+                <span class="cs-number">1.4K <span class="cs-color">+</span></span>
+                <span class="cs-desc">Complete Projects</span>
+            </div>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Our Story</span>
+            <h2 class="cs-title">The Best Place for Your Dream Vacation is Here, Where Luxury Meets Tranquility. We are a modern architectural bureau with a skillful & professional team of architects</h2>
+            <div class="cs-image-group cs-image-group2">
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/room3.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/room3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/room3.jpg" alt="nice house" width="1215" height="660">
+                </picture>
+                <a href="" class="cs-link">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-up-right.svg" alt="icon" width="24" height="24">
+                    16 Revene Marin, New York
+                </a>
+            </div>
+            <p class="cs-text">
+                Since the 1980s, as the complexity of buildings began to increase, the field of architecture became multi-disciplinary with specializations. From visionary concepts to flawless execution, we craft architectural masterpieces. Urban design draws together the many strands of place-making, environmental stewardship. 
+            </p>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

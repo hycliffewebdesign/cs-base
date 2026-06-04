@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1378 {
+    padding: var(--sectionPadding);
+  }
+  #services-1378 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-1378 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #services-1378 .cs-topper {
+    color: var(--secondary);
+  }
+  #services-1378 .cs-content {
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+  #services-1378 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    /* 72px - 84px */
+    row-gap: clamp(4.5rem, 6vw, 5.25rem);
+  }
+  #services-1378 .cs-item {
+    /* change to left if you want text aligned to the left */
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    /* 210px - 305px */
+    min-height: clamp(13.125rem, 30vw, 19.0625rem);
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 16px - 40px */
+    padding: clamp(1rem, 3vw, 2.5rem);
+    padding-top: 0;
+    background-color: #f4f4f4;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+  #services-1378 .cs-item:hover {
+    background-color: var(--primary);
+  }
+  #services-1378 .cs-item:hover .cs-picture {
+    background-color: var(--primary);
+  }
+  #services-1378 .cs-item:hover .cs-icon,
+  #services-1378 .cs-item:hover .cs-arrow {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #services-1378 .cs-item:hover .cs-h3,
+  #services-1378 .cs-item:hover .cs-item-text {
+    color: #fff;
+  }
+  #services-1378 .cs-item:hover .cs-item-text {
+    opacity: 0.8;
+  }
+  #services-1378 .cs-item:hover .cs-link {
+    border-color: #fff;
+  }
+  #services-1378 .cs-picture {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin: -2.75rem 0 clamp(1.75rem, 3vw, 2.25rem) 0;
+    box-sizing: border-box;
+    background-color: #bababa;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s background-color;
+  }
+  #services-1378 .cs-icon {
+    width: 2rem;
+    height: auto;
+    transition: filter 0.3s;
+  }
+  #services-1378 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: inherit;
+    /* if a word is too long for the card, break it onto a new line */
+    word-break: break-word;
+    margin: 0 0 0.75rem;
+    transition: color 0.3s;
+  }
+  #services-1378 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 2rem;
+    color: var(--bodyTextColor);
+    transition: 0.3s color;
+  }
+  #services-1378 .cs-link {
+    text-decoration: none;
+    width: 4rem;
+    height: 4rem;
+    color: var(--headerColor);
+    border: 1px solid #bababa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents the parent flexbox from shrinking the arrow */
+    flex-shrink: 0;
+    gap: 0.625rem;
+    transition: border-color 0.3s;
+  }
+  #services-1378 .cs-arrow {
+    width: auto;
+    height: 0.75rem;
+    transition: filter 0.3s;
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #services-1378 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-1378 .cs-item {
+    grid-column: span 4;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1378">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">We’re Commited to Deliver Top High Quality Services</h2>
+            <p class="cs-text">We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.</p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-layers.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Full Development</h3>
+                <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-media.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Media Strategy</h3>
+                <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-alert.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Effective Marketing</h3>
+                <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-meter.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">SEO Optimization</h3>
+                <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-design.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">UX / UI Design</h3>
+                <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-image.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Photo and Print</h3>
+                <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

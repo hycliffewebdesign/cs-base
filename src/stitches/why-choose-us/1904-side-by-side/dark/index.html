@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>side by side</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-choose-1904 {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-container {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-content {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--sectionPadding);
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-topper {
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1904 .cs-title {
+    max-width: 13ch;
+    margin: 0 0 3rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1904 .cs-picture {
+    width: 100%;
+    max-width: 36.625rem;
+    height: auto;
+    display: block;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #why-choose-1904 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #why-choose-1904 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    height: clamp(18.75rem, 55vw, 26.25rem);
+    margin: 0;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    padding: clamp(2rem, 4.5vw, 3.75rem) clamp(1rem, 3.1vw, 2.5rem);
+    background-color: #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-column: span 12;
+    /* 24px - 40px */
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1904 .cs-item:nth-last-of-type(odd) {
+    background-color: #5f5f5f;
+  }
+  #why-choose-1904 .cs-icon-wrapper {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #why-choose-1904 .cs-icon {
+    width: 2rem;
+    height: auto;
+  }
+  #why-choose-1904 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    /* 12px - 16px */
+    margin: 0 0 clamp(0.75rem, 1.8vw, 1rem) 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1904 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #why-choose-1904 .cs-item {
+    grid-column: span 6;
+  }
+  #why-choose-1904 .cs-item:nth-of-type(1),
+  #why-choose-1904 .cs-item:nth-of-type(4) {
+    background-color: #767676;
+  }
+  #why-choose-1904 .cs-item:nth-of-type(2),
+  #why-choose-1904 .cs-item:nth-of-type(3) {
+    background-color: #5f5f5f;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #why-choose-1904 .cs-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  #why-choose-1904 .cs-content {
+    text-align: left;
+    width: 100%;
+    align-items: flex-start;
+  }
+  #why-choose-1904 .cs-content:before {
+    /* background color, moves to the section parent at desktop */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1904 .cs-picture {
+    max-width: 100%;
+    margin-left: auto;
+  }
+  #why-choose-1904 .cs-card-group {
+    width: 65%;
+    max-width: 100%;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #why-choose-1904 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #why-choose-1904:before {
+    /* background color */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    right: 50%;
+    left: auto;
+    z-index: -1;
+  }
+  #why-choose-1904 .cs-content {
+    width: 50%;
+    /* 16px - 100px */
+    padding-left: clamp(1rem, 5vw, 6.25rem);
+  }
+  #why-choose-1904 .cs-content:before {
+    margin-right: 0.625rem;
+    right: 50%;
+    left: auto;
+  }
+  #why-choose-1904 .cs-picture {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    right: 2.5rem;
+    bottom: 0rem;
+    z-index: -1;
+  }
+  #why-choose-1904 .cs-picture img {
+    width: auto;
+    height: auto;
+    max-height: 47.5rem;
+    object-fit: contain;
+  }
+  #why-choose-1904 .cs-card-group {
+    width: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<section id="why-choose-1904">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Why Choose Stitch Gym</h2>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym3.png" alt="body builder" width="562" height="568">
+            </picture>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-house.svg" alt="white house" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">22,000 Square Feet Modern Gym</h3>
+                    <p class="cs-item-text">
+                        Take advantage of our spacious gym equipped with a wide range of gym fitness machines so you can achieve the maximum benefits.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-layer.svg" alt="white layers" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">State of The Art Equipment</h3>
+                    <p class="cs-item-text">
+                        We are well equipped with the most up-to-date equipment & sound systems to enhance your class experience and high-intensity classes.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-hourglass.svg" alt="white hourglass" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">Programs for Proper Weight Loss</h3>
+                    <p class="cs-item-text">
+                        We have special & high priority program for who want to loose weight. We consult with physician & dieticians to provide proper training.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-layer.svg" alt="white layers" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">State of The Art Equipment</h3>
+                    <p class="cs-item-text">
+                        We are well equipped with the most up-to-date equipment & sound systems to enhance your class experience and high-intensity classes.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

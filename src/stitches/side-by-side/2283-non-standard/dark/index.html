@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>non standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2283 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2283 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-2283 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbs-2283 .cs-content-images {
+    display: none;
+  }
+  #sbs-2283 .cs-text {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  #sbs-2283 .cs-text:last-of-type {
+    margin: 0;
+  }
+  #sbs-2283 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    order: 3;
+  }
+  #sbs-2283 .cs-item {
+    list-style: none;
+    /* 24px - 32px */
+    padding: clamp(1.5rem, 5vw, 2rem);
+    border-left: 4px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2283 .cs-item:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbs-2283 .cs-item-picture {
+    display: none;
+  }
+  #sbs-2283 .cs-h3 {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #sbs-2283 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #sbs-2283 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2283 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-2283 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-2283 .cs-image-group {
+    /* scales the whole group based on the view width size and stop when that vales equals .74em, resets at desktop */
+    font-size: min(2.48vw, 1rem);
+    width: 36.5em;
+    height: 38.6875em;
+    display: block;
+    position: relative;
+    z-index: 1;
+    order: 2;
+  }
+  #sbs-2283 .cs-picture {
+    display: block;
+    position: absolute;
+  }
+  #sbs-2283 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2283 .cs-picture1 {
+    width: 23.8125em;
+    height: 23.8125em;
+    border-right: 0.875em solid #FEF5F4;
+    border-bottom: 0.875em solid #FEF5F4;
+    top: 0;
+    bottom: 17.5625em;
+    left: 0;
+  }
+  #sbs-2283 .cs-picture2 {
+    width: 23.875em;
+    height: 20.375em;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  #sbs-2283 .cs-picture3 {
+    width: 13.4375em;
+    height: 9.5em;
+    bottom: 10em;
+    left: 6.25em;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2283 .cs-container {
+    max-width: 80rem;
+    gap: 2rem;
+  }
+  #sbs-2283 .cs-content {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2.75rem;
+    position: relative;
+    z-index: 10;
+  }
+  #sbs-2283 .cs-flex {
+    width: 100%;
+    max-width: 46.125rem;
+  }
+  #sbs-2283 .cs-content-images {
+    width: 45vw;
+    max-width: 25.75rem;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+    order: -1;
+  }
+  #sbs-2283 .cs-li {
+    align-items: center;
+  }
+  #sbs-2283 .cs-image-group {
+    display: none;
+  }
+  #sbs-2283 .cs-picture1 {
+    width: 100%;
+    /* -133px to -165px */
+    height: calc(100% + clamp(8.3125rem, 13vw, 10.3125rem));
+    top: 0;
+  }
+  #sbs-2283 .cs-picture3 {
+    width: 56%;
+    min-height: 100px;
+    max-width: 14.5625rem;
+    left: 50%;
+    top: calc(100% + 5rem);
+    transform: translateX(-50%);
+  }
+  #sbs-2283 .cs-picture3 img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    top: auto;
+    left: auto;
+    object-fit: initial;
+  }
+  #sbs-2283 .cs-card-group {
+    width: 50%;
+    max-width: 32.5625rem;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2283 .cs-item-picture {
+    width: 30vw;
+    max-width: 25.8125rem;
+    border: none;
+    display: block;
+    position: absolute;
+    /* 72px - 130px */
+    right: calc(100% + clamp(4.5rem, 8.5vw, 8.125rem));
+    top: 2.25rem;
+    bottom: 0;
+  }
+  #sbs-2283 .cs-item-picture:before {
+    display: none;
+  }
+  #sbs-2283 .cs-picture2 {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2283">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg" alt="wedding photoshoot" width="297" height="366">
+            </picture>
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg" alt="photograph of a woman" width="405" height="376">
+            </picture>
+            <!--Middle image-->
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png" alt="children's birthday" width="218" height="155">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Story</span>
+                <h2 class="cs-title">Excellence in Exterior Remodeling</h2>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto dolor corporis, optio libero voluptates placeat sapiente exercitationem aliquam, expedita ab rerum quae consectetur quia, pariatur quasi nobis! Totam dignissimos 
+                </p>
+            </div>
+            <!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the content section gets taller from more content-->
+            <div class="cs-content-images">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg" alt="wedding photoshoot" width="297" height="366">
+                </picture>
+                <picture class="cs-picture cs-picture3">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png" alt="children's birthday" width="218" height="155">
+                </picture>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">Our Mission</h3>
+                <p class="cs-item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus deleniti quas illo explicabo unde sapiente, doloribus pariatur et inventore quaerat? Lorem 
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Our Vision</h3>
+                <p class="cs-item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus deleniti quas illo explicabo unde sapiente, doloribus pariatur et inventore quaerat? Lorem ipsum dolor, sit amet consectetur adipisicing elit!
+                </p>
+            </li>
+            <!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the cs-card-group gets taller from more content-->
+            <li class="cs-item cs-item-picture">
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg" alt="photograph of a woman" width="405" height="376">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

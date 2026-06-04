@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>single quotes</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Quote            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #quote-2141 {
+    /* 80px - 160px */
+    padding: clamp(5rem, 10vw, 10rem) 1rem;
+    background-color: #FBF5F1;
+    position: relative;
+    z-index: 1;
+  }
+  #quote-2141 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #quote-2141 .cs-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #quote-2141 .cs-quote-icon {
+    /* 120px - 220px */
+    width: clamp(7.5rem, 12vw, 13.75rem);
+    height: auto;
+    display: block;
+    position: absolute;
+    /* -48px - -96px */
+    top: calc(clamp(3rem, 8vw, 6rem)*-1);
+    z-index: -1;
+  }
+  #quote-2141 .cs-quote {
+    /* 25px - 49px */
+    font-size: clamp(1.5625rem, 4.8vw, 3.0625rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 45ch;
+    /* 24px - 32px */
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem);
+    color: var(--headerColor);
+  }
+  #quote-2141 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary);
+    display: block;
+  }
+  #quote-2141 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #quote-2141 .cs-flower {
+    width: 50vw;
+    max-width: 40rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  #quote-2141 .cs-left {
+    top: 0;
+    left: 0;
+  }
+  #quote-2141 .cs-right {
+    right: 0;
+    bottom: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                     Quote                    -->
+<!-- ============================================ -->
+
+<section id="quote-2141">
+    <div class="cs-container">
+        <div class="cs-content">
+            <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/beige-quote.svg" alt="quote" width="222" height="186" aria-hidden="true">
+            <p class="cs-quote">
+                "We're not just photographers, we're dream weavers, transforming your visions into tangible memories you'll cherish forever."
+            </p>
+            <span class="cs-name">Elisa Morgan</span>
+            <span class="cs-job">CEO of Stitchography</span>
+        </div>
+    </div>
+    <img class="cs-flower cs-left" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wedding-flower2.png" alt="flower" width="640" height="324" aria-hidden="true">
+    <img class="cs-flower cs-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wedding-flower1.png" alt="flower" width="640" height="324" aria-hidden="true">
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+---
+description: After site changes, check whether Privacy Policy or Terms of Service need updates.
+alwaysApply: true
+---
+
+# Legal Pages Review
+
+After you **modify or add** anything that affects how the site works, what it collects, or what users agree to, check whether `src/content/pages/privacy-policy.html` and/or `src/content/pages/terms-of-service.html` need updates.
+
+## Review when the change involves
+
+- Contact forms, new form fields, or form providers (e.g. Netlify, reCAPTCHA)
+- Analytics, tracking scripts, cookies, or local storage (beyond theme preference)
+- Third-party embeds (maps, widgets, chat, reviews, payment links)
+- New pages or features that collect personal or business information
+- Pricing, subscriptions, contracts, refunds, or service terms
+- Hosting, email, or data-sharing vendors
+- Service area, business name, contact info, or licensing claims in `client.js`
+
+## What to do
+
+1. Read the current Privacy Policy and Terms of Service.
+2. Update copy if the change creates a new collection, use, sharing, or obligation not already covered.
+3. If no update is needed, say so briefly when finishing the task (e.g. "Legal pages: no change needed — copy-only edit").
+4. Do not leave placeholder "template" language in client-facing legal pages.
+
+## Legal page paths
+
+- `src/content/pages/privacy-policy.html`
+- `src/content/pages/terms-of-service.html`

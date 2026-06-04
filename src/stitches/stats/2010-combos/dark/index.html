@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>combos</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---   Side by Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2010 {
+    width: 100%;
+    padding: var(--sectionPadding);
+    /* 48px - 100px */
+    padding-bottom: clamp(3rem, 13vw, 6.25rem);
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left, set to center to centrally align */
+    align-items: flex-start;
+    position: relative;
+    z-index: 9;
+  }
+  #sbs-2010 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 44rem;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    grid-auto-flow: row;
+    /* 48px - 80px */
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+  #sbs-2010 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 49.1875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    position: relative;
+    z-index: 3;
+  }
+  #sbs-2010 .cs-text-large {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    margin: 0 0 0.75rem;
+    color: var(--headerColor);
+  }
+  #sbs-2010 .cs-title {
+    max-width: none;
+  }
+  #sbs-2010 .cs-text {
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+  #sbs-2010 .cs-text:last-of-type {
+    margin-bottom: 0;
+  }
+  #sbs-2010 .cs-image-group {
+    font-size: min(2.97vw, 1rem);
+    width: 25.8125em;
+    height: 34.4375em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2010 .cs-picture {
+    width: 23.8125em;
+    height: 34.4375em;
+    box-sizing: border-box;
+    background-color: #dab692;
+    overflow: hidden;
+    border: 0.5em solid #dab692;
+    border-radius: 16.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbs-2010 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2010 .cs-graphic {
+    height: auto;
+    position: absolute;
+  }
+  #sbs-2010 .cs-brown {
+    width: 8.25em;
+    height: auto;
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+  #sbs-2010 .cs-dots {
+    width: 8.5625em;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2010 .cs-container {
+    max-width: 80rem;
+    justify-items: initial;
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+  }
+  #sbs-2010 .cs-content {
+    grid-column: span 1;
+    align-self: center;
+  }
+  #sbs-2010 .cs-image-group {
+    grid-column: span 1;
+  }
+  #sbs-2010 .cs-brown {
+    top: 0;
+    right: 0;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #sbs-2010 {
+    margin-bottom: -1vw;
+    padding-bottom: 3.125rem;
+  }
+}
+/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-2010 {
+    padding: var(--sectionPadding);
+    /* we remove the padding-top from the section and apply it to cs-wrapper instead, so we can vertically offset the text content from the cs-wave graphic */
+    padding-top: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2010:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #f6eddf;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: -1;
+  }
+  #stats-2010 .cs-wave {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+  }
+  #stats-2010 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 80px */
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+  #stats-2010 .cs-wrapper {
+    /* 48px - 150px */
+    padding-top: clamp(3rem, 15vw, 9.375rem);
+  }
+  #stats-2010 .cs-h3 {
+    font-size: 1.9375rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+  }
+  #stats-2010 .cs-text {
+    margin-bottom: 0.75rem;
+  }
+  #stats-2010 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #stats-2010 .cs-stat-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* 48px - 57px */
+    gap: clamp(3rem, 6vw, 3.5625rem);
+  }
+  #stats-2010 .cs-stat-number {
+    /* 31px - 39px */
+    font-size: clamp(1.9375rem, 5vw, 2.4375rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin-bottom: 0 0 0.5rem;
+    color: var(--primary);
+    display: block;
+  }
+  #stats-2010 .cs-stat-text {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #stats-2010 .cs-image-group {
+    font-size: min(3.37vw, 0.9rem);
+    width: 27.0625em;
+    height: 35.3125em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2010 .cs-picture {
+    width: 25.8125em;
+    height: 33.625em;
+    margin-top: 1.5em;
+    box-sizing: border-box;
+    background-color: #dab692;
+    overflow: hidden;
+    border: 8px solid #dab692;
+    border-radius: 16.25rem;
+    position: absolute;
+    z-index: -1;
+  }
+  #stats-2010 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+  }
+  #stats-2010 .cs-graphic {
+    height: auto;
+    position: absolute;
+  }
+  #stats-2010 .cs-brown {
+    width: 8.6875em;
+    height: auto;
+    top: 1.4375em;
+    right: 0;
+    z-index: -2;
+    transform: rotate(-140deg);
+  }
+  #stats-2010 .cs-peach {
+    width: 4.3125em;
+    height: auto;
+    top: 0;
+    right: 6.9375em;
+  }
+  #stats-2010 .cs-leaf {
+    width: 14.0625em;
+    height: auto;
+    bottom: 0em;
+    left: -1.25em;
+    z-index: 1;
+  }
+  #stats-2010 .cs-dots {
+    width: 16.3125em;
+    height: auto;
+    right: 0.8125em;
+    bottom: 0;
+    z-index: -2;
+  }
+  #stats-2010 .cs-lines {
+    width: 11em;
+    height: auto;
+    bottom: -0.6875em;
+    left: -1.25em;
+  }
+  #stats-2010 .cs-dark {
+    display: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats-2010::before {
+    top: 35%;
+  }
+  #stats-2010 .cs-container {
+    max-width: 80rem;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    /* 48px - 60px */
+    gap: clamp(3rem, 6vw, 3.75rem);
+  }
+  #stats-2010 .cs-image-group {
+    font-size: min(1.31vw, 1rem);
+    flex: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--            Side by Side Reverse              -->
+<!-- ============================================ -->
+
+<section id="sbs-2010">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">About us</span>
+                <h2 class="cs-title">Welcome to Our Stitch Skin Dermatology</h2>
+            </div>
+            <p class="cs-text-large">
+                Dr. Suchismita (Tia) Paul is a Harvard-MIT trained, board-certified dermatologist, a media skincare expert and an advisor/brand expert for several global skincare companies. She received her bachelor’s degree from Cornell University and a joint MD from Harvard Medical School and MIT, followed by her dermatology residency at the University of Miami, where she was a chief resident.
+            </p>
+            <p class="cs-text">
+                Aside from seeing patients, Dr. Paul is dedicated to patient advocacy and education on evidence-based medicine in dermatology, especially for skin of color. She has published several articles in top medical journals, such as Nature and Science, and has also been featured in media and various beauty and lifestyle publications including Insider, Huff Post, The Washington Post and Elle Magazine.
+            </p>
+            <p class="cs-text">
+                She has a social media following of more than 400K followers across platforms such as Instagram and TikTok where she educates and raises awareness on skincare and skin related issues.
+            </p>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/derma-clinician-large.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/derma-clinician-large.jpg">
+                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/derma-clinician-large.jpg" alt="dermatologist" width="324" height="467">
+            </picture>
+            <img class="cs-graphic cs-brown" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-lines-3.svg" alt="graphic" width="208" height="203" aria-hidden="true">
+            <img class="cs-graphic cs-dots" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dot-group.svg" alt="graphic" width="137" height="112" aria-hidden="true">
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Stats                     -->
+<!-- ============================================ -->
+
+<section id="stats-2010">
+    <div class="cs-container">
+        <div class="cs-wrapper">
+            <h3 class="cs-h3">Natural and certified organic</h3>
+            <p class="cs-text">Aside from seeing patients, Dr. Paul is dedicated to patient advocacy and education on evidence-based medicine in dermatology, especially for skin of color. She has published several articles in top medical journals, such as Nature and Science, and has also been featured in media and various beauty and lifestyle publications including Insider, Huff Post, The Washington Post and Elle Magazine.</p>
+            <p class="cs-text">She has a social media following of more than 400K followers across platforms such as Instagram and TikTok where she educates and raises awareness on skincare and skin related issues.</p>
+            <ul class="cs-stat-group">
+                <li class="cs-stat">
+                    <span class="cs-stat-number">32+</span>
+                    <span class="cs-stat-text">Years of experience</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-stat-number">21+</span>
+                    <span class="cs-stat-text">Skin treatments</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-stat-number">956+</span>
+                    <span class="cs-stat-text">Satisfied clients</span>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/derma-clinician-small.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/derma-clinician-small.jpg">
+                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/derma-clinician-small.jpg" alt="dermatologist" width="324" height="467">
+            </picture>
+            <img class="cs-graphic cs-brown" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-lines2.svg" alt="graphic" width="100" height="98" aria-hidden="true">
+            <img class="cs-graphic cs-peach" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/peach-blob.svg" alt="graphic" width="42" height="31" aria-hidden="true">
+            <img class="cs-graphic cs-leaf" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/leaf2.svg" alt="graphic" width="136" height="171" aria-hidden="true">
+            <img class="cs-graphic cs-dots" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/beige-dots.svg" alt="graphic" width="159" height="88" aria-hidden="true">
+            <img class="cs-graphic cs-lines" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/beige-lines.svg" alt="graphic" width="150" height="165" aria-hidden="true">
+        </div>
+    </div>
+    <img class="cs-wave cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/derma-wave.svg" alt="wave" width="1920" height="198" loading="lazy" decoding="async">
+    <img class="cs-wave cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/derma-wave-dark.svg" alt="wave" width="1920" height="198" loading="lazy" decoding="async">
+</section>
+
+<script></script>
+</body>
+</html>

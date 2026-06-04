@@ -1,0 +1,54 @@
+---
+description: Prefer a single global style change over editing multiple files. Apply when changing styling, layout, typography, colors, or spacing.
+alwaysApply: true
+---
+
+# Global Styles First
+
+Before editing styles in two or more files, stop and check whether one change in the global stylesheet can achieve the same outcome.
+
+## When this applies
+
+- The same visual change is needed in multiple sections, pages, or components
+- Typography, color, spacing, or layout tweaks that feel site-wide
+- You are about to repeat the same override in `about.scss`, `services.scss`, `contact.scss`, or other page SCSS files
+
+## What to check first (in order)
+
+1. **`src/assets/sass/root.scss`** — CSS variables in `:root`, dark mode tokens, `.cs-*` utilities, nav, footer, and other shared section patterns
+2. **Existing shared classes** — `.cs-title`, `.cs-topper`, `.cs-text`, `.cs-button-solid`, etc.
+3. **`src/assets/sass/local.scss`** — only if the change is page-specific, not site-wide
+4. **`src/assets/sass/critical.scss`** — only for above-the-fold overrides that cannot live in `root.scss`
+
+The comment at the top of `root.scss` states the intent: site-wide edits belong there so changes apply everywhere from one place.
+
+## Decision rule
+
+| Situation | Approach |
+|-----------|----------|
+| Change applies everywhere or to a shared `.cs-*` pattern | Edit `root.scss` once |
+| Change affects one page only | Edit that page's SCSS (e.g. `about.scss`) |
+| Unsure | Default to `root.scss` first; narrow scope only if global causes unwanted side effects |
+
+## Examples
+
+```scss
+// ❌ BAD — same title color in about.scss, services.scss, contact.scss
+#about-hero .cs-title,
+#services-hero .cs-title { color: var(--primary); }
+
+// ✅ GOOD — update once in root.scss if all titles should change
+.cs-title { color: var(--headerColor); }
+// Or update --headerColor / --primary in :root for a brand-wide shift
+```
+
+```scss
+// ❌ BAD — duplicate section padding across multiple page files
+#about-services { padding: 5rem 1rem; }
+#contact-info { padding: 5rem 1rem; }
+
+// ✅ GOOD — use or update --sectionPadding in :root
+section { padding: var(--sectionPadding); }
+```
+
+If a global change would affect unrelated areas, add or extend a shared class in `root.scss` rather than copying overrides into multiple page SCSS files.

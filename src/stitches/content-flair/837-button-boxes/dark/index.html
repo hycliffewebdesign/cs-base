@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button boxes</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/* you can copy and paste this into your global stylesheet to be used everywhere in your site */
+#button-box-837 {
+  width: 100%;
+  max-width: 39.375rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+#button-box-837 .cs-link {
+  text-decoration: none;
+  padding-right: 1.875rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+#button-box-837 .cs-link:hover:before {
+  width: 100%;
+  height: 3.5em;
+  border-radius: 1.875rem;
+}
+#button-box-837 .cs-link:hover .cs-wrapper {
+  transform: scale(1.2);
+}
+#button-box-837 .cs-link:hover .cs-icon {
+  transform: translateX(0.4375rem);
+}
+#button-box-837 .cs-link:before {
+  /* light green circle that animates on hover */
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background: #eff1f0;
+  border-radius: 1.5rem;
+  opacity: 1;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: width 0.3s, height 0.3s, border-radius 0.3s;
+}
+#button-box-837 .cs-wrapper {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* prevents flexbox from squishing it */
+  flex: none;
+  transition: transform 0.3s;
+}
+#button-box-837 .cs-icon {
+  width: 1.5rem;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+#button-box-837 .cs-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+#button-box-837 .cs-header {
+  font-size: 1rem;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin: 0;
+  color: var(--headerColor);
+  display: block;
+}
+#button-box-837 .cs-link-content {
+  font-size: 1rem;
+  line-height: 1.2em;
+  font-weight: 400;
+  margin: 0;
+  color: var(--bodyTextColor);
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<!--                   
+    These "Micro Stitches" are to be placed inside the .cs-content group of Side By Side Stitches. This one is supposed to go under the cs-text. 
+-->
+
+<div id="button-box-837" class="cs-contact-group">
+    <a class="cs-link" href="tel:555-555-0234">
+        <picture class="cs-wrapper">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone.svg" alt="icon" width="24" height="24">
+        </picture>
+        <div class="cs-info">
+            <span class="cs-header">Call Now</span>
+            <span class="cs-link-content">(555) 555-0234</span>
+        </div>
+    </a>
+    <a class="cs-link" href="mailto:Info@health&wellness.com">
+        <picture class="cs-wrapper">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail.svg" alt="icon" width="24" height="24">
+        </picture>
+        <div class="cs-info">
+            <span class="cs-header">Send A Message</span>
+            <span class="cs-link-content">Info@health&wellness.com</span>
+        </div>
+    </a>
+</div>
+
+<script></script>
+</body>
+</html>

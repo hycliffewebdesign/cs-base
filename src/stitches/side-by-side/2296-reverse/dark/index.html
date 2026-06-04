@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-2296 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2296 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 4vw, 4rem);
+  }
+  #sbsr-2296 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 36.625rem;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left, set to center to centrally align */
+    align-items: flex-start;
+  }
+  #sbsr-2296 .cs-title {
+    max-width: 30ch;
+  }
+  #sbsr-2296 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbsr-2296 .cs-text:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+  #sbsr-2296 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2296 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbsr-2296 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbsr-2296 .cs-h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #sbsr-2296 .cs-ul {
+    margin: 0.75rem 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #sbsr-2296 .cs-li {
+    font-size: 1rem;
+    line-height: 1.5em;
+    list-style: none;
+    /* 20px - 24px */
+    padding-left: clamp(1.25rem, 3vw, 1.5rem);
+    color: var(--bodyTextColor);
+    position: relative;
+  }
+  #sbsr-2296 .cs-li strong {
+    color: var(--headerColor);
+  }
+  #sbsr-2296 .cs-li::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: var(--secondary);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+  }
+  #sbsr-2296 .cs-image-group {
+    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+    font-size: min(1.98vw, .802rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 46.125em;
+    height: 38.75em;
+    order: -1;
+    position: relative;
+    z-index: 1;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #sbsr-2296 .cs-picture {
+    width: 100%;
+    height: 100%;
+    border: 1em solid #e7e7e8;
+    box-sizing: border-box;
+    display: block;
+  }
+  #sbsr-2296 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-2296 .cs-picture-wrapper1 {
+    width: 25.8125em;
+    height: 28.5625em;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-2296 .cs-picture-wrapper2 {
+    width: 25.8125em;
+    height: 24.8125em;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1em;
+    position: absolute;
+    top: 3.25em;
+    right: 0;
+    z-index: -1;
+  }
+  #sbsr-2296 .cs-picture-wrapper3 {
+    width: 25.75em;
+    min-height: 18.375em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 9.25em;
+  }
+  #sbsr-2296 .cs-tag {
+    /* 14px - 24px */
+    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    color: var(--headerColor);
+    display: block;
+    flex: none;
+  }
+  #sbsr-2296 .cs-arrow {
+    width: 9.25em;
+    height: auto;
+    position: absolute;
+  }
+  #sbsr-2296 .cs-arrow-left {
+    bottom: 12.5625em;
+    left: 4.5em;
+    transform: rotate(-120deg);
+  }
+  #sbsr-2296 .cs-arrow-right {
+    right: 7.125em;
+    bottom: 11.0625em;
+    transform: rotate(300deg);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-2296 .cs-container {
+    max-width: 80rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbsr-2296 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbsr-2296 .cs-image-group {
+    font-size: min(1.1vw, 1rem);
+    height: auto;
+    min-height: 38.75em;
+    order: initial;
+    flex: none;
+  }
+  #sbsr-2296 .cs-picture-wrapper1 {
+    height: auto;
+    bottom: 10.1875em;
+  }
+  #sbsr-2296 .cs-picture-wrapper2 {
+    height: auto;
+    bottom: 10.625em;
+  }
+  #sbsr-2296 .cs-picture-wrapper3 .cs-picture {
+    height: 15.5625em;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="sbsr-2296">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">Luxurious Custom Home in Andover</h2>
+            <p class="cs-text">
+                A bespoke 5-bedroom residence designed with modern elegance and functionality. This project involved custom architectural features, high-end finishes, and sustainable building practices.
+            </p>
+            <h3 class="cs-h3">Our Process</h3>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <strong>Design Consultation</strong>: Collaborated with the client to understand their vision.
+                </li>
+                <li class="cs-li">
+                    <strong>Planning & Permits</strong>: Managed all necessary approvals and planning stages.
+                </li>
+                <li class="cs-li">
+                    <strong>Construction</strong>: The build was executed with meticulous attention to detail, ensuring every aspect was perfected.
+                </li>
+                <li class="cs-li">
+                    <strong>Final Touches</strong>: Installed premium fixtures and completed interior finishes.
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Book An Appointment</a>
+        </div>
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <div class="cs-picture-wrapper1">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after1.jpg" alt="wedding" width="272" height="337">
+                </picture>
+                <span class="cs-tag">After</span>
+            </div>
+            <!--Small Image-->
+            <div class="cs-picture-wrapper2">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-after2.jpg" alt="wedding" width="243" height="367">
+                </picture>
+                <span class="cs-tag">After</span>
+            </div>
+            <!--Small Image-->
+            <div class="cs-picture-wrapper3">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/construction-before.jpg" alt="wedding" width="243" height="367">
+                </picture>
+                <span class="cs-tag">Before</span>
+            </div>
+            <img class="cs-arrow cs-arrow-left" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/construction-arrow-left.svg" alt="arrow" width="148" height="54">
+            <img class="cs-arrow cs-arrow-right" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/construction-arrow-right.svg" alt="arrow" width="148" height="54">
+        </div>
+    </div>
+
+</section>
+
+<script></script>
+</body>
+</html>

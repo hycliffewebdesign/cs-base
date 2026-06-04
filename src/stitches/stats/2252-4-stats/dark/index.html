@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 stats</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-2252 {
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #FBF5F1;
+    /* clips anything overflowing */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2252 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    padding: var(--sectionPadding);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  #stats-2252 .cs-content {
+    /* set text align to center if content needs to be centered */
+    text-align: left;
+    width: 100%;
+    max-width: 33.6875rem;
+    display: flex;
+    flex-direction: column;
+    /* left aligns content, set to center to align content horizontally */
+    align-items: flex-start;
+  }
+  #stats-2252 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  #stats-2252 .cs-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #stats-2252 .cs-number {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    color: var(--primary);
+  }
+  #stats-2252 .cs-header {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+  }
+  #stats-2252 .cs-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #stats-2252 .cs-image-group {
+    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+    font-size: min(3.6vw, 1rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 25em;
+    height: 31em;
+    order: 2;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2252 .cs-picture {
+    width: auto;
+    height: 30.875em;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotateY(180deg);
+  }
+  #stats-2252 .cs-picture img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+  #stats-2252 .cs-wheel {
+    width: 22.75em;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 4.25em;
+    left: 0;
+    z-index: -2;
+  }
+  #stats-2252 .cs-flower {
+    /* 136px - 211px */
+    width: clamp(8.5rem, 17vw, 13.2rem);
+    height: auto;
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats-2252 .cs-container {
+    max-width: 80rem;
+    padding: var(--sectionPadding);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #stats-2252 .cs-card-group {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 18.125rem;
+    row-gap: 3rem;
+  }
+  #stats-2252 .cs-item {
+    width: 25%;
+    max-width: 23.4375rem;
+  }
+  #stats-2252 .cs-image-group {
+    /* set to inherit at Large Desktop */
+    font-size: min(1.2vw, 1rem);
+    margin-top: auto;
+    order: -1;
+    position: absolute;
+    bottom: 0;
+  }
+}
+/* Desktop - 1-24px */
+@media only screen and (min-width: 64rem) {
+  #stats-2252 .cs-container {
+    padding-bottom: 0;
+  }
+  #stats-2252 .cs-card-group {
+    padding-bottom: clamp(7.375rem, 10vw, 8.75rem);
+    column-gap: 31.25rem;
+  }
+  #stats-2252 .cs-item {
+    /* in case you add another row of stats */
+  }
+  #stats-2252 .cs-item:nth-of-type(1),
+  #stats-2252 .cs-item:nth-of-type(2) {
+    /* 118px - 140px */
+    padding-top: clamp(7.375rem, 10vw, 8.75rem);
+  }
+  #stats-2252 .cs-image-group {
+    font-size: 1rem;
+  }
+  #stats-2252 .cs-flower {
+    width: 13vw;
+    max-width: max-content;
+    display: block;
+    position: absolute;
+    top: clamp(2rem, 3vw, 7rem);
+    z-index: -1;
+  }
+  #stats-2252 .cs-flower1 {
+    left: 0;
+  }
+  #stats-2252 .cs-flower2 {
+    right: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Stats                     -->
+<!-- ============================================ -->
+
+<section id="stats-2252">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/bride.png" alt="wedding bride" width="565" height="814">
+            </picture>
+            <!--Color Wheel-->
+            <img class="cs-wheel" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/color-wheel.png" alt="color wheel" width="572" height="572" aria-hidden="true">
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-number">12+</span>
+                <span class="cs-header">Years of experience</span>
+                <p class="cs-text">
+                    Our expert instructors give you the skills and knowledge to manage process risks and show you how to continuously make your facilities and operations more safe and reliable.
+                </p>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">12+</span>
+                <span class="cs-header">Years of experience</span>
+                <p class="cs-text">
+                    Our expert instructors give you the skills and knowledge to manage process risks and show you how to continuously make your facilities and operations more safe and reliable.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <!--Floating Flower-->
+    <img class="cs-flower cs-flower1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower15.png" alt="flower" width="281" height="228" aria-hidden="true">
+    <img class="cs-flower cs-flower2" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower16.png" alt="flower" width="281" height="227" aria-hidden="true">
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mosaic</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Gallery          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-2243 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-2243 .cs-container {
+    width: 100%;
+    max-width: 115rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 5vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-2243 .cs-content {
+    /* aligns text centrally. set to left to left-align text */
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centrally aligns items. set to flex-start to left-align items */
+    align-items: center;
+    z-index: 2;
+  }
+  #gallery-2243 .cs-title {
+    max-width: 40ch;
+  }
+  #gallery-2243 .cs-gallery {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(16, 16.666vw);
+    gap: clamp(0.5rem, 2vw, 1.25rem);
+  }
+  #gallery-2243 .cs-picture {
+    grid-column: span 6;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-2243 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #gallery-2243 .cs-picture1 {
+    grid-row: 2 / span 3;
+  }
+  #gallery-2243 .cs-picture2 {
+    grid-row: 1 / span 4;
+  }
+  #gallery-2243 .cs-picture3 {
+    grid-column: span 12;
+    grid-row: 5 / span 5;
+  }
+  #gallery-2243 .cs-picture4 {
+    grid-row: 10 / span 4;
+  }
+  #gallery-2243 .cs-picture5 {
+    grid-row: 11 / span 3;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #gallery-2243 .cs-gallery {
+    /* 320px - 600px */
+    height: clamp(20rem, 41vw, 37.5rem);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  #gallery-2243 .cs-gallery .cs-picture {
+    grid-column: span 1;
+  }
+  #gallery-2243 .cs-gallery .cs-picture1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 3;
+  }
+  #gallery-2243 .cs-gallery .cs-picture2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
+  }
+  #gallery-2243 .cs-gallery .cs-picture3 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 6;
+  }
+  #gallery-2243 .cs-gallery .cs-picture4 {
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 4;
+  }
+  #gallery-2243 .cs-gallery .cs-picture5 {
+    grid-column: 6 / span 1;
+    grid-row: 2 / span 3;
+  }
+}
+/* Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #gallery-2243 .cs-gallery {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  #gallery-2243 .cs-gallery .cs-picture {
+    grid-column: span 1;
+  }
+  #gallery-2243 .cs-gallery .cs-picture1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 4;
+  }
+  #gallery-2243 .cs-gallery .cs-picture2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 5;
+  }
+  #gallery-2243 .cs-gallery .cs-picture3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 6;
+  }
+  #gallery-2243 .cs-gallery .cs-picture4 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 5;
+  }
+  #gallery-2243 .cs-gallery .cs-picture5 {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 4;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-2243">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Gallery</span>
+            <h2 class="cs-title">A Dedicated Team Of Photographers, Capturing
+                Precious Moments With Every Click</h2>
+            <p class="cs-text">
+                We have courses on-demand and live instructors for workshops and support. We also provide LIVE instructor-led training courses and onsite training.
+            </p>
+        </div>
+        <div class="cs-gallery">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg" alt="formerly dress you people outside" width="380" height="271">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg" alt="formerly dress you people outside" width="380" height="271">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg" alt="formerly dress you people outside" width="380" height="271">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg" alt="formerly dress you people outside" width="380" height="271">
+            </picture>
+            <picture class="cs-picture cs-picture5">
+                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/wedding-gallery1.jpg" alt="formerly dress you people outside" width="380" height="271">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

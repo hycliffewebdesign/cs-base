@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>non standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2288 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2288 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-2288 .cs-ul-group {
+    width: 100%;
+    max-width: 52.9375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 32px - 48px */
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+  #sbs-2288 .cs-ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 0.75rem;
+    row-gap: 0.5rem;
+  }
+  #sbs-2288 .cs-li {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.25vw, 1rem);
+    line-height: 1.5em;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background-color: #fff9e8;
+    color: var(--bodyTextColor);
+    display: flex;
+    grid-column: span 12;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    position: relative;
+    flex: 1;
+    /* list bullet point */
+  }
+  #sbs-2288 .cs-li::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.375rem;
+    background-color: var(--secondary);
+    display: block;
+    flex: none;
+    transform: rotate(45deg);
+  }
+  #sbs-2288 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 36.625rem;
+    display: flex;
+    flex-direction: column;
+    /* aligns content to the left, set to center to centrally align */
+    align-items: flex-start;
+  }
+  #sbs-2288 .cs-title {
+    max-width: 30ch;
+  }
+  #sbs-2288 .cs-text {
+    margin-bottom: 2rem;
+  }
+  #sbs-2288 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: var(--headerColor);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2288 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-2288 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-2288 .cs-images {
+    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+    font-size: min(2.21vw, .88rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 41em;
+    height: 47.375em;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2288 .cs-picture {
+    display: block;
+    position: absolute;
+  }
+  #sbs-2288 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2288 .cs-picture1 {
+    width: 30.5em;
+    height: 25.375em;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2288 .cs-picture2 {
+    width: 35.25em;
+    height: 30em;
+    border: 12px solid #fff;
+    right: 0;
+    bottom: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2288 .cs-li {
+    grid-column: span 4;
+  }
+  #sbs-2288 .cs-images {
+    font-size: min(1.85vw, .94rem);
+    width: 38.9375em;
+    height: 27.625em;
+  }
+  #sbs-2288 .cs-picture1 {
+    width: 23.875em;
+    height: 12.6875em;
+  }
+  #sbs-2288 .cs-picture2 {
+    width: 26.0625em;
+    height: 18.9375em;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-2288 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-2288 .cs-content {
+    width: 36vw;
+    max-width: 23.125rem;
+    padding-bottom: 8.875rem;
+  }
+  #sbs-2288 .cs-ul-group {
+    width: 100%;
+  }
+  #sbs-2288 .cs-images {
+    font-size: inherit;
+    width: 100%;
+    height: 100%;
+    min-height: 25.75rem;
+  }
+  #sbs-2288 .cs-picture1 {
+    width: 61.1316212%;
+    height: auto;
+    bottom: 14.9375rem;
+  }
+  #sbs-2288 .cs-picture2 {
+    width: 66.934189%;
+    height: auto;
+    top: 7.5rem;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #sbs-2288 .cs-content {
+    padding-right: 3.25rem;
+  }
+  #sbs-2288 .cs-picture1 {
+    width: 32.625rem;
+    bottom: 3.75rem;
+  }
+  #sbs-2288 .cs-picture2 {
+    width: 24.4375rem;
+    top: 3.75rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2288">
+    <div class="cs-container">
+        <div class="cs-ul-group">
+            <ul class="cs-ul">
+                <li class="cs-li">Tailored design consultations just for you</li>
+                <li class="cs-li">High-quality materials and craftsmanship</li>
+                <li class="cs-li">Eco-friendly & energy efficient building techniques</li>
+            </ul>
+            <div class="cs-images">
+                <!--Main Image-->
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction2.jpg" alt="wedding" width="272" height="337">
+                </picture>
+                <!--Small Image-->
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction1.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction1.jpg" alt="wedding" width="243" height="367">
+                </picture>
+            </div>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Custom Homes</span>
+            <h2 class="cs-title">Designing Your Dream Home</h2>
+            <p class="cs-text">
+                Our custom home services are tailored to bring your unique vision to life. From initial concept to final construction, we work closely with you to design and build a residence that reflects your style and meets your specific needs.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

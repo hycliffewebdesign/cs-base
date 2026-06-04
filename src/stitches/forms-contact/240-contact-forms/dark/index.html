@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact forms</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-contact-240 {
+    padding: var(--sectionPadding);
+  }
+  #cs-contact-240 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 50rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #cs-contact-240 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #cs-contact-240 .cs-left-section {
+    width: 100%;
+  }
+  #cs-contact-240 #cs-form-240 {
+    width: 100%;
+  }
+  #cs-contact-240 .cs-label {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5em;
+    /* 12px - 20px */
+    margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #cs-contact-240 .cs-label-message {
+    /* 32px - 48px */
+    margin-bottom: clamp(2rem, 5.3vw, 3rem);
+  }
+  #cs-contact-240 .cs-input,
+  #cs-contact-240 .cs-textarea {
+    font-size: 1rem;
+    width: 100%;
+    height: 4rem;
+    margin-top: 0.25rem;
+    /* prevents border & padding from affecting height */
+    box-sizing: border-box;
+    padding-left: 1.25rem;
+    border: 1px solid #b4b2c7;
+    border-radius: 0.5rem;
+    transition: border 0.3s;
+  }
+  #cs-contact-240 .cs-input:hover,
+  #cs-contact-240 .cs-textarea:hover {
+    border: 1px solid var(--primary);
+  }
+  #cs-contact-240 .cs-textarea {
+    font-family: inherit;
+    min-height: 7.5rem;
+    margin: 0;
+    padding-top: 1.25rem;
+  }
+  #cs-contact-240 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #cs-contact-240 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #cs-contact-240 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #cs-contact-240 .cs-submit {
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  #cs-contact-240 .cs-right-section {
+    width: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 24px - 40px top & bottom */
+    /* 20px - 40px left & right */
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
+    background-color: var(--bodyTextColorWhite);
+    /* cuts off corners on img tag */
+    overflow: hidden;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* 28px - 40px */
+    gap: clamp(1.75rem, 4vw, 2.5rem);
+    position: relative;
+  }
+  #cs-contact-240 .cs-ul {
+    margin: 0;
+    padding: 0;
+  }
+  #cs-contact-240 .cs-li {
+    list-style: none;
+    /* 16px - 20px */
+    margin-bottom: clamp(1rem, 2vw, 1.25rem);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #cs-contact-240 .cs-li:hover .cs-icon-wrapper {
+    transform: scale(1.2);
+  }
+  #cs-contact-240 .cs-li:last-of-type {
+    margin-bottom: 0;
+  }
+  #cs-contact-240 .cs-header {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 0.5rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #cs-contact-240 .cs-link {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-decoration: none;
+    color: var(--bodyTextColor);
+    position: relative;
+  }
+  #cs-contact-240 .cs-link:hover:before {
+    width: 100%;
+  }
+  #cs-contact-240 .cs-link:before {
+    /* top right box */
+    content: "";
+    width: 0%;
+    height: 2px;
+    /* current color of parent */
+    background: currentColor;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  #cs-contact-240 .cs-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    /* 16px - 20px */
+    margin-right: clamp(1rem, 2vw, 1.25rem);
+    background-color: #fff;
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #cs-contact-240 .cs-icon {
+    /* 32px -36px */
+    width: clamp(2rem, 3vw, 2.25rem);
+    height: auto;
+    display: block;
+  }
+  #cs-contact-240 .cs-picture {
+    width: 100%;
+    /* clips image corners */
+    overflow: hidden;
+    border-radius: 0.5rem;
+    display: block;
+    position: relative;
+    /* width divided height */
+    aspect-ratio: 1.44;
+  }
+  #cs-contact-240 .cs-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+  #cs-contact-240 #cs-form-240 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #cs-contact-240 .cs-label {
+    width: 48%;
+  }
+  #cs-contact-240 .cs-label-message {
+    width: 100%;
+  }
+  #cs-contact-240 .cs-button-solid {
+    margin-left: 0;
+  }
+  #cs-contact-240 .cs-right-section {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #cs-contact-240 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* 60px - 108px */
+    gap: clamp(3.75rem, 7.9vw, 6.75rem);
+  }
+  #cs-contact-240 .cs-left-section {
+    max-width: 32.625rem;
+  }
+  #cs-contact-240 .cs-label {
+    width: 100%;
+  }
+  #cs-contact-240 .cs-right-section {
+    width: 40vw;
+    max-width: 39.375rem;
+    flex-direction: column;
+    align-items: flex-start;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #cs-contact-240 .cs-picture {
+    width: 100%;
+    max-width: 100%;
+    height: 27.375rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Contact Form                  -->
+<!-- ============================================ -->
+
+<section id="cs-contact-240">
+    <div class="cs-container">
+        <div class="cs-left-section">
+            <div class="cs-content">
+                <span class="cs-topper">Contact</span>
+                <h2 class="cs-title">Get in Touch</h2>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
+                </p>
+            </div>
+            <form id="cs-form-240" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-240" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label">
+                    Email
+                    <input class="cs-input" required type="text" id="email-240" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label">
+                    Phone
+                    <input class="cs-input" required type="text" id="phone-240" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    How Did You Find Us
+                    <input class="cs-input" type="text" id="find-240" name="find-us" placeholder="How did you find us?">
+                </label>
+                <label class="cs-label cs-label-message">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-240" placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Submit Message Now</button>
+            </form>
+        </div>
+        <div class="cs-right-section">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/mail.svg" alt="mail icon" class="cs-icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:support@yourdomain.com" class="cs-link">support@yourdomain.com</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone.svg" alt="phone icon" class="cs-icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:206-987-6543" class="cs-link">(206) 987-6543</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin.svg" alt="address icon" class="cs-icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Address</span>
+                        <a href="" class="cs-link">2553 Woodbridge Lane, Bouston Ware 120</a>
+                    </div>
+                </li>
+            </ul>
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map.jpg">
+                <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/map.jpg" alt="google map" width="462" height="438">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

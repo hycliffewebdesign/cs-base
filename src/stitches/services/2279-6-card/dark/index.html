@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-2279 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #services-2279 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-2279 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #services-2279 .cs-title {
+    max-width: 20ch;
+    color: var(--bodyTextColorWhite);
+    margin: 0;
+  }
+  #services-2279 .cs-text {
+    opacity: 0.8;
+  }
+  #services-2279 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(0.5rem, 2vw, 1.25rem);
+  }
+  #services-2279 .cs-item {
+    /* place this in a variable to reuse for the s-icon-wrapper placement */
+    --itemPadding: clamp(1rem, 3.5vw, 3rem);
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    /* 16px - 48px */
+    padding: var(--itemPadding);
+    background-color: #fff;
+    border: 1px solid #E7E7E8;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    grid-column: span 12;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2279 .cs-item:hover .cs-h3,
+  #services-2279 .cs-item:hover .cs-link,
+  #services-2279 .cs-item:hover .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #services-2279 .cs-item:hover .cs-item-text {
+    opacity: 0.9;
+  }
+  #services-2279 .cs-item:hover .cs-icon-wrapper {
+    border-radius: 50%;
+    transform: rotate(90deg);
+  }
+  #services-2279 .cs-item:hover .cs-icon {
+    transform: rotate(-90deg);
+  }
+  #services-2279 .cs-item:hover .cs-arrow {
+    filter: grayscale(1) brightness(10000%);
+  }
+  #services-2279 .cs-item:hover .cs-background {
+    opacity: 1;
+  }
+  #services-2279 .cs-icon-wrapper {
+    /* 48px - 100px */
+    width: clamp(3rem, 7vw, 6.25rem);
+    height: clamp(3rem, 7vw, 6.25rem);
+    margin: 0;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: var(--itemPadding);
+    right: var(--itemPadding);
+    z-index: 1;
+    transition: transform 0.5s, border-radius 0.5s;
+  }
+  #services-2279 .cs-icon-wrapper:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #services-2279 .cs-icon {
+    /* 24px - 48px */
+    width: clamp(1.5rem, 4vw, 3rem);
+    height: auto;
+    transition: transform 0.5s;
+  }
+  #services-2279 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    text-align: inherit;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2279 .cs-h3:before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--primary);
+    opacity: 1;
+    display: block;
+  }
+  #services-2279 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    max-width: 18.75rem;
+    /* 56px - 108px */
+    margin: 0 0 clamp(3.5rem, 8vw, 6.75rem) 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #services-2279 .cs-link {
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 0.375rem 0;
+    color: var(--headerColor);
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    position: relative;
+    transition: color 0.3s;
+  }
+  #services-2279 .cs-link:hover .cs-arrow {
+    transform: rotate(45deg);
+  }
+  #services-2279 .cs-link:before {
+    /* underline */
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0rem;
+    left: 0;
+  }
+  #services-2279 .cs-arrow {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+  #services-2279 .cs-background {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #services-2279 .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    opacity: 0.84;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #services-2279 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+  #services-2279 .cs-accent {
+    width: 100%;
+    height: 21.6875rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #services-2279 .cs-accent:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #111418;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #services-2279 .cs-accent img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.24;
+    mix-blend-mode: soft-light;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2279 .cs-container {
+    max-width: 80rem;
+  }
+  #services-2279 .cs-item {
+    grid-column: span 6;
+    justify-content: flex-start;
+  }
+  #services-2279 .cs-link {
+    margin-top: auto;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-2279 .cs-item {
+    grid-column: span 4;
+  }
+  #services-2279 .cs-accent {
+    /* 435px - 526px */
+    height: clamp(27.1875rem, 41vw, 32.875rem);
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #services-2279 .cs-item {
+    background-color: var(--dark);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #services-2279 .cs-item:hover .cs-icon-wrapper:before {
+    background-color: var(--primary);
+    opacity: 0.9;
+  }
+  body.dark-mode #services-2279 .cs-h3,
+  body.dark-mode #services-2279 .cs-item-text,
+  body.dark-mode #services-2279 .cs-link {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-2279 .cs-icon-wrapper {
+    background-color: var(--dark);
+  }
+  body.dark-mode #services-2279 .cs-icon-wrapper:before {
+    background-color: #000;
+    opacity: 0.3;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  body.dark-mode #services-2279 .cs-arrow,
+  body.dark-mode #services-2279 .cs-icon {
+    filter: grayscale(1) brightness(10000%);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-2279">
+    <div class="cs-container">
+        <!-- Left Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Our Service</span>
+            <h2 class="cs-title">Our Comprehensive Exterior Services</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/roof.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Roofing Services</h3>
+                <p class="cs-item-text">
+                    Dependable solutions for repairs, replacements, or installing new systems to ensure everything runs smoothly.
+                </p>
+                <a href="" class="cs-link">
+                    View More
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/upper-right-black-arrow.svg" alt="icon" width="20" height="20">
+                </a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction1.jpg" alt="construction" width="480" height="425">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/roof.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Roofing Services</h3>
+                <p class="cs-item-text">
+                    Dependable solutions for repairs, replacements, or installing new systems to ensure everything runs smoothly.
+                </p>
+                <a href="" class="cs-link">
+                    View More
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/upper-right-black-arrow.svg" alt="icon" width="20" height="20">
+                </a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction1.jpg" alt="construction" width="480" height="425">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/roof.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Roofing Services</h3>
+                <p class="cs-item-text">
+                    Dependable solutions for repairs, replacements, or installing new systems to ensure everything runs smoothly.
+                </p>
+                <a href="" class="cs-link">
+                    View More
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/upper-right-black-arrow.svg" alt="icon" width="20" height="20">
+                </a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction1.jpg" alt="construction" width="480" height="425">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/roof.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Roofing Services</h3>
+                <p class="cs-item-text">
+                    Dependable solutions for repairs, replacements, or installing new systems to ensure everything runs smoothly.
+                </p>
+                <a href="" class="cs-link">
+                    View More
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/upper-right-black-arrow.svg" alt="icon" width="20" height="20">
+                </a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction1.jpg" alt="construction" width="480" height="425">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/roof.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Roofing Services</h3>
+                <p class="cs-item-text">
+                    Dependable solutions for repairs, replacements, or installing new systems to ensure everything runs smoothly.
+                </p>
+                <a href="" class="cs-link">
+                    View More
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/upper-right-black-arrow.svg" alt="icon" width="20" height="20">
+                </a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction1.jpg" alt="construction" width="480" height="425">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/roof.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Roofing Services</h3>
+                <p class="cs-item-text">
+                    Dependable solutions for repairs, replacements, or installing new systems to ensure everything runs smoothly.
+                </p>
+                <a href="" class="cs-link">
+                    View More
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/upper-right-black-arrow.svg" alt="icon" width="20" height="20">
+                </a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction1.jpg" alt="construction" width="480" height="425">
+                </picture>
+            </li>
+        </ul>
+    </div>
+    <!--Waves Background-->
+    <picture class="cs-accent">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/brush-strokes.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/brush-strokes.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/brush-strokes.jpg" alt="brush strokes" width="1920" height="331" aria-hidden="true">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

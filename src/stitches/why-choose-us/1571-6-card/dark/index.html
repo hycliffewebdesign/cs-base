@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---         Why Choose         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-choose-1571 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #why-choose-1571 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #why-choose-1571 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #why-choose-1571 .cs-title {
+    max-width: 27ch;
+    margin: 0;
+  }
+  #why-choose-1571 .cs-topper {
+    color: var(--secondary);
+  }
+  #why-choose-1571 .cs-card-wrapper {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    row-gap: 2.5rem;
+  }
+  #why-choose-1571 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* 24px - 60px */
+    gap: clamp(1.5rem, 5vw, 3.75rem);
+  }
+  #why-choose-1571 .cs-item {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  #why-choose-1571 .cs-icon-wrapper {
+    /* 60px - 80px */
+    width: clamp(3.75rem, 5vw, 5rem);
+    height: clamp(3.75rem, 5vw, 5rem);
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+  #why-choose-1571 .cs-icon-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #why-choose-1571 .cs-icon {
+    /* 24px - 36px */
+    width: clamp(1.5rem, 3vw, 2.25rem);
+    height: auto;
+  }
+  #why-choose-1571 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.5rem;
+    color: var(--headerColor);
+  }
+  #why-choose-1571 .cs-item-text {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #why-choose-1571 .cs-image {
+    /* all these change on tablet */
+    width: 70vw;
+    max-width: 18.75rem;
+    height: 70vw;
+    max-height: 18.75rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #why-choose-1571 .cs-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 18.75rem;
+    object-fit: contain;
+    z-index: 1;
+  }
+  #why-choose-1571 .cs-image::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    opacity: 0.1;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #why-choose-1571 .cs-image::after {
+    content: '';
+    width: 75%;
+    height: 75%;
+    background-color: var(--primary);
+    opacity: 0.3;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #why-choose-1571 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1571 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #why-choose-1571 .cs-container {
+    max-width: 80rem;
+  }
+  #why-choose-1571 .cs-card-wrapper {
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #why-choose-1571 .cs-item {
+    text-align: left;
+    align-items: start;
+  }
+  #why-choose-1571 .cs-image {
+    width: 30vw;
+    max-width: 26.75rem;
+    height: 30vw;
+    max-height: 26.875rem;
+  }
+  #why-choose-1571 .cs-image img {
+    max-height: 26.875rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #why-choose-1571 .cs-item {
+    flex-direction: row;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                  Why Choose                  -->
+<!-- ============================================ -->
+
+<section id="why-choose-1571">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose us</span>
+            <h2 class="cs-title">Dive into the exhilarating world of Modern E-commerce</h2>
+        </div>
+        <div class="cs-card-wrapper">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-truck-icon.svg"
+                                alt="car" width="24" height="24" aria-hidden="true">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Free Delivery</h3>
+                        <p class="cs-item-text">
+                            If your glasses aren't perfect, return them within 30 days for a full refund.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-headphone-icon.svg"
+                                alt="car" width="24" height="24" aria-hidden="true">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Online support 24/7</h3>
+                        <p class="cs-item-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-money-icon.svg"
+                                alt="car" width="24" height="24" aria-hidden="true">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Money Return</h3>
+                        <p class="cs-item-text">
+                            If your glasses aren't perfect, return them within 30 days for a full refund.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <picture class="cs-image">
+                <source media="(max-width: 600px)"
+                        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-watches.png">
+                <source media="(min-width: 601px)"
+                        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-watches.png">
+                <img loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-watches.png" alt="watches"
+                        width="510" height="193" aria-hidden="true">
+            </picture>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-label-icon.svg"
+                                alt="car" width="24" height="24" aria-hidden="true">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Member Discount</h3>
+                        <p class="cs-item-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-shield-icon.svg"
+                                alt="car" width="24" height="24" aria-hidden="true">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Safe Payment</h3>
+                        <p class="cs-item-text">
+                            If your glasses aren't perfect, return them within 30 days for a full refund.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg"
+                                alt="car" width="24" height="24" aria-hidden="true">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Shop with Confidence</h3>
+                        <p class="cs-item-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-why-choose-background.png">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-why-choose-background.png">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-why-choose-background.png" alt="texture" width="1280" height="568">
+    </picture>
+</section>
+
+<script></script>
+</body>
+</html>

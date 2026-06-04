@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---        Meet the Team       -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-team-2080 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-team-2080 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-team-2080 .cs-content {
+    /* set text align to center if content needs to be centered */
+    text-align: left;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* left aligns content, set to center to align content horizontally */
+    align-items: flex-start;
+    grid-column: span 12;
+  }
+  #meet-team-2080 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    max-width: 9.25rem;
+    min-width: 7.25rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #meet-team-2080 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #meet-team-2080 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #meet-team-2080 .cs-card-group {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+    position: relative;
+  }
+  #meet-team-2080 .cs-item {
+    min-height: 22.5rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column: span 12;
+    position: relative;
+  }
+  #meet-team-2080 .cs-item:last-of-type::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #meet-team-2080 .cs-picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+  }
+  #meet-team-2080 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes it act like a background image */
+    object-fit: cover;
+    /* forces the top if the images to always be at the top of the container */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #meet-team-2080 .cs-info {
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+  #meet-team-2080 .cs-info:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #meet-team-2080 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+  }
+  #meet-team-2080 .cs-cta {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    max-height: 25.375rem;
+    min-height: 22.5rem;
+    margin-bottom: auto;
+    padding: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--primary);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-column: span 12;
+    position: relative;
+  }
+  #meet-team-2080 .cs-cta:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #meet-team-2080 .cs-h2 {
+    font-size: 1.9375rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+  }
+  #meet-team-2080 .cs-job {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-team-2080 .cs-container {
+    max-width: 80rem;
+  }
+  #meet-team-2080 .cs-content {
+    min-height: 22.5rem;
+    margin-bottom: auto;
+    grid-column: span 6;
+  }
+  #meet-team-2080 .cs-item,
+  #meet-team-2080 .cs-cta {
+    grid-column: span 6;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #meet-team-2080 .cs-content,
+  #meet-team-2080 .cs-item,
+  #meet-team-2080 .cs-cta {
+    min-height: 25.375rem;
+    grid-column: span 4;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #meet-team-2080 .cs-content,
+  #meet-team-2080 .cs-item,
+  #meet-team-2080 .cs-cta {
+    grid-column: span 3;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                Meet the Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-2080">
+    <div class="cs-container">
+        <!--Gallery-->
+        <ul class="cs-card-group">
+            <li class="cs-content">
+                <span class="cs-topper">Our Team</span>
+                <h2 class="cs-title">Meet Our Team</h2>
+                <p class="cs-text">
+                    Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Luctus accumsan tortor.
+                </p>
+            </li>
+            <!--Picture 1-->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d1.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d1.jpg" alt="team member" width="305" height="400">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Dr. Eleanor Pena</h3>
+                    <span class="cs-job">Dental Surgeon</span>
+                </div>
+            </li>
+            <!--Picture 2-->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d2.jpeg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d2.jpeg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d2.jpeg" alt="team member" width="305" height="400">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Dr. Albert Flores</h3>
+                    <span class="cs-job">Dental Surgeon</span>
+                </div>
+            </li>
+            <!--Picture 3-->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d3.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d3.jpg" alt="team member" width="305" height="400">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Dr. Dianne Russell</h3>
+                    <span class="cs-job">Dental Surgeon</span>
+                </div>
+            </li>
+            <!--Picture 4-->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d4.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d4.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d4.jpg" alt="team member" width="305" height="400">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Dr. Ronald Richards</h3>
+                    <span class="cs-job">Dental Surgeon</span>
+                </div>
+            </li>
+            <!--Picture 5-->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d5.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d5.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d5.jpg" alt="team member" width="305" height="400">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Dr. Darlene Robertson</h3>
+                    <span class="cs-job">Dental Surgeon</span>
+                </div>
+            </li>
+            <!--Picture 6-->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d6.jpeg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d6.jpeg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/d6.jpeg" alt="team member" width="305" height="400">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Dr. Savannah Nguyen</h3>
+                    <span class="cs-job">Dental Surgeon</span>
+                </div>
+            </li>
+            <li class="cs-cta">
+                <div class="cs-wrapper">
+                    <h2 class="cs-h2">Join The Team</h2>
+                    <span class="cs-text">Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis imperdiet proin fermentum.</span>
+                </div>
+                <a href="" class="cs-button-solid">Submit</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>single review</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1837 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1837:before {
+    /* background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.03;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+  }
+  #reviews-1837 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-1837 .cs-office-hours {
+    text-align: center;
+    /* 284px - 413px */
+    width: clamp(17.75rem, 40vw, 25.8125rem);
+    /* 220px - 280px */
+    height: clamp(13.75rem, 28vw, 17.5rem);
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    /* 32px - 64px left & right*/
+    padding: 0rem clamp(2rem, 4vw, 4rem);
+    background-color: #fff;
+    border-radius: 25rem;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1837 .cs-office-hours:before {
+    /* background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 25rem;
+    opacity: 0.1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #reviews-1837 .cs-office-hours:after {
+    /* background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 8px solid var(--primary);
+    border-radius: 25rem;
+    opacity: 0.3;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+  }
+  #reviews-1837 .cs-hours {
+    /* 31px - 39px */
+    font-size: clamp(1.9375rem, 4vw, 2.4375rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-1837 .cs-days,
+  #reviews-1837 .cs-time {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #reviews-1837 .cs-days {
+    margin-bottom: 0.5rem;
+  }
+  #reviews-1837 .cs-leaf {
+    /* 102px - 175px */
+    width: clamp(6.375rem, 13vw, 10.9375rem);
+    height: auto;
+    position: absolute;
+    bottom: -0.375rem;
+    left: 0.0625rem;
+    z-index: 1;
+  }
+  #reviews-1837 .cs-review {
+    width: 100%;
+    max-width: 49.1875rem;
+    margin: 0;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    position: relative;
+  }
+  #reviews-1837 .cs-review-text {
+    /* 31px - 39px */
+    font-size: clamp(1.9375rem, 4vw, 2.4375rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    color: var(--headerColor);
+  }
+  #reviews-1837 .cs-flex-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #reviews-1837 .cs-picture {
+    width: 3.25rem;
+    height: 3.25rem;
+    /* clips image corners to make circle */
+    overflow: hidden;
+    border-radius: 3.25rem;
+    display: block;
+    position: relative;
+  }
+  #reviews-1837 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes the image behave like a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews-1837 .cs-name {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--secondary);
+    display: block;
+  }
+  #reviews-1837 .cs-job {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #reviews-1837 .cs-quote {
+    /* 73px - 88px */
+    width: clamp(4.5625rem, 10vw, 5.5rem);
+    height: auto;
+    position: absolute;
+    right: -1rem;
+    bottom: -4rem;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-1837 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #reviews-1837 .cs-quote {
+    right: 0rem;
+    bottom: 0rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<div id="reviews-1837">
+    <div class="cs-container">
+        <div class="cs-office-hours">
+            <span class="cs-hours">Office Hours</span>
+            <span class="cs-days">Monday to Friday</span>
+            <span class="cs-time">9am - 5pm</span>
+            <img class="cs-leaf" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/derm-leaf.svg" alt="leaf graphic" loading="lazy" decoding="async" height="175" width="142">
+        </div>
+        <div class="cs-review">
+            <p class="cs-review-text">
+                We’ll start small then build, giving your body a to really what you’re doing. Each class will be exciting, always moving you forward.
+            </p>
+            <div class="cs-flex-group">
+                <picture class="cs-picture">
+                    <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dermatology-profile.jpeg" decoding="async" alt="profile" width="52" height="52" aria-hidden="true" loading="lazy">
+                </picture>
+                <span class="cs-name">
+                    Preeti Paul
+                    <span class="cs-job">Software Engineer at Google</span>
+                </span>
+            </div>
+            <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/derm-beige-quote.svg" decoding="async" loading="lazy" alt="quote icon" width="88" height="73">
+        </div>
+    </div>
+</div>
+
+<script></script>
+</body>
+</html>

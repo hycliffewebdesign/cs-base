@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>combo</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-footer-1865 {
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    padding-bottom: 2.5rem;
+    background-color: #F6EDDF;
+  }
+  #cs-footer-1865 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #cs-footer-1865 .cs-subscribe {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    /* changes to -224px at desktop */
+    margin-bottom: -15.875rem;
+    /* 60px - 100px top & bottom */
+    padding: clamp(3.75rem, 8vw, 6.25rem) 1.5rem;
+    background-color: var(--primary);
+    border: 8px solid var(--primaryLight);
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* 314px */
+    transform: translateY(-19.625rem);
+  }
+  #cs-footer-1865 .cs-topper {
+    margin: 0 0 0.25rem 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #cs-footer-1865 .cs-title {
+    color: var(--bodyTextColorWhite);
+    max-width: 25ch;
+  }
+  #cs-footer-1865 .cs-text {
+    margin: 0 0 2rem 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #cs-footer-1865 .cs-form {
+    width: 100%;
+    max-width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #cs-footer-1865 .cs-input {
+    font-size: 1rem;
+    width: 100%;
+    /* 46px - 56px */
+    height: clamp(2.875rem, 5.5vw, 3.5rem);
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    padding-left: 1.25rem;
+    border: none;
+    border-radius: 3.75rem;
+    display: block;
+  }
+  #cs-footer-1865 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    background-color: var(--headerColor);
+    color: #fff;
+    border-radius: 3.75rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #cs-footer-1865 .cs-button-solid:hover {
+    background-color: #ffffff;
+    color: var(--headerColor);
+  }
+  #cs-footer-1865 .cs-submit {
+    width: 100%;
+    color: var(--bodyTextColorWhite);
+    border: none;
+    transition: background-color 0.3s;
+  }
+  #cs-footer-1865 .cs-submit:hover {
+    cursor: pointer;
+  }
+  #cs-footer-1865 .cs-top {
+    width: 100%;
+    /* 48px - 64px */
+    margin-bottom: clamp(3rem, 6vw, 4rem);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* 64px - 100px */
+    column-gap: clamp(4rem, 9vw, 6.25rem);
+    row-gap: 2rem;
+  }
+  #cs-footer-1865 .cs-logo-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 32px - 48px */
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+  #cs-footer-1865 .cs-logo {
+    width: 100%;
+    max-width: 19.8125rem;
+    height: auto;
+  }
+  #cs-footer-1865 .cs-logo img {
+    width: 100%;
+    height: auto;
+  }
+  #cs-footer-1865 .cs-social {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #cs-footer-1865 .cs-social-li {
+    list-style: none;
+  }
+  #cs-footer-1865 .cs-social-link {
+    width: 2.5rem;
+    height: auto;
+    padding: 0.75rem;
+    background-color: #DED1BD;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  #cs-footer-1865 .cs-social-link:hover {
+    background-color: var(--primary);
+  }
+  #cs-footer-1865 .cs-social-link:hover .cs-social-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #cs-footer-1865 .cs-social-icon {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+  }
+  #cs-footer-1865 .cs-ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #cs-footer-1865 .cs-contact-ul {
+    width: 100%;
+    max-width: 100%;
+    gap: 0.5rem;
+  }
+  #cs-footer-1865 .cs-li {
+    list-style: none;
+    margin: 0;
+    display: block;
+  }
+  #cs-footer-1865 .cs-header {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    /* 16px - 24px bottom */
+    margin: 0 0 clamp(1rem, 3.5vw, 1.5rem) 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #cs-footer-1865 .cs-link,
+  #cs-footer-1865 .cs-li {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #cs-footer-1865 .cs-link:hover:before {
+    width: 100%;
+  }
+  #cs-footer-1865 .cs-link:before {
+    /* on hover underline */
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  #cs-footer-1865 .cs-bottom {
+    width: 100%;
+    margin: 0;
+    /* 20px - 40px top */
+    padding: clamp(1.25rem, 5vw, 2.5rem) 0 0 0;
+    border-top: 1px solid #DED1BD;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #cs-footer-1865 .cs-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 20px - 40px */
+    column-gap: clamp(1.25rem, 5.3vw, 2.5rem);
+  }
+  #cs-footer-1865 .cs-nav-li {
+    list-style: none;
+  }
+  #cs-footer-1865 .cs-nav-link {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-decoration: none;
+    margin: 0;
+    color: var(--bodyTextColor);
+    position: relative;
+  }
+  #cs-footer-1865 .cs-nav-link:hover {
+    color: #8F5B34;
+  }
+  #cs-footer-1865 .cs-nav-link:hover:before {
+    width: 100%;
+  }
+  #cs-footer-1865 .cs-nav-link:before {
+    /* on hover underline */
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  #cs-footer-1865 .cs-copyright {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #cs-footer-1865 .cs-copyright-link {
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    margin: 0;
+    color: inherit;
+    display: inline-block;
+  }
+  #cs-footer-1865 .cs-copyright-link:hover {
+    text-decoration: underline;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-footer-1865 .cs-subscribe {
+    /* 60px - 100px top & bottom */
+    /* 100px - 200px left & right */
+    padding: clamp(3.75rem, 8vw, 6.25rem) clamp(6.25rem, 13vw, 12.5rem);
+    border-radius: 25rem;
+  }
+  #cs-footer-1865 .cs-form {
+    flex-direction: row;
+  }
+  #cs-footer-1865 .cs-submit {
+    width: 30%;
+  }
+  #cs-footer-1865 .cs-logo-wrapper {
+    width: auto;
+    margin-right: auto;
+  }
+  #cs-footer-1865 .cs-contact-ul {
+    /* 152px - 412px */
+    width: clamp(9.5rem, 25vw, 25.75rem);
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #cs-footer-1865 .cs-subscribe {
+    margin-bottom: -14rem;
+  }
+  #cs-footer-1865 .cs-bottom {
+    flex-direction: row;
+  }
+  #cs-footer-1865 .cs-copyright {
+    text-align: right;
+  }
+}
+</style>
+</head>
+<body>
+
+<!--Notes: Make the section above this stitch have a:
+    padding-bottom: clamp(25rem, 30vw, 28.125rem);
+-->
+                                
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1865">
+    <div class="cs-container">
+        <div class="cs-subscribe">
+            <span class="cs-topper">Subscribe to Us</span>
+            <h2 class="cs-title">Subscribe To Our Newsletter</h2>
+            <p class="cs-text">You may also fill out the form below and we will respond as quickly as possible.</p>
+            <form class="cs-form" name="Contact Form" method="post">
+                <input class="cs-input" type="email" id="cs-email-1865" name="find-us" placeholder="Enter your email" required="">
+                <button class="cs-button-solid cs-submit" type="submit">Subscribe</button>
+            </form>
+        </div>
+        <!--Top Section-->
+        <div class="cs-top">
+            <!--Warpped logo in wrapper div so that div can be 100% width to force the lists below it to stay in their line.  The cs-logo can maintain its' max width. we didn't want it 100% width becuase then the blank area to the right of the logo will also result in a click and hover event. -->
+            <div class="cs-logo-wrapper">
+                <a href="" class="cs-logo">
+                    <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/dermatology-logo.svg" alt="logo" aria-hidden="true" loading="lazy" decoding="async" width="317" height="49">
+                </a>
+                <ul class="cs-social">
+                    <li class="cs-social-li">
+                        <a href="" class="cs-social-link" rel="noopener" target="_blank" aria-label="">
+                            <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-facebook.svg" alt="icon" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="cs-social-li">
+                        <a href="" class="cs-social-link" rel="noopener" target="_blank" aria-label="">
+                            <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-linkedin.svg" alt="icon" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="cs-social-li">
+                        <a href="" class="cs-social-link" rel="noopener" target="_blank" aria-label="">
+                            <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-derm-footer.svg" alt="icon" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="cs-social-li">
+                        <a href="" class="cs-social-link" rel="noopener" target="_blank" aria-label="">
+                            <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/grey-tiktok.svg" alt="icon" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="cs-ul cs-contact-ul">
+                <li class="cs-li">
+                    <span class="cs-header">Contact Info</span>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link" target="_blank" rel="noopener">
+                        4321 Birch Street, Ste 140, Newport Beach, CA 92660
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a href="mailto:info@example.com" class="cs-link">
+                        info@stitchskin.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <span class="cs-header">Office Hours</span>
+                </li>
+                <li class="cs-li">
+                    Monday to Friday
+                </li>
+                <li class="cs-li">
+                    9am - 5pm
+                </li>
+            </ul>
+        </div>
+        <!--Bottom Section-->
+        <div class="cs-bottom">
+            <!--Navigation-->
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <a href="" class="cs-nav-link">Home</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a href="" class="cs-nav-link">About</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a href="" class="cs-nav-link">Services</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a href="" class="cs-nav-link">Classes</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a href="" class="cs-nav-link">Blog</a>
+                </li>
+            </ul>
+            <span class="cs-copyright">
+                © Copyright 2024 - <a href="" class="cs-copyright-link">Stitch Skin Dermatology & Aesthetics</a>
+            </span>
+        </div>
+    </div>
+</footer>
+
+<script></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>non standard</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #sbs-1357 {
+    padding: var(--sectionPadding);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #sbs-1357 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 39.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #sbs-1357 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #sbs-1357 .cs-topper {
+    color: #767676;
+  }
+  #sbs-1357 .cs-title {
+    max-width: 25ch;
+  }
+  #sbs-1357 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-1357 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-1357 .cs-h3 {
+    /* 16px - 30px */
+    font-size: clamp(1rem, 2.4vw, 1.25rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    max-width: 37ch;
+    /* 16px - 24px */
+    margin: 0 0 clamp(1rem, 1.6vw, 1.5rem);
+    color: var(--primary);
+  }
+  #sbs-1357 .cs-button-solid {
+    font-size: 1rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #sbs-1357 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1a1a1a;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-1357 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #sbs-1357 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-1357 .cs-bubbles {
+    width: 33.375rem;
+    height: 34rem;
+    position: absolute;
+    /* changes to 160px at larger desktop */
+    left: -16.25rem;
+    /* removed at larger desktop */
+    bottom: -15rem;
+    z-index: -1;
+  }
+  #sbs-1357 .cs-bubbles:before {
+    /* white border bubble */
+    content: "";
+    width: 26.25rem;
+    height: 26.25rem;
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    animation-name: floatAnimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #sbs-1357 .cs-bubbles:after {
+    /* orange bubble */
+    content: "";
+    width: 20.6875rem;
+    height: 20.6875rem;
+    background: var(--primary);
+    opacity: 0.15;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    animation-name: floatAnimation2;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #sbs-1357 .cs-picture {
+    width: 100%;
+    height: 20.5rem;
+    border-radius: 3rem;
+    /* clips the corners of the img tag */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #sbs-1357 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-1357 .cs-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #sbs-1357 .cs-content {
+    width: 85%;
+    order: -1;
+  }
+  #sbs-1357 .cs-picture {
+    width: 50%;
+    max-width: 19.0625rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-1357 .cs-container {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+  }
+  #sbs-1357 .cs-content {
+    /* 80px - 140px */
+    padding: clamp(5rem, 10vw, 8.75rem) 0;
+    order: initial;
+  }
+  #sbs-1357 .cs-bubbles {
+    /* reset at large deskop */
+    left: -12.0625rem;
+    bottom: -8.125rem;
+  }
+  #sbs-1357 .cs-picture {
+    width: 37%;
+    /* 230px - 340px */
+    height: clamp(14.375rem, 24vw, 21.25rem);
+  }
+  #sbs-1357 .cs-picture1 {
+    align-self: flex-start;
+  }
+  #sbs-1357 .cs-picture2 {
+    align-self: flex-end;
+  }
+}
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+  #sbs-1357 .cs-bubbles {
+    margin-right: 31.25rem;
+    left: auto;
+    right: 50%;
+    bottom: -3.125rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1357">
+    <div class="cs-container">
+        <picture class="cs-picture cs-picture1">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg" alt="meeting" width="305" height="339">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">About Company</span>
+            <h2 class="cs-title">We're delighted to provide excellent customer service</h2>
+            <h3 class="cs-h3">
+                We’re committed to delivering the best digital 
+                marketing for businesses
+            </h3>
+            <p class="cs-text">
+                There are many variations of passages of Lorem Ipsumavailable, but the majority have suffered alteration in someform, simply free text by injected humour, or randomised.
+            </p>
+            <a href="" class="cs-button-solid">Discover More</a>
+        </div>
+        <picture class="cs-picture cs-picture2">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg" alt="meeting" width="305" height="339">
+        </picture>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<script></script>
+</body>
+</html>

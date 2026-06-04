@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 card</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Events           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #events-1764 {
+    /* centers buttons */
+    text-align: center;
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #events-1764 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #events-1764 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #events-1764 .cs-title {
+    /* max width of 18 characters, includes spaces between words */
+    max-width: 18ch;
+    margin: 0;
+  }
+  #events-1764 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* changes to a grid on desktop */
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #events-1764 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    max-width: 25.8125rem;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+  #events-1764 .cs-item:hover {
+    box-shadow: 0px 4px 120px 0px #0000001f;
+    border-color: none;
+  }
+  #events-1764 .cs-item:hover .cs-picture img {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+  #events-1764 .cs-item:hover .cs-h3 {
+    color: var(--primary);
+  }
+  #events-1764 .cs-picture {
+    width: 100%;
+    /* 280px - 320px */
+    height: clamp(17.5rem, 22vw, 20rem);
+    background-color: #1a1a1a;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #events-1764 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #events-1764 .cs-info {
+    height: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 24px - 28px vertical */
+    /* 16px - 28px sides */
+    padding: clamp(1.5rem, 2vw, 1.75rem) clamp(1rem, 2vw, 1.75rem);
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  #events-1764 .cs-h3 {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 3vw, 1.9375rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 1.25rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #events-1764 .cs-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #events-1764 .cs-opening,
+  #events-1764 .cs-time {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  #events-1764 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+  }
+  #events-1764 .cs-bold {
+    font-weight: 700;
+  }
+  #events-1764 .cs-bar {
+    width: 100%;
+    height: 0.5rem;
+    margin: 1.5rem 0;
+    background-color: #fdd2d2;
+    position: relative;
+  }
+  #events-1764 .cs-bar::after {
+    content: "";
+    /* percent of the bar filled */
+    width: 65%;
+    height: 100%;
+    background-color: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #events-1764 .cs-instructor {
+    /* 24px - 28px vertical */
+    /* 16px - 28px sides */
+    padding: clamp(1.5rem, 2vw, 1.75rem) clamp(1rem, 2vw, 1.75rem);
+    border-top: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+  }
+  #events-1764 .cs-instructor-info {
+    display: flex;
+    flex-direction: column;
+  }
+  #events-1764 .cs-portrait {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-right: 0.75rem;
+    /* hides overflow from border-radius */
+    overflow: hidden;
+    border-radius: 3.75rem;
+    position: relative;
+  }
+  #events-1764 .cs-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #events-1764 .cs-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #events-1764 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+  }
+  #events-1764 .cs-price {
+    font-size: 1.9375rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin-left: auto;
+    color: var(--headerColor);
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #events-1764 .cs-card-group {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #events-1764 .cs-item {
+    grid-column: span 4;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Events                    -->
+<!-- ============================================ -->
+
+<section id="events-1764">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Events</span>
+            <h2 class="cs-title">Join Our Upcoming Events Now</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Cardio Workout & Cross Combat</h3>
+                    <div class="cs-details">
+                        <span class="cs-opening">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-event-calendar.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Opening:</span> July 23, 2024
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-event-clock.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Class Time:</span> 9.00am - 10.00am
+                        </span>
+                    </div>
+                    <div class="cs-bar"></div>
+                </div>
+                <div class="cs-instructor">
+                    <picture class="cs-portrait">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Icons/gym-portrait.jpg" alt="portrait" height="32" width="32" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-instructor-info">
+                        <h3 class="cs-name">Rachel Moor</h3>
+                        <span class="cs-job">Instructor</span>
+                    </div>
+                    <span class="cs-price">$50</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Dead Lifting Pro State League</h3>
+                    <div class="cs-details">
+                        <span class="cs-opening">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-event-calendar.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Opening:</span> July 23, 2024
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-event-clock.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Class Time:</span> 9.00am - 10.00am
+                        </span>
+                    </div>
+                    <div class="cs-bar"></div>
+                </div>
+                <div class="cs-instructor">
+                    <picture class="cs-portrait">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Icons/gym-portrait.jpg" alt="portrait" height="32" width="32" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-instructor-info">
+                        <h3 class="cs-name">Guy Hawkins</h3>
+                        <span class="cs-job">Instructor</span>
+                    </div>
+                    <span class="cs-price">$50</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-4.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-4.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-4.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Shed & Pedal Weight Loss Cycling Challenge</h3>
+                    <div class="cs-details">
+                        <span class="cs-opening">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-event-calendar.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Opening:</span> July 23, 2024
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-event-clock.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Class Time:</span> 9.00am - 10.00am
+                        </span>
+                    </div>
+                    <div class="cs-bar"></div>
+                </div>
+                <div class="cs-instructor">
+                    <picture class="cs-portrait">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Icons/gym-portrait.jpg" alt="portrait" height="32" width="32" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-instructor-info">
+                        <h3 class="cs-name">Ralph Edwards</h3>
+                        <span class="cs-job">Instructor</span>
+                    </div>
+                    <span class="cs-price">$50</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

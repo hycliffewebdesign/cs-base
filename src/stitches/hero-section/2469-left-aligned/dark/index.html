@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>left aligned</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-2469 {
+    padding: var(--sectionPadding);
+    /* 180px - 200px top */
+    /* 60px - 120px bottom */
+    padding: clamp(10.25rem, 16.82vw, 12.5rem) 1rem clamp(3.75rem, 8vw, 7.5rem);
+    background-color: #f8f8f7;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2469 .cs-container {
+    width: 100%;
+    max-width: 90rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 140px */
+    gap: clamp(3rem, 7vw, 8.75rem);
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2469 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 38.5rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content, set to flex-start to align content to the left */
+    align-items: center;
+  }
+  #hero-2469 .cs-topper {
+    color: var(--secondary);
+  }
+  #hero-2469 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 700;
+    max-width: 20ch;
+    margin: 0 0 2rem 0;
+  }
+  #hero-2469 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    margin: 0;
+    padding: 0 3rem;
+    background-color: var(--primary);
+    overflow: hidden;
+    color: #fff;
+    border-radius: 1.875rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #hero-2469 .cs-button-solid:before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #hero-2469 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #hero-2469 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-2469 .cs-dots {
+    /* 48px - 64px */
+    margin: clamp(3rem, 6vw, 4rem) 0 0;
+    display: flex;
+    gap: 0.5rem;
+  }
+  #hero-2469 .cs-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #cfd0d1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: width 0.3s;
+  }
+  #hero-2469 .cs-dot::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: var(--primary);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #hero-2469 .cs-dot.cs-active {
+    width: 1rem;
+  }
+  #hero-2469 .cs-dot.cs-active::before {
+    width: 100%;
+    transition: width 7s linear;
+  }
+  #hero-2469 .cs-slideshow {
+    width: 100%;
+    height: 100vw;
+    max-height: 31.25rem;
+    position: relative;
+  }
+  #hero-2469 .cs-background {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  #hero-2469 .cs-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #hero-2469 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #hero-2469 .cs-content {
+    text-align: left;
+    max-width: 35rem;
+    /* 40px - 140px bottom */
+    padding: clamp(2.5rem, 12vw, 10.25rem) 0 clamp(2.5rem, 9vw, 8.75rem);
+    align-items: flex-start;
+  }
+  #hero-2469 .cs-slideshow {
+    height: auto;
+    flex: 1;
+  }
+}
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 1200px) {
+  #hero-2469 .cs-container {
+    justify-content: flex-start;
+  }
+  #hero-2469 .cs-slideshow {
+    width: 48vw;
+    max-width: 50rem;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-2469">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Authentic Native American Artifacts</span>
+            <h1 class="cs-title">
+                Discover & Collect a Legacy of American Indian Art
+            </h1>
+            <a href="" class="cs-button-solid">Get Started</a>
+            <!-- if you wish to add more slides, add additional .cs-background and .cs-dot elements with matching data-slide attributes-->
+            <div class="cs-dots">
+                <span data-slide="1" class="cs-dot">
+                </span>
+                <span data-slide="2" class="cs-dot">
+                </span>
+                <span data-slide="3" class="cs-dot">
+                </span>
+            </div>
+        </div>
+        <!-- a wrapper is needed to allow us to overlay all .cs-background elements using position: absolute top of each other, creating the fade in/out effect -->
+        <div class="cs-slideshow">
+            <picture data-slide="1" class="cs-background">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png" alt="abstract background" width="2250" height="1500" aria-hidden="true">
+            </picture>
+            <picture data-slide="2" class="cs-background">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png" alt="abstract background" width="2250" height="1500" aria-hidden="true">
+            </picture>
+            <picture data-slide="3" class="cs-background">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/desk.png" alt="abstract background" width="2250" height="1500" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<script>class HeroSlideshow {
+    constructor(heroElement) {
+        // config
+        this.hero = heroElement;
+        this.dots = Array.from(this.hero.querySelectorAll('.cs-dot'));
+        this.slides = Array.from(this.hero.querySelectorAll('.cs-background'));
+        this.currentSlide = 0;
+        this.totalSlides = this.dots.length;
+        this.slideDuration = 7000; // 7 seconds - this needs to be the same as the transition duration in the css
+        this.slideInterval = null;
+
+        this.init();
+    }
+
+    init() {
+        this.slides.forEach((slide, index) => {
+            slide.style.opacity = index === 0 ? '1' : '0';
+        });
+
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.handleDotClick(index));
+        });
+
+        this.activateDot(0);
+        this.startSlideshow();
+    }
+
+    activateDot(index) {
+        const dot = this.dots[index];
+        dot.classList.add('cs-active');
+    }
+
+    deactivateDot(index) {
+        const dot = this.dots[index];
+        dot.classList.remove('cs-active');
+    }
+
+    goToSlide(slideIndex) {
+        this.deactivateDot(this.currentSlide);
+        this.slides[this.currentSlide].style.opacity = '0';
+        this.currentSlide = slideIndex;
+
+        requestAnimationFrame(() => {
+            this.activateDot(this.currentSlide);
+            this.slides[this.currentSlide].style.opacity = '1';
+        });
+    }
+
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextIndex);
+    }
+
+    startSlideshow() {
+        this.slideInterval = setInterval(() => this.nextSlide(), this.slideDuration);
+    }
+
+    resetSlideshow() {
+        clearInterval(this.slideInterval);
+        this.startSlideshow();
+    }
+
+    handleDotClick(index) {
+        if (index !== this.currentSlide) {
+            this.goToSlide(index);
+            this.resetSlideshow();
+        }
+    }
+
+    destroy() {
+        clearInterval(this.slideInterval);
+        this.dots.forEach((dot, index) => {
+            dot.removeEventListener('click', () => this.handleDotClick(index));
+        });
+    }
+}
+
+// initialize slideshow on DOM ready, if the hero element exists. this prevents errors if the hero element does not exist.
+document.addEventListener('DOMContentLoaded', function () {
+    const hero = document.querySelector('#hero-2469');
+    if (hero) {
+        new HeroSlideshow(hero);
+    }
+});</script>
+</body>
+</html>

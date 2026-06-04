@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reverse pair</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-1433,
+  #RPsbsr-1433 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+  }
+  #RPsbs-1433 .cs-container,
+  #RPsbsr-1433 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #RPsbs-1433 .cs-content,
+  #RPsbsr-1433 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #RPsbs-1433 .cs-text,
+  #RPsbsr-1433 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #RPsbs-1433 .cs-text:last-of-type,
+  #RPsbsr-1433 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #RPsbs-1433 .cs-card-group,
+  #RPsbsr-1433 .cs-card-group {
+    width: 100%;
+    max-width: 39.375rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  #RPsbs-1433 .cs-li,
+  #RPsbsr-1433 .cs-li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #RPsbs-1433 .cs-li-picture,
+  #RPsbsr-1433 .cs-li-picture {
+    width: 5rem;
+    height: 5rem;
+    margin: 0;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #RPsbs-1433 .cs-li-picture:before,
+  #RPsbsr-1433 .cs-li-picture:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #RPsbs-1433 .cs-li-icon,
+  #RPsbsr-1433 .cs-li-icon {
+    width: 2rem;
+    height: auto;
+    display: block;
+  }
+  #RPsbs-1433 .cs-h3,
+  #RPsbsr-1433 .cs-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: left;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+  }
+  #RPsbs-1433 .cs-li-text,
+  #RPsbsr-1433 .cs-li-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #RPsbs-1433 .cs-image-group,
+  #RPsbsr-1433 .cs-image-group {
+    /* scale down the whole section */
+    font-size: min(1.6vw, .6em);
+    /* aligns the .cs-image-group to the right */
+    text-align: right;
+    /* using ems so we can scale this container with a font size */
+    width: auto;
+    max-width: 43.875rem;
+    min-width: 37.5em;
+    /* changes auto at desktop */
+    height: 38.625em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+    position: relative;
+  }
+  #RPsbs-1433 .cs-person,
+  #RPsbsr-1433 .cs-person {
+    width: auto;
+    height: 100%;
+    /* allows text align to move it left or right */
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+  #RPsbs-1433 .cs-person img,
+  #RPsbsr-1433 .cs-person img {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    object-fit: contain;
+    display: block;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RPsbs-1433 .cs-container,
+  #RPsbsr-1433 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+  }
+  #RPsbs-1433 .cs-content,
+  #RPsbsr-1433 .cs-content {
+    width: 50%;
+  }
+  #RPsbs-1433 .cs-image-group,
+  #RPsbsr-1433 .cs-image-group {
+    font-size: min(1.3vw, 1em);
+    /* pushes person image to the right of the container */
+    justify-content: flex-end;
+    /* sends it to the left in the 1st position */
+    order: -1;
+    position: absolute;
+    bottom: -6.3125rem;
+    /* changes to 0 at large desktop */
+    left: -6.25rem;
+    flex: none;
+  }
+}
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #RPsbs-1433 .cs-image-group,
+  #RPsbsr-1433 .cs-image-group {
+    font-size: min(1.2vw, 1em);
+    height: auto;
+    margin-right: 1.875rem;
+    /* pushes person image to the right of the container */
+    justify-content: flex-end;
+    /* pushed person image to the bottom of the container */
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 50%;
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbsr-1433 {
+    background-color: #f7f7f7;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RPsbsr-1433 .cs-container {
+    justify-content: flex-start;
+  }
+  #RPsbsr-1433 .cs-image-group {
+    /* pushes person image to the left of the container */
+    justify-content: flex-start;
+    /* changes to 0 at large desktop */
+    right: -10.625rem;
+    left: 50%;
+  }
+}
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #RPsbsr-1433 .cs-image-group {
+    margin-right: auto;
+    margin-left: 1.875rem;
+    top: 0;
+    right: auto;
+    left: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-1433">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!-- Person Picture -->
+            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
+            <picture class="cs-person">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteer.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteer.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteer.png" alt="volunteer" width="702" height="617" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Giving Back</span>
+            <h2 class="cs-title">How To Donate Us</h2>
+            <p class="cs-text">
+                Our impact is about more than moving money to where it’s needed most it’s also about helping nonprofits access information and ideas that will help them listen, learn, and grow.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Become a Volunteer</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Quick Fundraise</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Start Donating</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Side By Side Reverse              -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-1433">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!-- Person Picture -->
+            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
+            <picture class="cs-person">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteer2.png">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteer2.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteer2.png" alt="volunteer" width="702" height="617" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Giving Back</span>
+            <h2 class="cs-title">How To Donate Us</h2>
+            <p class="cs-text">
+                Our impact is about more than moving money to where it’s needed most it’s also about helping nonprofits access information and ideas that will help them listen, learn, and grow.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Become a Volunteer</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Quick Fundraise</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Start Donating</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script></script>
+</body>
+</html>

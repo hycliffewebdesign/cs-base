@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 stats</title>
+  <style>:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #ff6a3e;
+  --primaryLight: #ffba43;
+  --secondary: #ffba43;
+  --secondaryLight: #ffba43;
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+</style>
+  <style>/*-- -------------------------- -->
+<---           Stats            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #stats-2428 {
+    padding: var(--sectionPadding);
+    background-color: #010104;
+    padding-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2428 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 128px */
+    gap: clamp(3rem, 7vw, 8rem);
+  }
+  #stats-2428 .cs-wrapper {
+    max-width: 36rem;
+    display: contents;
+  }
+  #stats-2428 .cs-content {
+    /* set text align to center if content needs to be center aligned */
+    text-align: left;
+    width: 100%;
+    flex: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #stats-2428 .cs-topper {
+    color: var(--secondary);
+  }
+  #stats-2428 .cs-title,
+  #stats-2428 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #stats-2428 .cs-text {
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+  #stats-2428 .cs-text:last-of-type {
+    /* change to 32px if you add a button to this section */
+    margin-bottom: 0;
+  }
+  #stats-2428 .cs-card-group {
+    width: 100%;
+    max-width: 36rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.4vw, 1.25rem);
+    position: relative;
+    z-index: 10;
+  }
+  #stats-2428 .cs-item {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    /* 20px - 60px top & bottom, 16px - 48px left & right */
+    padding: clamp(1.25rem, 4.5vw, 3.75rem) clamp(1rem, 3.5vw, 3rem);
+    background-color: #030711;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 0;
+  }
+  #stats-2428 .cs-number {
+    /* 39px - 72px */
+    font-size: clamp(2.4375rem, 6.5vw, 4.5rem);
+    line-height: 1.2em;
+    text-align: inherit;
+    font-weight: 700;
+    /* 24px - 64px */
+    margin: 0 0 clamp(1.5rem, 5vw, 4rem) 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #stats-2428 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-align: inherit;
+    font-weight: bold;
+    margin: 0 0 0.75rem 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #stats-2428 .cs-item-text {
+    line-height: 1.5em;
+    max-width: 28.125rem;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  #stats-2428 .cs-picture {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    order: 2;
+    position: relative;
+    z-index: 1;
+  }
+  #stats-2428 .cs-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #stats-2428 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  #stats-2428 .cs-wrapper {
+    width: 48vw;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  #stats-2428 .cs-card-group {
+    padding: var(--sectionPadding);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+  #stats-2428 .cs-picture {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+  }
+  #stats-2428 .cs-picture img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* remove the right:0 and uncomment the left if you have a thinner image and want it oriented to the left more instead of on the right side of its parent container */
+    /* left: 0; */
+    right: 0;
+  }
+}
+/* Large Desktop - 1800px */
+@media only screen and (min-width: 1800px) {
+  #stats-2428 .cs-picture img {
+    right: 45%;
+    /* offsetting any possible left value added in tablet, remove the right: 45% and left: auto if you dont need this stylingg */
+    left: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                      Stats                   -->
+<!-- ============================================ -->
+
+<section id="stats-2428">
+	<div class="cs-container">
+		<div class="cs-wrapper">
+			<div class="cs-content">
+				<span class="cs-topper">What The Numbers Say</span>
+				<h2 class="cs-title">Not Just a Studio, A Space for Transformation</h2>
+				<p class="cs-text">
+					Our space is intimate, immersive, and designed for focused artistic collaboration. Whether you’re preparing for a photoshoot, festival, performance, or simply want to express yourself in a new way, our team delivers glowing,
+					high-impact body designs that tell a story — your story.
+				</p>
+				<p class="cs-text">
+                    We also share our process with others through body art workshops and creative mentorship.
+                </p>
+			</div>
+			<picture class="cs-picture">
+				<!--Mobile Image-->
+				<source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tatoo7b.png" />
+				<!--Tablet and above Image-->
+				<source media="(max-width: 1023px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tatoo7b.png" />
+                <!--Desktop and above Image-->
+				<source media="(min-width: 1024px)" srcset="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo7.png" />
+				<img loading="lazy" decoding="async" src="https://nyc3.digitaloceanspaces.com/csimages2/Images/People/tattoo7.png" alt="person with tattoo" width="608" height="862" />
+			</picture>
+		</div>
+		<ul class="cs-card-group">
+			<li class="cs-item">
+				<span class="cs-number">10K+</span>
+				<h3 class="cs-h3">Body Art Sessions Completed</h3>
+				<p class="cs-item-text">
+                    From UV painting to spiritual art, our artists transform clients into masterpieces in Portland and beyond.
+                </p>
+			</li>
+			<li class="cs-item">
+				<span class="cs-number">1.2M+</span>
+				<h3 class="cs-h3">Social Media Views</h3>
+				<p class="cs-item-text">
+                    Our creations shine on Instagram and TikTok, building a vibrant community of body art lovers.
+                </p>
+			</li>
+			<li class="cs-item">
+				<span class="cs-number">22 Years</span>
+				<h3 class="cs-h3">Combined Artistic Experience</h3>
+				<p class="cs-item-text">
+                    With years of ing experience, our team infuses creativity into every body we paint.
+                </p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<script></script>
+</body>
+</html>
